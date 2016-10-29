@@ -1,5 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500');
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
+}
+
+
+.as-link {
+  cursor: pointer;
+}
+
+.list-table-row, .list-table-header, .list-table-cell {
+  display: flex;
+}
+
+.list-table-row, .list-table-header {
+  border-bottom: solid 1px #efefef;
+}
+
+.list-table-row {
+  cursor: pointer;
+}
+
+.list-table-row:hover {
+  background-color: #FAFAFA;
+}
+
+.list-table-row:last-child {
+  border: none;
+}
+
+.list-table-header {
+  font-weight: 500;
+  color: #999;
+}
+
+.list-table-cell {
+  flex: 1;
+  padding: 5px 0;
+  line-height: 25px;
 }

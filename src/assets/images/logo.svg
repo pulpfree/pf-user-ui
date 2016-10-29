@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="218px" height="52px" viewBox="0 0 218 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-family="HelveticaNeue, Helvetica Neue" font-weight="normal">
+        <g id="Group" transform="translate(-5.000000, -10.000000)">
+            <g id="Logo">
+                <text id="Advanced-Web-Solutio" fill="#FFFFFF" font-size="15.110001" letter-spacing="1.75">
+                    <tspan x="13" y="61">Advanced Web Solutions</tspan>
+                </text>
+                <g id="Group-2" font-size="42.9691967" letter-spacing="3" fill="#B2DFDB">
+                    <text id="Tech">
+                        <tspan x="126" y="41">Tech</tspan>
+                    </text>
+                    <text id="Webb">
+                        <tspan x="5.6238422" y="41">Webb</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

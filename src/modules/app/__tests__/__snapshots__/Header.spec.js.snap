@@ -1,0 +1,1178 @@
+exports[`components <Header /> matches snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <header
+    className="App-header">
+    <img
+        alt="logo"
+        className="App-logo"
+        src="test-file-stub" />
+    <nav
+        className="App-nav">
+        <function FlatButton() {
+            var _ref;
+        
+            var _temp, _this, _ret;
+        
+            (0, _classCallCheck3.default)(this, FlatButton);
+        
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = arguments[_key];
+            }
+        
+            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+              hovered: false,
+              isKeyboardFocused: false,
+              touch: false
+            }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+              _this.setState({ isKeyboardFocused: isKeyboardFocused });
+              _this.props.onKeyboardFocus(event, isKeyboardFocused);
+            }, _this.handleMouseEnter = function (event) {
+              // Cancel hover styles for touch devices
+              if (!_this.state.touch) _this.setState({ hovered: true });
+              _this.props.onMouseEnter(event);
+            }, _this.handleMouseLeave = function (event) {
+              _this.setState({ hovered: false });
+              _this.props.onMouseLeave(event);
+            }, _this.handleTouchStart = function (event) {
+              _this.setState({ touch: true });
+              _this.props.onTouchStart(event);
+            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+          }
+            containerElement={
+                <function (props, context, updater) {
+                      // This constructor gets overridden by mocks. The argument is used
+                      // by mocks to assert on what gets mounted.
+                
+                      if (process.env.NODE_ENV !== 'production') {
+                        process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                      }
+                
+                      // Wire up auto-binding
+                      if (this.__reactAutoBindPairs.length) {
+                        bindAutoBindMethods(this);
+                      }
+                
+                      this.props = props;
+                      this.context = context;
+                      this.refs = emptyObject;
+                      this.updater = updater || ReactNoopUpdateQueue;
+                
+                      this.state = null;
+                
+                      // ReactClasses doesn't have constructors. Instead, they use the
+                      // getInitialState and componentWillMount methods for initialization.
+                
+                      var initialState = this.getInitialState ? this.getInitialState() : null;
+                      if (process.env.NODE_ENV !== 'production') {
+                        // We allow auto-mocks to proceed as if they're returning null.
+                        if (initialState === undefined && this.getInitialState._isMockFunction) {
+                          // This is probably bad practice. Consider warning here and
+                          // deprecating this convenience.
+                          initialState = null;
+                        }
+                      }
+                      !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                
+                      this.state = initialState;
+                    }
+                    onlyActiveOnIndex={false}
+                    style={Object {}}
+                    to="/" />
+            }
+            disabled={false}
+            label="dashboard"
+            labelPosition="after"
+            labelStyle={Object {}}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onTouchStart={[Function]}
+            primary={false}
+            secondary={true}
+            style={
+                Object {
+                    "borderRadius": 0,
+                  }
+            } />
+        <function FlatButton() {
+            var _ref;
+        
+            var _temp, _this, _ret;
+        
+            (0, _classCallCheck3.default)(this, FlatButton);
+        
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = arguments[_key];
+            }
+        
+            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+              hovered: false,
+              isKeyboardFocused: false,
+              touch: false
+            }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+              _this.setState({ isKeyboardFocused: isKeyboardFocused });
+              _this.props.onKeyboardFocus(event, isKeyboardFocused);
+            }, _this.handleMouseEnter = function (event) {
+              // Cancel hover styles for touch devices
+              if (!_this.state.touch) _this.setState({ hovered: true });
+              _this.props.onMouseEnter(event);
+            }, _this.handleMouseLeave = function (event) {
+              _this.setState({ hovered: false });
+              _this.props.onMouseLeave(event);
+            }, _this.handleTouchStart = function (event) {
+              _this.setState({ touch: true });
+              _this.props.onTouchStart(event);
+            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+          }
+            containerElement={
+                <function (props, context, updater) {
+                      // This constructor gets overridden by mocks. The argument is used
+                      // by mocks to assert on what gets mounted.
+                
+                      if (process.env.NODE_ENV !== 'production') {
+                        process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                      }
+                
+                      // Wire up auto-binding
+                      if (this.__reactAutoBindPairs.length) {
+                        bindAutoBindMethods(this);
+                      }
+                
+                      this.props = props;
+                      this.context = context;
+                      this.refs = emptyObject;
+                      this.updater = updater || ReactNoopUpdateQueue;
+                
+                      this.state = null;
+                
+                      // ReactClasses doesn't have constructors. Instead, they use the
+                      // getInitialState and componentWillMount methods for initialization.
+                
+                      var initialState = this.getInitialState ? this.getInitialState() : null;
+                      if (process.env.NODE_ENV !== 'production') {
+                        // We allow auto-mocks to proceed as if they're returning null.
+                        if (initialState === undefined && this.getInitialState._isMockFunction) {
+                          // This is probably bad practice. Consider warning here and
+                          // deprecating this convenience.
+                          initialState = null;
+                        }
+                      }
+                      !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                
+                      this.state = initialState;
+                    }
+                    onlyActiveOnIndex={false}
+                    style={Object {}}
+                    to="/site" />
+            }
+            disabled={false}
+            label="sites"
+            labelPosition="after"
+            labelStyle={Object {}}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onTouchStart={[Function]}
+            primary={false}
+            secondary={true}
+            style={
+                Object {
+                    "borderRadius": 0,
+                  }
+            } />
+        <function FlatButton() {
+            var _ref;
+        
+            var _temp, _this, _ret;
+        
+            (0, _classCallCheck3.default)(this, FlatButton);
+        
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = arguments[_key];
+            }
+        
+            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+              hovered: false,
+              isKeyboardFocused: false,
+              touch: false
+            }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+              _this.setState({ isKeyboardFocused: isKeyboardFocused });
+              _this.props.onKeyboardFocus(event, isKeyboardFocused);
+            }, _this.handleMouseEnter = function (event) {
+              // Cancel hover styles for touch devices
+              if (!_this.state.touch) _this.setState({ hovered: true });
+              _this.props.onMouseEnter(event);
+            }, _this.handleMouseLeave = function (event) {
+              _this.setState({ hovered: false });
+              _this.props.onMouseLeave(event);
+            }, _this.handleTouchStart = function (event) {
+              _this.setState({ touch: true });
+              _this.props.onTouchStart(event);
+            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+          }
+            containerElement={
+                <function (props, context, updater) {
+                      // This constructor gets overridden by mocks. The argument is used
+                      // by mocks to assert on what gets mounted.
+                
+                      if (process.env.NODE_ENV !== 'production') {
+                        process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                      }
+                
+                      // Wire up auto-binding
+                      if (this.__reactAutoBindPairs.length) {
+                        bindAutoBindMethods(this);
+                      }
+                
+                      this.props = props;
+                      this.context = context;
+                      this.refs = emptyObject;
+                      this.updater = updater || ReactNoopUpdateQueue;
+                
+                      this.state = null;
+                
+                      // ReactClasses doesn't have constructors. Instead, they use the
+                      // getInitialState and componentWillMount methods for initialization.
+                
+                      var initialState = this.getInitialState ? this.getInitialState() : null;
+                      if (process.env.NODE_ENV !== 'production') {
+                        // We allow auto-mocks to proceed as if they're returning null.
+                        if (initialState === undefined && this.getInitialState._isMockFunction) {
+                          // This is probably bad practice. Consider warning here and
+                          // deprecating this convenience.
+                          initialState = null;
+                        }
+                      }
+                      !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                
+                      this.state = initialState;
+                    }
+                    onlyActiveOnIndex={false}
+                    style={Object {}}
+                    to="/user" />
+            }
+            disabled={false}
+            label="users"
+            labelPosition="after"
+            labelStyle={Object {}}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onTouchStart={[Function]}
+            primary={false}
+            secondary={true}
+            style={
+                Object {
+                    "borderRadius": 0,
+                  }
+            } />
+    </nav>
+</header>,
+  "nodes": Array [
+    <header
+      className="App-header">
+      <img
+            alt="logo"
+            className="App-logo"
+            src="test-file-stub" />
+      <nav
+            className="App-nav">
+            <function FlatButton() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, FlatButton);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  hovered: false,
+                  isKeyboardFocused: false,
+                  touch: false
+                }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                  _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                  _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                }, _this.handleMouseEnter = function (event) {
+                  // Cancel hover styles for touch devices
+                  if (!_this.state.touch) _this.setState({ hovered: true });
+                  _this.props.onMouseEnter(event);
+                }, _this.handleMouseLeave = function (event) {
+                  _this.setState({ hovered: false });
+                  _this.props.onMouseLeave(event);
+                }, _this.handleTouchStart = function (event) {
+                  _this.setState({ touch: true });
+                  _this.props.onTouchStart(event);
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                  containerElement={
+                        <function (props, context, updater) {
+                              // This constructor gets overridden by mocks. The argument is used
+                              // by mocks to assert on what gets mounted.
+                        
+                              if (process.env.NODE_ENV !== 'production') {
+                                process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                              }
+                        
+                              // Wire up auto-binding
+                              if (this.__reactAutoBindPairs.length) {
+                                bindAutoBindMethods(this);
+                              }
+                        
+                              this.props = props;
+                              this.context = context;
+                              this.refs = emptyObject;
+                              this.updater = updater || ReactNoopUpdateQueue;
+                        
+                              this.state = null;
+                        
+                              // ReactClasses doesn't have constructors. Instead, they use the
+                              // getInitialState and componentWillMount methods for initialization.
+                        
+                              var initialState = this.getInitialState ? this.getInitialState() : null;
+                              if (process.env.NODE_ENV !== 'production') {
+                                // We allow auto-mocks to proceed as if they're returning null.
+                                if (initialState === undefined && this.getInitialState._isMockFunction) {
+                                  // This is probably bad practice. Consider warning here and
+                                  // deprecating this convenience.
+                                  initialState = null;
+                                }
+                              }
+                              !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                        
+                              this.state = initialState;
+                            }
+                              onlyActiveOnIndex={false}
+                              style={Object {}}
+                              to="/" />
+                  }
+                  disabled={false}
+                  label="dashboard"
+                  labelPosition="after"
+                  labelStyle={Object {}}
+                  onKeyboardFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onTouchStart={[Function]}
+                  primary={false}
+                  secondary={true}
+                  style={
+                        Object {
+                              "borderRadius": 0,
+                            }
+                  } />
+            <function FlatButton() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, FlatButton);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  hovered: false,
+                  isKeyboardFocused: false,
+                  touch: false
+                }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                  _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                  _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                }, _this.handleMouseEnter = function (event) {
+                  // Cancel hover styles for touch devices
+                  if (!_this.state.touch) _this.setState({ hovered: true });
+                  _this.props.onMouseEnter(event);
+                }, _this.handleMouseLeave = function (event) {
+                  _this.setState({ hovered: false });
+                  _this.props.onMouseLeave(event);
+                }, _this.handleTouchStart = function (event) {
+                  _this.setState({ touch: true });
+                  _this.props.onTouchStart(event);
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                  containerElement={
+                        <function (props, context, updater) {
+                              // This constructor gets overridden by mocks. The argument is used
+                              // by mocks to assert on what gets mounted.
+                        
+                              if (process.env.NODE_ENV !== 'production') {
+                                process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                              }
+                        
+                              // Wire up auto-binding
+                              if (this.__reactAutoBindPairs.length) {
+                                bindAutoBindMethods(this);
+                              }
+                        
+                              this.props = props;
+                              this.context = context;
+                              this.refs = emptyObject;
+                              this.updater = updater || ReactNoopUpdateQueue;
+                        
+                              this.state = null;
+                        
+                              // ReactClasses doesn't have constructors. Instead, they use the
+                              // getInitialState and componentWillMount methods for initialization.
+                        
+                              var initialState = this.getInitialState ? this.getInitialState() : null;
+                              if (process.env.NODE_ENV !== 'production') {
+                                // We allow auto-mocks to proceed as if they're returning null.
+                                if (initialState === undefined && this.getInitialState._isMockFunction) {
+                                  // This is probably bad practice. Consider warning here and
+                                  // deprecating this convenience.
+                                  initialState = null;
+                                }
+                              }
+                              !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                        
+                              this.state = initialState;
+                            }
+                              onlyActiveOnIndex={false}
+                              style={Object {}}
+                              to="/site" />
+                  }
+                  disabled={false}
+                  label="sites"
+                  labelPosition="after"
+                  labelStyle={Object {}}
+                  onKeyboardFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onTouchStart={[Function]}
+                  primary={false}
+                  secondary={true}
+                  style={
+                        Object {
+                              "borderRadius": 0,
+                            }
+                  } />
+            <function FlatButton() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, FlatButton);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  hovered: false,
+                  isKeyboardFocused: false,
+                  touch: false
+                }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                  _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                  _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                }, _this.handleMouseEnter = function (event) {
+                  // Cancel hover styles for touch devices
+                  if (!_this.state.touch) _this.setState({ hovered: true });
+                  _this.props.onMouseEnter(event);
+                }, _this.handleMouseLeave = function (event) {
+                  _this.setState({ hovered: false });
+                  _this.props.onMouseLeave(event);
+                }, _this.handleTouchStart = function (event) {
+                  _this.setState({ touch: true });
+                  _this.props.onTouchStart(event);
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                  containerElement={
+                        <function (props, context, updater) {
+                              // This constructor gets overridden by mocks. The argument is used
+                              // by mocks to assert on what gets mounted.
+                        
+                              if (process.env.NODE_ENV !== 'production') {
+                                process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                              }
+                        
+                              // Wire up auto-binding
+                              if (this.__reactAutoBindPairs.length) {
+                                bindAutoBindMethods(this);
+                              }
+                        
+                              this.props = props;
+                              this.context = context;
+                              this.refs = emptyObject;
+                              this.updater = updater || ReactNoopUpdateQueue;
+                        
+                              this.state = null;
+                        
+                              // ReactClasses doesn't have constructors. Instead, they use the
+                              // getInitialState and componentWillMount methods for initialization.
+                        
+                              var initialState = this.getInitialState ? this.getInitialState() : null;
+                              if (process.env.NODE_ENV !== 'production') {
+                                // We allow auto-mocks to proceed as if they're returning null.
+                                if (initialState === undefined && this.getInitialState._isMockFunction) {
+                                  // This is probably bad practice. Consider warning here and
+                                  // deprecating this convenience.
+                                  initialState = null;
+                                }
+                              }
+                              !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                        
+                              this.state = initialState;
+                            }
+                              onlyActiveOnIndex={false}
+                              style={Object {}}
+                              to="/user" />
+                  }
+                  disabled={false}
+                  label="users"
+                  labelPosition="after"
+                  labelStyle={Object {}}
+                  onKeyboardFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onTouchStart={[Function]}
+                  primary={false}
+                  secondary={true}
+                  style={
+                        Object {
+                              "borderRadius": 0,
+                            }
+                  } />
+      </nav>
+</header>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <function Header() {_classCallCheck(this, Header);return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));}
+        links={
+                Array [
+                        Object {
+                          "label": "dashboard",
+                          "path": "/",
+                        },
+                        Object {
+                          "label": "sites",
+                          "path": "/site",
+                        },
+                        Object {
+                          "label": "users",
+                          "path": "/user",
+                        },
+                      ]
+        } />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Header {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "links": Array [
+            Object {
+              "label": "dashboard",
+              "path": "/",
+            },
+            Object {
+              "label": "sites",
+              "path": "/site",
+            },
+            Object {
+              "label": "users",
+              "path": "/user",
+            },
+          ],
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": Object {
+        "_currentElement": <header
+          className="App-header">
+          <img
+                    alt="logo"
+                    className="App-logo"
+                    src="test-file-stub" />
+          <nav
+                    className="App-nav">
+                    <function FlatButton() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, FlatButton);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                          hovered: false,
+                          isKeyboardFocused: false,
+                          touch: false
+                        }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                          _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                          _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                        }, _this.handleMouseEnter = function (event) {
+                          // Cancel hover styles for touch devices
+                          if (!_this.state.touch) _this.setState({ hovered: true });
+                          _this.props.onMouseEnter(event);
+                        }, _this.handleMouseLeave = function (event) {
+                          _this.setState({ hovered: false });
+                          _this.props.onMouseLeave(event);
+                        }, _this.handleTouchStart = function (event) {
+                          _this.setState({ touch: true });
+                          _this.props.onTouchStart(event);
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }
+                              containerElement={
+                                        <function (props, context, updater) {
+                                              // This constructor gets overridden by mocks. The argument is used
+                                              // by mocks to assert on what gets mounted.
+                                        
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                                              }
+                                        
+                                              // Wire up auto-binding
+                                              if (this.__reactAutoBindPairs.length) {
+                                                bindAutoBindMethods(this);
+                                              }
+                                        
+                                              this.props = props;
+                                              this.context = context;
+                                              this.refs = emptyObject;
+                                              this.updater = updater || ReactNoopUpdateQueue;
+                                        
+                                              this.state = null;
+                                        
+                                              // ReactClasses doesn't have constructors. Instead, they use the
+                                              // getInitialState and componentWillMount methods for initialization.
+                                        
+                                              var initialState = this.getInitialState ? this.getInitialState() : null;
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                // We allow auto-mocks to proceed as if they're returning null.
+                                                if (initialState === undefined && this.getInitialState._isMockFunction) {
+                                                  // This is probably bad practice. Consider warning here and
+                                                  // deprecating this convenience.
+                                                  initialState = null;
+                                                }
+                                              }
+                                              !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                                        
+                                              this.state = initialState;
+                                            }
+                                                  onlyActiveOnIndex={false}
+                                                  style={Object {}}
+                                                  to="/" />
+                              }
+                              disabled={false}
+                              label="dashboard"
+                              labelPosition="after"
+                              labelStyle={Object {}}
+                              onKeyboardFocus={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onTouchStart={[Function]}
+                              primary={false}
+                              secondary={true}
+                              style={
+                                        Object {
+                                                  "borderRadius": 0,
+                                                }
+                              } />
+                    <function FlatButton() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, FlatButton);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                          hovered: false,
+                          isKeyboardFocused: false,
+                          touch: false
+                        }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                          _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                          _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                        }, _this.handleMouseEnter = function (event) {
+                          // Cancel hover styles for touch devices
+                          if (!_this.state.touch) _this.setState({ hovered: true });
+                          _this.props.onMouseEnter(event);
+                        }, _this.handleMouseLeave = function (event) {
+                          _this.setState({ hovered: false });
+                          _this.props.onMouseLeave(event);
+                        }, _this.handleTouchStart = function (event) {
+                          _this.setState({ touch: true });
+                          _this.props.onTouchStart(event);
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }
+                              containerElement={
+                                        <function (props, context, updater) {
+                                              // This constructor gets overridden by mocks. The argument is used
+                                              // by mocks to assert on what gets mounted.
+                                        
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                                              }
+                                        
+                                              // Wire up auto-binding
+                                              if (this.__reactAutoBindPairs.length) {
+                                                bindAutoBindMethods(this);
+                                              }
+                                        
+                                              this.props = props;
+                                              this.context = context;
+                                              this.refs = emptyObject;
+                                              this.updater = updater || ReactNoopUpdateQueue;
+                                        
+                                              this.state = null;
+                                        
+                                              // ReactClasses doesn't have constructors. Instead, they use the
+                                              // getInitialState and componentWillMount methods for initialization.
+                                        
+                                              var initialState = this.getInitialState ? this.getInitialState() : null;
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                // We allow auto-mocks to proceed as if they're returning null.
+                                                if (initialState === undefined && this.getInitialState._isMockFunction) {
+                                                  // This is probably bad practice. Consider warning here and
+                                                  // deprecating this convenience.
+                                                  initialState = null;
+                                                }
+                                              }
+                                              !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                                        
+                                              this.state = initialState;
+                                            }
+                                                  onlyActiveOnIndex={false}
+                                                  style={Object {}}
+                                                  to="/site" />
+                              }
+                              disabled={false}
+                              label="sites"
+                              labelPosition="after"
+                              labelStyle={Object {}}
+                              onKeyboardFocus={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onTouchStart={[Function]}
+                              primary={false}
+                              secondary={true}
+                              style={
+                                        Object {
+                                                  "borderRadius": 0,
+                                                }
+                              } />
+                    <function FlatButton() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, FlatButton);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                          hovered: false,
+                          isKeyboardFocused: false,
+                          touch: false
+                        }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                          _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                          _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                        }, _this.handleMouseEnter = function (event) {
+                          // Cancel hover styles for touch devices
+                          if (!_this.state.touch) _this.setState({ hovered: true });
+                          _this.props.onMouseEnter(event);
+                        }, _this.handleMouseLeave = function (event) {
+                          _this.setState({ hovered: false });
+                          _this.props.onMouseLeave(event);
+                        }, _this.handleTouchStart = function (event) {
+                          _this.setState({ touch: true });
+                          _this.props.onTouchStart(event);
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }
+                              containerElement={
+                                        <function (props, context, updater) {
+                                              // This constructor gets overridden by mocks. The argument is used
+                                              // by mocks to assert on what gets mounted.
+                                        
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                                              }
+                                        
+                                              // Wire up auto-binding
+                                              if (this.__reactAutoBindPairs.length) {
+                                                bindAutoBindMethods(this);
+                                              }
+                                        
+                                              this.props = props;
+                                              this.context = context;
+                                              this.refs = emptyObject;
+                                              this.updater = updater || ReactNoopUpdateQueue;
+                                        
+                                              this.state = null;
+                                        
+                                              // ReactClasses doesn't have constructors. Instead, they use the
+                                              // getInitialState and componentWillMount methods for initialization.
+                                        
+                                              var initialState = this.getInitialState ? this.getInitialState() : null;
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                // We allow auto-mocks to proceed as if they're returning null.
+                                                if (initialState === undefined && this.getInitialState._isMockFunction) {
+                                                  // This is probably bad practice. Consider warning here and
+                                                  // deprecating this convenience.
+                                                  initialState = null;
+                                                }
+                                              }
+                                              !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                                        
+                                              this.state = initialState;
+                                            }
+                                                  onlyActiveOnIndex={false}
+                                                  style={Object {}}
+                                                  to="/user" />
+                              }
+                              disabled={false}
+                              label="users"
+                              labelPosition="after"
+                              labelStyle={Object {}}
+                              onKeyboardFocus={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onTouchStart={[Function]}
+                              primary={false}
+                              secondary={true}
+                              style={
+                                        Object {
+                                                  "borderRadius": 0,
+                                                }
+                              } />
+          </nav>
+</header>,
+        "_debugID": 2,
+        "_renderedOutput": <header
+          className="App-header">
+          <img
+                    alt="logo"
+                    className="App-logo"
+                    src="test-file-stub" />
+          <nav
+                    className="App-nav">
+                    <function FlatButton() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, FlatButton);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                          hovered: false,
+                          isKeyboardFocused: false,
+                          touch: false
+                        }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                          _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                          _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                        }, _this.handleMouseEnter = function (event) {
+                          // Cancel hover styles for touch devices
+                          if (!_this.state.touch) _this.setState({ hovered: true });
+                          _this.props.onMouseEnter(event);
+                        }, _this.handleMouseLeave = function (event) {
+                          _this.setState({ hovered: false });
+                          _this.props.onMouseLeave(event);
+                        }, _this.handleTouchStart = function (event) {
+                          _this.setState({ touch: true });
+                          _this.props.onTouchStart(event);
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }
+                              containerElement={
+                                        <function (props, context, updater) {
+                                              // This constructor gets overridden by mocks. The argument is used
+                                              // by mocks to assert on what gets mounted.
+                                        
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                                              }
+                                        
+                                              // Wire up auto-binding
+                                              if (this.__reactAutoBindPairs.length) {
+                                                bindAutoBindMethods(this);
+                                              }
+                                        
+                                              this.props = props;
+                                              this.context = context;
+                                              this.refs = emptyObject;
+                                              this.updater = updater || ReactNoopUpdateQueue;
+                                        
+                                              this.state = null;
+                                        
+                                              // ReactClasses doesn't have constructors. Instead, they use the
+                                              // getInitialState and componentWillMount methods for initialization.
+                                        
+                                              var initialState = this.getInitialState ? this.getInitialState() : null;
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                // We allow auto-mocks to proceed as if they're returning null.
+                                                if (initialState === undefined && this.getInitialState._isMockFunction) {
+                                                  // This is probably bad practice. Consider warning here and
+                                                  // deprecating this convenience.
+                                                  initialState = null;
+                                                }
+                                              }
+                                              !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                                        
+                                              this.state = initialState;
+                                            }
+                                                  onlyActiveOnIndex={false}
+                                                  style={Object {}}
+                                                  to="/" />
+                              }
+                              disabled={false}
+                              label="dashboard"
+                              labelPosition="after"
+                              labelStyle={Object {}}
+                              onKeyboardFocus={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onTouchStart={[Function]}
+                              primary={false}
+                              secondary={true}
+                              style={
+                                        Object {
+                                                  "borderRadius": 0,
+                                                }
+                              } />
+                    <function FlatButton() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, FlatButton);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                          hovered: false,
+                          isKeyboardFocused: false,
+                          touch: false
+                        }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                          _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                          _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                        }, _this.handleMouseEnter = function (event) {
+                          // Cancel hover styles for touch devices
+                          if (!_this.state.touch) _this.setState({ hovered: true });
+                          _this.props.onMouseEnter(event);
+                        }, _this.handleMouseLeave = function (event) {
+                          _this.setState({ hovered: false });
+                          _this.props.onMouseLeave(event);
+                        }, _this.handleTouchStart = function (event) {
+                          _this.setState({ touch: true });
+                          _this.props.onTouchStart(event);
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }
+                              containerElement={
+                                        <function (props, context, updater) {
+                                              // This constructor gets overridden by mocks. The argument is used
+                                              // by mocks to assert on what gets mounted.
+                                        
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                                              }
+                                        
+                                              // Wire up auto-binding
+                                              if (this.__reactAutoBindPairs.length) {
+                                                bindAutoBindMethods(this);
+                                              }
+                                        
+                                              this.props = props;
+                                              this.context = context;
+                                              this.refs = emptyObject;
+                                              this.updater = updater || ReactNoopUpdateQueue;
+                                        
+                                              this.state = null;
+                                        
+                                              // ReactClasses doesn't have constructors. Instead, they use the
+                                              // getInitialState and componentWillMount methods for initialization.
+                                        
+                                              var initialState = this.getInitialState ? this.getInitialState() : null;
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                // We allow auto-mocks to proceed as if they're returning null.
+                                                if (initialState === undefined && this.getInitialState._isMockFunction) {
+                                                  // This is probably bad practice. Consider warning here and
+                                                  // deprecating this convenience.
+                                                  initialState = null;
+                                                }
+                                              }
+                                              !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                                        
+                                              this.state = initialState;
+                                            }
+                                                  onlyActiveOnIndex={false}
+                                                  style={Object {}}
+                                                  to="/site" />
+                              }
+                              disabled={false}
+                              label="sites"
+                              labelPosition="after"
+                              labelStyle={Object {}}
+                              onKeyboardFocus={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onTouchStart={[Function]}
+                              primary={false}
+                              secondary={true}
+                              style={
+                                        Object {
+                                                  "borderRadius": 0,
+                                                }
+                              } />
+                    <function FlatButton() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, FlatButton);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                          hovered: false,
+                          isKeyboardFocused: false,
+                          touch: false
+                        }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                          _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                          _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                        }, _this.handleMouseEnter = function (event) {
+                          // Cancel hover styles for touch devices
+                          if (!_this.state.touch) _this.setState({ hovered: true });
+                          _this.props.onMouseEnter(event);
+                        }, _this.handleMouseLeave = function (event) {
+                          _this.setState({ hovered: false });
+                          _this.props.onMouseLeave(event);
+                        }, _this.handleTouchStart = function (event) {
+                          _this.setState({ touch: true });
+                          _this.props.onTouchStart(event);
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }
+                              containerElement={
+                                        <function (props, context, updater) {
+                                              // This constructor gets overridden by mocks. The argument is used
+                                              // by mocks to assert on what gets mounted.
+                                        
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                process.env.NODE_ENV !== 'production' ? warning(this instanceof Constructor, 'Something is calling a React component directly. Use a factory or ' + 'JSX instead. See: https://fb.me/react-legacyfactory') : void 0;
+                                              }
+                                        
+                                              // Wire up auto-binding
+                                              if (this.__reactAutoBindPairs.length) {
+                                                bindAutoBindMethods(this);
+                                              }
+                                        
+                                              this.props = props;
+                                              this.context = context;
+                                              this.refs = emptyObject;
+                                              this.updater = updater || ReactNoopUpdateQueue;
+                                        
+                                              this.state = null;
+                                        
+                                              // ReactClasses doesn't have constructors. Instead, they use the
+                                              // getInitialState and componentWillMount methods for initialization.
+                                        
+                                              var initialState = this.getInitialState ? this.getInitialState() : null;
+                                              if (process.env.NODE_ENV !== 'production') {
+                                                // We allow auto-mocks to proceed as if they're returning null.
+                                                if (initialState === undefined && this.getInitialState._isMockFunction) {
+                                                  // This is probably bad practice. Consider warning here and
+                                                  // deprecating this convenience.
+                                                  initialState = null;
+                                                }
+                                              }
+                                              !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
+                                        
+                                              this.state = initialState;
+                                            }
+                                                  onlyActiveOnIndex={false}
+                                                  style={Object {}}
+                                                  to="/user" />
+                              }
+                              disabled={false}
+                              label="users"
+                              labelPosition="after"
+                              labelStyle={Object {}}
+                              onKeyboardFocus={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onTouchStart={[Function]}
+                              primary={false}
+                              secondary={true}
+                              style={
+                                        Object {
+                                                  "borderRadius": 0,
+                                                }
+                              } />
+          </nav>
+</header>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <function Header() {_classCallCheck(this, Header);return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));}
+    links={
+        Array [
+            Object {
+              "label": "dashboard",
+              "path": "/",
+            },
+            Object {
+              "label": "sites",
+              "path": "/site",
+            },
+            Object {
+              "label": "users",
+              "path": "/user",
+            },
+          ]
+    } />,
+}
+`;

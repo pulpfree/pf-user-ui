@@ -1,0 +1,36 @@
+legend {
+  color: #666;
+  text-transform: uppercase;
+}
+
+legend.row {
+  border-bottom: solid 1px #999;
+  width: 100%;
+  padding-bottom: 4px;
+}
+
+.form-row {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-col {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.form-row-spacer {
+  flex-shrink: 1;
+  width: 20px;
+}
+
+.form-text-input {
+  flex: 1
+}

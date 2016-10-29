@@ -1,3 +1,4 @@
+
 {
     "parser": "babel-eslint",
     "env": {
@@ -45,9 +46,10 @@
         "react/wrap-multilines": 1,
 
         "no-cond-assign": 1,             // disallow assignment in conditional expressions
-        "no-console": 0,                 // disallow use of console (off by default in the node environment)
+        "no-console": ,                 // disallow use of console (off by default in the node environment)
         "no-constant-condition": 1,      // disallow use of constant expressions in conditions
-        "no-comma-dangle": 0,            // disallow trailing commas in object literals
+       // "no-comma-dangle": 0,            // disallow trailing commas in object literals
+        "comma-dangle": 2,
         "no-control-regex": 1,           // disallow control characters in regular expressions
         "no-debugger": 1,                // disallow use of debugger
         "no-dupe-keys": 1,               // disallow duplicate keys when creating object literals

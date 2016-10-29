@@ -1,0 +1,110 @@
+{
+  fetchSiteById(_id: "580e3d0b722179828f867ff0") {
+    _id
+    active
+    credentialKeyPassword
+    credentialKeyUsername
+    collectionNm
+    dbNm
+    domain
+    name
+    resetURI
+  }
+}
+
+{
+  fetchSites {
+    _id
+    active
+    credentialKeyPassword
+    credentialKeyUsername
+    collectionNm
+    dbNm
+    domain
+    name
+    resetURI
+  }
+}
+
+{
+  fetchSites(domain: "ca.example.foo4") {
+    _id
+    active
+    credentialKeyPassword
+    credentialKeyUsername
+    collectionNm
+    dbNm
+    domain
+    name
+    resetURI
+  }
+}
+
+
+{
+  site(name: "Universal Sales") {
+    name
+    active
+    domain
+  }
+}
+
+{
+  fetchUser(domainID: "580e3d0b722179828f867ff0", email: "rond@webbtech.net") {
+    _id
+    email
+    active
+  }
+}
+
+{
+  fetchUsers(domainID: "580e3d0b722179828f867ff0") {
+    _id
+    email
+    active
+    scope
+    scopeBits
+  }
+}
+
+
+mutation {
+  createSite(credentialKeyPassword: "password", credentialKeyUsername: "email", collectionNm: "users", dbNm: "test-db", domain: "ca.example.foo1", name: "My New Site", resetURI: "http://foo.com/auth") {
+    _id
+    domain
+    name
+    resetURI
+  }
+}
+
+mutation {
+  updateSite(_id: "580e3d0b722179828f867ff0", domain: "ca.example.foo2", name: "My New Site2", resetURI: "http://foo.com/auth") {
+    _id
+    active
+    collectionNm
+    credentialKeyPassword
+    domain
+    name
+    resetURI
+  }
+}
+
+mutation {
+  createUser(domainID: "580e3d0b722179828f867ff0", active: true, email: "test@me.com", password: "MyTestingPass1", scope: ["admin", "siteuser"]) {
+    _id
+    email
+    active
+    scope
+    scopeBits
+  }
+}
+
+mutation {
+  updateUser(domainID: "580e3d0b722179828f867ff0", userID: "580e40ab025690863119ce85", active: true) {
+    _id
+    email
+    active
+    scope
+    scopeBits
+  }
+}
