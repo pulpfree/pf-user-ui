@@ -4,15 +4,16 @@ import ReactDOM from 'react-dom'
 import { Router, browserHistory } from 'react-router'
 import { syncHistoryWithStore } from 'react-router-redux'
 
-import ApolloClient, { createNetworkInterface } from 'apollo-client'
+// import ApolloClient, { createNetworkInterface } from 'apollo-client'
 import { ApolloProvider } from 'react-apollo'
+import ApolloClientSingleton from './network/apollo-client-singleton'
 
-import configureStore from './store/configureStore'
+import Store from './store/configureStore'
 import createRoutes from './services/routes'
 
 import './index.css'
 
-const client  = new ApolloClient({
+/*const client  = new ApolloClient({
   networkInterface: createNetworkInterface({
     uri: 'http://localhost:3003/graphql',
     opts: {
@@ -21,12 +22,15 @@ const client  = new ApolloClient({
     }
   })
 })
-const store   = configureStore()
-const history = syncHistoryWithStore(browserHistory, store)
+const store   = configureStore()*/
+
+const store = new Store(browserHistory, window.INITIAL_STATE)
+
+const history = syncHistoryWithStore(browserHistory, store.data)
 const routes  = createRoutes(store)
 
 ReactDOM.render(
-  <ApolloProvider client={client} store={store}>
+  <ApolloProvider client={ApolloClientSingleton} store={store.data}>
     <Router history={history}>
       {routes}
     </Router>

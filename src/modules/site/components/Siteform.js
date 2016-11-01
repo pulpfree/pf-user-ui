@@ -77,7 +77,7 @@ export class Siteform extends Component {
   `*/
 
     const { scratch } = this.props
-    console.log('scratch:', scratch)
+    // console.log('scratch:', scratch)
 
     return (
       <div style={{width: 'auto', margin: 'auto'}}>

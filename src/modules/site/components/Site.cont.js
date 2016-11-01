@@ -18,9 +18,9 @@ import gql from 'graphql-tag'
 import {
   setSiteScratch,
 } from '../siteActions'
-import {
+/*import {
   siteScratchSelector,
-} from '../siteSelectors'
+} from '../siteSelectors'*/
 
 import { styles as st } from '../../../styles'
 
@@ -148,12 +148,12 @@ Site.propStyles = {
   children: PropTypes.object.isRequired
 }
 
-function mapStateToProps(state) {
+/*function mapStateToProps(state) {
   return {
     scratch:  siteScratchSelector(state),
     ts: state,
   }
-}
+}*/
 
 function mapDispatchToProps(dispatch) {
   return {
@@ -165,6 +165,7 @@ function mapDispatchToProps(dispatch) {
 
 // export default Site
 export default connect(
-  mapStateToProps,
+  // mapStateToProps,
+  null,
   mapDispatchToProps
 )(Site)

@@ -11,7 +11,7 @@ import TextField from 'material-ui/TextField'
 
 // import UserForm from './Userform'
 
-import { graphql } from 'react-apollo';
+import { graphql, compose, withApollo } from 'react-apollo';
 import gql from 'graphql-tag'
 import update from 'react-addons-update'
 
@@ -35,7 +35,7 @@ class User extends Component {
     super(props)
     this.state = {
       siteID: null,
-      firstName: 'Default Name'
+      firstName: 'NewName'
     }
   }
 
@@ -56,24 +56,20 @@ class User extends Component {
 
   submitForm = () => {
     console.log('props:', this.props)
-    const { submit } = this.props
+    const { createContact } = this.props
     const name = this.state.firstName
     // console.log('in submitForm firstName:', this.state.firstName)
+    return createContact(name)
 
-    return submit(name).then((res) => {
+    /*return submit(name).then((res) => {
       console.log('res in submitForm:', res)
-      /*if (!res.errors) {
-        browserHistory.push('/feed/new')
-      } else {
-        this.setState({ errors: res.errors })
-      }*/
-    })
+    })*/
   }
 
   render() {
 
-    const { isLoading } = this.props
-    if (isLoading) {
+    const { loading, fetchContacts, createContact } = this.props
+    if (loading) {
       return (
         <div>Loading...</div>
       );
@@ -81,7 +77,8 @@ class User extends Component {
 
     // let rows = []
     // console.log('props:', this.props)
-    const rows = this.props.contacts.map(s => {
+
+    const rows = fetchContacts.map(s => {
         return (
           <div
               className='list-table-row'
@@ -122,6 +119,7 @@ class User extends Component {
               />
               <br /><br />
               <div onClick={() => this.submitForm()}>Click me</div>
+              <div onClick={() => createContact(this.state.firstName)}>Click me2</div>
             </div>
 
             {rows}
@@ -140,25 +138,16 @@ User.propStyles = {
   children: PropTypes.object
 }
 
-const ContactsQuery = gql`
-      query ContactsQuery($type: String) {
-        fetchContacts(type: "personal") {
-          _id
-          name
-          type
-        }
-      }`
+const CONTACTS_QUERY = gql`
+  query fetchContacts($type: String) {
+    fetchContacts(type: "personal") {
+      _id
+      name
+      type
+    }
+  }`
 
-    const withList = graphql(ContactsQuery, {
-      options: ({ type }) => ({ variables: { type } }),
-      props: ({ ownProps, data }) => {
-        if (data.loading) return { isLoading: true }
-        if (data.error) return { hasErrors: true }
-        return { contacts: data.fetchContacts }
-      }
-    })
-
-  const CREATE_CONTACT_MUTATION = gql`
+const CREATE_CONTACT_MUTATION = gql`
   mutation createContact($name: String) {
     createContact(name: $name, type: "personal") {
       _id
@@ -167,39 +156,116 @@ const ContactsQuery = gql`
     }
   }`
 
-  const withMutation = graphql(CREATE_CONTACT_MUTATION, {
+export default withApollo(compose(
+  graphql(CONTACTS_QUERY, {
+    props({data: {loading, fetchContacts}}) {
+      return {loading, fetchContacts}
+    }
+  }),
+  graphql(CREATE_CONTACT_MUTATION, {
     props({ ownProps, mutate }) {
-      return {
-        submit(name) {
-          // console.log('ownProps:', ownProps)
-          // console.log('mutate:', mutate)
-          return mutate({
-            variables: { name },
-            optimisticResponse: {
-              __typeName: 'Mutation',
-              createContact: {
-                __typeName: 'Contact',
-                _id: null,
-                name: name,
-                type: 'personal'
-              }
-            },
-            updateQueries: {
-              Contact: (prev, { mutationResult }) => {
-                console.log('mutationResult:', mutationResult)
-                const newContact = mutationResult.data.createContact
-                return update(prev, {
-                  contacts: {
-                    $unshift: [newContact]
-                  }
-                })
-              }
+    return {
+      createContact(name) {
+        // console.log('ownProps:', ownProps)
+        // console.log('mutate:', mutate)
+        return mutate({
+          variables: { name },
+          optimisticResponse: {
+            __typeName: 'Mutation',
+            createContact: {
+              __typeName: 'Contact',
+              _id: null,
+              name: name,
+              type: 'personal'
             }
-          })
-        }
+          },
+          updateQueries: {
+            fetchContacts: (prev, { mutationResult }) => {
+              const newContact = mutationResult.data.createContact
+              return update(prev, {
+                fetchContacts: {
+                  $unshift: [newContact]
+                }
+              })
+            }
+          }
+        })
       }
     }
+  }
+    /*props: ({ ownProps, mutate }) => ({
+      createContact(name) {
+        console.log('submit name:', name)
+        console.log('ownProps:', ownProps)
+        return () => mutate({
+          variables: { name },
+          updateQueries: {
+            fetchContacts: (prev, { mutationResult }) => {
+              const newContact = mutationResult.data.createContact
+              return update(prev, {
+                fetchContacts: {
+                  $unshift: [newContact]
+                }
+              })
+            }
+          },
+          optimisticResponse: {
+            __typeName: 'Mutation',
+            createContact: {
+              __typeName: 'Contact',
+              // _id: null,
+              name: name,
+              type: 'personal'
+            }
+          }
+        })
+      }
+    })*/
   })
+)(User))
 
-export default withList(withMutation(User))
+/*const withList = graphql(ContactsQuery, {
+  options: ({ type }) => ({ variables: { type } }),
+  props: ({ ownProps, data }) => {
+    if (data.loading) return { isLoading: true }
+    if (data.error) return { hasErrors: true }
+    return { contacts: data.fetchContacts }
+  }
+})
+
+const withMutation = graphql(CREATE_CONTACT_MUTATION, {
+  props({ ownProps, mutate }) {
+    return {
+      submit(name) {
+        // console.log('ownProps:', ownProps)
+        // console.log('mutate:', mutate)
+        return mutate({
+          variables: { name },
+          optimisticResponse: {
+            __typeName: 'Mutation',
+            createContact: {
+              __typeName: 'Contact',
+              _id: null,
+              name: name,
+              type: 'personal'
+            }
+          },
+          updateQueries: {
+            Contact: (prev, { mutationResult }) => {
+              console.log('mutationResult:', mutationResult)
+              const newContact = mutationResult.data.createContact
+              return update(prev, {
+                contacts: {
+                  $unshift: [newContact]
+                }
+              })
+            }
+          }
+        })
+      }
+    }
+  }
+})*/
+
+// export default withList(withMutation(User))
 // export default withList(User)

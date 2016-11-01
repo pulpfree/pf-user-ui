@@ -1,46 +1,28 @@
-import { createStore, applyMiddleware, compose } from 'redux'
-// import thunk from 'redux-thunk'
-import createLogger from 'redux-logger'
-import createSagaMiddleware from 'redux-saga'
-
-// import DevTools from '../components/DevTools'
-
-// import api from '../middleware/api'
+import { createStore, compose, applyMiddleware } from 'redux'
+import { routerMiddleware } from 'react-router-redux'
+import ReduxThunk from 'redux-thunk'
+import ApolloClientSingleton from '../network/apollo-client-singleton'
 import rootReducer from '../services/reducers'
-import rootSaga from '../services/rootSaga'
 
-const sagaMiddleWare = createSagaMiddleware()
+export default class Store {
+  constructor(history, initialState = {}) {
+    /*const reducer = combineReducers({
+      ...reducers,
+      apollo: ApolloClientSingleton.reducer(),
+      routing: routerReducer
+    })*/
 
-const enhancer = compose(
-  applyMiddleware(
-    // thunk,
-    // api,
-    sagaMiddleWare,
-    createLogger(),
-  ),
-  window.devToolsExtension ? window.devToolsExtension() : f => f
-  // DevTools.instrument()
-)
-
-export default function configureStore(initialState) {
-  const store = createStore(
-    rootReducer,
-    initialState,
-    enhancer
-  )
-
-  sagaMiddleWare.run(rootSaga)
-
-  // Required for replaying actions from devtools to work
-  // reduxRouterMiddleware.listenForReplays(store)
-
-  /*if (module.hot) {
-    // Enable Webpack hot module replacement for reducers
-    module.hot.accept('../reducers', () => {
-      const nextRootReducer = require('../reducers')
-      store.replaceReducer(nextRootReducer)
-    })
-  }*/
-
-  return store
+    this.data = createStore(
+      rootReducer,
+      initialState,
+      compose(
+        applyMiddleware(
+          routerMiddleware(history),
+          ApolloClientSingleton.middleware(),
+          ReduxThunk.withExtraArgument(ApolloClientSingleton)
+        ),
+         typeof window === 'object' && typeof window.devToolsExtension !== 'undefined' ? window.devToolsExtension() : f => f
+      )
+    )
+  }
 }
