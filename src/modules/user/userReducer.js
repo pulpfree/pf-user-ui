@@ -13,15 +13,20 @@ const listState = Immutable({
 
 })
 
-const scratchState = Immutable({
+export const scratchState = Immutable({
   active: false,
+  domainID: null,
   email: null,
-  name: {
-    first: null,
-    last: null,
+  contact: {
+    _id: null,
+    email: null,
+    name: {
+      first: null,
+      last: null,
+    },
   },
   password: null,
-  roles: [],
+  scope: [],
 })
 
 export function current (state = currentState, action) {
@@ -44,7 +49,7 @@ export function scratch (state = scratchState, action) {
   switch (action.type) {
 
   case userActions.USER_SCRATCH_SET:
-    return scratchState.merge(action.params, {deep: true})
+    return scratchState.merge(action.params.user, {deep: true})
 
   case userActions.USER_SCRATCH_CREATE:
     return scratchState

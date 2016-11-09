@@ -1,47 +1,30 @@
 import React, { Component, PropTypes } from 'react'
 
+import ActionDone from 'material-ui/svg-icons/action/done'
 import Checkbox from 'material-ui/Checkbox'
-import TextField from 'material-ui/TextField'
-// import Paper from 'material-ui/Paper'
+import ContentClear from 'material-ui/svg-icons/content/clear'
 import RaisedButton from 'material-ui/RaisedButton'
 import Subheader from 'material-ui/Subheader'
+import TextField from 'material-ui/TextField'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-// import { graphql } from 'react-apollo';
-// import gql from 'graphql-tag'
+import { compose, graphql, withApollo } from 'react-apollo'
+import gql from 'graphql-tag'
+import update from 'react-addons-update'
 
-import {
-  persistSite,
-  setSiteCreate,
-  setSiteProp,
-  setSiteScratch,
-} from '../siteActions'
+import { setSiteProp } from '../siteActions'
+import * as alertActions from '../../alert/alertActions'
 import {
   siteScratchSelector,
   siteCurrentSelector,
 } from '../siteSelectors'
 
-import ActionDone from 'material-ui/svg-icons/action/done'
-import ContentClear from 'material-ui/svg-icons/content/clear'
-import { yellow500 } from 'material-ui/styles/colors'
-
 import '../../../styles/form.css'
 
+
 export class Siteform extends Component {
-
-  componentWillMount = () => {
-    const { scratch } = this.props
-    if (!scratch._id) {
-      this.props.actions.setSiteCreate()
-    }
-  }
-
-  _onPropChange = (field) => {
-    const val = this.refs[field].input.value
-    this.props.actions.setSiteProp({[field]: val})
-  }
 
   _onPropChange = (field) => {
     const val = this.refs[field].input.value
@@ -49,39 +32,50 @@ export class Siteform extends Component {
   }
 
   _onCheck = (e, val, field) => {
+    console.log('check val:', val)
     this.props.actions.setSiteProp({[field]: val})
   }
 
   _validate = (field) => {
-    // console.log('validate:', this.refs.email.state)
-    // console.log('validate:', this.refs.email.input.value)
+  }
+
+  _onCancelForm = () => {
+    this.props.closeFormFunc()
   }
 
   _onSubmit = () => {
-    // console.log('submit form:', )
-    this.props.actions.persistSite()
-  }
+    const { createSite, scratch, updateSite } = this.props
+    const edit = scratch._id ? true : false
+    const successMsg = edit ? 'Site info successfully updated' : 'Site successfully created'
 
-  // const UPDATE_SITE_MUTATION = gql''
+    let p
+    if (edit) {
+      p = updateSite(scratch._id, scratch)
+    } else {
+      p = createSite(scratch)
+    }
+    p.then(res => {
+      this._onCancelForm()
+      this.props.actions.alertSend({
+        dismissAfter: 2000,
+        message:      successMsg,
+        type:         'success',
+      })
+    }).catch(err => {
+      this._onCancelForm()
+      this.props.actions.alertSend({
+        message:  `ERROR: ${err.message}`,
+        type:     'danger',
+      })
+    })
+  }
 
   render () {
 
-    /*const CREATE_SITE_MUTATION = gql`
-    mutation addSite {
-      createSite(credentialKeyPassword: "password", credentialKeyUsername: "email", collectionNm: "users", dbNm: "test-db", domain: "ca.example.foo12", name: "My New Site", resetURI: "http://foo.com/auth") {
-        _id
-        domain
-        name
-      }
-    }
-  `*/
-
     const { scratch } = this.props
-    // console.log('scratch:', scratch)
 
     return (
       <div style={{width: 'auto', margin: 'auto'}}>
-        <h2>Site Details</h2>
         <form onSubmit={() => this._onSubmit()}>
 
           <div className='form-row'>
@@ -89,45 +83,45 @@ export class Siteform extends Component {
             <div className='form-col'>
               <legend className='row'>Domain</legend>
               <TextField
-                floatingLabelText='Identifier Name'
-                onChange={() => this._onPropChange('name')}
-                onBlur={() => this._validate('name')}
-                ref='name'
-                value={scratch.name || ''}
-            />
-            <TextField
-                floatingLabelText='FQDN [Domain]'
-                onChange={() => this._onPropChange('domain')}
-                onBlur={() => this._validate('domain')}
-                ref='domain'
-                value={scratch.domain || ''}
-            />
+                  floatingLabelText='Identifier Name'
+                  onChange={() => this._onPropChange('name')}
+                  onBlur={() => this._validate('name')}
+                  ref='name'
+                  value={scratch.name || ''}
+              />
+              <TextField
+                  floatingLabelText='FQDN [Domain]'
+                  onChange={() => this._onPropChange('domain')}
+                  onBlur={() => this._validate('domain')}
+                  ref='domain'
+                  value={scratch.domain || ''}
+              />
 
-            <br /><br />
-            <legend className='row'>Security</legend>
-              <TextField
-                  floatingLabelText='Public PEM File'
-                  onChange={() => this._onPropChange('pemFilePublic')}
-                  onBlur={() => this._validate('pemFilePublic')}
-                  ref='pemFilePublic'
-                  value={scratch.pemFilePublic || ''}
-              />
-              <TextField
-                  floatingLabelText='Private PEM File'
-                  onChange={() => this._onPropChange('pemFilePrivate')}
-                  onBlur={() => this._validate('pemFilePrivate')}
-                  ref='pemFilePrivate'
-                  value={scratch.pemFilePrivate || ''}
-              />
-              <TextField
-                  disabled={true}
-                  floatingLabelText='Signing Method'
-                  onChange={() => this._onPropChange('signingMethod')}
-                  onBlur={() => this._validate('signingMethod')}
-                  ref='signingMethod'
-                  value={scratch.signingMethod || ''}
-              />
-            </div>
+              <br /><br />
+              <legend className='row'>Security</legend>
+                <TextField
+                    floatingLabelText='Public PEM File'
+                    onChange={() => this._onPropChange('pemFilePublic')}
+                    onBlur={() => this._validate('pemFilePublic')}
+                    ref='pemFilePublic'
+                    value={scratch.pemFilePublic || ''}
+                />
+                <TextField
+                    floatingLabelText='Private PEM File'
+                    onChange={() => this._onPropChange('pemFilePrivate')}
+                    onBlur={() => this._validate('pemFilePrivate')}
+                    ref='pemFilePrivate'
+                    value={scratch.pemFilePrivate || ''}
+                />
+                <TextField
+                    disabled={true}
+                    floatingLabelText='Signing Method'
+                    onChange={() => this._onPropChange('signingMethod')}
+                    onBlur={() => this._validate('signingMethod')}
+                    ref='signingMethod'
+                    value={scratch.signingMethod || ''}
+                />
+              </div>
 
             <div className='form-row-spacer' />
             <div className='form-row-spacer' />
@@ -135,18 +129,25 @@ export class Siteform extends Component {
             <div className='form-col'>
               <legend className='row'>Database</legend>
               <TextField
-                  floatingLabelText='Name'
+                  floatingLabelText='DB Name'
                   onChange={() => this._onPropChange('dbNm')}
                   onBlur={() => this._validate('dbNm')}
                   ref='dbNm'
                   value={scratch.dbNm || ''}
               />
               <TextField
-                  floatingLabelText='Collection'
+                  floatingLabelText='User Collection'
                   onChange={() => this._onPropChange('collectionNm')}
                   onBlur={() => this._validate('collectionNm')}
                   ref='collectionNm'
                   value={scratch.collectionNm || ''}
+              />
+              <TextField
+                  floatingLabelText='Contact Collection'
+                  onChange={() => this._onPropChange('collectionContactNm')}
+                  onBlur={() => this._validate('collectionContactNm')}
+                  ref='collectionContactNm'
+                  value={scratch.collectionContactNm || ''}
               />
 
               <br /><br />
@@ -182,10 +183,9 @@ export class Siteform extends Component {
               <Checkbox
                   label="Active"
                   labelPosition="right"
-                  // onBlur={() => this._validate('active')}
                   onCheck={(e, val) => this._onCheck(e, val, 'active')}
                   ref='active'
-                  value={scratch.active}
+                  checked={scratch.active}
               />
             </div>
           </div>
@@ -194,25 +194,83 @@ export class Siteform extends Component {
             <RaisedButton
                 icon={<ContentClear />}
                 label="Cancel"
-                onClick={() => this._onSubmit()}
-                secondary={true}
-                labelStyle={{color: '#333'}}
+                onClick={() => this._onCancelForm()}
             />
             <RaisedButton
                 icon={<ActionDone />}
-                label="Submit User Info"
+                label="Submit Site Info"
                 onClick={() => this._onSubmit()}
-                primary={true}
-                labelStyle={{color: yellow500}}
-
+                secondary={true}
             />
           </div>
-
         </form>
       </div>
     )
   }
 }
+
+const CREATE_SITE_MUTATION = gql`
+  mutation createSite($fields:SiteInput!) {
+    createSite(input:$fields) {
+      _id
+      active
+      credentialKeyPassword
+      credentialKeyUsername
+      collectionNm
+      dbNm
+      domain
+      name
+      pemFilePrivate
+      pemFilePublic
+      resetURI
+      signingMethod
+    }
+  }`
+
+const UPDATE_SITE_MUTATION = gql`
+  mutation updateSite($_id:ID!, $fields:SiteInput!) {
+    updateSite(_id:$_id, input:$fields) {
+      _id
+      active
+      domain
+      name
+    }
+  }`
+
+const withAddForm = graphql(CREATE_SITE_MUTATION, {
+  props({ ownProps, mutate }) {
+    return {
+      createSite(fields) {
+        return mutate({
+          variables: { fields },
+          updateQueries: {
+            fetchSites: (prev, { mutationResult }) => {
+              const newSite = mutationResult.data.createSite
+              return update(prev, {
+                fetchSites: {
+                  $unshift: [newSite]
+                }
+              })
+            }
+          }
+        })
+      }
+    }
+  }
+})
+
+const withEditForm = graphql(UPDATE_SITE_MUTATION, {
+  props({ ownProps, mutate }) {
+    return {
+      updateSite(_id, fields) {
+        return mutate({
+          variables: { _id, fields }
+        })
+      }
+    }
+  }
+})
+
 
 function mapStateToProps(state) {
   return {
@@ -224,10 +282,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
-      persistSite,
-      setSiteCreate,
+      ...alertActions,
       setSiteProp,
-      setSiteScratch,
     }, dispatch),
   }
 }
@@ -239,7 +295,12 @@ Siteform.propTypes = {
   site:     PropTypes.object,
 }
 
+const MutateForm = withApollo(compose(
+  withAddForm,
+  withEditForm
+)(Siteform))
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Siteform)
+)(MutateForm)

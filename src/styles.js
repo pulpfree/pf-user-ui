@@ -6,6 +6,7 @@ export const styles = {
     width: 36,
     height: 36,
     padding: 6,
+    fill: '#22A699',
   },
   appBarEleStyle: {
     width: 50,

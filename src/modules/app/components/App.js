@@ -7,6 +7,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 
 import './App.css'
 import Header from './Header'
+import Alerts from '../../alert/components/Alerts'
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
@@ -36,6 +37,7 @@ export class App extends Component {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div className="App">
+        <Alerts />
           <Header links={links} pathname={pathname} routeChildren={routeChildren} />
           {children}
         </div>
@@ -56,7 +58,6 @@ function mapStateToProps(state, ownProps) {
     routeChildren: ownProps.route.childRoutes,
   };
 }
-
 
 export default connect(
   mapStateToProps

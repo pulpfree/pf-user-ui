@@ -1,0 +1,3190 @@
+exports[`components <Site /> renders without crashing 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <section
+    className="App-container">
+    <function Paper() {
+        (0, _classCallCheck3.default)(this, Paper);
+        return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+      }
+        circle={false}
+        rounded={true}
+        transitionEnabled={true}
+        zDepth={1}>
+        <function AppBar() {
+            var _ref;
+        
+            var _temp, _this, _ret;
+        
+            (0, _classCallCheck3.default)(this, AppBar);
+        
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = arguments[_key];
+            }
+        
+            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = AppBar.__proto__ || (0, _getPrototypeOf2.default)(AppBar)).call.apply(_ref, [this].concat(args))), _this), _this.handleTouchTapLeftIconButton = function (event) {
+              if (_this.props.onLeftIconButtonTouchTap) {
+                _this.props.onLeftIconButtonTouchTap(event);
+              }
+            }, _this.handleTouchTapRightIconButton = function (event) {
+              if (_this.props.onRightIconButtonTouchTap) {
+                _this.props.onRightIconButtonTouchTap(event);
+              }
+            }, _this.handleTitleTouchTap = function (event) {
+              if (_this.props.onTitleTouchTap) {
+                _this.props.onTitleTouchTap(event);
+              }
+            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+          }
+            iconElementRight={
+                <function IconButton() {
+                    var _ref;
+                
+                    var _temp, _this, _ret;
+                
+                    (0, _classCallCheck3.default)(this, IconButton);
+                
+                    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                      args[_key] = arguments[_key];
+                    }
+                
+                    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = IconButton.__proto__ || (0, _getPrototypeOf2.default)(IconButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                      tooltipShown: false
+                    }, _this.handleBlur = function (event) {
+                      _this.hideTooltip();
+                      if (_this.props.onBlur) _this.props.onBlur(event);
+                    }, _this.handleFocus = function (event) {
+                      _this.showTooltip();
+                      if (_this.props.onFocus) _this.props.onFocus(event);
+                    }, _this.handleMouseLeave = function (event) {
+                      if (!_this.refs.button.isKeyboardFocused()) _this.hideTooltip();
+                      if (_this.props.onMouseLeave) _this.props.onMouseLeave(event);
+                    }, _this.handleMouseOut = function (event) {
+                      if (_this.props.disabled) _this.hideTooltip();
+                      if (_this.props.onMouseOut) _this.props.onMouseOut(event);
+                    }, _this.handleMouseEnter = function (event) {
+                      _this.showTooltip();
+                      if (_this.props.onMouseEnter) _this.props.onMouseEnter(event);
+                    }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                      if (keyboardFocused && !_this.props.disabled) {
+                        _this.showTooltip();
+                        if (_this.props.onFocus) _this.props.onFocus(event);
+                      } else {
+                        _this.hideTooltip();
+                        if (_this.props.onBlur) _this.props.onBlur(event);
+                      }
+                
+                      if (_this.props.onKeyboardFocus) {
+                        _this.props.onKeyboardFocus(event, keyboardFocused);
+                      }
+                    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                  }
+                    disableTouchRipple={false}
+                    disabled={false}
+                    iconStyle={
+                        Object {
+                            "fill": "#22A699",
+                            "height": 36,
+                            "padding": 6,
+                            "width": 36,
+                          }
+                    }
+                    style={
+                        Object {
+                            "height": 40,
+                            "padding": 0,
+                            "width": 50,
+                          }
+                    }
+                    tooltipPosition="bottom-center"
+                    touch={false}>
+                    <function _class() {
+                            _classCallCheck(this, _class);
+                    
+                            return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                          } />
+                </function IconButton() {
+                    var _ref;
+                
+                    var _temp, _this, _ret;
+                
+                    (0, _classCallCheck3.default)(this, IconButton);
+                
+                    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                      args[_key] = arguments[_key];
+                    }
+                
+                    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = IconButton.__proto__ || (0, _getPrototypeOf2.default)(IconButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                      tooltipShown: false
+                    }, _this.handleBlur = function (event) {
+                      _this.hideTooltip();
+                      if (_this.props.onBlur) _this.props.onBlur(event);
+                    }, _this.handleFocus = function (event) {
+                      _this.showTooltip();
+                      if (_this.props.onFocus) _this.props.onFocus(event);
+                    }, _this.handleMouseLeave = function (event) {
+                      if (!_this.refs.button.isKeyboardFocused()) _this.hideTooltip();
+                      if (_this.props.onMouseLeave) _this.props.onMouseLeave(event);
+                    }, _this.handleMouseOut = function (event) {
+                      if (_this.props.disabled) _this.hideTooltip();
+                      if (_this.props.onMouseOut) _this.props.onMouseOut(event);
+                    }, _this.handleMouseEnter = function (event) {
+                      _this.showTooltip();
+                      if (_this.props.onMouseEnter) _this.props.onMouseEnter(event);
+                    }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                      if (keyboardFocused && !_this.props.disabled) {
+                        _this.showTooltip();
+                        if (_this.props.onFocus) _this.props.onFocus(event);
+                      } else {
+                        _this.hideTooltip();
+                        if (_this.props.onBlur) _this.props.onBlur(event);
+                      }
+                
+                      if (_this.props.onKeyboardFocus) {
+                        _this.props.onKeyboardFocus(event, keyboardFocused);
+                      }
+                    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                  }>
+            }
+            onRightIconButtonTouchTap={[Function]}
+            showMenuIconButton={false}
+            style={
+                Object {
+                    "boxShadow": "none",
+                  }
+            }
+            title="Site Listing"
+            zDepth={1} />
+        <article
+            style={
+                Object {
+                    "padding": 15,
+                  }
+            }>
+            <() => {
+                  let rows = fetchSites.map(s => {
+                    return (
+                      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+                          className: 'list-table-row',
+                          key: s._id, __source: { fileName: _jsxFileName, lineNumber: 103 }, __self: this },
+            
+                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this }, s.name),
+                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 108 }, __self: this }, s.domain),
+                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: .3, textAlign: 'right' }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 109 }, __self: this }, s.active === true ? 'Y' : 'N'),
+                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 110 }, __self: this },
+                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                            icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_create2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 112 }, __self: this }),
+                            onClick: () => this._handleOpenRoles(s._id),
+                            secondary: true, __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this })),
+            
+            
+                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                            icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_delete2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }),
+                            onClick: () => this._onDeleteSite(s._id),
+                            secondary: true, __source: { fileName: _jsxFileName, lineNumber: 118 }, __self: this }))));
+            
+            
+            
+            
+                  });
+                  return (
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }, /* istanbul ignore next */_react2.default.createElement(Header, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }), rows));
+            
+                } />
+        </article>
+    </function Paper() {
+        (0, _classCallCheck3.default)(this, Paper);
+        return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+      }>
+    <function Dialog() {
+        var _ref3;
+    
+        var _temp3, _this3, _ret3;
+    
+        (0, _classCallCheck3.default)(this, Dialog);
+    
+        for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+          args[_key3] = arguments[_key3];
+        }
+    
+        return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+          return _react2.default.createElement(DialogInline, _this3.props);
+        }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+      }
+        actionsContainerStyle={
+            Object {
+                "paddingTop": 0,
+              }
+        }
+        autoDetectWindowHeight={true}
+        autoScrollBodyContent={false}
+        modal={true}
+        onRequestClose={[Function]}
+        open={false}
+        repositionOnUpdate={true}
+        title="Site Details">
+        <function Connect(props, context) {
+                _classCallCheck(this, Connect);
+        
+                var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+        
+                _this.version = version;
+                _this.store = props.store || context.store;
+        
+                (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+        
+                var storeState = _this.store.getState();
+                _this.state = { storeState: storeState };
+                _this.clearCache();
+                return _this;
+              }
+            closeFormFunc={[Function]} />
+    </function Dialog() {
+        var _ref3;
+    
+        var _temp3, _this3, _ret3;
+    
+        (0, _classCallCheck3.default)(this, Dialog);
+    
+        for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+          args[_key3] = arguments[_key3];
+        }
+    
+        return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+          return _react2.default.createElement(DialogInline, _this3.props);
+        }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+      }>
+    <function Dialog() {
+        var _ref3;
+    
+        var _temp3, _this3, _ret3;
+    
+        (0, _classCallCheck3.default)(this, Dialog);
+    
+        for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+          args[_key3] = arguments[_key3];
+        }
+    
+        return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+          return _react2.default.createElement(DialogInline, _this3.props);
+        }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+      }
+        actions={
+            Array [
+                <function FlatButton() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, FlatButton);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  hovered: false,
+                  isKeyboardFocused: false,
+                  touch: false
+                }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                  _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                  _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                }, _this.handleMouseEnter = function (event) {
+                  // Cancel hover styles for touch devices
+                  if (!_this.state.touch) _this.setState({ hovered: true });
+                  _this.props.onMouseEnter(event);
+                }, _this.handleMouseLeave = function (event) {
+                  _this.setState({ hovered: false });
+                  _this.props.onMouseLeave(event);
+                }, _this.handleTouchStart = function (event) {
+                  _this.setState({ touch: true });
+                  _this.props.onTouchStart(event);
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                  disabled={false}
+                  label="NO!"
+                  labelPosition="after"
+                  labelStyle={Object {}}
+                  onKeyboardFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onTouchStart={[Function]}
+                  onTouchTap={[Function]}
+                  primary={true}
+                  secondary={false} />,
+                <function FlatButton() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, FlatButton);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  hovered: false,
+                  isKeyboardFocused: false,
+                  touch: false
+                }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                  _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                  _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                }, _this.handleMouseEnter = function (event) {
+                  // Cancel hover styles for touch devices
+                  if (!_this.state.touch) _this.setState({ hovered: true });
+                  _this.props.onMouseEnter(event);
+                }, _this.handleMouseLeave = function (event) {
+                  _this.setState({ hovered: false });
+                  _this.props.onMouseLeave(event);
+                }, _this.handleTouchStart = function (event) {
+                  _this.setState({ touch: true });
+                  _this.props.onTouchStart(event);
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                  disabled={false}
+                  label="Go Ahead"
+                  labelPosition="after"
+                  labelStyle={Object {}}
+                  onKeyboardFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onTouchStart={[Function]}
+                  onTouchTap={[Function]}
+                  primary={false}
+                  secondary={true} />,
+              ]
+        }
+        autoDetectWindowHeight={true}
+        autoScrollBodyContent={false}
+        contentStyle={
+            Object {
+                "width": 400,
+              }
+        }
+        modal={false}
+        onRequestClose={[Function]}
+        open={false}
+        repositionOnUpdate={true}
+        title="Delete Site">
+        You sure you want to delete this site?
+        <br />
+        This action cannot be undone.
+    </function Dialog() {
+        var _ref3;
+    
+        var _temp3, _this3, _ret3;
+    
+        (0, _classCallCheck3.default)(this, Dialog);
+    
+        for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+          args[_key3] = arguments[_key3];
+        }
+    
+        return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+          return _react2.default.createElement(DialogInline, _this3.props);
+        }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+      }>
+    <function Dialog() {
+        var _ref3;
+    
+        var _temp3, _this3, _ret3;
+    
+        (0, _classCallCheck3.default)(this, Dialog);
+    
+        for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+          args[_key3] = arguments[_key3];
+        }
+    
+        return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+          return _react2.default.createElement(DialogInline, _this3.props);
+        }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+      }
+        actions={
+            Array [
+                <function FlatButton() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, FlatButton);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  hovered: false,
+                  isKeyboardFocused: false,
+                  touch: false
+                }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                  _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                  _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                }, _this.handleMouseEnter = function (event) {
+                  // Cancel hover styles for touch devices
+                  if (!_this.state.touch) _this.setState({ hovered: true });
+                  _this.props.onMouseEnter(event);
+                }, _this.handleMouseLeave = function (event) {
+                  _this.setState({ hovered: false });
+                  _this.props.onMouseLeave(event);
+                }, _this.handleTouchStart = function (event) {
+                  _this.setState({ touch: true });
+                  _this.props.onTouchStart(event);
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                  disabled={false}
+                  label="NO!"
+                  labelPosition="after"
+                  labelStyle={Object {}}
+                  onKeyboardFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onTouchStart={[Function]}
+                  onTouchTap={[Function]}
+                  primary={true}
+                  secondary={false} />,
+                <function FlatButton() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, FlatButton);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  hovered: false,
+                  isKeyboardFocused: false,
+                  touch: false
+                }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                  _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                  _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                }, _this.handleMouseEnter = function (event) {
+                  // Cancel hover styles for touch devices
+                  if (!_this.state.touch) _this.setState({ hovered: true });
+                  _this.props.onMouseEnter(event);
+                }, _this.handleMouseLeave = function (event) {
+                  _this.setState({ hovered: false });
+                  _this.props.onMouseLeave(event);
+                }, _this.handleTouchStart = function (event) {
+                  _this.setState({ touch: true });
+                  _this.props.onTouchStart(event);
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                  disabled={false}
+                  label="Go Ahead"
+                  labelPosition="after"
+                  labelStyle={Object {}}
+                  onKeyboardFocus={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onTouchStart={[Function]}
+                  onTouchTap={[Function]}
+                  primary={false}
+                  secondary={true} />,
+              ]
+        }
+        autoDetectWindowHeight={true}
+        autoScrollBodyContent={false}
+        contentStyle={
+            Object {
+                "width": 600,
+              }
+        }
+        modal={false}
+        onRequestClose={[Function]}
+        open={false}
+        repositionOnUpdate={true}
+        title="User Roles">
+        You sure you want to delete this site?
+        <br />
+        This action cannot be undone.
+    </function Dialog() {
+        var _ref3;
+    
+        var _temp3, _this3, _ret3;
+    
+        (0, _classCallCheck3.default)(this, Dialog);
+    
+        for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+          args[_key3] = arguments[_key3];
+        }
+    
+        return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+          return _react2.default.createElement(DialogInline, _this3.props);
+        }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+      }>
+    <function FlatButton() {
+        var _ref;
+    
+        var _temp, _this, _ret;
+    
+        (0, _classCallCheck3.default)(this, FlatButton);
+    
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+    
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+          hovered: false,
+          isKeyboardFocused: false,
+          touch: false
+        }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+          _this.setState({ isKeyboardFocused: isKeyboardFocused });
+          _this.props.onKeyboardFocus(event, isKeyboardFocused);
+        }, _this.handleMouseEnter = function (event) {
+          // Cancel hover styles for touch devices
+          if (!_this.state.touch) _this.setState({ hovered: true });
+          _this.props.onMouseEnter(event);
+        }, _this.handleMouseLeave = function (event) {
+          _this.setState({ hovered: false });
+          _this.props.onMouseLeave(event);
+        }, _this.handleTouchStart = function (event) {
+          _this.setState({ touch: true });
+          _this.props.onTouchStart(event);
+        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+      }
+        disabled={false}
+        label="Go Ahead danger"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={true} />
+    <function FlatButton() {
+        var _ref;
+    
+        var _temp, _this, _ret;
+    
+        (0, _classCallCheck3.default)(this, FlatButton);
+    
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+    
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+          hovered: false,
+          isKeyboardFocused: false,
+          touch: false
+        }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+          _this.setState({ isKeyboardFocused: isKeyboardFocused });
+          _this.props.onKeyboardFocus(event, isKeyboardFocused);
+        }, _this.handleMouseEnter = function (event) {
+          // Cancel hover styles for touch devices
+          if (!_this.state.touch) _this.setState({ hovered: true });
+          _this.props.onMouseEnter(event);
+        }, _this.handleMouseLeave = function (event) {
+          _this.setState({ hovered: false });
+          _this.props.onMouseLeave(event);
+        }, _this.handleTouchStart = function (event) {
+          _this.setState({ touch: true });
+          _this.props.onTouchStart(event);
+        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+      }
+        disabled={false}
+        label="Go Ahead success"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={true} />
+    <function FlatButton() {
+        var _ref;
+    
+        var _temp, _this, _ret;
+    
+        (0, _classCallCheck3.default)(this, FlatButton);
+    
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+    
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+          hovered: false,
+          isKeyboardFocused: false,
+          touch: false
+        }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+          _this.setState({ isKeyboardFocused: isKeyboardFocused });
+          _this.props.onKeyboardFocus(event, isKeyboardFocused);
+        }, _this.handleMouseEnter = function (event) {
+          // Cancel hover styles for touch devices
+          if (!_this.state.touch) _this.setState({ hovered: true });
+          _this.props.onMouseEnter(event);
+        }, _this.handleMouseLeave = function (event) {
+          _this.setState({ hovered: false });
+          _this.props.onMouseLeave(event);
+        }, _this.handleTouchStart = function (event) {
+          _this.setState({ touch: true });
+          _this.props.onTouchStart(event);
+        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+      }
+        disabled={false}
+        label="Go Ahead info"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={true} />
+    <function FlatButton() {
+        var _ref;
+    
+        var _temp, _this, _ret;
+    
+        (0, _classCallCheck3.default)(this, FlatButton);
+    
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+          args[_key] = arguments[_key];
+        }
+    
+        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+          hovered: false,
+          isKeyboardFocused: false,
+          touch: false
+        }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+          _this.setState({ isKeyboardFocused: isKeyboardFocused });
+          _this.props.onKeyboardFocus(event, isKeyboardFocused);
+        }, _this.handleMouseEnter = function (event) {
+          // Cancel hover styles for touch devices
+          if (!_this.state.touch) _this.setState({ hovered: true });
+          _this.props.onMouseEnter(event);
+        }, _this.handleMouseLeave = function (event) {
+          _this.setState({ hovered: false });
+          _this.props.onMouseLeave(event);
+        }, _this.handleTouchStart = function (event) {
+          _this.setState({ touch: true });
+          _this.props.onTouchStart(event);
+        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+      }
+        disabled={false}
+        label="Go Ahead warning"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        onTouchTap={[Function]}
+        primary={false}
+        secondary={true} />
+</section>,
+  "nodes": Array [
+    <section
+      className="App-container">
+      <function Paper() {
+          (0, _classCallCheck3.default)(this, Paper);
+          return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+        }
+            circle={false}
+            rounded={true}
+            transitionEnabled={true}
+            zDepth={1}>
+            <function AppBar() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, AppBar);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = AppBar.__proto__ || (0, _getPrototypeOf2.default)(AppBar)).call.apply(_ref, [this].concat(args))), _this), _this.handleTouchTapLeftIconButton = function (event) {
+                  if (_this.props.onLeftIconButtonTouchTap) {
+                    _this.props.onLeftIconButtonTouchTap(event);
+                  }
+                }, _this.handleTouchTapRightIconButton = function (event) {
+                  if (_this.props.onRightIconButtonTouchTap) {
+                    _this.props.onRightIconButtonTouchTap(event);
+                  }
+                }, _this.handleTitleTouchTap = function (event) {
+                  if (_this.props.onTitleTouchTap) {
+                    _this.props.onTitleTouchTap(event);
+                  }
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                  iconElementRight={
+                        <function IconButton() {
+                            var _ref;
+                        
+                            var _temp, _this, _ret;
+                        
+                            (0, _classCallCheck3.default)(this, IconButton);
+                        
+                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                              args[_key] = arguments[_key];
+                            }
+                        
+                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = IconButton.__proto__ || (0, _getPrototypeOf2.default)(IconButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                              tooltipShown: false
+                            }, _this.handleBlur = function (event) {
+                              _this.hideTooltip();
+                              if (_this.props.onBlur) _this.props.onBlur(event);
+                            }, _this.handleFocus = function (event) {
+                              _this.showTooltip();
+                              if (_this.props.onFocus) _this.props.onFocus(event);
+                            }, _this.handleMouseLeave = function (event) {
+                              if (!_this.refs.button.isKeyboardFocused()) _this.hideTooltip();
+                              if (_this.props.onMouseLeave) _this.props.onMouseLeave(event);
+                            }, _this.handleMouseOut = function (event) {
+                              if (_this.props.disabled) _this.hideTooltip();
+                              if (_this.props.onMouseOut) _this.props.onMouseOut(event);
+                            }, _this.handleMouseEnter = function (event) {
+                              _this.showTooltip();
+                              if (_this.props.onMouseEnter) _this.props.onMouseEnter(event);
+                            }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                              if (keyboardFocused && !_this.props.disabled) {
+                                _this.showTooltip();
+                                if (_this.props.onFocus) _this.props.onFocus(event);
+                              } else {
+                                _this.hideTooltip();
+                                if (_this.props.onBlur) _this.props.onBlur(event);
+                              }
+                        
+                              if (_this.props.onKeyboardFocus) {
+                                _this.props.onKeyboardFocus(event, keyboardFocused);
+                              }
+                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                          }
+                              disableTouchRipple={false}
+                              disabled={false}
+                              iconStyle={
+                                    Object {
+                                          "fill": "#22A699",
+                                          "height": 36,
+                                          "padding": 6,
+                                          "width": 36,
+                                        }
+                              }
+                              style={
+                                    Object {
+                                          "height": 40,
+                                          "padding": 0,
+                                          "width": 50,
+                                        }
+                              }
+                              tooltipPosition="bottom-center"
+                              touch={false}>
+                              <function _class() {
+                                      _classCallCheck(this, _class);
+                              
+                                      return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                    } />
+                        </function IconButton() {
+                            var _ref;
+                        
+                            var _temp, _this, _ret;
+                        
+                            (0, _classCallCheck3.default)(this, IconButton);
+                        
+                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                              args[_key] = arguments[_key];
+                            }
+                        
+                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = IconButton.__proto__ || (0, _getPrototypeOf2.default)(IconButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                              tooltipShown: false
+                            }, _this.handleBlur = function (event) {
+                              _this.hideTooltip();
+                              if (_this.props.onBlur) _this.props.onBlur(event);
+                            }, _this.handleFocus = function (event) {
+                              _this.showTooltip();
+                              if (_this.props.onFocus) _this.props.onFocus(event);
+                            }, _this.handleMouseLeave = function (event) {
+                              if (!_this.refs.button.isKeyboardFocused()) _this.hideTooltip();
+                              if (_this.props.onMouseLeave) _this.props.onMouseLeave(event);
+                            }, _this.handleMouseOut = function (event) {
+                              if (_this.props.disabled) _this.hideTooltip();
+                              if (_this.props.onMouseOut) _this.props.onMouseOut(event);
+                            }, _this.handleMouseEnter = function (event) {
+                              _this.showTooltip();
+                              if (_this.props.onMouseEnter) _this.props.onMouseEnter(event);
+                            }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                              if (keyboardFocused && !_this.props.disabled) {
+                                _this.showTooltip();
+                                if (_this.props.onFocus) _this.props.onFocus(event);
+                              } else {
+                                _this.hideTooltip();
+                                if (_this.props.onBlur) _this.props.onBlur(event);
+                              }
+                        
+                              if (_this.props.onKeyboardFocus) {
+                                _this.props.onKeyboardFocus(event, keyboardFocused);
+                              }
+                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                          }>
+                  }
+                  onRightIconButtonTouchTap={[Function]}
+                  showMenuIconButton={false}
+                  style={
+                        Object {
+                              "boxShadow": "none",
+                            }
+                  }
+                  title="Site Listing"
+                  zDepth={1} />
+            <article
+                  style={
+                        Object {
+                              "padding": 15,
+                            }
+                  }>
+                  <() => {
+                        let rows = fetchSites.map(s => {
+                          return (
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+                                className: 'list-table-row',
+                                key: s._id, __source: { fileName: _jsxFileName, lineNumber: 103 }, __self: this },
+                  
+                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this }, s.name),
+                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 108 }, __self: this }, s.domain),
+                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: .3, textAlign: 'right' }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 109 }, __self: this }, s.active === true ? 'Y' : 'N'),
+                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 110 }, __self: this },
+                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                                  icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_create2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 112 }, __self: this }),
+                                  onClick: () => this._handleOpenRoles(s._id),
+                                  secondary: true, __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this })),
+                  
+                  
+                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                                  icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_delete2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }),
+                                  onClick: () => this._onDeleteSite(s._id),
+                                  secondary: true, __source: { fileName: _jsxFileName, lineNumber: 118 }, __self: this }))));
+                  
+                  
+                  
+                  
+                        });
+                        return (
+                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }, /* istanbul ignore next */_react2.default.createElement(Header, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }), rows));
+                  
+                      } />
+            </article>
+      </function Paper() {
+          (0, _classCallCheck3.default)(this, Paper);
+          return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+        }>
+      <function Dialog() {
+          var _ref3;
+      
+          var _temp3, _this3, _ret3;
+      
+          (0, _classCallCheck3.default)(this, Dialog);
+      
+          for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+            args[_key3] = arguments[_key3];
+          }
+      
+          return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+            return _react2.default.createElement(DialogInline, _this3.props);
+          }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+        }
+            actionsContainerStyle={
+                  Object {
+                        "paddingTop": 0,
+                      }
+            }
+            autoDetectWindowHeight={true}
+            autoScrollBodyContent={false}
+            modal={true}
+            onRequestClose={[Function]}
+            open={false}
+            repositionOnUpdate={true}
+            title="Site Details">
+            <function Connect(props, context) {
+                    _classCallCheck(this, Connect);
+            
+                    var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+            
+                    _this.version = version;
+                    _this.store = props.store || context.store;
+            
+                    (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+            
+                    var storeState = _this.store.getState();
+                    _this.state = { storeState: storeState };
+                    _this.clearCache();
+                    return _this;
+                  }
+                  closeFormFunc={[Function]} />
+      </function Dialog() {
+          var _ref3;
+      
+          var _temp3, _this3, _ret3;
+      
+          (0, _classCallCheck3.default)(this, Dialog);
+      
+          for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+            args[_key3] = arguments[_key3];
+          }
+      
+          return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+            return _react2.default.createElement(DialogInline, _this3.props);
+          }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+        }>
+      <function Dialog() {
+          var _ref3;
+      
+          var _temp3, _this3, _ret3;
+      
+          (0, _classCallCheck3.default)(this, Dialog);
+      
+          for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+            args[_key3] = arguments[_key3];
+          }
+      
+          return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+            return _react2.default.createElement(DialogInline, _this3.props);
+          }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+        }
+            actions={
+                  Array [
+                        <function FlatButton() {
+                      var _ref;
+                  
+                      var _temp, _this, _ret;
+                  
+                      (0, _classCallCheck3.default)(this, FlatButton);
+                  
+                      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                      }
+                  
+                      return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                        hovered: false,
+                        isKeyboardFocused: false,
+                        touch: false
+                      }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                        _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                        _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                      }, _this.handleMouseEnter = function (event) {
+                        // Cancel hover styles for touch devices
+                        if (!_this.state.touch) _this.setState({ hovered: true });
+                        _this.props.onMouseEnter(event);
+                      }, _this.handleMouseLeave = function (event) {
+                        _this.setState({ hovered: false });
+                        _this.props.onMouseLeave(event);
+                      }, _this.handleTouchStart = function (event) {
+                        _this.setState({ touch: true });
+                        _this.props.onTouchStart(event);
+                      }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                    }
+                          disabled={false}
+                          label="NO!"
+                          labelPosition="after"
+                          labelStyle={Object {}}
+                          onKeyboardFocus={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onTouchStart={[Function]}
+                          onTouchTap={[Function]}
+                          primary={true}
+                          secondary={false} />,
+                        <function FlatButton() {
+                      var _ref;
+                  
+                      var _temp, _this, _ret;
+                  
+                      (0, _classCallCheck3.default)(this, FlatButton);
+                  
+                      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                      }
+                  
+                      return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                        hovered: false,
+                        isKeyboardFocused: false,
+                        touch: false
+                      }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                        _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                        _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                      }, _this.handleMouseEnter = function (event) {
+                        // Cancel hover styles for touch devices
+                        if (!_this.state.touch) _this.setState({ hovered: true });
+                        _this.props.onMouseEnter(event);
+                      }, _this.handleMouseLeave = function (event) {
+                        _this.setState({ hovered: false });
+                        _this.props.onMouseLeave(event);
+                      }, _this.handleTouchStart = function (event) {
+                        _this.setState({ touch: true });
+                        _this.props.onTouchStart(event);
+                      }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                    }
+                          disabled={false}
+                          label="Go Ahead"
+                          labelPosition="after"
+                          labelStyle={Object {}}
+                          onKeyboardFocus={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onTouchStart={[Function]}
+                          onTouchTap={[Function]}
+                          primary={false}
+                          secondary={true} />,
+                      ]
+            }
+            autoDetectWindowHeight={true}
+            autoScrollBodyContent={false}
+            contentStyle={
+                  Object {
+                        "width": 400,
+                      }
+            }
+            modal={false}
+            onRequestClose={[Function]}
+            open={false}
+            repositionOnUpdate={true}
+            title="Delete Site">
+            You sure you want to delete this site?
+            <br />
+            This action cannot be undone.
+      </function Dialog() {
+          var _ref3;
+      
+          var _temp3, _this3, _ret3;
+      
+          (0, _classCallCheck3.default)(this, Dialog);
+      
+          for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+            args[_key3] = arguments[_key3];
+          }
+      
+          return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+            return _react2.default.createElement(DialogInline, _this3.props);
+          }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+        }>
+      <function Dialog() {
+          var _ref3;
+      
+          var _temp3, _this3, _ret3;
+      
+          (0, _classCallCheck3.default)(this, Dialog);
+      
+          for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+            args[_key3] = arguments[_key3];
+          }
+      
+          return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+            return _react2.default.createElement(DialogInline, _this3.props);
+          }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+        }
+            actions={
+                  Array [
+                        <function FlatButton() {
+                      var _ref;
+                  
+                      var _temp, _this, _ret;
+                  
+                      (0, _classCallCheck3.default)(this, FlatButton);
+                  
+                      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                      }
+                  
+                      return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                        hovered: false,
+                        isKeyboardFocused: false,
+                        touch: false
+                      }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                        _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                        _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                      }, _this.handleMouseEnter = function (event) {
+                        // Cancel hover styles for touch devices
+                        if (!_this.state.touch) _this.setState({ hovered: true });
+                        _this.props.onMouseEnter(event);
+                      }, _this.handleMouseLeave = function (event) {
+                        _this.setState({ hovered: false });
+                        _this.props.onMouseLeave(event);
+                      }, _this.handleTouchStart = function (event) {
+                        _this.setState({ touch: true });
+                        _this.props.onTouchStart(event);
+                      }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                    }
+                          disabled={false}
+                          label="NO!"
+                          labelPosition="after"
+                          labelStyle={Object {}}
+                          onKeyboardFocus={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onTouchStart={[Function]}
+                          onTouchTap={[Function]}
+                          primary={true}
+                          secondary={false} />,
+                        <function FlatButton() {
+                      var _ref;
+                  
+                      var _temp, _this, _ret;
+                  
+                      (0, _classCallCheck3.default)(this, FlatButton);
+                  
+                      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                      }
+                  
+                      return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                        hovered: false,
+                        isKeyboardFocused: false,
+                        touch: false
+                      }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                        _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                        _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                      }, _this.handleMouseEnter = function (event) {
+                        // Cancel hover styles for touch devices
+                        if (!_this.state.touch) _this.setState({ hovered: true });
+                        _this.props.onMouseEnter(event);
+                      }, _this.handleMouseLeave = function (event) {
+                        _this.setState({ hovered: false });
+                        _this.props.onMouseLeave(event);
+                      }, _this.handleTouchStart = function (event) {
+                        _this.setState({ touch: true });
+                        _this.props.onTouchStart(event);
+                      }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                    }
+                          disabled={false}
+                          label="Go Ahead"
+                          labelPosition="after"
+                          labelStyle={Object {}}
+                          onKeyboardFocus={[Function]}
+                          onMouseEnter={[Function]}
+                          onMouseLeave={[Function]}
+                          onTouchStart={[Function]}
+                          onTouchTap={[Function]}
+                          primary={false}
+                          secondary={true} />,
+                      ]
+            }
+            autoDetectWindowHeight={true}
+            autoScrollBodyContent={false}
+            contentStyle={
+                  Object {
+                        "width": 600,
+                      }
+            }
+            modal={false}
+            onRequestClose={[Function]}
+            open={false}
+            repositionOnUpdate={true}
+            title="User Roles">
+            You sure you want to delete this site?
+            <br />
+            This action cannot be undone.
+      </function Dialog() {
+          var _ref3;
+      
+          var _temp3, _this3, _ret3;
+      
+          (0, _classCallCheck3.default)(this, Dialog);
+      
+          for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+            args[_key3] = arguments[_key3];
+          }
+      
+          return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+            return _react2.default.createElement(DialogInline, _this3.props);
+          }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+        }>
+      <function FlatButton() {
+          var _ref;
+      
+          var _temp, _this, _ret;
+      
+          (0, _classCallCheck3.default)(this, FlatButton);
+      
+          for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+      
+          return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            hovered: false,
+            isKeyboardFocused: false,
+            touch: false
+          }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+            _this.setState({ isKeyboardFocused: isKeyboardFocused });
+            _this.props.onKeyboardFocus(event, isKeyboardFocused);
+          }, _this.handleMouseEnter = function (event) {
+            // Cancel hover styles for touch devices
+            if (!_this.state.touch) _this.setState({ hovered: true });
+            _this.props.onMouseEnter(event);
+          }, _this.handleMouseLeave = function (event) {
+            _this.setState({ hovered: false });
+            _this.props.onMouseLeave(event);
+          }, _this.handleTouchStart = function (event) {
+            _this.setState({ touch: true });
+            _this.props.onTouchStart(event);
+          }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+        }
+            disabled={false}
+            label="Go Ahead danger"
+            labelPosition="after"
+            labelStyle={Object {}}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onTouchStart={[Function]}
+            onTouchTap={[Function]}
+            primary={false}
+            secondary={true} />
+      <function FlatButton() {
+          var _ref;
+      
+          var _temp, _this, _ret;
+      
+          (0, _classCallCheck3.default)(this, FlatButton);
+      
+          for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+      
+          return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            hovered: false,
+            isKeyboardFocused: false,
+            touch: false
+          }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+            _this.setState({ isKeyboardFocused: isKeyboardFocused });
+            _this.props.onKeyboardFocus(event, isKeyboardFocused);
+          }, _this.handleMouseEnter = function (event) {
+            // Cancel hover styles for touch devices
+            if (!_this.state.touch) _this.setState({ hovered: true });
+            _this.props.onMouseEnter(event);
+          }, _this.handleMouseLeave = function (event) {
+            _this.setState({ hovered: false });
+            _this.props.onMouseLeave(event);
+          }, _this.handleTouchStart = function (event) {
+            _this.setState({ touch: true });
+            _this.props.onTouchStart(event);
+          }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+        }
+            disabled={false}
+            label="Go Ahead success"
+            labelPosition="after"
+            labelStyle={Object {}}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onTouchStart={[Function]}
+            onTouchTap={[Function]}
+            primary={false}
+            secondary={true} />
+      <function FlatButton() {
+          var _ref;
+      
+          var _temp, _this, _ret;
+      
+          (0, _classCallCheck3.default)(this, FlatButton);
+      
+          for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+      
+          return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            hovered: false,
+            isKeyboardFocused: false,
+            touch: false
+          }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+            _this.setState({ isKeyboardFocused: isKeyboardFocused });
+            _this.props.onKeyboardFocus(event, isKeyboardFocused);
+          }, _this.handleMouseEnter = function (event) {
+            // Cancel hover styles for touch devices
+            if (!_this.state.touch) _this.setState({ hovered: true });
+            _this.props.onMouseEnter(event);
+          }, _this.handleMouseLeave = function (event) {
+            _this.setState({ hovered: false });
+            _this.props.onMouseLeave(event);
+          }, _this.handleTouchStart = function (event) {
+            _this.setState({ touch: true });
+            _this.props.onTouchStart(event);
+          }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+        }
+            disabled={false}
+            label="Go Ahead info"
+            labelPosition="after"
+            labelStyle={Object {}}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onTouchStart={[Function]}
+            onTouchTap={[Function]}
+            primary={false}
+            secondary={true} />
+      <function FlatButton() {
+          var _ref;
+      
+          var _temp, _this, _ret;
+      
+          (0, _classCallCheck3.default)(this, FlatButton);
+      
+          for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+      
+          return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            hovered: false,
+            isKeyboardFocused: false,
+            touch: false
+          }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+            _this.setState({ isKeyboardFocused: isKeyboardFocused });
+            _this.props.onKeyboardFocus(event, isKeyboardFocused);
+          }, _this.handleMouseEnter = function (event) {
+            // Cancel hover styles for touch devices
+            if (!_this.state.touch) _this.setState({ hovered: true });
+            _this.props.onMouseEnter(event);
+          }, _this.handleMouseLeave = function (event) {
+            _this.setState({ hovered: false });
+            _this.props.onMouseLeave(event);
+          }, _this.handleTouchStart = function (event) {
+            _this.setState({ touch: true });
+            _this.props.onTouchStart(event);
+          }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+        }
+            disabled={false}
+            label="Go Ahead warning"
+            labelPosition="after"
+            labelStyle={Object {}}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onTouchStart={[Function]}
+            onTouchTap={[Function]}
+            primary={false}
+            secondary={true} />
+</section>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <class Site extends /* istanbul ignore next */_react.Component {
+
+  constructor(props) {
+    super(props); /* istanbul ignore next */this.
+
+
+
+
+
+
+
+
+    _handleOpen = () => {
+      this.setState({ openForm: true });
+    }; /* istanbul ignore next */this.
+
+    _handleOpenDelete = () => {
+      this.setState({ openDelete: true });
+    }; /* istanbul ignore next */this.
+
+    _handleOpenRoles = () => {
+      this.setState({ openRoles: true });
+    }; /* istanbul ignore next */this.
+
+    _handleClose = () => {
+      this.setState({ openForm: false });
+      this.setState({ openDelete: false });
+      this.setState({ openRoles: false });
+    }; /* istanbul ignore next */this.
+
+    _handleRowClick = site => {
+      this._handleOpen();
+      this.props.actions.setSiteScratch({ site });
+    }; /* istanbul ignore next */this.
+
+    _onAddSite = () => {
+      this.props.actions.setSiteCreate();
+      this._handleOpen();
+    }; /* istanbul ignore next */this.
+
+    _onDeleteSite = id => {
+      this.setState({ siteID: id });
+      this._handleOpenDelete();
+    }; /* istanbul ignore next */this.
+
+    _onDeleteConfirm = () => {
+      this.props.removeSite(this.state.siteID).then(res => {
+        this.props.refetch();
+        this._handleClose();
+      });
+    };this.state = { openForm: false, openDelete: false, openRoles: false, siteID: null };}
+
+  render() {/* istanbul ignore next */var _props =
+
+    this.props; /* istanbul ignore next */const loading = _props.loading; /* istanbul ignore next */const fetchSites = _props.fetchSites;
+    if (loading) {
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 86 }, __self: this }, /* istanbul ignore next */'Loading...'));
+
+    }
+
+    const Header = () =>
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'list-table-header', __source: { fileName: _jsxFileName, lineNumber: 91 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, __source: { fileName: _jsxFileName, lineNumber: 92 }, __self: this }, /* istanbul ignore next */'Name'),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, __source: { fileName: _jsxFileName, lineNumber: 93 }, __self: this }, /* istanbul ignore next */'Domain'),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: .5 }, __source: { fileName: _jsxFileName, lineNumber: 94 }, __self: this }, /* istanbul ignore next */'Active'),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 95 }, __self: this }, /* istanbul ignore next */'User Roles'),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 96 }, __self: this }));
+
+
+
+    const SiteList = () => {
+      let rows = fetchSites.map(s => {
+        return (
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+              className: 'list-table-row',
+              key: s._id, __source: { fileName: _jsxFileName, lineNumber: 103 }, __self: this },
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this }, s.name),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 108 }, __self: this }, s.domain),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: .3, textAlign: 'right' }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 109 }, __self: this }, s.active === true ? 'Y' : 'N'),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 110 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_create2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 112 }, __self: this }),
+                onClick: () => this._handleOpenRoles(s._id),
+                secondary: true, __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this })),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_delete2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }),
+                onClick: () => this._onDeleteSite(s._id),
+                secondary: true, __source: { fileName: _jsxFileName, lineNumber: 118 }, __self: this }))));
+
+
+
+
+      });
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }, /* istanbul ignore next */_react2.default.createElement(Header, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }), rows));
+
+    };
+
+    const deleteActions = [
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+      label: 'NO!',
+      primary: true,
+      onTouchTap: this._handleClose, __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this }),
+
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+      label: 'Go Ahead',
+      secondary: true,
+      onTouchTap: this._onDeleteConfirm, __source: { fileName: _jsxFileName, lineNumber: 138 }, __self: this })];
+
+
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */{ className: 'App-container', __source: { fileName: _jsxFileName, lineNumber: 146 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Paper2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 147 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_AppBar2.default, /* istanbul ignore next */{
+            iconElementRight: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_IconButton2.default, /* istanbul ignore next */{ iconStyle: /* istanbul ignore next */_styles.styles.appBarEleIconStyle, style: /* istanbul ignore next */_styles.styles.appBarEleStyle, __source: { fileName: _jsxFileName, lineNumber: 149 }, __self: this }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_add2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 149 }, __self: this })),
+            onRightIconButtonTouchTap: () => this._onAddSite(),
+            showMenuIconButton: false,
+            style: /* istanbul ignore next */_styles.styles.appBar,
+            title: 'Site Listing', __source: { fileName: _jsxFileName, lineNumber: 148 }, __self: this }),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'article', /* istanbul ignore next */{ style: /* istanbul ignore next */_styles.styles.paper, __source: { fileName: _jsxFileName, lineNumber: 155 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement(SiteList, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 156 }, __self: this }))),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Dialog2.default, /* istanbul ignore next */{
+            actionsContainerStyle: { paddingTop: 0 },
+            modal: true,
+            onRequestClose: this._handleClose,
+            open: this.state.openForm,
+            title: 'Site Details', __source: { fileName: _jsxFileName, lineNumber: 159 }, __self: this },
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Siteform2.default, /* istanbul ignore next */{ closeFormFunc: this._handleClose, __source: { fileName: _jsxFileName, lineNumber: 166 }, __self: this })),
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Dialog2.default, /* istanbul ignore next */{
+            actions: deleteActions,
+            contentStyle: { width: 400 },
+            onRequestClose: this._handleClose,
+            open: this.state.openDelete,
+            title: 'Delete Site', __source: { fileName: _jsxFileName, lineNumber: 168 }, __self: this }, /* istanbul ignore next */'You sure you want to delete this site?',
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 175 }, __self: this }), /* istanbul ignore next */'This action cannot be undone.'),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Dialog2.default, /* istanbul ignore next */{
+            actions: deleteActions,
+            contentStyle: { width: 600 },
+            onRequestClose: this._handleClose,
+            open: this.state.openRoles,
+            title: 'User Roles', __source: { fileName: _jsxFileName, lineNumber: 178 }, __self: this }, /* istanbul ignore next */'You sure you want to delete this site?',
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 185 }, __self: this }), /* istanbul ignore next */'This action cannot be undone.'),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+          label: 'Go Ahead danger',
+          secondary: true,
+          onTouchTap: () => this.props.actions.alertSend({
+            message: 'Invalid entries, please check your information.',
+            type: 'danger',
+            dismissAfter: 2000 }), __source: { fileName: _jsxFileName, lineNumber: 188 }, __self: this }),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+          label: 'Go Ahead success',
+          secondary: true,
+          onTouchTap: () => this.props.actions.alertSend({
+            message: 'It worked! Imagine that...<br />New line??',
+            type: 'success',
+            dismissAfter: 5000 }), __source: { fileName: _jsxFileName, lineNumber: 197 }, __self: this }),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+          label: 'Go Ahead info',
+          secondary: true,
+          onTouchTap: () => this.props.actions.alertSend({
+            message: 'It worked! Imagine that...',
+            type: 'info',
+            dismissAfter: 1000 }), __source: { fileName: _jsxFileName, lineNumber: 206 }, __self: this }),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+          label: 'Go Ahead warning',
+          secondary: true,
+          onTouchTap: () => this.props.actions.alertSend({
+            message: 'ERROR: It worked! Imagine that...',
+            type: 'warning' }), __source: { fileName: _jsxFileName, lineNumber: 215 }, __self: this })));
+
+
+
+
+
+  }} />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Site {
+        "_handleClose": [Function],
+        "_handleOpen": [Function],
+        "_handleOpenDelete": [Function],
+        "_handleOpenRoles": [Function],
+        "_handleRowClick": [Function],
+        "_onAddSite": [Function],
+        "_onDeleteConfirm": [Function],
+        "_onDeleteSite": [Function],
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": Object {
+          "openDelete": false,
+          "openForm": false,
+          "openRoles": false,
+          "siteID": null,
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": Object {
+        "_currentElement": <section
+          className="App-container">
+          <function Paper() {
+              (0, _classCallCheck3.default)(this, Paper);
+              return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+            }
+                    circle={false}
+                    rounded={true}
+                    transitionEnabled={true}
+                    zDepth={1}>
+                    <function AppBar() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, AppBar);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = AppBar.__proto__ || (0, _getPrototypeOf2.default)(AppBar)).call.apply(_ref, [this].concat(args))), _this), _this.handleTouchTapLeftIconButton = function (event) {
+                          if (_this.props.onLeftIconButtonTouchTap) {
+                            _this.props.onLeftIconButtonTouchTap(event);
+                          }
+                        }, _this.handleTouchTapRightIconButton = function (event) {
+                          if (_this.props.onRightIconButtonTouchTap) {
+                            _this.props.onRightIconButtonTouchTap(event);
+                          }
+                        }, _this.handleTitleTouchTap = function (event) {
+                          if (_this.props.onTitleTouchTap) {
+                            _this.props.onTitleTouchTap(event);
+                          }
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }
+                              iconElementRight={
+                                        <function IconButton() {
+                                            var _ref;
+                                        
+                                            var _temp, _this, _ret;
+                                        
+                                            (0, _classCallCheck3.default)(this, IconButton);
+                                        
+                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                              args[_key] = arguments[_key];
+                                            }
+                                        
+                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = IconButton.__proto__ || (0, _getPrototypeOf2.default)(IconButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                              tooltipShown: false
+                                            }, _this.handleBlur = function (event) {
+                                              _this.hideTooltip();
+                                              if (_this.props.onBlur) _this.props.onBlur(event);
+                                            }, _this.handleFocus = function (event) {
+                                              _this.showTooltip();
+                                              if (_this.props.onFocus) _this.props.onFocus(event);
+                                            }, _this.handleMouseLeave = function (event) {
+                                              if (!_this.refs.button.isKeyboardFocused()) _this.hideTooltip();
+                                              if (_this.props.onMouseLeave) _this.props.onMouseLeave(event);
+                                            }, _this.handleMouseOut = function (event) {
+                                              if (_this.props.disabled) _this.hideTooltip();
+                                              if (_this.props.onMouseOut) _this.props.onMouseOut(event);
+                                            }, _this.handleMouseEnter = function (event) {
+                                              _this.showTooltip();
+                                              if (_this.props.onMouseEnter) _this.props.onMouseEnter(event);
+                                            }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                              if (keyboardFocused && !_this.props.disabled) {
+                                                _this.showTooltip();
+                                                if (_this.props.onFocus) _this.props.onFocus(event);
+                                              } else {
+                                                _this.hideTooltip();
+                                                if (_this.props.onBlur) _this.props.onBlur(event);
+                                              }
+                                        
+                                              if (_this.props.onKeyboardFocus) {
+                                                _this.props.onKeyboardFocus(event, keyboardFocused);
+                                              }
+                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                          }
+                                                  disableTouchRipple={false}
+                                                  disabled={false}
+                                                  iconStyle={
+                                                            Object {
+                                                                      "fill": "#22A699",
+                                                                      "height": 36,
+                                                                      "padding": 6,
+                                                                      "width": 36,
+                                                                    }
+                                                  }
+                                                  style={
+                                                            Object {
+                                                                      "height": 40,
+                                                                      "padding": 0,
+                                                                      "width": 50,
+                                                                    }
+                                                  }
+                                                  tooltipPosition="bottom-center"
+                                                  touch={false}>
+                                                  <function _class() {
+                                                          _classCallCheck(this, _class);
+                                                  
+                                                          return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                                        } />
+                                        </function IconButton() {
+                                            var _ref;
+                                        
+                                            var _temp, _this, _ret;
+                                        
+                                            (0, _classCallCheck3.default)(this, IconButton);
+                                        
+                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                              args[_key] = arguments[_key];
+                                            }
+                                        
+                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = IconButton.__proto__ || (0, _getPrototypeOf2.default)(IconButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                              tooltipShown: false
+                                            }, _this.handleBlur = function (event) {
+                                              _this.hideTooltip();
+                                              if (_this.props.onBlur) _this.props.onBlur(event);
+                                            }, _this.handleFocus = function (event) {
+                                              _this.showTooltip();
+                                              if (_this.props.onFocus) _this.props.onFocus(event);
+                                            }, _this.handleMouseLeave = function (event) {
+                                              if (!_this.refs.button.isKeyboardFocused()) _this.hideTooltip();
+                                              if (_this.props.onMouseLeave) _this.props.onMouseLeave(event);
+                                            }, _this.handleMouseOut = function (event) {
+                                              if (_this.props.disabled) _this.hideTooltip();
+                                              if (_this.props.onMouseOut) _this.props.onMouseOut(event);
+                                            }, _this.handleMouseEnter = function (event) {
+                                              _this.showTooltip();
+                                              if (_this.props.onMouseEnter) _this.props.onMouseEnter(event);
+                                            }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                              if (keyboardFocused && !_this.props.disabled) {
+                                                _this.showTooltip();
+                                                if (_this.props.onFocus) _this.props.onFocus(event);
+                                              } else {
+                                                _this.hideTooltip();
+                                                if (_this.props.onBlur) _this.props.onBlur(event);
+                                              }
+                                        
+                                              if (_this.props.onKeyboardFocus) {
+                                                _this.props.onKeyboardFocus(event, keyboardFocused);
+                                              }
+                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                          }>
+                              }
+                              onRightIconButtonTouchTap={[Function]}
+                              showMenuIconButton={false}
+                              style={
+                                        Object {
+                                                  "boxShadow": "none",
+                                                }
+                              }
+                              title="Site Listing"
+                              zDepth={1} />
+                    <article
+                              style={
+                                        Object {
+                                                  "padding": 15,
+                                                }
+                              }>
+                              <() => {
+                                    let rows = fetchSites.map(s => {
+                                      return (
+                                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+                                            className: 'list-table-row',
+                                            key: s._id, __source: { fileName: _jsxFileName, lineNumber: 103 }, __self: this },
+                              
+                                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this }, s.name),
+                                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 108 }, __self: this }, s.domain),
+                                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: .3, textAlign: 'right' }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 109 }, __self: this }, s.active === true ? 'Y' : 'N'),
+                                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 110 }, __self: this },
+                                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                                              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_create2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 112 }, __self: this }),
+                                              onClick: () => this._handleOpenRoles(s._id),
+                                              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this })),
+                              
+                              
+                                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+                                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                                              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_delete2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }),
+                                              onClick: () => this._onDeleteSite(s._id),
+                                              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 118 }, __self: this }))));
+                              
+                              
+                              
+                              
+                                    });
+                                    return (
+                                      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }, /* istanbul ignore next */_react2.default.createElement(Header, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }), rows));
+                              
+                                  } />
+                    </article>
+          </function Paper() {
+              (0, _classCallCheck3.default)(this, Paper);
+              return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+            }>
+          <function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }
+                    actionsContainerStyle={
+                              Object {
+                                        "paddingTop": 0,
+                                      }
+                    }
+                    autoDetectWindowHeight={true}
+                    autoScrollBodyContent={false}
+                    modal={true}
+                    onRequestClose={[Function]}
+                    open={false}
+                    repositionOnUpdate={true}
+                    title="Site Details">
+                    <function Connect(props, context) {
+                            _classCallCheck(this, Connect);
+                    
+                            var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+                    
+                            _this.version = version;
+                            _this.store = props.store || context.store;
+                    
+                            (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+                    
+                            var storeState = _this.store.getState();
+                            _this.state = { storeState: storeState };
+                            _this.clearCache();
+                            return _this;
+                          }
+                              closeFormFunc={[Function]} />
+          </function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }>
+          <function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }
+                    actions={
+                              Array [
+                                        <function FlatButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, FlatButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    isKeyboardFocused: false,
+                                    touch: false
+                                  }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                                    _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                                    _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                                  }, _this.handleMouseEnter = function (event) {
+                                    // Cancel hover styles for touch devices
+                                    if (!_this.state.touch) _this.setState({ hovered: true });
+                                    _this.props.onMouseEnter(event);
+                                  }, _this.handleMouseLeave = function (event) {
+                                    _this.setState({ hovered: false });
+                                    _this.props.onMouseLeave(event);
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({ touch: true });
+                                    _this.props.onTouchStart(event);
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                          disabled={false}
+                                          label="NO!"
+                                          labelPosition="after"
+                                          labelStyle={Object {}}
+                                          onKeyboardFocus={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          onTouchStart={[Function]}
+                                          onTouchTap={[Function]}
+                                          primary={true}
+                                          secondary={false} />,
+                                        <function FlatButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, FlatButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    isKeyboardFocused: false,
+                                    touch: false
+                                  }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                                    _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                                    _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                                  }, _this.handleMouseEnter = function (event) {
+                                    // Cancel hover styles for touch devices
+                                    if (!_this.state.touch) _this.setState({ hovered: true });
+                                    _this.props.onMouseEnter(event);
+                                  }, _this.handleMouseLeave = function (event) {
+                                    _this.setState({ hovered: false });
+                                    _this.props.onMouseLeave(event);
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({ touch: true });
+                                    _this.props.onTouchStart(event);
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                          disabled={false}
+                                          label="Go Ahead"
+                                          labelPosition="after"
+                                          labelStyle={Object {}}
+                                          onKeyboardFocus={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          onTouchStart={[Function]}
+                                          onTouchTap={[Function]}
+                                          primary={false}
+                                          secondary={true} />,
+                                      ]
+                    }
+                    autoDetectWindowHeight={true}
+                    autoScrollBodyContent={false}
+                    contentStyle={
+                              Object {
+                                        "width": 400,
+                                      }
+                    }
+                    modal={false}
+                    onRequestClose={[Function]}
+                    open={false}
+                    repositionOnUpdate={true}
+                    title="Delete Site">
+                    You sure you want to delete this site?
+                    <br />
+                    This action cannot be undone.
+          </function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }>
+          <function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }
+                    actions={
+                              Array [
+                                        <function FlatButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, FlatButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    isKeyboardFocused: false,
+                                    touch: false
+                                  }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                                    _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                                    _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                                  }, _this.handleMouseEnter = function (event) {
+                                    // Cancel hover styles for touch devices
+                                    if (!_this.state.touch) _this.setState({ hovered: true });
+                                    _this.props.onMouseEnter(event);
+                                  }, _this.handleMouseLeave = function (event) {
+                                    _this.setState({ hovered: false });
+                                    _this.props.onMouseLeave(event);
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({ touch: true });
+                                    _this.props.onTouchStart(event);
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                          disabled={false}
+                                          label="NO!"
+                                          labelPosition="after"
+                                          labelStyle={Object {}}
+                                          onKeyboardFocus={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          onTouchStart={[Function]}
+                                          onTouchTap={[Function]}
+                                          primary={true}
+                                          secondary={false} />,
+                                        <function FlatButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, FlatButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    isKeyboardFocused: false,
+                                    touch: false
+                                  }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                                    _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                                    _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                                  }, _this.handleMouseEnter = function (event) {
+                                    // Cancel hover styles for touch devices
+                                    if (!_this.state.touch) _this.setState({ hovered: true });
+                                    _this.props.onMouseEnter(event);
+                                  }, _this.handleMouseLeave = function (event) {
+                                    _this.setState({ hovered: false });
+                                    _this.props.onMouseLeave(event);
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({ touch: true });
+                                    _this.props.onTouchStart(event);
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                          disabled={false}
+                                          label="Go Ahead"
+                                          labelPosition="after"
+                                          labelStyle={Object {}}
+                                          onKeyboardFocus={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          onTouchStart={[Function]}
+                                          onTouchTap={[Function]}
+                                          primary={false}
+                                          secondary={true} />,
+                                      ]
+                    }
+                    autoDetectWindowHeight={true}
+                    autoScrollBodyContent={false}
+                    contentStyle={
+                              Object {
+                                        "width": 600,
+                                      }
+                    }
+                    modal={false}
+                    onRequestClose={[Function]}
+                    open={false}
+                    repositionOnUpdate={true}
+                    title="User Roles">
+                    You sure you want to delete this site?
+                    <br />
+                    This action cannot be undone.
+          </function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }>
+          <function FlatButton() {
+              var _ref;
+          
+              var _temp, _this, _ret;
+          
+              (0, _classCallCheck3.default)(this, FlatButton);
+          
+              for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+              }
+          
+              return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                hovered: false,
+                isKeyboardFocused: false,
+                touch: false
+              }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                _this.props.onKeyboardFocus(event, isKeyboardFocused);
+              }, _this.handleMouseEnter = function (event) {
+                // Cancel hover styles for touch devices
+                if (!_this.state.touch) _this.setState({ hovered: true });
+                _this.props.onMouseEnter(event);
+              }, _this.handleMouseLeave = function (event) {
+                _this.setState({ hovered: false });
+                _this.props.onMouseLeave(event);
+              }, _this.handleTouchStart = function (event) {
+                _this.setState({ touch: true });
+                _this.props.onTouchStart(event);
+              }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+            }
+                    disabled={false}
+                    label="Go Ahead danger"
+                    labelPosition="after"
+                    labelStyle={Object {}}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onTouchStart={[Function]}
+                    onTouchTap={[Function]}
+                    primary={false}
+                    secondary={true} />
+          <function FlatButton() {
+              var _ref;
+          
+              var _temp, _this, _ret;
+          
+              (0, _classCallCheck3.default)(this, FlatButton);
+          
+              for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+              }
+          
+              return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                hovered: false,
+                isKeyboardFocused: false,
+                touch: false
+              }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                _this.props.onKeyboardFocus(event, isKeyboardFocused);
+              }, _this.handleMouseEnter = function (event) {
+                // Cancel hover styles for touch devices
+                if (!_this.state.touch) _this.setState({ hovered: true });
+                _this.props.onMouseEnter(event);
+              }, _this.handleMouseLeave = function (event) {
+                _this.setState({ hovered: false });
+                _this.props.onMouseLeave(event);
+              }, _this.handleTouchStart = function (event) {
+                _this.setState({ touch: true });
+                _this.props.onTouchStart(event);
+              }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+            }
+                    disabled={false}
+                    label="Go Ahead success"
+                    labelPosition="after"
+                    labelStyle={Object {}}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onTouchStart={[Function]}
+                    onTouchTap={[Function]}
+                    primary={false}
+                    secondary={true} />
+          <function FlatButton() {
+              var _ref;
+          
+              var _temp, _this, _ret;
+          
+              (0, _classCallCheck3.default)(this, FlatButton);
+          
+              for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+              }
+          
+              return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                hovered: false,
+                isKeyboardFocused: false,
+                touch: false
+              }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                _this.props.onKeyboardFocus(event, isKeyboardFocused);
+              }, _this.handleMouseEnter = function (event) {
+                // Cancel hover styles for touch devices
+                if (!_this.state.touch) _this.setState({ hovered: true });
+                _this.props.onMouseEnter(event);
+              }, _this.handleMouseLeave = function (event) {
+                _this.setState({ hovered: false });
+                _this.props.onMouseLeave(event);
+              }, _this.handleTouchStart = function (event) {
+                _this.setState({ touch: true });
+                _this.props.onTouchStart(event);
+              }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+            }
+                    disabled={false}
+                    label="Go Ahead info"
+                    labelPosition="after"
+                    labelStyle={Object {}}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onTouchStart={[Function]}
+                    onTouchTap={[Function]}
+                    primary={false}
+                    secondary={true} />
+          <function FlatButton() {
+              var _ref;
+          
+              var _temp, _this, _ret;
+          
+              (0, _classCallCheck3.default)(this, FlatButton);
+          
+              for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+              }
+          
+              return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                hovered: false,
+                isKeyboardFocused: false,
+                touch: false
+              }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                _this.props.onKeyboardFocus(event, isKeyboardFocused);
+              }, _this.handleMouseEnter = function (event) {
+                // Cancel hover styles for touch devices
+                if (!_this.state.touch) _this.setState({ hovered: true });
+                _this.props.onMouseEnter(event);
+              }, _this.handleMouseLeave = function (event) {
+                _this.setState({ hovered: false });
+                _this.props.onMouseLeave(event);
+              }, _this.handleTouchStart = function (event) {
+                _this.setState({ touch: true });
+                _this.props.onTouchStart(event);
+              }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+            }
+                    disabled={false}
+                    label="Go Ahead warning"
+                    labelPosition="after"
+                    labelStyle={Object {}}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onTouchStart={[Function]}
+                    onTouchTap={[Function]}
+                    primary={false}
+                    secondary={true} />
+</section>,
+        "_debugID": 2,
+        "_renderedOutput": <section
+          className="App-container">
+          <function Paper() {
+              (0, _classCallCheck3.default)(this, Paper);
+              return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+            }
+                    circle={false}
+                    rounded={true}
+                    transitionEnabled={true}
+                    zDepth={1}>
+                    <function AppBar() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, AppBar);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = AppBar.__proto__ || (0, _getPrototypeOf2.default)(AppBar)).call.apply(_ref, [this].concat(args))), _this), _this.handleTouchTapLeftIconButton = function (event) {
+                          if (_this.props.onLeftIconButtonTouchTap) {
+                            _this.props.onLeftIconButtonTouchTap(event);
+                          }
+                        }, _this.handleTouchTapRightIconButton = function (event) {
+                          if (_this.props.onRightIconButtonTouchTap) {
+                            _this.props.onRightIconButtonTouchTap(event);
+                          }
+                        }, _this.handleTitleTouchTap = function (event) {
+                          if (_this.props.onTitleTouchTap) {
+                            _this.props.onTitleTouchTap(event);
+                          }
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }
+                              iconElementRight={
+                                        <function IconButton() {
+                                            var _ref;
+                                        
+                                            var _temp, _this, _ret;
+                                        
+                                            (0, _classCallCheck3.default)(this, IconButton);
+                                        
+                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                              args[_key] = arguments[_key];
+                                            }
+                                        
+                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = IconButton.__proto__ || (0, _getPrototypeOf2.default)(IconButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                              tooltipShown: false
+                                            }, _this.handleBlur = function (event) {
+                                              _this.hideTooltip();
+                                              if (_this.props.onBlur) _this.props.onBlur(event);
+                                            }, _this.handleFocus = function (event) {
+                                              _this.showTooltip();
+                                              if (_this.props.onFocus) _this.props.onFocus(event);
+                                            }, _this.handleMouseLeave = function (event) {
+                                              if (!_this.refs.button.isKeyboardFocused()) _this.hideTooltip();
+                                              if (_this.props.onMouseLeave) _this.props.onMouseLeave(event);
+                                            }, _this.handleMouseOut = function (event) {
+                                              if (_this.props.disabled) _this.hideTooltip();
+                                              if (_this.props.onMouseOut) _this.props.onMouseOut(event);
+                                            }, _this.handleMouseEnter = function (event) {
+                                              _this.showTooltip();
+                                              if (_this.props.onMouseEnter) _this.props.onMouseEnter(event);
+                                            }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                              if (keyboardFocused && !_this.props.disabled) {
+                                                _this.showTooltip();
+                                                if (_this.props.onFocus) _this.props.onFocus(event);
+                                              } else {
+                                                _this.hideTooltip();
+                                                if (_this.props.onBlur) _this.props.onBlur(event);
+                                              }
+                                        
+                                              if (_this.props.onKeyboardFocus) {
+                                                _this.props.onKeyboardFocus(event, keyboardFocused);
+                                              }
+                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                          }
+                                                  disableTouchRipple={false}
+                                                  disabled={false}
+                                                  iconStyle={
+                                                            Object {
+                                                                      "fill": "#22A699",
+                                                                      "height": 36,
+                                                                      "padding": 6,
+                                                                      "width": 36,
+                                                                    }
+                                                  }
+                                                  style={
+                                                            Object {
+                                                                      "height": 40,
+                                                                      "padding": 0,
+                                                                      "width": 50,
+                                                                    }
+                                                  }
+                                                  tooltipPosition="bottom-center"
+                                                  touch={false}>
+                                                  <function _class() {
+                                                          _classCallCheck(this, _class);
+                                                  
+                                                          return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                                        } />
+                                        </function IconButton() {
+                                            var _ref;
+                                        
+                                            var _temp, _this, _ret;
+                                        
+                                            (0, _classCallCheck3.default)(this, IconButton);
+                                        
+                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                              args[_key] = arguments[_key];
+                                            }
+                                        
+                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = IconButton.__proto__ || (0, _getPrototypeOf2.default)(IconButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                              tooltipShown: false
+                                            }, _this.handleBlur = function (event) {
+                                              _this.hideTooltip();
+                                              if (_this.props.onBlur) _this.props.onBlur(event);
+                                            }, _this.handleFocus = function (event) {
+                                              _this.showTooltip();
+                                              if (_this.props.onFocus) _this.props.onFocus(event);
+                                            }, _this.handleMouseLeave = function (event) {
+                                              if (!_this.refs.button.isKeyboardFocused()) _this.hideTooltip();
+                                              if (_this.props.onMouseLeave) _this.props.onMouseLeave(event);
+                                            }, _this.handleMouseOut = function (event) {
+                                              if (_this.props.disabled) _this.hideTooltip();
+                                              if (_this.props.onMouseOut) _this.props.onMouseOut(event);
+                                            }, _this.handleMouseEnter = function (event) {
+                                              _this.showTooltip();
+                                              if (_this.props.onMouseEnter) _this.props.onMouseEnter(event);
+                                            }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                              if (keyboardFocused && !_this.props.disabled) {
+                                                _this.showTooltip();
+                                                if (_this.props.onFocus) _this.props.onFocus(event);
+                                              } else {
+                                                _this.hideTooltip();
+                                                if (_this.props.onBlur) _this.props.onBlur(event);
+                                              }
+                                        
+                                              if (_this.props.onKeyboardFocus) {
+                                                _this.props.onKeyboardFocus(event, keyboardFocused);
+                                              }
+                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                          }>
+                              }
+                              onRightIconButtonTouchTap={[Function]}
+                              showMenuIconButton={false}
+                              style={
+                                        Object {
+                                                  "boxShadow": "none",
+                                                }
+                              }
+                              title="Site Listing"
+                              zDepth={1} />
+                    <article
+                              style={
+                                        Object {
+                                                  "padding": 15,
+                                                }
+                              }>
+                              <() => {
+                                    let rows = fetchSites.map(s => {
+                                      return (
+                                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+                                            className: 'list-table-row',
+                                            key: s._id, __source: { fileName: _jsxFileName, lineNumber: 103 }, __self: this },
+                              
+                                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this }, s.name),
+                                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 108 }, __self: this }, s.domain),
+                                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: .3, textAlign: 'right' }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 109 }, __self: this }, s.active === true ? 'Y' : 'N'),
+                                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 110 }, __self: this },
+                                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                                              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_create2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 112 }, __self: this }),
+                                              onClick: () => this._handleOpenRoles(s._id),
+                                              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this })),
+                              
+                              
+                                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+                                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                                              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_delete2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }),
+                                              onClick: () => this._onDeleteSite(s._id),
+                                              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 118 }, __self: this }))));
+                              
+                              
+                              
+                              
+                                    });
+                                    return (
+                                      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }, /* istanbul ignore next */_react2.default.createElement(Header, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }), rows));
+                              
+                                  } />
+                    </article>
+          </function Paper() {
+              (0, _classCallCheck3.default)(this, Paper);
+              return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+            }>
+          <function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }
+                    actionsContainerStyle={
+                              Object {
+                                        "paddingTop": 0,
+                                      }
+                    }
+                    autoDetectWindowHeight={true}
+                    autoScrollBodyContent={false}
+                    modal={true}
+                    onRequestClose={[Function]}
+                    open={false}
+                    repositionOnUpdate={true}
+                    title="Site Details">
+                    <function Connect(props, context) {
+                            _classCallCheck(this, Connect);
+                    
+                            var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+                    
+                            _this.version = version;
+                            _this.store = props.store || context.store;
+                    
+                            (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+                    
+                            var storeState = _this.store.getState();
+                            _this.state = { storeState: storeState };
+                            _this.clearCache();
+                            return _this;
+                          }
+                              closeFormFunc={[Function]} />
+          </function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }>
+          <function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }
+                    actions={
+                              Array [
+                                        <function FlatButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, FlatButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    isKeyboardFocused: false,
+                                    touch: false
+                                  }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                                    _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                                    _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                                  }, _this.handleMouseEnter = function (event) {
+                                    // Cancel hover styles for touch devices
+                                    if (!_this.state.touch) _this.setState({ hovered: true });
+                                    _this.props.onMouseEnter(event);
+                                  }, _this.handleMouseLeave = function (event) {
+                                    _this.setState({ hovered: false });
+                                    _this.props.onMouseLeave(event);
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({ touch: true });
+                                    _this.props.onTouchStart(event);
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                          disabled={false}
+                                          label="NO!"
+                                          labelPosition="after"
+                                          labelStyle={Object {}}
+                                          onKeyboardFocus={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          onTouchStart={[Function]}
+                                          onTouchTap={[Function]}
+                                          primary={true}
+                                          secondary={false} />,
+                                        <function FlatButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, FlatButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    isKeyboardFocused: false,
+                                    touch: false
+                                  }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                                    _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                                    _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                                  }, _this.handleMouseEnter = function (event) {
+                                    // Cancel hover styles for touch devices
+                                    if (!_this.state.touch) _this.setState({ hovered: true });
+                                    _this.props.onMouseEnter(event);
+                                  }, _this.handleMouseLeave = function (event) {
+                                    _this.setState({ hovered: false });
+                                    _this.props.onMouseLeave(event);
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({ touch: true });
+                                    _this.props.onTouchStart(event);
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                          disabled={false}
+                                          label="Go Ahead"
+                                          labelPosition="after"
+                                          labelStyle={Object {}}
+                                          onKeyboardFocus={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          onTouchStart={[Function]}
+                                          onTouchTap={[Function]}
+                                          primary={false}
+                                          secondary={true} />,
+                                      ]
+                    }
+                    autoDetectWindowHeight={true}
+                    autoScrollBodyContent={false}
+                    contentStyle={
+                              Object {
+                                        "width": 400,
+                                      }
+                    }
+                    modal={false}
+                    onRequestClose={[Function]}
+                    open={false}
+                    repositionOnUpdate={true}
+                    title="Delete Site">
+                    You sure you want to delete this site?
+                    <br />
+                    This action cannot be undone.
+          </function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }>
+          <function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }
+                    actions={
+                              Array [
+                                        <function FlatButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, FlatButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    isKeyboardFocused: false,
+                                    touch: false
+                                  }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                                    _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                                    _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                                  }, _this.handleMouseEnter = function (event) {
+                                    // Cancel hover styles for touch devices
+                                    if (!_this.state.touch) _this.setState({ hovered: true });
+                                    _this.props.onMouseEnter(event);
+                                  }, _this.handleMouseLeave = function (event) {
+                                    _this.setState({ hovered: false });
+                                    _this.props.onMouseLeave(event);
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({ touch: true });
+                                    _this.props.onTouchStart(event);
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                          disabled={false}
+                                          label="NO!"
+                                          labelPosition="after"
+                                          labelStyle={Object {}}
+                                          onKeyboardFocus={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          onTouchStart={[Function]}
+                                          onTouchTap={[Function]}
+                                          primary={true}
+                                          secondary={false} />,
+                                        <function FlatButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, FlatButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    isKeyboardFocused: false,
+                                    touch: false
+                                  }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                                    _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                                    _this.props.onKeyboardFocus(event, isKeyboardFocused);
+                                  }, _this.handleMouseEnter = function (event) {
+                                    // Cancel hover styles for touch devices
+                                    if (!_this.state.touch) _this.setState({ hovered: true });
+                                    _this.props.onMouseEnter(event);
+                                  }, _this.handleMouseLeave = function (event) {
+                                    _this.setState({ hovered: false });
+                                    _this.props.onMouseLeave(event);
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({ touch: true });
+                                    _this.props.onTouchStart(event);
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                          disabled={false}
+                                          label="Go Ahead"
+                                          labelPosition="after"
+                                          labelStyle={Object {}}
+                                          onKeyboardFocus={[Function]}
+                                          onMouseEnter={[Function]}
+                                          onMouseLeave={[Function]}
+                                          onTouchStart={[Function]}
+                                          onTouchTap={[Function]}
+                                          primary={false}
+                                          secondary={true} />,
+                                      ]
+                    }
+                    autoDetectWindowHeight={true}
+                    autoScrollBodyContent={false}
+                    contentStyle={
+                              Object {
+                                        "width": 600,
+                                      }
+                    }
+                    modal={false}
+                    onRequestClose={[Function]}
+                    open={false}
+                    repositionOnUpdate={true}
+                    title="User Roles">
+                    You sure you want to delete this site?
+                    <br />
+                    This action cannot be undone.
+          </function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }>
+          <function FlatButton() {
+              var _ref;
+          
+              var _temp, _this, _ret;
+          
+              (0, _classCallCheck3.default)(this, FlatButton);
+          
+              for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+              }
+          
+              return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                hovered: false,
+                isKeyboardFocused: false,
+                touch: false
+              }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                _this.props.onKeyboardFocus(event, isKeyboardFocused);
+              }, _this.handleMouseEnter = function (event) {
+                // Cancel hover styles for touch devices
+                if (!_this.state.touch) _this.setState({ hovered: true });
+                _this.props.onMouseEnter(event);
+              }, _this.handleMouseLeave = function (event) {
+                _this.setState({ hovered: false });
+                _this.props.onMouseLeave(event);
+              }, _this.handleTouchStart = function (event) {
+                _this.setState({ touch: true });
+                _this.props.onTouchStart(event);
+              }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+            }
+                    disabled={false}
+                    label="Go Ahead danger"
+                    labelPosition="after"
+                    labelStyle={Object {}}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onTouchStart={[Function]}
+                    onTouchTap={[Function]}
+                    primary={false}
+                    secondary={true} />
+          <function FlatButton() {
+              var _ref;
+          
+              var _temp, _this, _ret;
+          
+              (0, _classCallCheck3.default)(this, FlatButton);
+          
+              for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+              }
+          
+              return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                hovered: false,
+                isKeyboardFocused: false,
+                touch: false
+              }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                _this.props.onKeyboardFocus(event, isKeyboardFocused);
+              }, _this.handleMouseEnter = function (event) {
+                // Cancel hover styles for touch devices
+                if (!_this.state.touch) _this.setState({ hovered: true });
+                _this.props.onMouseEnter(event);
+              }, _this.handleMouseLeave = function (event) {
+                _this.setState({ hovered: false });
+                _this.props.onMouseLeave(event);
+              }, _this.handleTouchStart = function (event) {
+                _this.setState({ touch: true });
+                _this.props.onTouchStart(event);
+              }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+            }
+                    disabled={false}
+                    label="Go Ahead success"
+                    labelPosition="after"
+                    labelStyle={Object {}}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onTouchStart={[Function]}
+                    onTouchTap={[Function]}
+                    primary={false}
+                    secondary={true} />
+          <function FlatButton() {
+              var _ref;
+          
+              var _temp, _this, _ret;
+          
+              (0, _classCallCheck3.default)(this, FlatButton);
+          
+              for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+              }
+          
+              return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                hovered: false,
+                isKeyboardFocused: false,
+                touch: false
+              }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                _this.props.onKeyboardFocus(event, isKeyboardFocused);
+              }, _this.handleMouseEnter = function (event) {
+                // Cancel hover styles for touch devices
+                if (!_this.state.touch) _this.setState({ hovered: true });
+                _this.props.onMouseEnter(event);
+              }, _this.handleMouseLeave = function (event) {
+                _this.setState({ hovered: false });
+                _this.props.onMouseLeave(event);
+              }, _this.handleTouchStart = function (event) {
+                _this.setState({ touch: true });
+                _this.props.onTouchStart(event);
+              }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+            }
+                    disabled={false}
+                    label="Go Ahead info"
+                    labelPosition="after"
+                    labelStyle={Object {}}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onTouchStart={[Function]}
+                    onTouchTap={[Function]}
+                    primary={false}
+                    secondary={true} />
+          <function FlatButton() {
+              var _ref;
+          
+              var _temp, _this, _ret;
+          
+              (0, _classCallCheck3.default)(this, FlatButton);
+          
+              for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+              }
+          
+              return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = FlatButton.__proto__ || (0, _getPrototypeOf2.default)(FlatButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                hovered: false,
+                isKeyboardFocused: false,
+                touch: false
+              }, _this.handleKeyboardFocus = function (event, isKeyboardFocused) {
+                _this.setState({ isKeyboardFocused: isKeyboardFocused });
+                _this.props.onKeyboardFocus(event, isKeyboardFocused);
+              }, _this.handleMouseEnter = function (event) {
+                // Cancel hover styles for touch devices
+                if (!_this.state.touch) _this.setState({ hovered: true });
+                _this.props.onMouseEnter(event);
+              }, _this.handleMouseLeave = function (event) {
+                _this.setState({ hovered: false });
+                _this.props.onMouseLeave(event);
+              }, _this.handleTouchStart = function (event) {
+                _this.setState({ touch: true });
+                _this.props.onTouchStart(event);
+              }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+            }
+                    disabled={false}
+                    label="Go Ahead warning"
+                    labelPosition="after"
+                    labelStyle={Object {}}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onTouchStart={[Function]}
+                    onTouchTap={[Function]}
+                    primary={false}
+                    secondary={true} />
+</section>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <class Site extends /* istanbul ignore next */_react.Component {
+
+  constructor(props) {
+    super(props); /* istanbul ignore next */this.
+
+
+
+
+
+
+
+
+    _handleOpen = () => {
+      this.setState({ openForm: true });
+    }; /* istanbul ignore next */this.
+
+    _handleOpenDelete = () => {
+      this.setState({ openDelete: true });
+    }; /* istanbul ignore next */this.
+
+    _handleOpenRoles = () => {
+      this.setState({ openRoles: true });
+    }; /* istanbul ignore next */this.
+
+    _handleClose = () => {
+      this.setState({ openForm: false });
+      this.setState({ openDelete: false });
+      this.setState({ openRoles: false });
+    }; /* istanbul ignore next */this.
+
+    _handleRowClick = site => {
+      this._handleOpen();
+      this.props.actions.setSiteScratch({ site });
+    }; /* istanbul ignore next */this.
+
+    _onAddSite = () => {
+      this.props.actions.setSiteCreate();
+      this._handleOpen();
+    }; /* istanbul ignore next */this.
+
+    _onDeleteSite = id => {
+      this.setState({ siteID: id });
+      this._handleOpenDelete();
+    }; /* istanbul ignore next */this.
+
+    _onDeleteConfirm = () => {
+      this.props.removeSite(this.state.siteID).then(res => {
+        this.props.refetch();
+        this._handleClose();
+      });
+    };this.state = { openForm: false, openDelete: false, openRoles: false, siteID: null };}
+
+  render() {/* istanbul ignore next */var _props =
+
+    this.props; /* istanbul ignore next */const loading = _props.loading; /* istanbul ignore next */const fetchSites = _props.fetchSites;
+    if (loading) {
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 86 }, __self: this }, /* istanbul ignore next */'Loading...'));
+
+    }
+
+    const Header = () =>
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'list-table-header', __source: { fileName: _jsxFileName, lineNumber: 91 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, __source: { fileName: _jsxFileName, lineNumber: 92 }, __self: this }, /* istanbul ignore next */'Name'),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, __source: { fileName: _jsxFileName, lineNumber: 93 }, __self: this }, /* istanbul ignore next */'Domain'),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: .5 }, __source: { fileName: _jsxFileName, lineNumber: 94 }, __self: this }, /* istanbul ignore next */'Active'),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 95 }, __self: this }, /* istanbul ignore next */'User Roles'),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 96 }, __self: this }));
+
+
+
+    const SiteList = () => {
+      let rows = fetchSites.map(s => {
+        return (
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
+              className: 'list-table-row',
+              key: s._id, __source: { fileName: _jsxFileName, lineNumber: 103 }, __self: this },
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this }, s.name),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: 1.5 }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 108 }, __self: this }, s.domain),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', style: { flex: .3, textAlign: 'right' }, onClick: () => this._handleRowClick(s), __source: { fileName: _jsxFileName, lineNumber: 109 }, __self: this }, s.active === true ? 'Y' : 'N'),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 110 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_create2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 112 }, __self: this }),
+                onClick: () => this._handleOpenRoles(s._id),
+                secondary: true, __source: { fileName: _jsxFileName, lineNumber: 111 }, __self: this })),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_delete2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }),
+                onClick: () => this._onDeleteSite(s._id),
+                secondary: true, __source: { fileName: _jsxFileName, lineNumber: 118 }, __self: this }))));
+
+
+
+
+      });
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }, /* istanbul ignore next */_react2.default.createElement(Header, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }), rows));
+
+    };
+
+    const deleteActions = [
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+      label: 'NO!',
+      primary: true,
+      onTouchTap: this._handleClose, __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this }),
+
+    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+      label: 'Go Ahead',
+      secondary: true,
+      onTouchTap: this._onDeleteConfirm, __source: { fileName: _jsxFileName, lineNumber: 138 }, __self: this })];
+
+
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */{ className: 'App-container', __source: { fileName: _jsxFileName, lineNumber: 146 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Paper2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 147 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_AppBar2.default, /* istanbul ignore next */{
+            iconElementRight: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_IconButton2.default, /* istanbul ignore next */{ iconStyle: /* istanbul ignore next */_styles.styles.appBarEleIconStyle, style: /* istanbul ignore next */_styles.styles.appBarEleStyle, __source: { fileName: _jsxFileName, lineNumber: 149 }, __self: this }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_add2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 149 }, __self: this })),
+            onRightIconButtonTouchTap: () => this._onAddSite(),
+            showMenuIconButton: false,
+            style: /* istanbul ignore next */_styles.styles.appBar,
+            title: 'Site Listing', __source: { fileName: _jsxFileName, lineNumber: 148 }, __self: this }),
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'article', /* istanbul ignore next */{ style: /* istanbul ignore next */_styles.styles.paper, __source: { fileName: _jsxFileName, lineNumber: 155 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement(SiteList, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 156 }, __self: this }))),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Dialog2.default, /* istanbul ignore next */{
+            actionsContainerStyle: { paddingTop: 0 },
+            modal: true,
+            onRequestClose: this._handleClose,
+            open: this.state.openForm,
+            title: 'Site Details', __source: { fileName: _jsxFileName, lineNumber: 159 }, __self: this },
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Siteform2.default, /* istanbul ignore next */{ closeFormFunc: this._handleClose, __source: { fileName: _jsxFileName, lineNumber: 166 }, __self: this })),
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Dialog2.default, /* istanbul ignore next */{
+            actions: deleteActions,
+            contentStyle: { width: 400 },
+            onRequestClose: this._handleClose,
+            open: this.state.openDelete,
+            title: 'Delete Site', __source: { fileName: _jsxFileName, lineNumber: 168 }, __self: this }, /* istanbul ignore next */'You sure you want to delete this site?',
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 175 }, __self: this }), /* istanbul ignore next */'This action cannot be undone.'),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Dialog2.default, /* istanbul ignore next */{
+            actions: deleteActions,
+            contentStyle: { width: 600 },
+            onRequestClose: this._handleClose,
+            open: this.state.openRoles,
+            title: 'User Roles', __source: { fileName: _jsxFileName, lineNumber: 178 }, __self: this }, /* istanbul ignore next */'You sure you want to delete this site?',
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 185 }, __self: this }), /* istanbul ignore next */'This action cannot be undone.'),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+          label: 'Go Ahead danger',
+          secondary: true,
+          onTouchTap: () => this.props.actions.alertSend({
+            message: 'Invalid entries, please check your information.',
+            type: 'danger',
+            dismissAfter: 2000 }), __source: { fileName: _jsxFileName, lineNumber: 188 }, __self: this }),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+          label: 'Go Ahead success',
+          secondary: true,
+          onTouchTap: () => this.props.actions.alertSend({
+            message: 'It worked! Imagine that...<br />New line??',
+            type: 'success',
+            dismissAfter: 5000 }), __source: { fileName: _jsxFileName, lineNumber: 197 }, __self: this }),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+          label: 'Go Ahead info',
+          secondary: true,
+          onTouchTap: () => this.props.actions.alertSend({
+            message: 'It worked! Imagine that...',
+            type: 'info',
+            dismissAfter: 1000 }), __source: { fileName: _jsxFileName, lineNumber: 206 }, __self: this }),
+
+
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+          label: 'Go Ahead warning',
+          secondary: true,
+          onTouchTap: () => this.props.actions.alertSend({
+            message: 'ERROR: It worked! Imagine that...',
+            type: 'warning' }), __source: { fileName: _jsxFileName, lineNumber: 215 }, __self: this })));
+
+
+
+
+
+  }} />,
+}
+`;

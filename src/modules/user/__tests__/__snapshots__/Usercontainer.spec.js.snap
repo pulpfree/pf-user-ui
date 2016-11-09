@@ -88,6 +88,7 @@ ShallowWrapper {
                     disabled={false}
                     iconStyle={
                         Object {
+                            "fill": "#22A699",
                             "height": 36,
                             "padding": 6,
                             "width": 36,
@@ -171,114 +172,11 @@ ShallowWrapper {
               }
                 autoWidth={false}
                 disabled={false}
+                floatingLabelFixed={true}
+                floatingLabelText="Select Site"
                 fullWidth={false}
-                hintText="Select Site"
                 onChange={[Function]}
-                value={null}>
-                <function MenuItem() {
-                    var _ref;
-                
-                    var _temp, _this, _ret;
-                
-                    (0, _classCallCheck3.default)(this, MenuItem);
-                
-                    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                      args[_key] = arguments[_key];
-                    }
-                
-                    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-                      open: false
-                    }, _this.cloneMenuItem = function (item) {
-                      return _react2.default.cloneElement(item, {
-                        onTouchTap: function onTouchTap(event) {
-                          if (!item.props.menuItems) {
-                            _this.handleRequestClose();
-                          }
-                
-                          if (item.props.onTouchTap) {
-                            item.props.onTouchTap(event);
-                          }
-                        }
-                      });
-                    }, _this.handleTouchTap = function (event) {
-                      event.preventDefault();
-                
-                      _this.setState({
-                        open: true,
-                        anchorEl: _reactDom2.default.findDOMNode(_this)
-                      });
-                
-                      if (_this.props.onTouchTap) {
-                        _this.props.onTouchTap(event);
-                      }
-                    }, _this.handleRequestClose = function () {
-                      _this.setState({
-                        open: false,
-                        anchorEl: null
-                      });
-                    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
-                  }
-                    checked={false}
-                    desktop={false}
-                    disabled={false}
-                    focusState="none"
-                    insetChildren={false}
-                    primaryText="Universal App"
-                    value="abc" />
-                <function MenuItem() {
-                    var _ref;
-                
-                    var _temp, _this, _ret;
-                
-                    (0, _classCallCheck3.default)(this, MenuItem);
-                
-                    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                      args[_key] = arguments[_key];
-                    }
-                
-                    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-                      open: false
-                    }, _this.cloneMenuItem = function (item) {
-                      return _react2.default.cloneElement(item, {
-                        onTouchTap: function onTouchTap(event) {
-                          if (!item.props.menuItems) {
-                            _this.handleRequestClose();
-                          }
-                
-                          if (item.props.onTouchTap) {
-                            item.props.onTouchTap(event);
-                          }
-                        }
-                      });
-                    }, _this.handleTouchTap = function (event) {
-                      event.preventDefault();
-                
-                      _this.setState({
-                        open: true,
-                        anchorEl: _reactDom2.default.findDOMNode(_this)
-                      });
-                
-                      if (_this.props.onTouchTap) {
-                        _this.props.onTouchTap(event);
-                      }
-                    }, _this.handleRequestClose = function () {
-                      _this.setState({
-                        open: false,
-                        anchorEl: null
-                      });
-                    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
-                  }
-                    checked={false}
-                    desktop={false}
-                    disabled={false}
-                    focusState="none"
-                    insetChildren={false}
-                    primaryText="Gales Sales"
-                    value="gales" />
-            </function SelectField() {
-                (0, _classCallCheck3.default)(this, SelectField);
-                return (0, _possibleConstructorReturn3.default)(this, (SelectField.__proto__ || (0, _getPrototypeOf2.default)(SelectField)).apply(this, arguments));
-              }>
+                value={null} />
             <br />
             <br />
             <function GraphQL(props, context) {
@@ -286,22 +184,8 @@ ShallowWrapper {
                             this.data = {};
                             this.version = version;
                             this.client = context.client;
-                            invariant(!!this.client, "Could not find "client" in the context of " +
-                                (""" + graphQLDisplayName + "". ") +
-                                "Wrap the root component in an <ApolloProvider>");
-                            this.store = this.client.store;
-                            this.type = operation.type;
-                            if (mapPropsToSkip(props))
-                                return;
-                            this.setInitialProps();
-                        } />
-            <function GraphQL(props, context) {
-                            _super.call(this, props, context);
-                            this.data = {};
-                            this.version = version;
-                            this.client = context.client;
-                            invariant(!!this.client, "Could not find "client" in the context of " +
-                                (""" + graphQLDisplayName + "". ") +
+                            invariant(!!this.client, "Could not find \"client\" in the context of " +
+                                ("\"" + graphQLDisplayName + "\". ") +
                                 "Wrap the root component in an <ApolloProvider>");
                             this.store = this.client.store;
                             this.type = operation.type;
@@ -309,11 +193,69 @@ ShallowWrapper {
                                 return;
                             this.setInitialProps();
                         }
-                type="personal" />
+                domainID={null} />
         </article>
     </function Paper() {
         (0, _classCallCheck3.default)(this, Paper);
         return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+      }>
+    <function Dialog() {
+        var _ref3;
+    
+        var _temp3, _this3, _ret3;
+    
+        (0, _classCallCheck3.default)(this, Dialog);
+    
+        for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+          args[_key3] = arguments[_key3];
+        }
+    
+        return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+          return _react2.default.createElement(DialogInline, _this3.props);
+        }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+      }
+        actionsContainerStyle={
+            Object {
+                "paddingTop": 0,
+              }
+        }
+        autoDetectWindowHeight={true}
+        autoScrollBodyContent={false}
+        modal={true}
+        onRequestClose={[Function]}
+        open={false}
+        repositionOnUpdate={true}
+        title="User Info">
+        <function Connect(props, context) {
+                _classCallCheck(this, Connect);
+        
+                var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+        
+                _this.version = version;
+                _this.store = props.store || context.store;
+        
+                (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+        
+                var storeState = _this.store.getState();
+                _this.state = { storeState: storeState };
+                _this.clearCache();
+                return _this;
+              }
+            closeFormFunc={[Function]} />
+    </function Dialog() {
+        var _ref3;
+    
+        var _temp3, _this3, _ret3;
+    
+        (0, _classCallCheck3.default)(this, Dialog);
+    
+        for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+          args[_key3] = arguments[_key3];
+        }
+    
+        return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+          return _react2.default.createElement(DialogInline, _this3.props);
+        }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
       }>
 </section>,
   "nodes": Array [
@@ -399,6 +341,7 @@ ShallowWrapper {
                               disabled={false}
                               iconStyle={
                                     Object {
+                                          "fill": "#22A699",
                                           "height": 36,
                                           "padding": 6,
                                           "width": 36,
@@ -482,114 +425,11 @@ ShallowWrapper {
                     }
                         autoWidth={false}
                         disabled={false}
+                        floatingLabelFixed={true}
+                        floatingLabelText="Select Site"
                         fullWidth={false}
-                        hintText="Select Site"
                         onChange={[Function]}
-                        value={null}>
-                        <function MenuItem() {
-                            var _ref;
-                        
-                            var _temp, _this, _ret;
-                        
-                            (0, _classCallCheck3.default)(this, MenuItem);
-                        
-                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                              args[_key] = arguments[_key];
-                            }
-                        
-                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-                              open: false
-                            }, _this.cloneMenuItem = function (item) {
-                              return _react2.default.cloneElement(item, {
-                                onTouchTap: function onTouchTap(event) {
-                                  if (!item.props.menuItems) {
-                                    _this.handleRequestClose();
-                                  }
-                        
-                                  if (item.props.onTouchTap) {
-                                    item.props.onTouchTap(event);
-                                  }
-                                }
-                              });
-                            }, _this.handleTouchTap = function (event) {
-                              event.preventDefault();
-                        
-                              _this.setState({
-                                open: true,
-                                anchorEl: _reactDom2.default.findDOMNode(_this)
-                              });
-                        
-                              if (_this.props.onTouchTap) {
-                                _this.props.onTouchTap(event);
-                              }
-                            }, _this.handleRequestClose = function () {
-                              _this.setState({
-                                open: false,
-                                anchorEl: null
-                              });
-                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
-                          }
-                              checked={false}
-                              desktop={false}
-                              disabled={false}
-                              focusState="none"
-                              insetChildren={false}
-                              primaryText="Universal App"
-                              value="abc" />
-                        <function MenuItem() {
-                            var _ref;
-                        
-                            var _temp, _this, _ret;
-                        
-                            (0, _classCallCheck3.default)(this, MenuItem);
-                        
-                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                              args[_key] = arguments[_key];
-                            }
-                        
-                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-                              open: false
-                            }, _this.cloneMenuItem = function (item) {
-                              return _react2.default.cloneElement(item, {
-                                onTouchTap: function onTouchTap(event) {
-                                  if (!item.props.menuItems) {
-                                    _this.handleRequestClose();
-                                  }
-                        
-                                  if (item.props.onTouchTap) {
-                                    item.props.onTouchTap(event);
-                                  }
-                                }
-                              });
-                            }, _this.handleTouchTap = function (event) {
-                              event.preventDefault();
-                        
-                              _this.setState({
-                                open: true,
-                                anchorEl: _reactDom2.default.findDOMNode(_this)
-                              });
-                        
-                              if (_this.props.onTouchTap) {
-                                _this.props.onTouchTap(event);
-                              }
-                            }, _this.handleRequestClose = function () {
-                              _this.setState({
-                                open: false,
-                                anchorEl: null
-                              });
-                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
-                          }
-                              checked={false}
-                              desktop={false}
-                              disabled={false}
-                              focusState="none"
-                              insetChildren={false}
-                              primaryText="Gales Sales"
-                              value="gales" />
-                  </function SelectField() {
-                      (0, _classCallCheck3.default)(this, SelectField);
-                      return (0, _possibleConstructorReturn3.default)(this, (SelectField.__proto__ || (0, _getPrototypeOf2.default)(SelectField)).apply(this, arguments));
-                    }>
+                        value={null} />
                   <br />
                   <br />
                   <function GraphQL(props, context) {
@@ -597,22 +437,8 @@ ShallowWrapper {
                                   this.data = {};
                                   this.version = version;
                                   this.client = context.client;
-                                  invariant(!!this.client, "Could not find "client" in the context of " +
-                                      (""" + graphQLDisplayName + "". ") +
-                                      "Wrap the root component in an <ApolloProvider>");
-                                  this.store = this.client.store;
-                                  this.type = operation.type;
-                                  if (mapPropsToSkip(props))
-                                      return;
-                                  this.setInitialProps();
-                              } />
-                  <function GraphQL(props, context) {
-                                  _super.call(this, props, context);
-                                  this.data = {};
-                                  this.version = version;
-                                  this.client = context.client;
-                                  invariant(!!this.client, "Could not find "client" in the context of " +
-                                      (""" + graphQLDisplayName + "". ") +
+                                  invariant(!!this.client, "Could not find \"client\" in the context of " +
+                                      ("\"" + graphQLDisplayName + "\". ") +
                                       "Wrap the root component in an <ApolloProvider>");
                                   this.store = this.client.store;
                                   this.type = operation.type;
@@ -620,11 +446,69 @@ ShallowWrapper {
                                       return;
                                   this.setInitialProps();
                               }
-                        type="personal" />
+                        domainID={null} />
             </article>
       </function Paper() {
           (0, _classCallCheck3.default)(this, Paper);
           return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+        }>
+      <function Dialog() {
+          var _ref3;
+      
+          var _temp3, _this3, _ret3;
+      
+          (0, _classCallCheck3.default)(this, Dialog);
+      
+          for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+            args[_key3] = arguments[_key3];
+          }
+      
+          return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+            return _react2.default.createElement(DialogInline, _this3.props);
+          }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+        }
+            actionsContainerStyle={
+                  Object {
+                        "paddingTop": 0,
+                      }
+            }
+            autoDetectWindowHeight={true}
+            autoScrollBodyContent={false}
+            modal={true}
+            onRequestClose={[Function]}
+            open={false}
+            repositionOnUpdate={true}
+            title="User Info">
+            <function Connect(props, context) {
+                    _classCallCheck(this, Connect);
+            
+                    var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+            
+                    _this.version = version;
+                    _this.store = props.store || context.store;
+            
+                    (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+            
+                    var storeState = _this.store.getState();
+                    _this.state = { storeState: storeState };
+                    _this.clearCache();
+                    return _this;
+                  }
+                  closeFormFunc={[Function]} />
+      </function Dialog() {
+          var _ref3;
+      
+          var _temp3, _this3, _ret3;
+      
+          (0, _classCallCheck3.default)(this, Dialog);
+      
+          for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+            args[_key3] = arguments[_key3];
+          }
+      
+          return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+            return _react2.default.createElement(DialogInline, _this3.props);
+          }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
         }>
 </section>,
   ],
@@ -644,133 +528,196 @@ ShallowWrapper {
 
 
 
+
+
+    _handleOpen = () => {
+      this.setState({ open: true });
+    }; /* istanbul ignore next */this.
+
+    _handleOpenDelete = () => {
+      this.setState({ openDelete: true });
+    }; /* istanbul ignore next */this.
+
+    _handleClose = () => {
+      this.setState({ open: false });
+      this.setState({ openDelete: false });
+    }; /* istanbul ignore next */this.
+
+    _onUserClick = user => {
+      user.domainID = this.state.siteID;
+      this.props.actions.setUserScratch({ user });
+      this._handleOpen();
+    }; /* istanbul ignore next */this.
+
     _onAddUser = () => {
-      console.log('_onAddUser:', '_onAddUser');
+      if (!this.state.siteID) {return;}
+      this.props.actions.setUserCreate();
+      this.props.actions.setUserProp({ 'domainID': this.state.siteID });
+      this._handleOpen();
     }; /* istanbul ignore next */this.
 
     _onSelectSite = (e, idx, val) => {
       this.setState({ siteID: val });
-    }; /* istanbul ignore next */this.
-
-    handleChange = event => {
-      console.log('event:', event.target.value);
-      this.setState({
-        firstName: event.target.value });
-
-    };this.state = { siteID: null, firstName: '' };}
-
-  render() {
-
-    // const { children } = this.props
-
-    const ContactsQuery = /* istanbul ignore next */_graphqlTag2.default\`
-      query ContactsQuery($type: String) {
-        fetchContacts(type: $type) {
-          _id
-          name
-          type
-        }
-      }\`;
-
-    const CREATE_CONTACT_MUTATION = /* istanbul ignore next */_graphqlTag2.default\`
-      mutation addContact($name: String) {
-        createContact(name: $name, type: "personal") {
-          _id
-          name
-          type
-        }
-      }\`;
-
-    const updateContacts = {
-      Contact: (prev, /* istanbul ignore next */_ref) => {/* istanbul ignore next */let mutationResult = _ref.mutationResult;
-        const newContact = mutationResult.data.createContact;
-        return (/* istanbul ignore next */(0, _reactAddonsUpdate2.default)(prev, {
-            entry: { contacts: { $unshift: [newContact] } } }));
-
-      } };
+    };this.state = { open: false, openDelete: false, siteID: null, userID: null };}
 
 
-    const withList = /* istanbul ignore next */(0, _reactApollo.graphql)(ContactsQuery, {
-      options: ( /* istanbul ignore next */_ref2) => /* istanbul ignore next */{let type = _ref2.type;return { variables: { type } };},
-      props: ( /* istanbul ignore next */_ref3) => {/* istanbul ignore next */let ownProps = _ref3.ownProps; /* istanbul ignore next */let data = _ref3.data;
-        if (data.loading) return { isLoading: true };
-        if (data.error) return { hasErrors: true };
-        return { contacts: data.fetchContacts };
-      } });
+  render() {/* istanbul ignore next */var _props =
 
+    this.props; /* istanbul ignore next */const loading = _props.loading; /* istanbul ignore next */const fetchSites = _props.fetchSites; /* istanbul ignore next */const removeUser = _props.removeUser;
+    if (loading) {
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 79 }, __self: this }, /* istanbul ignore next */'Loading...'));
 
-    const ContactList = props => {
-      if (props.isLoading) {
-        return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h2', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 98 }, __self: this }, /* istanbul ignore next */'Loading...'));
+    }
+
+    const UserList = data => {/* istanbul ignore next */const
+
+      loading = data.loading; /* istanbul ignore next */const fetchSiteById = data.fetchSiteById; /* istanbul ignore next */const fetchUsers = data.fetchUsers; /* istanbul ignore next */const refetch = data.refetch;
+      if (loading) {
+        return (
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 88 }, __self: this }, /* istanbul ignore next */'Loading...'));
+
       }
-      let rows = props.contacts.map(s => {
+
+      const _onDeleteUser = id => {
+        this.setState({ userID: id });
+        this._handleOpenDelete();
+      };
+
+      const _onDeleteConfirm = () => {
+        removeUser(this.state.userID, this.state.siteID).then(res => {
+          refetch();
+          this.setState({ openDelete: false });
+        });
+      };
+
+      const deleteActions = [
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+        label: 'NO!',
+        primary: true,
+        onTouchTap: this._handleClose, __source: { fileName: _jsxFileName, lineNumber: 105 }, __self: this }),
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+        label: 'Go Ahead',
+        secondary: true,
+        onTouchTap: _onDeleteConfirm, __source: { fileName: _jsxFileName, lineNumber: 110 }, __self: this })];
+
+
+
+      const Header = () =>
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'list-table-header', __source: { fileName: _jsxFileName, lineNumber: 118 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }, /* istanbul ignore next */'Name'),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 120 }, __self: this }, /* istanbul ignore next */'Active'),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 121 }, __self: this }, /* istanbul ignore next */'Email'),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 122 }, __self: this }));
+
+
+
+      const rows = fetchUsers.map(u => {
         return (
           /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
               className: 'list-table-row',
-              key: s._id, __source: { fileName: _jsxFileName, lineNumber: 102 }, __self: this },
+              key: u._id, __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this },
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 106 }, __self: this }, s._id),
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this }, s.name),
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 108 }, __self: this }, s.type)));
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', onClick: () => this._onUserClick(u), __source: { fileName: _jsxFileName, lineNumber: 132 }, __self: this },
+              u.contact.name.last, /* istanbul ignore next */', ', u.contact.name.first),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', onClick: () => this._onUserClick(u), __source: { fileName: _jsxFileName, lineNumber: 135 }, __self: this },
+              u.active ? 'Y' : 'N'),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 138 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'a', /* istanbul ignore next */{ href: \`mailto:${ u.email }\`, __source: { fileName: _jsxFileName, lineNumber: 139 }, __self: this }, u.email)),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 141 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_delete2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 143 }, __self: this }),
+                onClick: () => _onDeleteUser(u._id),
+                secondary: true, __source: { fileName: _jsxFileName, lineNumber: 142 }, __self: this }))));
+
+
 
 
       });
       return (
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 113 }, __self: this }, rows));
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this }, /* istanbul ignore next */_react2.default.createElement(Header, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this }), rows,
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Dialog2.default, /* istanbul ignore next */{
+              actions: deleteActions,
+              contentStyle: { width: 400 },
+              onRequestClose: this._handleClose,
+              open: this.state.openDelete, __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this }, /* istanbul ignore next */'You sure you want to delete this user?',
 
-    };
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 159 }, __self: this }), /* istanbul ignore next */'This action cannot be undone.')));
 
-    const ContactsWithView = withList(ContactList);
 
-    const NewEntry = props => {
-      return (
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 121 }, __self: this },
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-            floatingLabelText: 'First Name',
-            onChange: this.handleChange
-            // onBlur={() => this._validate('email')}
-            // ref='email'
-            // type='email'
-            , value: this.state.firstName, __source: { fileName: _jsxFileName, lineNumber: 122 }, __self: this }),
-
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ onClick: () => props.submit({ name: this.state.firstName }), __source: { fileName: _jsxFileName, lineNumber: 130 }, __self: this }, /* istanbul ignore next */'Click me')));
 
 
     };
 
-    const NewEntryWithData = /* istanbul ignore next */(0, _reactApollo.graphql)(CREATE_CONTACT_MUTATION, {
-      props: ( /* istanbul ignore next */_ref4) => /* istanbul ignore next */{let ownProps = _ref4.ownProps;let mutate = _ref4.mutate;return {
-          submit: ( /* istanbul ignore next */_ref5) => /* istanbul ignore next */{let name = _ref5.name;return mutate({ variables: { name } });} };} })(
+    const USER_QUERY = /* istanbul ignore next */_graphqlTag2.default\`
+      query fetchUsers ($domainID:ID, $siteID:ID) {
+        fetchUsers (domainID:$domainID) {
+          _id
+          active
+          contact {
+            _id
+            email
+            name {
+              first
+              last
+            }
+          }
+          email
+          scope
+        },
+        fetchSiteById (_id:$siteID) {
+          _id
+          roles {
+            id
+            label
+          }
+        }
+      }\`;
 
-    NewEntry);
+    const UserListWithData = /* istanbul ignore next */(0, _reactApollo.graphql)(USER_QUERY, {
+      options: ( /* istanbul ignore next */_ref) => /* istanbul ignore next */{let domainID = _ref.domainID;let siteID = _ref.siteID;return { variables: { domainID, siteID: domainID } };},
+      props( /* istanbul ignore next */_ref2) {/* istanbul ignore next */var _ref2$data = _ref2.data; /* istanbul ignore next */let loading = _ref2$data.loading; /* istanbul ignore next */let fetchSiteById = _ref2$data.fetchSiteById; /* istanbul ignore next */let fetchUsers = _ref2$data.fetchUsers; /* istanbul ignore next */let refetch = _ref2$data.refetch;
+        return { loading, fetchSiteById, fetchUsers, refetch };
+      } })(
+    UserList);
 
 
     return (
 
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */{ className: 'App-container', __source: { fileName: _jsxFileName, lineNumber: 144 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Paper2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 145 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */{ className: 'App-container', __source: { fileName: _jsxFileName, lineNumber: 201 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Paper2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 202 }, __self: this },
           /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_AppBar2.default, /* istanbul ignore next */{
-            iconElementRight: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_IconButton2.default, /* istanbul ignore next */{ iconStyle: /* istanbul ignore next */_styles.styles.appBarEleIconStyle, style: /* istanbul ignore next */_styles.styles.appBarEleStyle, __source: { fileName: _jsxFileName, lineNumber: 147 }, __self: this }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_add2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 147 }, __self: this })),
+            iconElementRight: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_IconButton2.default, /* istanbul ignore next */{ iconStyle: /* istanbul ignore next */_styles.styles.appBarEleIconStyle, style: /* istanbul ignore next */_styles.styles.appBarEleStyle, __source: { fileName: _jsxFileName, lineNumber: 204 }, __self: this }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_add2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 204 }, __self: this })),
             onRightIconButtonTouchTap: () => this._onAddUser(),
             showMenuIconButton: false,
             style: /* istanbul ignore next */_styles.styles.appBar,
-            title: 'User Listing', __source: { fileName: _jsxFileName, lineNumber: 146 }, __self: this }),
+            title: 'User Listing', __source: { fileName: _jsxFileName, lineNumber: 203 }, __self: this }),
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'article', /* istanbul ignore next */{ style: /* istanbul ignore next */_styles.styles.paper, __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'article', /* istanbul ignore next */{ style: /* istanbul ignore next */_styles.styles.paper, __source: { fileName: _jsxFileName, lineNumber: 210 }, __self: this },
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_SelectField2.default, /* istanbul ignore next */{
-                hintText: 'Select Site',
-                onChange: this._onSelectSite,
-                value: this.state.siteID, __source: { fileName: _jsxFileName, lineNumber: 154 }, __self: this },
+                floatingLabelFixed: true,
+                floatingLabelText: 'Select Site',
+                onChange: (e, key, payload) => this._onSelectSite(e, key, payload),
+                value: this.state.siteID, __source: { fileName: _jsxFileName, lineNumber: 211 }, __self: this },
 
-              sites.map(s => /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ key: s.id, value: s.id, primaryText: s.name, __source: { fileName: _jsxFileName, lineNumber: 159 }, __self: this }))),
+              fetchSites && fetchSites.length && fetchSites.map(s => /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ key: s._id, value: s._id, primaryText: s.name, __source: { fileName: _jsxFileName, lineNumber: 217 }, __self: this }))),
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 161 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 161 }, __self: this }),
-            /* istanbul ignore next */_react2.default.createElement(NewEntryWithData, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 162 }, __self: this }),
-
-            /* istanbul ignore next */_react2.default.createElement(ContactsWithView, /* istanbul ignore next */{ type: 'personal', __source: { fileName: _jsxFileName, lineNumber: 164 }, __self: this })))));
-
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 219 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 219 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement(UserListWithData, /* istanbul ignore next */{ domainID: this.state.siteID, __source: { fileName: _jsxFileName, lineNumber: 220 }, __self: this }))),
 
 
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Dialog2.default, /* istanbul ignore next */{
+            actionsContainerStyle: { paddingTop: 0 },
+            modal: true,
+            onRequestClose: this._handleClose,
+            open: this.state.open,
+            title: 'User Info', __source: { fileName: _jsxFileName, lineNumber: 223 }, __self: this },
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Userform2.default, /* istanbul ignore next */{ closeFormFunc: this._handleClose, __source: { fileName: _jsxFileName, lineNumber: 230 }, __self: this }))));
 
 
 
@@ -779,16 +726,21 @@ ShallowWrapper {
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": User {
+        "_handleClose": [Function],
+        "_handleOpen": [Function],
+        "_handleOpenDelete": [Function],
         "_onAddUser": [Function],
         "_onSelectSite": [Function],
+        "_onUserClick": [Function],
         "_reactInternalInstance": [Circular],
         "context": Object {},
-        "handleChange": [Function],
         "props": Object {},
         "refs": Object {},
         "state": Object {
-          "firstName": "",
+          "open": false,
+          "openDelete": false,
           "siteID": null,
+          "userID": null,
         },
         "updater": Object {
           "enqueueCallback": [Function],
@@ -890,6 +842,7 @@ ShallowWrapper {
                                                   disabled={false}
                                                   iconStyle={
                                                             Object {
+                                                                      "fill": "#22A699",
                                                                       "height": 36,
                                                                       "padding": 6,
                                                                       "width": 36,
@@ -973,114 +926,11 @@ ShallowWrapper {
                                 }
                                         autoWidth={false}
                                         disabled={false}
+                                        floatingLabelFixed={true}
+                                        floatingLabelText="Select Site"
                                         fullWidth={false}
-                                        hintText="Select Site"
                                         onChange={[Function]}
-                                        value={null}>
-                                        <function MenuItem() {
-                                            var _ref;
-                                        
-                                            var _temp, _this, _ret;
-                                        
-                                            (0, _classCallCheck3.default)(this, MenuItem);
-                                        
-                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                                              args[_key] = arguments[_key];
-                                            }
-                                        
-                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-                                              open: false
-                                            }, _this.cloneMenuItem = function (item) {
-                                              return _react2.default.cloneElement(item, {
-                                                onTouchTap: function onTouchTap(event) {
-                                                  if (!item.props.menuItems) {
-                                                    _this.handleRequestClose();
-                                                  }
-                                        
-                                                  if (item.props.onTouchTap) {
-                                                    item.props.onTouchTap(event);
-                                                  }
-                                                }
-                                              });
-                                            }, _this.handleTouchTap = function (event) {
-                                              event.preventDefault();
-                                        
-                                              _this.setState({
-                                                open: true,
-                                                anchorEl: _reactDom2.default.findDOMNode(_this)
-                                              });
-                                        
-                                              if (_this.props.onTouchTap) {
-                                                _this.props.onTouchTap(event);
-                                              }
-                                            }, _this.handleRequestClose = function () {
-                                              _this.setState({
-                                                open: false,
-                                                anchorEl: null
-                                              });
-                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
-                                          }
-                                                  checked={false}
-                                                  desktop={false}
-                                                  disabled={false}
-                                                  focusState="none"
-                                                  insetChildren={false}
-                                                  primaryText="Universal App"
-                                                  value="abc" />
-                                        <function MenuItem() {
-                                            var _ref;
-                                        
-                                            var _temp, _this, _ret;
-                                        
-                                            (0, _classCallCheck3.default)(this, MenuItem);
-                                        
-                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                                              args[_key] = arguments[_key];
-                                            }
-                                        
-                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-                                              open: false
-                                            }, _this.cloneMenuItem = function (item) {
-                                              return _react2.default.cloneElement(item, {
-                                                onTouchTap: function onTouchTap(event) {
-                                                  if (!item.props.menuItems) {
-                                                    _this.handleRequestClose();
-                                                  }
-                                        
-                                                  if (item.props.onTouchTap) {
-                                                    item.props.onTouchTap(event);
-                                                  }
-                                                }
-                                              });
-                                            }, _this.handleTouchTap = function (event) {
-                                              event.preventDefault();
-                                        
-                                              _this.setState({
-                                                open: true,
-                                                anchorEl: _reactDom2.default.findDOMNode(_this)
-                                              });
-                                        
-                                              if (_this.props.onTouchTap) {
-                                                _this.props.onTouchTap(event);
-                                              }
-                                            }, _this.handleRequestClose = function () {
-                                              _this.setState({
-                                                open: false,
-                                                anchorEl: null
-                                              });
-                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
-                                          }
-                                                  checked={false}
-                                                  desktop={false}
-                                                  disabled={false}
-                                                  focusState="none"
-                                                  insetChildren={false}
-                                                  primaryText="Gales Sales"
-                                                  value="gales" />
-                              </function SelectField() {
-                                  (0, _classCallCheck3.default)(this, SelectField);
-                                  return (0, _possibleConstructorReturn3.default)(this, (SelectField.__proto__ || (0, _getPrototypeOf2.default)(SelectField)).apply(this, arguments));
-                                }>
+                                        value={null} />
                               <br />
                               <br />
                               <function GraphQL(props, context) {
@@ -1088,22 +938,8 @@ ShallowWrapper {
                                               this.data = {};
                                               this.version = version;
                                               this.client = context.client;
-                                              invariant(!!this.client, "Could not find "client" in the context of " +
-                                                  (""" + graphQLDisplayName + "". ") +
-                                                  "Wrap the root component in an <ApolloProvider>");
-                                              this.store = this.client.store;
-                                              this.type = operation.type;
-                                              if (mapPropsToSkip(props))
-                                                  return;
-                                              this.setInitialProps();
-                                          } />
-                              <function GraphQL(props, context) {
-                                              _super.call(this, props, context);
-                                              this.data = {};
-                                              this.version = version;
-                                              this.client = context.client;
-                                              invariant(!!this.client, "Could not find "client" in the context of " +
-                                                  (""" + graphQLDisplayName + "". ") +
+                                              invariant(!!this.client, "Could not find \"client\" in the context of " +
+                                                  ("\"" + graphQLDisplayName + "\". ") +
                                                   "Wrap the root component in an <ApolloProvider>");
                                               this.store = this.client.store;
                                               this.type = operation.type;
@@ -1111,11 +947,69 @@ ShallowWrapper {
                                                   return;
                                               this.setInitialProps();
                                           }
-                                        type="personal" />
+                                        domainID={null} />
                     </article>
           </function Paper() {
               (0, _classCallCheck3.default)(this, Paper);
               return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+            }>
+          <function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }
+                    actionsContainerStyle={
+                              Object {
+                                        "paddingTop": 0,
+                                      }
+                    }
+                    autoDetectWindowHeight={true}
+                    autoScrollBodyContent={false}
+                    modal={true}
+                    onRequestClose={[Function]}
+                    open={false}
+                    repositionOnUpdate={true}
+                    title="User Info">
+                    <function Connect(props, context) {
+                            _classCallCheck(this, Connect);
+                    
+                            var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+                    
+                            _this.version = version;
+                            _this.store = props.store || context.store;
+                    
+                            (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+                    
+                            var storeState = _this.store.getState();
+                            _this.state = { storeState: storeState };
+                            _this.clearCache();
+                            return _this;
+                          }
+                              closeFormFunc={[Function]} />
+          </function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
             }>
 </section>,
         "_debugID": 2,
@@ -1201,6 +1095,7 @@ ShallowWrapper {
                                                   disabled={false}
                                                   iconStyle={
                                                             Object {
+                                                                      "fill": "#22A699",
                                                                       "height": 36,
                                                                       "padding": 6,
                                                                       "width": 36,
@@ -1284,114 +1179,11 @@ ShallowWrapper {
                                 }
                                         autoWidth={false}
                                         disabled={false}
+                                        floatingLabelFixed={true}
+                                        floatingLabelText="Select Site"
                                         fullWidth={false}
-                                        hintText="Select Site"
                                         onChange={[Function]}
-                                        value={null}>
-                                        <function MenuItem() {
-                                            var _ref;
-                                        
-                                            var _temp, _this, _ret;
-                                        
-                                            (0, _classCallCheck3.default)(this, MenuItem);
-                                        
-                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                                              args[_key] = arguments[_key];
-                                            }
-                                        
-                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-                                              open: false
-                                            }, _this.cloneMenuItem = function (item) {
-                                              return _react2.default.cloneElement(item, {
-                                                onTouchTap: function onTouchTap(event) {
-                                                  if (!item.props.menuItems) {
-                                                    _this.handleRequestClose();
-                                                  }
-                                        
-                                                  if (item.props.onTouchTap) {
-                                                    item.props.onTouchTap(event);
-                                                  }
-                                                }
-                                              });
-                                            }, _this.handleTouchTap = function (event) {
-                                              event.preventDefault();
-                                        
-                                              _this.setState({
-                                                open: true,
-                                                anchorEl: _reactDom2.default.findDOMNode(_this)
-                                              });
-                                        
-                                              if (_this.props.onTouchTap) {
-                                                _this.props.onTouchTap(event);
-                                              }
-                                            }, _this.handleRequestClose = function () {
-                                              _this.setState({
-                                                open: false,
-                                                anchorEl: null
-                                              });
-                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
-                                          }
-                                                  checked={false}
-                                                  desktop={false}
-                                                  disabled={false}
-                                                  focusState="none"
-                                                  insetChildren={false}
-                                                  primaryText="Universal App"
-                                                  value="abc" />
-                                        <function MenuItem() {
-                                            var _ref;
-                                        
-                                            var _temp, _this, _ret;
-                                        
-                                            (0, _classCallCheck3.default)(this, MenuItem);
-                                        
-                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-                                              args[_key] = arguments[_key];
-                                            }
-                                        
-                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-                                              open: false
-                                            }, _this.cloneMenuItem = function (item) {
-                                              return _react2.default.cloneElement(item, {
-                                                onTouchTap: function onTouchTap(event) {
-                                                  if (!item.props.menuItems) {
-                                                    _this.handleRequestClose();
-                                                  }
-                                        
-                                                  if (item.props.onTouchTap) {
-                                                    item.props.onTouchTap(event);
-                                                  }
-                                                }
-                                              });
-                                            }, _this.handleTouchTap = function (event) {
-                                              event.preventDefault();
-                                        
-                                              _this.setState({
-                                                open: true,
-                                                anchorEl: _reactDom2.default.findDOMNode(_this)
-                                              });
-                                        
-                                              if (_this.props.onTouchTap) {
-                                                _this.props.onTouchTap(event);
-                                              }
-                                            }, _this.handleRequestClose = function () {
-                                              _this.setState({
-                                                open: false,
-                                                anchorEl: null
-                                              });
-                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
-                                          }
-                                                  checked={false}
-                                                  desktop={false}
-                                                  disabled={false}
-                                                  focusState="none"
-                                                  insetChildren={false}
-                                                  primaryText="Gales Sales"
-                                                  value="gales" />
-                              </function SelectField() {
-                                  (0, _classCallCheck3.default)(this, SelectField);
-                                  return (0, _possibleConstructorReturn3.default)(this, (SelectField.__proto__ || (0, _getPrototypeOf2.default)(SelectField)).apply(this, arguments));
-                                }>
+                                        value={null} />
                               <br />
                               <br />
                               <function GraphQL(props, context) {
@@ -1399,22 +1191,8 @@ ShallowWrapper {
                                               this.data = {};
                                               this.version = version;
                                               this.client = context.client;
-                                              invariant(!!this.client, "Could not find "client" in the context of " +
-                                                  (""" + graphQLDisplayName + "". ") +
-                                                  "Wrap the root component in an <ApolloProvider>");
-                                              this.store = this.client.store;
-                                              this.type = operation.type;
-                                              if (mapPropsToSkip(props))
-                                                  return;
-                                              this.setInitialProps();
-                                          } />
-                              <function GraphQL(props, context) {
-                                              _super.call(this, props, context);
-                                              this.data = {};
-                                              this.version = version;
-                                              this.client = context.client;
-                                              invariant(!!this.client, "Could not find "client" in the context of " +
-                                                  (""" + graphQLDisplayName + "". ") +
+                                              invariant(!!this.client, "Could not find \"client\" in the context of " +
+                                                  ("\"" + graphQLDisplayName + "\". ") +
                                                   "Wrap the root component in an <ApolloProvider>");
                                               this.store = this.client.store;
                                               this.type = operation.type;
@@ -1422,11 +1200,69 @@ ShallowWrapper {
                                                   return;
                                               this.setInitialProps();
                                           }
-                                        type="personal" />
+                                        domainID={null} />
                     </article>
           </function Paper() {
               (0, _classCallCheck3.default)(this, Paper);
               return (0, _possibleConstructorReturn3.default)(this, (Paper.__proto__ || (0, _getPrototypeOf2.default)(Paper)).apply(this, arguments));
+            }>
+          <function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
+            }
+                    actionsContainerStyle={
+                              Object {
+                                        "paddingTop": 0,
+                                      }
+                    }
+                    autoDetectWindowHeight={true}
+                    autoScrollBodyContent={false}
+                    modal={true}
+                    onRequestClose={[Function]}
+                    open={false}
+                    repositionOnUpdate={true}
+                    title="User Info">
+                    <function Connect(props, context) {
+                            _classCallCheck(this, Connect);
+                    
+                            var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+                    
+                            _this.version = version;
+                            _this.store = props.store || context.store;
+                    
+                            (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+                    
+                            var storeState = _this.store.getState();
+                            _this.state = { storeState: storeState };
+                            _this.clearCache();
+                            return _this;
+                          }
+                              closeFormFunc={[Function]} />
+          </function Dialog() {
+              var _ref3;
+          
+              var _temp3, _this3, _ret3;
+          
+              (0, _classCallCheck3.default)(this, Dialog);
+          
+              for (var _len3 = arguments.length, args = Array(_len3), _key3 = 0; _key3 < _len3; _key3++) {
+                args[_key3] = arguments[_key3];
+              }
+          
+              return _ret3 = (_temp3 = (_this3 = (0, _possibleConstructorReturn3.default)(this, (_ref3 = Dialog.__proto__ || (0, _getPrototypeOf2.default)(Dialog)).call.apply(_ref3, [this].concat(args))), _this3), _this3.renderLayer = function () {
+                return _react2.default.createElement(DialogInline, _this3.props);
+              }, _temp3), (0, _possibleConstructorReturn3.default)(_this3, _ret3);
             }>
 </section>,
       },
@@ -1450,133 +1286,196 @@ ShallowWrapper {
 
 
 
+
+
+    _handleOpen = () => {
+      this.setState({ open: true });
+    }; /* istanbul ignore next */this.
+
+    _handleOpenDelete = () => {
+      this.setState({ openDelete: true });
+    }; /* istanbul ignore next */this.
+
+    _handleClose = () => {
+      this.setState({ open: false });
+      this.setState({ openDelete: false });
+    }; /* istanbul ignore next */this.
+
+    _onUserClick = user => {
+      user.domainID = this.state.siteID;
+      this.props.actions.setUserScratch({ user });
+      this._handleOpen();
+    }; /* istanbul ignore next */this.
+
     _onAddUser = () => {
-      console.log('_onAddUser:', '_onAddUser');
+      if (!this.state.siteID) {return;}
+      this.props.actions.setUserCreate();
+      this.props.actions.setUserProp({ 'domainID': this.state.siteID });
+      this._handleOpen();
     }; /* istanbul ignore next */this.
 
     _onSelectSite = (e, idx, val) => {
       this.setState({ siteID: val });
-    }; /* istanbul ignore next */this.
-
-    handleChange = event => {
-      console.log('event:', event.target.value);
-      this.setState({
-        firstName: event.target.value });
-
-    };this.state = { siteID: null, firstName: '' };}
-
-  render() {
-
-    // const { children } = this.props
-
-    const ContactsQuery = /* istanbul ignore next */_graphqlTag2.default\`
-      query ContactsQuery($type: String) {
-        fetchContacts(type: $type) {
-          _id
-          name
-          type
-        }
-      }\`;
-
-    const CREATE_CONTACT_MUTATION = /* istanbul ignore next */_graphqlTag2.default\`
-      mutation addContact($name: String) {
-        createContact(name: $name, type: "personal") {
-          _id
-          name
-          type
-        }
-      }\`;
-
-    const updateContacts = {
-      Contact: (prev, /* istanbul ignore next */_ref) => {/* istanbul ignore next */let mutationResult = _ref.mutationResult;
-        const newContact = mutationResult.data.createContact;
-        return (/* istanbul ignore next */(0, _reactAddonsUpdate2.default)(prev, {
-            entry: { contacts: { $unshift: [newContact] } } }));
-
-      } };
+    };this.state = { open: false, openDelete: false, siteID: null, userID: null };}
 
 
-    const withList = /* istanbul ignore next */(0, _reactApollo.graphql)(ContactsQuery, {
-      options: ( /* istanbul ignore next */_ref2) => /* istanbul ignore next */{let type = _ref2.type;return { variables: { type } };},
-      props: ( /* istanbul ignore next */_ref3) => {/* istanbul ignore next */let ownProps = _ref3.ownProps; /* istanbul ignore next */let data = _ref3.data;
-        if (data.loading) return { isLoading: true };
-        if (data.error) return { hasErrors: true };
-        return { contacts: data.fetchContacts };
-      } });
+  render() {/* istanbul ignore next */var _props =
 
+    this.props; /* istanbul ignore next */const loading = _props.loading; /* istanbul ignore next */const fetchSites = _props.fetchSites; /* istanbul ignore next */const removeUser = _props.removeUser;
+    if (loading) {
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 79 }, __self: this }, /* istanbul ignore next */'Loading...'));
 
-    const ContactList = props => {
-      if (props.isLoading) {
-        return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'h2', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 98 }, __self: this }, /* istanbul ignore next */'Loading...'));
+    }
+
+    const UserList = data => {/* istanbul ignore next */const
+
+      loading = data.loading; /* istanbul ignore next */const fetchSiteById = data.fetchSiteById; /* istanbul ignore next */const fetchUsers = data.fetchUsers; /* istanbul ignore next */const refetch = data.refetch;
+      if (loading) {
+        return (
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 88 }, __self: this }, /* istanbul ignore next */'Loading...'));
+
       }
-      let rows = props.contacts.map(s => {
+
+      const _onDeleteUser = id => {
+        this.setState({ userID: id });
+        this._handleOpenDelete();
+      };
+
+      const _onDeleteConfirm = () => {
+        removeUser(this.state.userID, this.state.siteID).then(res => {
+          refetch();
+          this.setState({ openDelete: false });
+        });
+      };
+
+      const deleteActions = [
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+        label: 'NO!',
+        primary: true,
+        onTouchTap: this._handleClose, __source: { fileName: _jsxFileName, lineNumber: 105 }, __self: this }),
+
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+        label: 'Go Ahead',
+        secondary: true,
+        onTouchTap: _onDeleteConfirm, __source: { fileName: _jsxFileName, lineNumber: 110 }, __self: this })];
+
+
+
+      const Header = () =>
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'list-table-header', __source: { fileName: _jsxFileName, lineNumber: 118 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }, /* istanbul ignore next */'Name'),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 120 }, __self: this }, /* istanbul ignore next */'Active'),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 121 }, __self: this }, /* istanbul ignore next */'Email'),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 122 }, __self: this }));
+
+
+
+      const rows = fetchUsers.map(u => {
         return (
           /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{
               className: 'list-table-row',
-              key: s._id, __source: { fileName: _jsxFileName, lineNumber: 102 }, __self: this },
+              key: u._id, __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this },
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 106 }, __self: this }, s._id),
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this }, s.name),
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 108 }, __self: this }, s.type)));
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', onClick: () => this._onUserClick(u), __source: { fileName: _jsxFileName, lineNumber: 132 }, __self: this },
+              u.contact.name.last, /* istanbul ignore next */', ', u.contact.name.first),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', onClick: () => this._onUserClick(u), __source: { fileName: _jsxFileName, lineNumber: 135 }, __self: this },
+              u.active ? 'Y' : 'N'),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 138 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'a', /* istanbul ignore next */{ href: \`mailto:${ u.email }\`, __source: { fileName: _jsxFileName, lineNumber: 139 }, __self: this }, u.email)),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'list-table-cell', __source: { fileName: _jsxFileName, lineNumber: 141 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_delete2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 143 }, __self: this }),
+                onClick: () => _onDeleteUser(u._id),
+                secondary: true, __source: { fileName: _jsxFileName, lineNumber: 142 }, __self: this }))));
+
+
 
 
       });
       return (
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 113 }, __self: this }, rows));
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this }, /* istanbul ignore next */_react2.default.createElement(Header, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this }), rows,
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Dialog2.default, /* istanbul ignore next */{
+              actions: deleteActions,
+              contentStyle: { width: 400 },
+              onRequestClose: this._handleClose,
+              open: this.state.openDelete, __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this }, /* istanbul ignore next */'You sure you want to delete this user?',
 
-    };
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 159 }, __self: this }), /* istanbul ignore next */'This action cannot be undone.')));
 
-    const ContactsWithView = withList(ContactList);
 
-    const NewEntry = props => {
-      return (
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 121 }, __self: this },
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-            floatingLabelText: 'First Name',
-            onChange: this.handleChange
-            // onBlur={() => this._validate('email')}
-            // ref='email'
-            // type='email'
-            , value: this.state.firstName, __source: { fileName: _jsxFileName, lineNumber: 122 }, __self: this }),
-
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ onClick: () => props.submit({ name: this.state.firstName }), __source: { fileName: _jsxFileName, lineNumber: 130 }, __self: this }, /* istanbul ignore next */'Click me')));
 
 
     };
 
-    const NewEntryWithData = /* istanbul ignore next */(0, _reactApollo.graphql)(CREATE_CONTACT_MUTATION, {
-      props: ( /* istanbul ignore next */_ref4) => /* istanbul ignore next */{let ownProps = _ref4.ownProps;let mutate = _ref4.mutate;return {
-          submit: ( /* istanbul ignore next */_ref5) => /* istanbul ignore next */{let name = _ref5.name;return mutate({ variables: { name } });} };} })(
+    const USER_QUERY = /* istanbul ignore next */_graphqlTag2.default\`
+      query fetchUsers ($domainID:ID, $siteID:ID) {
+        fetchUsers (domainID:$domainID) {
+          _id
+          active
+          contact {
+            _id
+            email
+            name {
+              first
+              last
+            }
+          }
+          email
+          scope
+        },
+        fetchSiteById (_id:$siteID) {
+          _id
+          roles {
+            id
+            label
+          }
+        }
+      }\`;
 
-    NewEntry);
+    const UserListWithData = /* istanbul ignore next */(0, _reactApollo.graphql)(USER_QUERY, {
+      options: ( /* istanbul ignore next */_ref) => /* istanbul ignore next */{let domainID = _ref.domainID;let siteID = _ref.siteID;return { variables: { domainID, siteID: domainID } };},
+      props( /* istanbul ignore next */_ref2) {/* istanbul ignore next */var _ref2$data = _ref2.data; /* istanbul ignore next */let loading = _ref2$data.loading; /* istanbul ignore next */let fetchSiteById = _ref2$data.fetchSiteById; /* istanbul ignore next */let fetchUsers = _ref2$data.fetchUsers; /* istanbul ignore next */let refetch = _ref2$data.refetch;
+        return { loading, fetchSiteById, fetchUsers, refetch };
+      } })(
+    UserList);
 
 
     return (
 
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */{ className: 'App-container', __source: { fileName: _jsxFileName, lineNumber: 144 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Paper2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 145 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'section', /* istanbul ignore next */{ className: 'App-container', __source: { fileName: _jsxFileName, lineNumber: 201 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Paper2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 202 }, __self: this },
           /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_AppBar2.default, /* istanbul ignore next */{
-            iconElementRight: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_IconButton2.default, /* istanbul ignore next */{ iconStyle: /* istanbul ignore next */_styles.styles.appBarEleIconStyle, style: /* istanbul ignore next */_styles.styles.appBarEleStyle, __source: { fileName: _jsxFileName, lineNumber: 147 }, __self: this }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_add2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 147 }, __self: this })),
+            iconElementRight: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_IconButton2.default, /* istanbul ignore next */{ iconStyle: /* istanbul ignore next */_styles.styles.appBarEleIconStyle, style: /* istanbul ignore next */_styles.styles.appBarEleStyle, __source: { fileName: _jsxFileName, lineNumber: 204 }, __self: this }, /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_add2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 204 }, __self: this })),
             onRightIconButtonTouchTap: () => this._onAddUser(),
             showMenuIconButton: false,
             style: /* istanbul ignore next */_styles.styles.appBar,
-            title: 'User Listing', __source: { fileName: _jsxFileName, lineNumber: 146 }, __self: this }),
+            title: 'User Listing', __source: { fileName: _jsxFileName, lineNumber: 203 }, __self: this }),
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'article', /* istanbul ignore next */{ style: /* istanbul ignore next */_styles.styles.paper, __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'article', /* istanbul ignore next */{ style: /* istanbul ignore next */_styles.styles.paper, __source: { fileName: _jsxFileName, lineNumber: 210 }, __self: this },
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_SelectField2.default, /* istanbul ignore next */{
-                hintText: 'Select Site',
-                onChange: this._onSelectSite,
-                value: this.state.siteID, __source: { fileName: _jsxFileName, lineNumber: 154 }, __self: this },
+                floatingLabelFixed: true,
+                floatingLabelText: 'Select Site',
+                onChange: (e, key, payload) => this._onSelectSite(e, key, payload),
+                value: this.state.siteID, __source: { fileName: _jsxFileName, lineNumber: 211 }, __self: this },
 
-              sites.map(s => /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ key: s.id, value: s.id, primaryText: s.name, __source: { fileName: _jsxFileName, lineNumber: 159 }, __self: this }))),
+              fetchSites && fetchSites.length && fetchSites.map(s => /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ key: s._id, value: s._id, primaryText: s.name, __source: { fileName: _jsxFileName, lineNumber: 217 }, __self: this }))),
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 161 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 161 }, __self: this }),
-            /* istanbul ignore next */_react2.default.createElement(NewEntryWithData, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 162 }, __self: this }),
-
-            /* istanbul ignore next */_react2.default.createElement(ContactsWithView, /* istanbul ignore next */{ type: 'personal', __source: { fileName: _jsxFileName, lineNumber: 164 }, __self: this })))));
-
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 219 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 219 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement(UserListWithData, /* istanbul ignore next */{ domainID: this.state.siteID, __source: { fileName: _jsxFileName, lineNumber: 220 }, __self: this }))),
 
 
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Dialog2.default, /* istanbul ignore next */{
+            actionsContainerStyle: { paddingTop: 0 },
+            modal: true,
+            onRequestClose: this._handleClose,
+            open: this.state.open,
+            title: 'User Info', __source: { fileName: _jsxFileName, lineNumber: 223 }, __self: this },
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Userform2.default, /* istanbul ignore next */{ closeFormFunc: this._handleClose, __source: { fileName: _jsxFileName, lineNumber: 230 }, __self: this }))));
 
 
 

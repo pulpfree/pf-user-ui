@@ -14,6 +14,12 @@ describe('site reducer', () => {
     ).toEqual(scratchState)
   })
 
+  it('should return new scratch site', () => {
+    expect(
+      reducers.scratch(scratchState, {type: actions.SITE_SCRATCH_CREATE})
+    ).toEqual(scratchState)
+  })
+
   it('should return merged scratch site', () => {
     const dbNm = 'example-db'
     const res = scratchState.set('dbNm', dbNm)

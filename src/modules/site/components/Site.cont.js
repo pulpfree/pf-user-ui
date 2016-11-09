@@ -4,41 +4,58 @@ import { connect } from 'react-redux'
 
 import AppBar from 'material-ui/AppBar'
 import ContentAdd from 'material-ui/svg-icons/content/add'
+import ContentCreate from 'material-ui/svg-icons/content/create'
+import ActionDelete from 'material-ui/svg-icons/action/delete'
 import Dialog from 'material-ui/Dialog'
 import IconButton from 'material-ui/IconButton'
 import Paper from 'material-ui/Paper'
-import RaisedButton from 'material-ui/RaisedButton'
+import FlatButton from 'material-ui/FlatButton'
 
 import SiteForm from './Siteform'
-// import SiteList from './Sitelist'
+import RoleForm from './RoleForm'
 
-import { graphql } from 'react-apollo';
+import * as alertActions from '../../alert/alertActions'
+
+import { compose, graphql, withApollo } from 'react-apollo';
 import gql from 'graphql-tag'
+// import update from 'react-addons-update'
 
 import {
+  setSiteCreate,
   setSiteScratch,
 } from '../siteActions'
-/*import {
-  siteScratchSelector,
-} from '../siteSelectors'*/
 
 import { styles as st } from '../../../styles'
 
-class Site extends Component {
+export class Site extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
       openForm: false,
+      openDelete: false,
+      openRoles: false,
+      siteID: null
     }
   }
 
   _handleOpen = () => {
-    this.setState({open: true})
+    this.setState({openForm: true})
+  }
+
+  _handleOpenDelete = () => {
+    this.setState({openDelete: true})
+  }
+
+  _handleOpenRoles = (site) => {
+    this.setState({openRoles: true})
+    this.props.actions.setSiteScratch({site})
   }
 
   _handleClose = () => {
-    this.setState({open: false})
+    this.setState({openForm: false})
+    this.setState({openDelete: false})
+    this.setState({openRoles: false})
   }
 
   _handleRowClick = (site) => {
@@ -47,56 +64,65 @@ class Site extends Component {
   }
 
   _onAddSite = () => {
+    this.props.actions.setSiteCreate()
     this._handleOpen()
+  }
+
+  _onDeleteSite = (id) => {
+    this.setState({siteID: id})
+    this._handleOpenDelete()
+  }
+
+  _onDeleteConfirm = () => {
+    this.props.removeSite(this.state.siteID).then(res => {
+      this.props.refetch()
+      this._handleClose()
+    })
   }
 
   render() {
 
-    const SitesQuery = gql`query SitesQuery {
-      fetchSites
-      {
-        _id
-        active
-        credentialKeyPassword
-        credentialKeyUsername
-        collectionNm
-        dbNm
-        domain
-        name
-        resetURI
-      }
-    }`
-
-    const withList = graphql(SitesQuery, {
-      props: ({ ownProps, data }) => {
-        if (data.loading) return { sitesLoading: true }
-        if (data.error) return { hasErrors: true }
-        return { sites: data.fetchSites }
-      }
-    })
+    const { loading, fetchSites } = this.props
+    if (loading) {
+      return (
+        <div>Loading...</div>
+      );
+    }
 
     const Header = () => (
       <header className='list-table-header'>
-        <div className='list-table-cell'>Name</div>
-        <div className='list-table-cell'>Domain</div>
-        <div className='list-table-cell'>Active</div>
+        <div className='list-table-cell' style={{flex: 1.5}}>Name</div>
+        <div className='list-table-cell' style={{flex: 1.5}}>Domain</div>
+        <div className='list-table-cell' style={{flex: .5}}>Active</div>
+        <div className='list-table-cell'>User Roles</div>
+        <div className='list-table-cell'></div>
       </header>
     )
 
-    const SiteList = (props) => {
-      if (props.sitesLoading) {
-        return <h2>Loading...</h2>
-      }
-      let rows = props.sites.map(s => {
+    const SiteList = () => {
+      let rows = fetchSites.map(s => {
         return (
           <div
               className='list-table-row'
               key={s._id}
-              onClick={() => this._handleRowClick(s)}
           >
-            <div className='list-table-cell'>{s.name}</div>
-            <div className='list-table-cell'>{s.domain}</div>
-            <div className='list-table-cell'>{s.active === true ? 'Y' : 'N'}</div>
+            <div className='list-table-cell' style={{flex: 1.5}} onClick={() => this._handleRowClick(s)}>{s.name}</div>
+            <div className='list-table-cell' style={{flex: 1.5}} onClick={() => this._handleRowClick(s)}>{s.domain}</div>
+            <div className='list-table-cell' style={{flex: .3, textAlign: 'right'}} onClick={() => this._handleRowClick(s)}>{s.active === true ? 'Y' : 'N'}</div>
+            <div className='list-table-cell'>
+              <FlatButton
+                  icon={<ContentCreate />}
+                  onClick={() => this._handleOpenRoles(s)}
+                  secondary={true}
+              />
+            </div>
+            <div className='list-table-cell'>
+              <FlatButton
+                  icon={<ActionDelete />}
+                  onClick={() => this._onDeleteSite(s._id)}
+                  secondary={true}
+              />
+            </div>
           </div>
         )
       })
@@ -105,13 +131,16 @@ class Site extends Component {
       )
     }
 
-    const SitesWithView = withList(SiteList)
-
-    const adjustActions = [
-      <RaisedButton
-        label='Close'
-        primary={true}
-        onTouchTap={this._handleClose}
+    const deleteActions = [
+      <FlatButton
+          label='NO!'
+          primary={true}
+          onTouchTap={this._handleClose}
+      />,
+      <FlatButton
+          label='Go Ahead'
+          secondary={true}
+          onTouchTap={this._onDeleteConfirm}
       />
     ]
 
@@ -119,26 +148,79 @@ class Site extends Component {
       <section className='App-container'>
         <Paper>
           <AppBar
-              title='Site Listing'
-              showMenuIconButton={false}
-              style={st.appBar}
               iconElementRight={<IconButton iconStyle={st.appBarEleIconStyle} style={st.appBarEleStyle}><ContentAdd /></IconButton>}
               onRightIconButtonTouchTap={() => this._onAddSite()}
+              showMenuIconButton={false}
+              style={st.appBar}
+              title='Site Listing'
           />
-          {/*<SiteForm />*/}
           <article style={st.paper}>
-            <SitesWithView />
+            <SiteList />
           </article>
         </Paper>
-        {<Dialog
-            actions={adjustActions}
+        <Dialog
+            actionsContainerStyle={{paddingTop: 0}}
             modal={true}
             onRequestClose={this._handleClose}
-            open={this.state.open}
-            title="Dialog With Actions"
+            open={this.state.openForm}
+            title='Site Details'
         >
-          <SiteForm />
-        </Dialog>}
+          <SiteForm closeFormFunc={this._handleClose} />
+        </Dialog>
+        <Dialog
+            actions={deleteActions}
+            contentStyle={{width: 400}}
+            onRequestClose={this._handleClose}
+            open={this.state.openDelete}
+            title='Delete Site'
+        >
+          You sure you want to delete this site?<br />
+          This action cannot be undone.
+        </Dialog>
+        <Dialog
+            contentStyle={{width: 800}}
+            onRequestClose={this._handleClose}
+            open={this.state.openRoles}
+            title='User Roles'
+        >
+          <RoleForm closeFormFunc={this._handleClose} />
+        </Dialog>
+        <FlatButton
+              label='Go Ahead danger'
+              secondary={true}
+              onTouchTap={() => this.props.actions.alertSend({
+                message: 'Invalid entries, please check your information.',
+                type: 'danger',
+                dismissAfter: 2000
+              })}
+          />
+          <FlatButton
+              label='Go Ahead success'
+              secondary={true}
+              onTouchTap={() => this.props.actions.alertSend({
+                message: 'It worked! Imagine that...<br />New line??',
+                type: 'success',
+                dismissAfter: 5000
+              })}
+          />
+          <FlatButton
+              label='Go Ahead info'
+              secondary={true}
+              onTouchTap={() => this.props.actions.alertSend({
+                message: 'It worked! Imagine that...',
+                type: 'info',
+                dismissAfter: 1000
+              })}
+          />
+          <FlatButton
+              label='Go Ahead warning'
+              secondary={true}
+              onTouchTap={() => this.props.actions.alertSend({
+                message: 'ERROR: It worked! Imagine that...',
+                type: 'warning',
+                // dismissAfter: 1000
+              })}
+          />
       </section>
     )
   }
@@ -148,24 +230,68 @@ Site.propStyles = {
   children: PropTypes.object.isRequired
 }
 
-/*function mapStateToProps(state) {
-  return {
-    scratch:  siteScratchSelector(state),
-    ts: state,
+const SITES_QUERY = gql`
+  query fetchSites {
+    fetchSites
+    {
+      _id
+      active
+      credentialKeyPassword
+      credentialKeyUsername
+      collectionNm
+      dbNm
+      domain
+      name
+      pemFilePrivate
+      pemFilePublic
+      resetURI
+      roles {id, label}
+      signingMethod
+    }
+  }`
+
+const SITE_REMOVE = gql`
+  mutation removeSite($_id:ID!) {
+    removeSite(_id:$_id) {
+      ok
+      n
+    }
+  }`
+
+const withList = graphql(SITES_QUERY, {
+  props({data: {loading, fetchSites, refetch}}) {
+    return {loading, fetchSites, refetch}
   }
-}*/
+})
+
+const withRemove = graphql(SITE_REMOVE, {
+  props({ ownProps, mutate }) {
+    return {
+      removeSite(_id) {
+        return mutate({
+          variables: { _id }
+        })
+      }
+    }
+  }
+})
+
+const SiteWithGraph = withApollo(compose(
+  withList,
+  withRemove
+)(Site))
 
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
+      ...alertActions,
+      setSiteCreate,
       setSiteScratch,
     }, dispatch),
   }
 }
 
-// export default Site
 export default connect(
-  // mapStateToProps,
   null,
   mapDispatchToProps
-)(Site)
+)(SiteWithGraph)

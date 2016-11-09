@@ -67,28 +67,6 @@
   }
 }
 
-
-mutation {
-  createSite(credentialKeyPassword: "password", credentialKeyUsername: "email", collectionNm: "users", dbNm: "test-db", domain: "ca.example.foo1", name: "My New Site", resetURI: "http://foo.com/auth") {
-    _id
-    domain
-    name
-    resetURI
-  }
-}
-
-mutation {
-  updateSite(_id: "580e3d0b722179828f867ff0", domain: "ca.example.foo2", name: "My New Site2", resetURI: "http://foo.com/auth") {
-    _id
-    active
-    collectionNm
-    credentialKeyPassword
-    domain
-    name
-    resetURI
-  }
-}
-
 mutation {
   createUser(domainID: "580e3d0b722179828f867ff0", active: true, email: "test@me.com", password: "MyTestingPass1", scope: ["admin", "siteuser"]) {
     _id
@@ -106,5 +84,46 @@ mutation {
     active
     scope
     scopeBits
+  }
+}
+
+mutation createSite($fields:SiteInput!) {
+  createSite(input:$fields) {
+    _id
+    domain
+    name
+    resetURI
+  }
+}
+{
+  "fields": {
+    "credentialKeyPassword": "password",
+    "credentialKeyUsername": "email",
+    "collectionNm": "users",
+    "dbNm": "test-db",
+    "domain": "ca.example.foo123",
+    "name": "My New Site",
+    "resetURI": "http://foo.com/auth"
+  }
+}
+
+mutation updateSite($_id:ID!, $fields:SiteInput!) {
+  updateSite(_id: $_id, input:$fields) {
+    _id
+    domain
+    name
+    resetURI
+  }
+}
+{
+  "_id": "5818f434b5dfd908040059f0",
+  "fields": {
+    "credentialKeyPassword": "password",
+    "credentialKeyUsername": "email",
+    "collectionNm": "users",
+    "dbNm": "test-db",
+    "domain": "ca.example.fooie",
+    "name": "My New Site",
+    "resetURI": "http://foo.com/auth"
   }
 }

@@ -1,24 +1,21 @@
 /* eslint-disable no-undef */
 import * as actions from '../siteActions'
 
-describe('user list actions', () => {
+import { scratchState } from '../siteReducer'
 
-  it('should create action to fetch users', () => {
+describe('site list actions', () => {
 
-    const params = {
-      siteID: 'abc'
-    }
-    const fetchRequestAction = {type: actions.SITE_LIST.REQUEST, params}
-    expect(actions.fetchSites(params)).toEqual(fetchRequestAction)
+  it('should create action to create new site', () => {
+    const fetchRequestAction = {type: actions.SITE_SCRATCH_CREATE}
+    expect(actions.setSiteCreate()).toEqual(fetchRequestAction)
   })
 
-  it('should create action to persist user', () => {
-
+  it('should create action to set site to scratch', () => {
     const params = {
-      siteID: 'abc'
+      siteID: 'abcf'
     }
-    const persistSiteAction = {type: actions.SITE_PERSIST.REQUEST, params}
-    expect(actions.persistSite(params)).toEqual(persistSiteAction)
+    const setSiteAction = {type: actions.SITE_SCRATCH_SET, params}
+    expect(actions.setSiteScratch(params)).toEqual(setSiteAction)
   })
 
   it('should create action to set scratch property', () => {

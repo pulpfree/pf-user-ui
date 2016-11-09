@@ -3,33 +3,42 @@ import Immutable from 'seamless-immutable'
 
 import * as reducers from '../userReducer'
 import * as actions from '../userActions'
+import { scratchState } from '../userReducer'
 
 describe('user reducer', () => {
 
-  const scratchState = Immutable({
-    active: false,
-    email: null,
-    name: {
-      first: null,
-      last: null,
+  const user = {
+    active: true,
+    contact: {
+      _id: null,
+      name: {
+        first: 'Test',
+        last: 'Dummy',
+      },
     },
+    domainID: null,
+    email: 'test@me.com',
     password: null,
-    roles: [],
-  })
+    scope: []
+  }
 
-  // console.log('user:', user)
   it('should return scratch initial state', () => {
     expect(
       reducers.scratch(undefined, {})
     ).toEqual(scratchState)
   })
 
-  it('should return merged scratch user', () => {
-    const email = 'test@example.com'
-    const res = scratchState.set('email', email)
+  it('should return new scratch create', () => {
     expect(
-      reducers.scratch(null, {type: actions.USER_SCRATCH_SET, params: {email}})
-    ).toEqual(res)
+      reducers.scratch(scratchState, {type: actions.USER_SCRATCH_CREATE})
+    ).toEqual(scratchState)
+  })
+
+  it('should return merged scratch user', () => {
+    const retUser = scratchState.merge(user)
+    expect(
+      reducers.scratch(scratchState, {type: actions.USER_SCRATCH_SET, params: {user}})
+    ).toEqual(retUser)
   })
 
   it('should set scratch property', () => {

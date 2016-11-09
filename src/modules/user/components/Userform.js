@@ -1,70 +1,72 @@
 import React, { Component, PropTypes } from 'react'
 
+import ActionDone from 'material-ui/svg-icons/action/done'
 import Checkbox from 'material-ui/Checkbox'
+import ContentClear from 'material-ui/svg-icons/content/clear'
 import RaisedButton from 'material-ui/RaisedButton'
 import Subheader from 'material-ui/Subheader'
 import TextField from 'material-ui/TextField'
 import { List } from 'material-ui/List'
-import Paper from 'material-ui/Paper'
+
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { compose, graphql, withApollo } from 'react-apollo'
+import gql from 'graphql-tag'
+// import update from 'react-addons-update'
 
-import {
-  persistUser,
-  setUserCreate,
-  setUserProp,
-  setUserScratch,
-} from '../userActions'
-import {
-  userScratchSelector,
-  userCurrentSelector,
-} from '../userSelectors'
+import { setUserProp } from '../userActions'
+import * as alertActions from '../../alert/alertActions'
+import { userScratchSelector } from '../userSelectors'
+import { siteScratchSelector } from '../../site/siteSelectors'
 
-import ActionDone from 'material-ui/svg-icons/action/done'
-import ContentClear from 'material-ui/svg-icons/content/clear'
-import { yellow500 } from 'material-ui/styles/colors'
+import { sortBy } from '../../../utils'
+
+const R = require('ramda')
 
 import '../../../styles/form.css'
 
-const roles = [
-  {id: 'admin', checked: false, label: 'Administrator'},
-  {id: 'superuser', checked: false, label: 'Super User'},
-]
 
 export class UserForm extends Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      roles: roles
+      roles: []
     }
   }
 
-  componentWillMount = () => {
-    const { method, user } = this.props
-
-    if (method === 'edit') {
-      this.props.actions.setUserScratch({item: user})
-      this.setState({roles: user.roles.asMutable()})
-    } else {
-      this.props.actions.setUserCreate()
-    }
+  componentDidMount = () => {
+    const userRoles = this.props.scratch.scope
+    let roles = this.props.fetchSiteById.roles.map(r => {
+      let ur = userRoles.find(u => u.id === r.id )
+      if (ur) {
+        r.checked = true
+      }
+      return r
+    })
+    this.setState({roles})
   }
 
   _onCheck = (e, val, field) => {
     this.props.actions.setUserProp({[field]: val})
   }
 
+  _onCancelForm = () => {
+    this.props.closeFormFunc()
+  }
+
   _onCheckRole = (e, val, field) => {
-    const rs = roles.map(r => {
+    const rs = this.state.roles.map(r => {
       if (r.id === field.id) {
         r.checked = val
       }
       return r
     })
     this.setState({roles: rs})
-    this.props.actions.setUserProp({'roles': rs})
+    const userRoles = rs.filter(r => r.checked)
+    const ur = userRoles.map(r => ({id: r.id, label: r.label}))
+    this.props.actions.setUserProp({'scope': ur})
   }
 
   _onPropChange = (field) => {
@@ -73,25 +75,53 @@ export class UserForm extends Component {
   }
 
   _validate = (field) => {
-    // console.log('validate:', this.refs.email.state)
-    // console.log('validate:', this.refs.email.input.value)
   }
 
   _onSubmit = () => {
-    // console.log('submit form:', )
-    this.props.actions.persistUser()
+    const { createUser, scratch, updateUser } = this.props
+    const edit = scratch._id ? true : false
+    const successMsg = edit ? 'User info successfully updated' : 'User successfully created'
+
+    let p
+    if (edit) {
+      p = updateUser(scratch)
+    } else {
+      p = createUser(scratch)
+    }
+    p.then(res => {
+      this.props.closeFormFunc()
+      this.props.actions.alertSend({
+        dismissAfter: 2000,
+        message:      successMsg,
+        type:         'success',
+      })
+    }).catch(err => {
+      this.props.actions.alertSend({
+        dismissAfter: 5000,
+        message:      `ERROR: ${err.message}`,
+        type:         'danger',
+      })
+    })
   }
 
   render () {
 
     let email = {error: false}
+    const { loading, scratch } = this.props
 
-    const { scratch } = this.props
+    if (loading) {
+      return (
+        <div>Loading...</div>
+      );
+    }
+    if (this.props.error) {
+      return (
+        <div>Fatal error occurred: {this.props.error.message}</div>
+      )
+    }
 
     return (
-      <div style={{width: 600, margin: 'auto'}}>
-        <Paper style={{padding: 20}}>
-        <h2>User Details</h2>
+      <div style={{margin: 'auto'}}>
           <form onSubmit={() => this._onSubmit()}>
 
             <legend className='row'>Login</legend>
@@ -123,19 +153,19 @@ export class UserForm extends Component {
               <TextField
                   className='form-text-input'
                   floatingLabelText='First Name'
-                  onChange={() => this._onPropChange('name.first')}
-                  onBlur={() => this._validate('name.first')}
-                  ref='name.first'
-                  value={scratch.name.first || ''}
+                  onChange={() => this._onPropChange('contact.name.first')}
+                  onBlur={() => this._validate('contact.name.first')}
+                  ref='contact.name.first'
+                  value={scratch.contact.name.first || ''}
               />
               <div className='form-row-spacer' />
               <TextField
                   className='form-text-input'
                   floatingLabelText='Last Name'
-                  onChange={() => this._onPropChange('name.last')}
-                  onBlur={() => this._validate('name.last')}
-                  ref='name.last'
-                  value={scratch.name.last || ''}
+                  onChange={() => this._onPropChange('contact.name.last')}
+                  onBlur={() => this._validate('contact.name.last')}
+                  ref='contact.name.last'
+                  value={scratch.contact.name.last || ''}
               />
             </div>
 
@@ -145,73 +175,176 @@ export class UserForm extends Component {
                 <Subheader>Status</Subheader>
                 <Checkbox
                     className='form-text-input'
-                    label="Active"
-                    labelPosition="right"
+                    label='Active'
+                    labelPosition='right'
                     onBlur={() => this._validate('active')}
                     onCheck={(e, val) => this._onCheck(e, val, 'active')}
                     ref='active'
-                    value={scratch.active}
+                    checked={scratch.active}
                 />
               </div>
               <div style={{flex: 1.25}}>
                   <Subheader>Roles</Subheader>
                 <List>
-                  {this.state.roles.map(r => {
+                  {this.state.roles.length && this.state.roles.map(r => {
                     return (
                       <Checkbox
                           key={r.id}
                           label={<div style={{width: 130}}>{r.label}</div>}
-                          labelPosition="right"
+                          labelPosition='right'
                           onCheck={(e, val) => this._onCheckRole(e, val, r)}
-                          checked={r.checked}
+                          defaultChecked={r.checked}
+                          value={r.id}
                           style={{marginBottom: 10}}
                       />
                     )
                   })}
                 </List>
               </div>
-
             </div>
 
-            <div className='form-row'>
+            <div className='form-row' style={{justifyContent: 'space-around'}}>
               <RaisedButton
                   icon={<ContentClear />}
                   label="Cancel"
-                  onClick={() => this._onSubmit()}
-                  secondary={true}
-                  labelStyle={{color: '#333'}}
+                  onClick={() => this._onCancelForm()}
               />
               <RaisedButton
                   icon={<ActionDone />}
                   label="Submit User Info"
                   onClick={() => this._onSubmit()}
-                  primary={true}
-                  labelStyle={{color: yellow500}}
-
+                  secondary={true}
               />
             </div>
-
           </form>
-        </Paper>
       </div>
     )
   }
 }
 
+const SITE_QUERY = gql`
+  query fetchSiteById ($siteID:ID) {
+    fetchSiteById (_id:$siteID) {
+      _id
+      roles {
+        id
+        label
+      }
+    }
+  }`
+
+const withSite = graphql(SITE_QUERY, {
+  options: ({ site }) => ({ variables: { siteID: site._id } }),
+  props({data: {error, loading, fetchSiteById, refetch}}) {
+    return {error, loading, fetchSiteById, refetch}
+  }
+})
+
+
+const CREATE_USER_MUTATION = gql`
+  mutation createUser($fields:UserInput!) {
+    createUser(input:$fields) {
+      _id
+      active
+      contact {
+        _id
+        email
+        name {
+          first
+          last
+        }
+      }
+      email
+      scope {
+        id
+        label
+      }
+    }
+  }`
+
+const UPDATE_USER_MUTATION = gql`
+  mutation updateUser($fields:UserInput!) {
+    updateUser(input:$fields) {
+      _id
+      active
+      contact {
+        _id
+        email
+        name {
+          first
+          last
+        }
+      }
+      email
+      scope {
+        id
+        label
+      }
+    }
+  }`
+
+const withAddForm = graphql(CREATE_USER_MUTATION, {
+  props({ ownProps, mutate }) {
+    return {
+      createUser(fields) {
+        return mutate({
+          variables: { fields },
+          updateQueries: {
+            fetchUsers: (prev, { mutationResult }) => {
+              let newUsr = R.merge(mutationResult.data.createUser, fields)
+              let newList = R.clone(prev)
+              newList.fetchUsers.push(newUsr)
+              sortBy('contact.name.last', newList.fetchUsers)
+              return newList
+            }
+          }
+        })
+      }
+    }
+  }
+})
+
+const withEditForm = graphql(UPDATE_USER_MUTATION, {
+  props({ ownProps, mutate }) {
+    return {
+      updateUser(fields) {
+        return mutate({
+          variables: { fields },
+          optimisticResponse: {
+            __typename: 'Mutation',
+            updateUser: {
+              _id: fields._id,
+              __typename: 'User',
+              ...fields
+            }
+          },
+          updateQueries: {
+            fetchUsers: (prev, { mutationResult }) => {
+              const idx = R.findIndex(R.propEq('_id', fields._id))(prev.fetchUsers)
+              let newList = R.clone(prev)
+              newList.fetchUsers[idx] = fields
+              sortBy('contact.name.last', newList.fetchUsers)
+              return newList
+            }
+          }
+        })
+      }
+    }
+  }
+})
+
 function mapStateToProps(state) {
   return {
-    user:     userCurrentSelector(state),
-    scratch:  userScratchSelector(state)
+    scratch:  userScratchSelector(state),
+    site:     siteScratchSelector(state)
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
-      persistUser,
-      setUserCreate,
+      ...alertActions,
       setUserProp,
-      setUserScratch,
     }, dispatch),
   }
 }
@@ -220,10 +353,15 @@ UserForm.propTypes = {
   actions:  PropTypes.object.isRequired,
   method:   PropTypes.object,
   scratch:  PropTypes.object,
-  user:     PropTypes.object,
 }
+
+const MutateUserForm = withApollo(compose(
+  withAddForm,
+  withEditForm,
+  withSite
+)(UserForm))
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(UserForm)
+)(MutateUserForm)

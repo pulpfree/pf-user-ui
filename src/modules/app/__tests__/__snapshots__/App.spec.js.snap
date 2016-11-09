@@ -28,14 +28,14 @@ ShallowWrapper {
               "fontWeight": 500,
               "primaryColor": "#424242",
               "primaryTextColor": "#ffffff",
-              "secondaryColor": "#ffeb3b",
+              "secondaryColor": "#22A699",
               "secondaryTextColor": "#ffffff",
               "textColor": "rgba(0, 0, 0, 0.87)",
             },
             "baseTheme": Object {
               "fontFamily": "Roboto, sans-serif",
               "palette": Object {
-                "accent1Color": "#ffeb3b",
+                "accent1Color": "#22A699",
                 "accent2Color": "#f5f5f5",
                 "accent3Color": "#9e9e9e",
                 "alternateTextColor": "#ffffff",
@@ -139,7 +139,7 @@ ShallowWrapper {
               "fontSize": 14,
               "fontWeight": 500,
               "primaryTextColor": "#424242",
-              "secondaryTextColor": "#ffeb3b",
+              "secondaryTextColor": "#22A699",
               "textColor": "rgba(0, 0, 0, 0.87)",
             },
             "floatingActionButton": Object {
@@ -149,7 +149,7 @@ ShallowWrapper {
               "disabledTextColor": "rgba(0, 0, 0, 0.3)",
               "iconColor": "#ffffff",
               "miniSize": 40,
-              "secondaryColor": "#ffeb3b",
+              "secondaryColor": "#22A699",
               "secondaryIconColor": "#ffffff",
             },
             "fontFamily": "Roboto, sans-serif",
@@ -161,7 +161,7 @@ ShallowWrapper {
               "color": "#ffffff",
             },
             "inkBar": Object {
-              "backgroundColor": "#ffeb3b",
+              "backgroundColor": "#22A699",
             },
             "isRtl": false,
             "listItem": Object {
@@ -180,7 +180,7 @@ ShallowWrapper {
               "hoverColor": "rgba(0, 0, 0, 0.035)",
               "padding": 24,
               "rightIconDesktopFill": "#757575",
-              "selectedTextColor": "#ffeb3b",
+              "selectedTextColor": "#22A699",
             },
             "menuSubheader": Object {
               "borderColor": "#e0e0e0",
@@ -191,7 +191,7 @@ ShallowWrapper {
               "backgroundColor": "rgba(0, 0, 0, 0.54)",
             },
             "palette": Object {
-              "accent1Color": "#ffeb3b",
+              "accent1Color": "#22A699",
               "accent2Color": "#f5f5f5",
               "accent3Color": "#9e9e9e",
               "alternateTextColor": "#ffffff",
@@ -242,14 +242,14 @@ ShallowWrapper {
               "fontWeight": 500,
               "primaryColor": "#424242",
               "primaryTextColor": "#ffffff",
-              "secondaryColor": "#ffeb3b",
+              "secondaryColor": "#22A699",
               "secondaryTextColor": "#ffffff",
               "textColor": "rgba(0, 0, 0, 0.87)",
             },
             "rawTheme": Object {
               "fontFamily": "Roboto, sans-serif",
               "palette": Object {
-                "accent1Color": "#ffeb3b",
+                "accent1Color": "#22A699",
                 "accent2Color": "#f5f5f5",
                 "accent3Color": "#9e9e9e",
                 "alternateTextColor": "#ffffff",
@@ -299,7 +299,7 @@ ShallowWrapper {
               "trackSize": 2,
             },
             "snackbar": Object {
-              "actionColor": "#ffeb3b",
+              "actionColor": "#22A699",
               "backgroundColor": "rgba(0, 0, 0, 0.87)",
               "textColor": "#ffffff",
             },
@@ -427,7 +427,52 @@ ShallowWrapper {
     }>
     <div
         className="App">
-        <function Header() {_classCallCheck(this, Header);return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));}
+        <function Connect(props, context) {
+                _classCallCheck(this, Connect);
+        
+                var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+        
+                _this.version = version;
+                _this.store = props.store || context.store;
+        
+                (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+        
+                var storeState = _this.store.getState();
+                _this.state = { storeState: storeState };
+                _this.clearCache();
+                return _this;
+              } />
+        <class Header extends /* istanbul ignore next */_react.Component {
+        
+          render() {/* istanbul ignore next */var _props =
+        
+            this.props; /* istanbul ignore next */const links = _props.links; /* istanbul ignore next */const pathname = _props.pathname;
+        
+            let ls = links.map(l => {
+              let eleStyle = { borderRadius: 0 };
+              if (pathname === l.path) {
+                eleStyle.backgroundColor = '#fff';
+                eleStyle.color = '#000';
+              }
+        
+              return (
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                  style: eleStyle,
+                  containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ to: l.path, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }),
+                  key: l.path,
+                  label: l.label,
+                  secondary: true, __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: this }));
+        
+        
+            });
+        
+            return (
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this },
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 35 }, __self: this }),
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this }, ls)));
+        
+        
+          }}
             links={
                 Array [
                     Object {
@@ -474,14 +519,14 @@ ShallowWrapper {
                     "fontWeight": 500,
                     "primaryColor": "#424242",
                     "primaryTextColor": "#ffffff",
-                    "secondaryColor": "#ffeb3b",
+                    "secondaryColor": "#22A699",
                     "secondaryTextColor": "#ffffff",
                     "textColor": "rgba(0, 0, 0, 0.87)",
                   },
                   "baseTheme": Object {
                     "fontFamily": "Roboto, sans-serif",
                     "palette": Object {
-                      "accent1Color": "#ffeb3b",
+                      "accent1Color": "#22A699",
                       "accent2Color": "#f5f5f5",
                       "accent3Color": "#9e9e9e",
                       "alternateTextColor": "#ffffff",
@@ -585,7 +630,7 @@ ShallowWrapper {
                     "fontSize": 14,
                     "fontWeight": 500,
                     "primaryTextColor": "#424242",
-                    "secondaryTextColor": "#ffeb3b",
+                    "secondaryTextColor": "#22A699",
                     "textColor": "rgba(0, 0, 0, 0.87)",
                   },
                   "floatingActionButton": Object {
@@ -595,7 +640,7 @@ ShallowWrapper {
                     "disabledTextColor": "rgba(0, 0, 0, 0.3)",
                     "iconColor": "#ffffff",
                     "miniSize": 40,
-                    "secondaryColor": "#ffeb3b",
+                    "secondaryColor": "#22A699",
                     "secondaryIconColor": "#ffffff",
                   },
                   "fontFamily": "Roboto, sans-serif",
@@ -607,7 +652,7 @@ ShallowWrapper {
                     "color": "#ffffff",
                   },
                   "inkBar": Object {
-                    "backgroundColor": "#ffeb3b",
+                    "backgroundColor": "#22A699",
                   },
                   "isRtl": false,
                   "listItem": Object {
@@ -626,7 +671,7 @@ ShallowWrapper {
                     "hoverColor": "rgba(0, 0, 0, 0.035)",
                     "padding": 24,
                     "rightIconDesktopFill": "#757575",
-                    "selectedTextColor": "#ffeb3b",
+                    "selectedTextColor": "#22A699",
                   },
                   "menuSubheader": Object {
                     "borderColor": "#e0e0e0",
@@ -637,7 +682,7 @@ ShallowWrapper {
                     "backgroundColor": "rgba(0, 0, 0, 0.54)",
                   },
                   "palette": Object {
-                    "accent1Color": "#ffeb3b",
+                    "accent1Color": "#22A699",
                     "accent2Color": "#f5f5f5",
                     "accent3Color": "#9e9e9e",
                     "alternateTextColor": "#ffffff",
@@ -688,14 +733,14 @@ ShallowWrapper {
                     "fontWeight": 500,
                     "primaryColor": "#424242",
                     "primaryTextColor": "#ffffff",
-                    "secondaryColor": "#ffeb3b",
+                    "secondaryColor": "#22A699",
                     "secondaryTextColor": "#ffffff",
                     "textColor": "rgba(0, 0, 0, 0.87)",
                   },
                   "rawTheme": Object {
                     "fontFamily": "Roboto, sans-serif",
                     "palette": Object {
-                      "accent1Color": "#ffeb3b",
+                      "accent1Color": "#22A699",
                       "accent2Color": "#f5f5f5",
                       "accent3Color": "#9e9e9e",
                       "alternateTextColor": "#ffffff",
@@ -745,7 +790,7 @@ ShallowWrapper {
                     "trackSize": 2,
                   },
                   "snackbar": Object {
-                    "actionColor": "#ffeb3b",
+                    "actionColor": "#22A699",
                     "backgroundColor": "rgba(0, 0, 0, 0.87)",
                     "textColor": "#ffffff",
                   },
@@ -873,7 +918,52 @@ ShallowWrapper {
       }>
       <div
             className="App">
-            <function Header() {_classCallCheck(this, Header);return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));}
+            <function Connect(props, context) {
+                    _classCallCheck(this, Connect);
+            
+                    var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+            
+                    _this.version = version;
+                    _this.store = props.store || context.store;
+            
+                    (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+            
+                    var storeState = _this.store.getState();
+                    _this.state = { storeState: storeState };
+                    _this.clearCache();
+                    return _this;
+                  } />
+            <class Header extends /* istanbul ignore next */_react.Component {
+            
+              render() {/* istanbul ignore next */var _props =
+            
+                this.props; /* istanbul ignore next */const links = _props.links; /* istanbul ignore next */const pathname = _props.pathname;
+            
+                let ls = links.map(l => {
+                  let eleStyle = { borderRadius: 0 };
+                  if (pathname === l.path) {
+                    eleStyle.backgroundColor = '#fff';
+                    eleStyle.color = '#000';
+                  }
+            
+                  return (
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                      style: eleStyle,
+                      containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ to: l.path, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }),
+                      key: l.path,
+                      label: l.label,
+                      secondary: true, __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: this }));
+            
+            
+                });
+            
+                return (
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this },
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 35 }, __self: this }),
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this }, ls)));
+            
+            
+              }}
                   links={
                         Array [
                               Object {
@@ -904,7 +994,22 @@ ShallowWrapper {
       "_calledComponentWillUnmount": false,
       "_compositeType": 0,
       "_context": Object {},
-      "_currentElement": <function App() {_classCallCheck(this, App);return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));} />,
+      "_currentElement": <class App extends /* istanbul ignore next */_react.Component {
+
+  render() {/* istanbul ignore next */var _props =
+
+    this.props; /* istanbul ignore next */const children = _props.children; /* istanbul ignore next */const pathname = _props.pathname; /* istanbul ignore next */const routeChildren = _props.routeChildren;
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MuiThemeProvider2.default, /* istanbul ignore next */{ muiTheme: /* istanbul ignore next */_theme.muiTheme, __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'App', __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Alerts2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Header2.default, /* istanbul ignore next */{ links: links, pathname: pathname, routeChildren: routeChildren, __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this }),
+          children)));
+
+
+
+  }} />,
       "_debugID": 1,
       "_hostContainerInfo": null,
       "_hostParent": null,
@@ -954,14 +1059,14 @@ ShallowWrapper {
                                 "fontWeight": 500,
                                 "primaryColor": "#424242",
                                 "primaryTextColor": "#ffffff",
-                                "secondaryColor": "#ffeb3b",
+                                "secondaryColor": "#22A699",
                                 "secondaryTextColor": "#ffffff",
                                 "textColor": "rgba(0, 0, 0, 0.87)",
                               },
                               "baseTheme": Object {
                                 "fontFamily": "Roboto, sans-serif",
                                 "palette": Object {
-                                  "accent1Color": "#ffeb3b",
+                                  "accent1Color": "#22A699",
                                   "accent2Color": "#f5f5f5",
                                   "accent3Color": "#9e9e9e",
                                   "alternateTextColor": "#ffffff",
@@ -1065,7 +1170,7 @@ ShallowWrapper {
                                 "fontSize": 14,
                                 "fontWeight": 500,
                                 "primaryTextColor": "#424242",
-                                "secondaryTextColor": "#ffeb3b",
+                                "secondaryTextColor": "#22A699",
                                 "textColor": "rgba(0, 0, 0, 0.87)",
                               },
                               "floatingActionButton": Object {
@@ -1075,7 +1180,7 @@ ShallowWrapper {
                                 "disabledTextColor": "rgba(0, 0, 0, 0.3)",
                                 "iconColor": "#ffffff",
                                 "miniSize": 40,
-                                "secondaryColor": "#ffeb3b",
+                                "secondaryColor": "#22A699",
                                 "secondaryIconColor": "#ffffff",
                               },
                               "fontFamily": "Roboto, sans-serif",
@@ -1087,7 +1192,7 @@ ShallowWrapper {
                                 "color": "#ffffff",
                               },
                               "inkBar": Object {
-                                "backgroundColor": "#ffeb3b",
+                                "backgroundColor": "#22A699",
                               },
                               "isRtl": false,
                               "listItem": Object {
@@ -1106,7 +1211,7 @@ ShallowWrapper {
                                 "hoverColor": "rgba(0, 0, 0, 0.035)",
                                 "padding": 24,
                                 "rightIconDesktopFill": "#757575",
-                                "selectedTextColor": "#ffeb3b",
+                                "selectedTextColor": "#22A699",
                               },
                               "menuSubheader": Object {
                                 "borderColor": "#e0e0e0",
@@ -1117,7 +1222,7 @@ ShallowWrapper {
                                 "backgroundColor": "rgba(0, 0, 0, 0.54)",
                               },
                               "palette": Object {
-                                "accent1Color": "#ffeb3b",
+                                "accent1Color": "#22A699",
                                 "accent2Color": "#f5f5f5",
                                 "accent3Color": "#9e9e9e",
                                 "alternateTextColor": "#ffffff",
@@ -1168,14 +1273,14 @@ ShallowWrapper {
                                 "fontWeight": 500,
                                 "primaryColor": "#424242",
                                 "primaryTextColor": "#ffffff",
-                                "secondaryColor": "#ffeb3b",
+                                "secondaryColor": "#22A699",
                                 "secondaryTextColor": "#ffffff",
                                 "textColor": "rgba(0, 0, 0, 0.87)",
                               },
                               "rawTheme": Object {
                                 "fontFamily": "Roboto, sans-serif",
                                 "palette": Object {
-                                  "accent1Color": "#ffeb3b",
+                                  "accent1Color": "#22A699",
                                   "accent2Color": "#f5f5f5",
                                   "accent3Color": "#9e9e9e",
                                   "alternateTextColor": "#ffffff",
@@ -1225,7 +1330,7 @@ ShallowWrapper {
                                 "trackSize": 2,
                               },
                               "snackbar": Object {
-                                "actionColor": "#ffeb3b",
+                                "actionColor": "#22A699",
                                 "backgroundColor": "rgba(0, 0, 0, 0.87)",
                                 "textColor": "#ffffff",
                               },
@@ -1353,7 +1458,52 @@ ShallowWrapper {
           }>
           <div
                     className="App">
-                    <function Header() {_classCallCheck(this, Header);return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));}
+                    <function Connect(props, context) {
+                            _classCallCheck(this, Connect);
+                    
+                            var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+                    
+                            _this.version = version;
+                            _this.store = props.store || context.store;
+                    
+                            (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+                    
+                            var storeState = _this.store.getState();
+                            _this.state = { storeState: storeState };
+                            _this.clearCache();
+                            return _this;
+                          } />
+                    <class Header extends /* istanbul ignore next */_react.Component {
+                    
+                      render() {/* istanbul ignore next */var _props =
+                    
+                        this.props; /* istanbul ignore next */const links = _props.links; /* istanbul ignore next */const pathname = _props.pathname;
+                    
+                        let ls = links.map(l => {
+                          let eleStyle = { borderRadius: 0 };
+                          if (pathname === l.path) {
+                            eleStyle.backgroundColor = '#fff';
+                            eleStyle.color = '#000';
+                          }
+                    
+                          return (
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                              style: eleStyle,
+                              containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ to: l.path, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }),
+                              key: l.path,
+                              label: l.label,
+                              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: this }));
+                    
+                    
+                        });
+                    
+                        return (
+                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this },
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 35 }, __self: this }),
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this }, ls)));
+                    
+                    
+                      }}
                               links={
                                         Array [
                                                   Object {
@@ -1400,14 +1550,14 @@ ShallowWrapper {
                                 "fontWeight": 500,
                                 "primaryColor": "#424242",
                                 "primaryTextColor": "#ffffff",
-                                "secondaryColor": "#ffeb3b",
+                                "secondaryColor": "#22A699",
                                 "secondaryTextColor": "#ffffff",
                                 "textColor": "rgba(0, 0, 0, 0.87)",
                               },
                               "baseTheme": Object {
                                 "fontFamily": "Roboto, sans-serif",
                                 "palette": Object {
-                                  "accent1Color": "#ffeb3b",
+                                  "accent1Color": "#22A699",
                                   "accent2Color": "#f5f5f5",
                                   "accent3Color": "#9e9e9e",
                                   "alternateTextColor": "#ffffff",
@@ -1511,7 +1661,7 @@ ShallowWrapper {
                                 "fontSize": 14,
                                 "fontWeight": 500,
                                 "primaryTextColor": "#424242",
-                                "secondaryTextColor": "#ffeb3b",
+                                "secondaryTextColor": "#22A699",
                                 "textColor": "rgba(0, 0, 0, 0.87)",
                               },
                               "floatingActionButton": Object {
@@ -1521,7 +1671,7 @@ ShallowWrapper {
                                 "disabledTextColor": "rgba(0, 0, 0, 0.3)",
                                 "iconColor": "#ffffff",
                                 "miniSize": 40,
-                                "secondaryColor": "#ffeb3b",
+                                "secondaryColor": "#22A699",
                                 "secondaryIconColor": "#ffffff",
                               },
                               "fontFamily": "Roboto, sans-serif",
@@ -1533,7 +1683,7 @@ ShallowWrapper {
                                 "color": "#ffffff",
                               },
                               "inkBar": Object {
-                                "backgroundColor": "#ffeb3b",
+                                "backgroundColor": "#22A699",
                               },
                               "isRtl": false,
                               "listItem": Object {
@@ -1552,7 +1702,7 @@ ShallowWrapper {
                                 "hoverColor": "rgba(0, 0, 0, 0.035)",
                                 "padding": 24,
                                 "rightIconDesktopFill": "#757575",
-                                "selectedTextColor": "#ffeb3b",
+                                "selectedTextColor": "#22A699",
                               },
                               "menuSubheader": Object {
                                 "borderColor": "#e0e0e0",
@@ -1563,7 +1713,7 @@ ShallowWrapper {
                                 "backgroundColor": "rgba(0, 0, 0, 0.54)",
                               },
                               "palette": Object {
-                                "accent1Color": "#ffeb3b",
+                                "accent1Color": "#22A699",
                                 "accent2Color": "#f5f5f5",
                                 "accent3Color": "#9e9e9e",
                                 "alternateTextColor": "#ffffff",
@@ -1614,14 +1764,14 @@ ShallowWrapper {
                                 "fontWeight": 500,
                                 "primaryColor": "#424242",
                                 "primaryTextColor": "#ffffff",
-                                "secondaryColor": "#ffeb3b",
+                                "secondaryColor": "#22A699",
                                 "secondaryTextColor": "#ffffff",
                                 "textColor": "rgba(0, 0, 0, 0.87)",
                               },
                               "rawTheme": Object {
                                 "fontFamily": "Roboto, sans-serif",
                                 "palette": Object {
-                                  "accent1Color": "#ffeb3b",
+                                  "accent1Color": "#22A699",
                                   "accent2Color": "#f5f5f5",
                                   "accent3Color": "#9e9e9e",
                                   "alternateTextColor": "#ffffff",
@@ -1671,7 +1821,7 @@ ShallowWrapper {
                                 "trackSize": 2,
                               },
                               "snackbar": Object {
-                                "actionColor": "#ffeb3b",
+                                "actionColor": "#22A699",
                                 "backgroundColor": "rgba(0, 0, 0, 0.87)",
                                 "textColor": "#ffffff",
                               },
@@ -1799,7 +1949,52 @@ ShallowWrapper {
           }>
           <div
                     className="App">
-                    <function Header() {_classCallCheck(this, Header);return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));}
+                    <function Connect(props, context) {
+                            _classCallCheck(this, Connect);
+                    
+                            var _this = _possibleConstructorReturn(this, _Component.call(this, props, context));
+                    
+                            _this.version = version;
+                            _this.store = props.store || context.store;
+                    
+                            (0, _invariant2["default"])(_this.store, 'Could not find "store" in either the context or ' + ('props of "' + connectDisplayName + '". ') + 'Either wrap the root component in a <Provider>, ' + ('or explicitly pass "store" as a prop to "' + connectDisplayName + '".'));
+                    
+                            var storeState = _this.store.getState();
+                            _this.state = { storeState: storeState };
+                            _this.clearCache();
+                            return _this;
+                          } />
+                    <class Header extends /* istanbul ignore next */_react.Component {
+                    
+                      render() {/* istanbul ignore next */var _props =
+                    
+                        this.props; /* istanbul ignore next */const links = _props.links; /* istanbul ignore next */const pathname = _props.pathname;
+                    
+                        let ls = links.map(l => {
+                          let eleStyle = { borderRadius: 0 };
+                          if (pathname === l.path) {
+                            eleStyle.backgroundColor = '#fff';
+                            eleStyle.color = '#000';
+                          }
+                    
+                          return (
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                              style: eleStyle,
+                              containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ to: l.path, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }),
+                              key: l.path,
+                              label: l.label,
+                              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: this }));
+                    
+                    
+                        });
+                    
+                        return (
+                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this },
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 35 }, __self: this }),
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this }, ls)));
+                    
+                    
+                      }}
                               links={
                                         Array [
                                                   Object {
@@ -1834,6 +2029,21 @@ ShallowWrapper {
     "render": [Function],
   },
   "root": [Circular],
-  "unrendered": <function App() {_classCallCheck(this, App);return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));} />,
+  "unrendered": <class App extends /* istanbul ignore next */_react.Component {
+
+  render() {/* istanbul ignore next */var _props =
+
+    this.props; /* istanbul ignore next */const children = _props.children; /* istanbul ignore next */const pathname = _props.pathname; /* istanbul ignore next */const routeChildren = _props.routeChildren;
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MuiThemeProvider2.default, /* istanbul ignore next */{ muiTheme: /* istanbul ignore next */_theme.muiTheme, __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'App', __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Alerts2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Header2.default, /* istanbul ignore next */{ links: links, pathname: pathname, routeChildren: routeChildren, __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this }),
+          children)));
+
+
+
+  }} />,
 }
 `;

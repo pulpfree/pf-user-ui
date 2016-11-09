@@ -3,26 +3,20 @@ import * as actions from '../userActions'
 
 describe('user list actions', () => {
 
-  it('should create action to fetch users', () => {
-
-    const params = {
-      siteID: 'abc'
-    }
-    const fetchRequestAction = {type: actions.USER_LIST.REQUEST, params}
-    expect(actions.fetchUsers(params)).toEqual(fetchRequestAction)
+  it('should create action to create new scratch site', () => {
+    const newScratchAction = {type: actions.USER_SCRATCH_CREATE}
+    expect(actions.setUserCreate()).toEqual(newScratchAction)
   })
 
-  it('should create action to persist user', () => {
-
+  it('should create action to set existing user into scratch', () => {
     const params = {
-      siteID: 'abc'
+      domainID: 'abc'
     }
-    const persistUserAction = {type: actions.USER_PERSIST.REQUEST, params}
-    expect(actions.persistUser(params)).toEqual(persistUserAction)
+    const setUserScratchAction = {type: actions.USER_SCRATCH_SET, params}
+    expect(actions.setUserScratch(params)).toEqual(setUserScratchAction)
   })
 
   it('should create action to set scratch property', () => {
-
     const prop = {
       'name.first': 'test'
     }

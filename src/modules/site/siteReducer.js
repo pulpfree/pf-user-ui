@@ -24,6 +24,7 @@ export const scratchState = Immutable({
   pemFilePrivate:         null,
   pemFilePublic:          null,
   resetURI:               null,
+  roles:                  [],
   signingMethod:          'RSA',
 })
 
