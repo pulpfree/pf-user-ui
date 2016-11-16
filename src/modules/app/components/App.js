@@ -41,7 +41,7 @@ export class App extends Component {
         <div className="App">
           <Alerts />
           <Header links={links} pathname={pathname} routeChildren={routeChildren} />
-          <Loginform />
+          {/*<Loginform />*/}
           {children}
         </div>
       </MuiThemeProvider>

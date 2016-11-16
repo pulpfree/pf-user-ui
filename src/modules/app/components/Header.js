@@ -12,17 +12,28 @@ class Header extends Component {
 
     const { links, pathname } = this.props
 
+    const eleStyle = {borderRadius: 0}
+    const activeStyle = {
+      backgroundColor: '#fff',
+      color: '#000'
+    }
+
+    let activeOnIndex
+
     let ls = links.map(l => {
       let eleStyle = {borderRadius: 0}
-      if (pathname === l.path) {
+      /*if (pathname === l.path) {
         eleStyle.backgroundColor = '#fff'
         eleStyle.color = '#000'
-      }
+      }*/
+      console.log('l.path:', l.path)
+      activeOnIndex = l.path === '/' ? true : false
+      // console.log('activeOnIndex:', activeOnIndex)
 
       return (
         <FlatButton
             style={eleStyle}
-            containerElement={<Link to={l.path} />}
+            containerElement={<Link onlyActiveOnIndex={activeOnIndex} activeStyle={activeStyle} to={l.path} />}
             key={l.path}
             label={l.label}
             secondary={true}

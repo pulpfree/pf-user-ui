@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { browserHistory } from 'react-router'
 
 import { graphql, compose, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
@@ -42,6 +43,12 @@ export class User extends Component {
     }
   }
 
+  componentDidMount = () => {
+    if (this.props.params.siteID) {
+      this.setState({siteID: this.props.params.siteID})
+    }
+  }
+
   _handleOpen = () => {
     this.setState({open: true})
   }
@@ -71,19 +78,24 @@ export class User extends Component {
   _onSelectSite = (e, idx, val) => {
     this.setState({siteID: val})
     this.props.actions.setSiteScratch({site: {_id: val}})
+    browserHistory.push(`/user/${val}`)
   }
 
 
   render() {
 
-    const { loading, fetchSites, removeUser } = this.props
-    if (loading) {
+    const { loading, fetchSites, params, removeUser } = this.props
+    if (loading === true) {
       return (
         <div>Loading...</div>
       )
     }
 
     const UserList = (data) => {
+
+      if (!data.domainID) {
+        return <div>Select Site</div>
+      }
 
       const { loading, fetchUsers, refetch } = data
       if (loading) {
@@ -201,6 +213,7 @@ export class User extends Component {
 
     const UserListWithData = graphql(USER_QUERY, {
       options: ({ domainID, siteID }) => ({ variables: { domainID, siteID: domainID } }),
+      skip: ({domainID}) => !domainID,
       props({data: {loading, fetchUsers, refetch}}) {
         if (fetchUsers && fetchUsers.length) {
           sortBy('contact.name.last', fetchUsers)
@@ -209,9 +222,7 @@ export class User extends Component {
       }
     })(UserList)
 
-
     return (
-
       <section className='App-container'>
         <Paper>
           <AppBar

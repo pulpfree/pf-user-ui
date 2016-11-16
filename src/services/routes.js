@@ -11,7 +11,9 @@ export default (store) => {
   return (
     <Route path='/' component={App}>
       <Route path='site' component={Site} />
-      <Route path='user' component={User} />
+      <Route path='user' component={User}>
+        <Route path=':siteID' component={User} />
+      </Route>
     </Route>
   )
 }

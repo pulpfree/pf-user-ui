@@ -41,3 +41,7 @@
 .appBar {
   box-shadow: 'none'
 }
+.active-hdr-link {
+  background-color: #fff;
+  color: #000;
+}
