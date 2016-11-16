@@ -92,7 +92,7 @@ export class Site extends Component {
     const Header = () => (
       <header className='list-table-header'>
         <div className='list-table-cell' style={{flex: 1.5}}>Name</div>
-        <div className='list-table-cell' style={{flex: 1.5}}>Domain</div>
+        <div className='list-table-cell' style={{flex: 1.5}}>Domain ID</div>
         <div className='list-table-cell' style={{flex: .5}}>Active</div>
         <div className='list-table-cell'>User Roles</div>
         <div className='list-table-cell'></div>
@@ -107,7 +107,7 @@ export class Site extends Component {
               key={s._id}
           >
             <div className='list-table-cell' style={{flex: 1.5}} onClick={() => this._handleRowClick(s)}>{s.name}</div>
-            <div className='list-table-cell' style={{flex: 1.5}} onClick={() => this._handleRowClick(s)}>{s.domain}</div>
+            <div className='list-table-cell' style={{flex: 1.5}} onClick={() => this._handleRowClick(s)}>{s.domainID}</div>
             <div className='list-table-cell' style={{flex: .3, textAlign: 'right'}} onClick={() => this._handleRowClick(s)}>{s.active === true ? 'Y' : 'N'}</div>
             <div className='list-table-cell'>
               <FlatButton
@@ -160,6 +160,7 @@ export class Site extends Component {
         </Paper>
         <Dialog
             actionsContainerStyle={{paddingTop: 0}}
+            autoScrollBodyContent={true}
             modal={true}
             onRequestClose={this._handleClose}
             open={this.state.openForm}
@@ -185,42 +186,6 @@ export class Site extends Component {
         >
           <RoleForm closeFormFunc={this._handleClose} />
         </Dialog>
-        <FlatButton
-              label='Go Ahead danger'
-              secondary={true}
-              onTouchTap={() => this.props.actions.alertSend({
-                message: 'Invalid entries, please check your information.',
-                type: 'danger',
-                dismissAfter: 2000
-              })}
-          />
-          <FlatButton
-              label='Go Ahead success'
-              secondary={true}
-              onTouchTap={() => this.props.actions.alertSend({
-                message: 'It worked! Imagine that...<br />New line??',
-                type: 'success',
-                dismissAfter: 5000
-              })}
-          />
-          <FlatButton
-              label='Go Ahead info'
-              secondary={true}
-              onTouchTap={() => this.props.actions.alertSend({
-                message: 'It worked! Imagine that...',
-                type: 'info',
-                dismissAfter: 1000
-              })}
-          />
-          <FlatButton
-              label='Go Ahead warning'
-              secondary={true}
-              onTouchTap={() => this.props.actions.alertSend({
-                message: 'ERROR: It worked! Imagine that...',
-                type: 'warning',
-                // dismissAfter: 1000
-              })}
-          />
       </section>
     )
   }
@@ -236,14 +201,21 @@ const SITES_QUERY = gql`
     {
       _id
       active
-      credentialKeyPassword
-      credentialKeyUsername
-      collectionNm
+      credentials {
+        password
+        username
+      }
+      collections {
+        contact
+        user
+      }
       dbNm
-      domain
+      domainID
       name
-      pemFilePrivate
-      pemFilePublic
+      pemFiles {
+        private
+        public
+      }
       resetURI
       roles {id, label}
       signingMethod

@@ -9,6 +9,8 @@ import './App.css'
 import Header from './Header'
 import Alerts from '../../alert/components/Alerts'
 
+import Loginform from '../../auth/components/Loginform'
+
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin()
@@ -37,8 +39,9 @@ export class App extends Component {
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div className="App">
-        <Alerts />
+          <Alerts />
           <Header links={links} pathname={pathname} routeChildren={routeChildren} />
+          <Loginform />
           {children}
         </div>
       </MuiThemeProvider>

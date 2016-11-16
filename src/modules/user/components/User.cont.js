@@ -23,6 +23,7 @@ import {
   setUserScratch
 } from '../userActions'
 import { setSiteScratch } from '../../site/siteActions'
+import * as alertActions from '../../alert/alertActions'
 
 import '../../../styles/form.css'
 import { styles as st } from '../../../styles'
@@ -100,6 +101,11 @@ export class User extends Component {
         removeUser(this.state.userID, this.state.siteID).then(res => {
           refetch()
           this.setState({openDelete: false})
+        })
+        this.props.actions.alertSend({
+          dismissAfter: 2000,
+          message:      'User successfully deleted',
+          type:         'success',
         })
       }
 
@@ -285,6 +291,7 @@ const UserWithGraph = withApollo(compose(
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
+      ...alertActions,
       setSiteScratch,
       setUserCreate,
       setUserProp,

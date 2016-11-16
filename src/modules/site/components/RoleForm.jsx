@@ -104,7 +104,7 @@ export class RoleForm extends Component {
         onRequestDelete={() => this._onDelete(data.id)}
         style={this.styles.chip}
       >
-        {data.id} - {data.label}
+        {data.label} [{data.id}]
       </Chip>
     );
   }
@@ -120,7 +120,8 @@ export class RoleForm extends Component {
             <TextField
                 floatingLabelText='Role ID'
                 onChange={() => this._onSetValue('roleID')}
-                ref='roleID'
+                ref="roleID"
+                autoFocus={true}
                 value={this.state.role.id}
             />
 
@@ -168,7 +169,7 @@ const UPDATE_ROLES_MUTATION = gql`
     updateSite(_id:$_id, input:$fields) {
       _id
       active
-      domain
+      domainID
       name
       roles {id, label}
     }

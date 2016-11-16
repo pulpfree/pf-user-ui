@@ -7,20 +7,7 @@ import { scratchState } from '../userReducer'
 
 describe('user reducer', () => {
 
-  const user = {
-    active: true,
-    contact: {
-      _id: null,
-      name: {
-        first: 'Test',
-        last: 'Dummy',
-      },
-    },
-    domainID: null,
-    email: 'test@me.com',
-    password: null,
-    scope: []
-  }
+  const scratchState = reducers.scratchState
 
   it('should return scratch initial state', () => {
     expect(
@@ -35,17 +22,18 @@ describe('user reducer', () => {
   })
 
   it('should return merged scratch user', () => {
-    const retUser = scratchState.merge(user)
+    const email = 'test@example.com'
+    const user = scratchState.set('email', email)
     expect(
       reducers.scratch(scratchState, {type: actions.USER_SCRATCH_SET, params: {user}})
-    ).toEqual(retUser)
+    ).toEqual(user)
   })
 
   it('should set scratch property', () => {
     const firstName = 'test'
-    const res = scratchState.setIn(['name', 'first'], firstName)
+    const res = scratchState.setIn(['contact', 'name', 'first'], firstName)
     expect(
-      reducers.scratch(scratchState, {type: actions.USER_SCRATCH_PROP, prop: {'name.first': firstName}})
+      reducers.scratch(scratchState, {type: actions.USER_SCRATCH_PROP, prop: {'contact.name.first': firstName}})
     ).toEqual(res)
   })
 })

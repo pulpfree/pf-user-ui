@@ -4,13 +4,9 @@ import * as userActions from './userActions'
 import Immutable from 'seamless-immutable'
 
 const currentState = Immutable({
-
-
 })
 
 const listState = Immutable({
-
-
 })
 
 export const scratchState = Immutable({

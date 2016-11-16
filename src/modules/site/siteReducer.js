@@ -14,18 +14,25 @@ const listState = Immutable({
 })
 
 export const scratchState = Immutable({
-  active:                 false,
-  credentialKeyPassword: 'password',
-  credentialKeyUsername: 'email',
-  collectionNm:           null,
-  dbNm:                   null,
-  domain:                 null,
-  name:                   null,
-  pemFilePrivate:         null,
-  pemFilePublic:          null,
-  resetURI:               null,
-  roles:                  [],
-  signingMethod:          'RSA',
+  active:         false,
+  credentials: {
+    password:     'password',
+    username:     'email'
+  },
+  collections: {
+    contact:      null,
+    user:         null,
+  },
+  dbNm:           null,
+  domainID:       null,
+  name:           null,
+  pemFiles: {
+    private:      null,
+    public:       null
+  },
+  resetURI:       null,
+  roles:          [],
+  signingMethod:  'RSA',
 })
 
 export function current (state = currentState, action) {

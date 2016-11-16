@@ -491,6 +491,7 @@ ShallowWrapper {
             }
             pathname={undefined}
             routeChildren={undefined} />
+        <class Loginform extends /* istanbul ignore next */_react.Component {} />
     </div>
 </function MuiThemeProvider() {
     (0, _classCallCheck3.default)(this, MuiThemeProvider);
@@ -982,6 +983,7 @@ ShallowWrapper {
                   }
                   pathname={undefined}
                   routeChildren={undefined} />
+            <class Loginform extends /* istanbul ignore next */_react.Component {} />
       </div>
 </function MuiThemeProvider() {
     (0, _classCallCheck3.default)(this, MuiThemeProvider);
@@ -1001,10 +1003,11 @@ ShallowWrapper {
     this.props; /* istanbul ignore next */const children = _props.children; /* istanbul ignore next */const pathname = _props.pathname; /* istanbul ignore next */const routeChildren = _props.routeChildren;
 
     return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MuiThemeProvider2.default, /* istanbul ignore next */{ muiTheme: /* istanbul ignore next */_theme.muiTheme, __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'App', __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this },
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Alerts2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Header2.default, /* istanbul ignore next */{ links: links, pathname: pathname, routeChildren: routeChildren, __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MuiThemeProvider2.default, /* istanbul ignore next */{ muiTheme: /* istanbul ignore next */_theme.muiTheme, __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'App', __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Alerts2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 42 }, __self: this }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Header2.default, /* istanbul ignore next */{ links: links, pathname: pathname, routeChildren: routeChildren, __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Loginform.Loginform, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 44 }, __self: this }),
           children)));
 
 
@@ -1522,6 +1525,7 @@ ShallowWrapper {
                               }
                               pathname={undefined}
                               routeChildren={undefined} />
+                    <class Loginform extends /* istanbul ignore next */_react.Component {} />
           </div>
 </function MuiThemeProvider() {
     (0, _classCallCheck3.default)(this, MuiThemeProvider);
@@ -2013,6 +2017,7 @@ ShallowWrapper {
                               }
                               pathname={undefined}
                               routeChildren={undefined} />
+                    <class Loginform extends /* istanbul ignore next */_react.Component {} />
           </div>
 </function MuiThemeProvider() {
     (0, _classCallCheck3.default)(this, MuiThemeProvider);
@@ -2036,10 +2041,11 @@ ShallowWrapper {
     this.props; /* istanbul ignore next */const children = _props.children; /* istanbul ignore next */const pathname = _props.pathname; /* istanbul ignore next */const routeChildren = _props.routeChildren;
 
     return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MuiThemeProvider2.default, /* istanbul ignore next */{ muiTheme: /* istanbul ignore next */_theme.muiTheme, __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'App', __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this },
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Alerts2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Header2.default, /* istanbul ignore next */{ links: links, pathname: pathname, routeChildren: routeChildren, __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MuiThemeProvider2.default, /* istanbul ignore next */{ muiTheme: /* istanbul ignore next */_theme.muiTheme, __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'App', __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Alerts2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 42 }, __self: this }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Header2.default, /* istanbul ignore next */{ links: links, pathname: pathname, routeChildren: routeChildren, __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Loginform.Loginform, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 44 }, __self: this }),
           children)));
 
 

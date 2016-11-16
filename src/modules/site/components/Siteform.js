@@ -12,7 +12,7 @@ import { connect } from 'react-redux'
 
 import { compose, graphql, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
-import update from 'react-addons-update'
+// import update from 'react-addons-update'
 
 import { setSiteProp } from '../siteActions'
 import * as alertActions from '../../alert/alertActions'
@@ -20,6 +20,10 @@ import {
   siteScratchSelector,
   siteCurrentSelector,
 } from '../siteSelectors'
+
+import { sortBy } from '../../../utils'
+
+const R = require('ramda')
 
 import '../../../styles/form.css'
 
@@ -90,28 +94,28 @@ export class Siteform extends Component {
                   value={scratch.name || ''}
               />
               <TextField
-                  floatingLabelText='FQDN [Domain]'
-                  onChange={() => this._onPropChange('domain')}
-                  onBlur={() => this._validate('domain')}
-                  ref='domain'
-                  value={scratch.domain || ''}
+                  floatingLabelText='Domain ID'
+                  onChange={() => this._onPropChange('domainID')}
+                  onBlur={() => this._validate('domainID')}
+                  ref='domainID'
+                  value={scratch.domainID || ''}
               />
 
               <br /><br />
               <legend className='row'>Security</legend>
                 <TextField
                     floatingLabelText='Public PEM File'
-                    onChange={() => this._onPropChange('pemFilePublic')}
-                    onBlur={() => this._validate('pemFilePublic')}
-                    ref='pemFilePublic'
-                    value={scratch.pemFilePublic || ''}
+                    onChange={() => this._onPropChange('pemFiles.public')}
+                    onBlur={() => this._validate('pemFiles.public')}
+                    ref='pemFiles.public'
+                    value={scratch.pemFiles.public || ''}
                 />
                 <TextField
                     floatingLabelText='Private PEM File'
-                    onChange={() => this._onPropChange('pemFilePrivate')}
-                    onBlur={() => this._validate('pemFilePrivate')}
-                    ref='pemFilePrivate'
-                    value={scratch.pemFilePrivate || ''}
+                    onChange={() => this._onPropChange('pemFiles.private')}
+                    onBlur={() => this._validate('pemFiles.private')}
+                    ref='pemFiles.private'
+                    value={scratch.pemFiles.private || ''}
                 />
                 <TextField
                     disabled={true}
@@ -137,34 +141,34 @@ export class Siteform extends Component {
               />
               <TextField
                   floatingLabelText='User Collection'
-                  onChange={() => this._onPropChange('collectionNm')}
-                  onBlur={() => this._validate('collectionNm')}
-                  ref='collectionNm'
-                  value={scratch.collectionNm || ''}
+                  onChange={() => this._onPropChange('collections.user')}
+                  onBlur={() => this._validate('collections.user')}
+                  ref='collections.user'
+                  value={scratch.collections.user || ''}
               />
               <TextField
                   floatingLabelText='Contact Collection'
-                  onChange={() => this._onPropChange('collectionContactNm')}
-                  onBlur={() => this._validate('collectionContactNm')}
-                  ref='collectionContactNm'
-                  value={scratch.collectionContactNm || ''}
+                  onChange={() => this._onPropChange('collections.contact')}
+                  onBlur={() => this._validate('collections.contact')}
+                  ref='collections.contact'
+                  value={scratch.collections.contact || ''}
               />
 
               <br /><br />
             <legend className='row'>Site Info</legend>
               <TextField
                   floatingLabelText='Credential Password Field'
-                  onChange={() => this._onPropChange('credentialKeyPassword')}
-                  onBlur={() => this._validate('credentialKeyPassword')}
-                  ref='credentialKeyPassword'
-                  value={scratch.credentialKeyPassword || ''}
+                  onChange={() => this._onPropChange('credentials.password')}
+                  onBlur={() => this._validate('credentials.password')}
+                  ref='credentials.password'
+                  value={scratch.credentials.password || ''}
               />
               <TextField
                   floatingLabelText='Credential Sitename Field'
-                  onChange={() => this._onPropChange('credentialKeyUsername')}
-                  onBlur={() => this._validate('credentialKeyUsername')}
-                  ref='credentialKeyUsername'
-                  value={scratch.credentialKeyUsername || ''}
+                  onChange={() => this._onPropChange('credentials.username')}
+                  onBlur={() => this._validate('credentials.username')}
+                  ref='credentials.username'
+                  value={scratch.credentials.username || ''}
               />
               <TextField
                   floatingLabelText='Reset URI'
@@ -214,15 +218,26 @@ const CREATE_SITE_MUTATION = gql`
     createSite(input:$fields) {
       _id
       active
-      credentialKeyPassword
-      credentialKeyUsername
-      collectionNm
+      credentials {
+        password
+        username
+      }
+      collections {
+        contact
+        user
+      }
       dbNm
-      domain
+      domainID
       name
-      pemFilePrivate
-      pemFilePublic
+      pemFiles {
+        private
+        public
+      }
       resetURI
+      roles {
+        id
+        label
+      }
       signingMethod
     }
   }`
@@ -232,8 +247,27 @@ const UPDATE_SITE_MUTATION = gql`
     updateSite(_id:$_id, input:$fields) {
       _id
       active
-      domain
+      credentials {
+        password
+        username
+      }
+      collections {
+        contact
+        user
+      }
+      dbNm
+      domainID
       name
+      pemFiles {
+        private
+        public
+      }
+      resetURI
+      roles {
+        id
+        label
+      }
+      signingMethod
     }
   }`
 
@@ -246,11 +280,10 @@ const withAddForm = graphql(CREATE_SITE_MUTATION, {
           updateQueries: {
             fetchSites: (prev, { mutationResult }) => {
               const newSite = mutationResult.data.createSite
-              return update(prev, {
-                fetchSites: {
-                  $unshift: [newSite]
-                }
-              })
+              let newList = R.clone(prev)
+              newList.fetchSites.push(newSite)
+              sortBy('nameID', newList.fetchSites)
+              return newList
             }
           }
         })
@@ -264,7 +297,24 @@ const withEditForm = graphql(UPDATE_SITE_MUTATION, {
     return {
       updateSite(_id, fields) {
         return mutate({
-          variables: { _id, fields }
+          variables: { _id, fields },
+          optimisticResponse: {
+            __typename: 'Mutation',
+            updateSite: {
+              _id: _id,
+              __typename: 'Site',
+              ...fields
+            }
+          },
+          updateQueries: {
+            fetchSites: (prev, { mutationResult }) => {
+              const idx = R.findIndex(R.propEq('_id', _id))(prev.fetchSites)
+              let newList = R.clone(prev)
+              newList.fetchSites[idx] = mutationResult.data.updateSite
+              sortBy('name', newList.fetchSites)
+              return newList
+            }
+          }
         })
       }
     }
@@ -274,7 +324,7 @@ const withEditForm = graphql(UPDATE_SITE_MUTATION, {
 
 function mapStateToProps(state) {
   return {
-    site:     siteCurrentSelector(state),
+    // site:     siteCurrentSelector(state),
     scratch:  siteScratchSelector(state),
   }
 }
@@ -292,7 +342,7 @@ Siteform.propTypes = {
   actions:  PropTypes.object.isRequired,
   method:   PropTypes.object,
   scratch:  PropTypes.object,
-  site:     PropTypes.object,
+  // site:     PropTypes.object,
 }
 
 const MutateForm = withApollo(compose(

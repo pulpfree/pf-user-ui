@@ -1,8 +1,6 @@
 
 import React from 'react';
 import { shallow } from 'enzyme'
-
-// import Store from '../../../store/configureStore'
 import { Site } from '../components/Site.cont'
 
 

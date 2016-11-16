@@ -17,7 +17,19 @@ responseMiddlewareNetworkInterface.use({
   }
 })
 
+const token = 'first-token-value'
+const exampleWare1 = {
+  applyMiddleware(req, next) {
+    if (!req.options.headers) {
+      req.options.headers = {}
+    }
+    req.options.headers.authorization = token
+    next()
+  }
+}
+
 const networkInterface = addQueryMerging(responseMiddlewareNetworkInterface)
+networkInterface.use([exampleWare1])
 
 const ApolloClientSingleton = new ApolloClient({
   networkInterface,

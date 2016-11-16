@@ -1,0 +1,2021 @@
+exports[`components <RoleForm /> renders without crashing 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    style={
+        Object {
+            "margin": "auto",
+            "width": "auto",
+          }
+    }>
+    <form
+        onSubmit={[Function]}>
+        <div
+            className="form-row">
+            <function TextField() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, TextField);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  isFocused: false,
+                  errorText: undefined,
+                  hasValue: false,
+                  isClean: true
+                }, _this.handleInputBlur = function (event) {
+                  _this.setState({ isFocused: false });
+                  if (_this.props.onBlur) _this.props.onBlur(event);
+                }, _this.handleInputChange = function (event) {
+                  _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                  if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                }, _this.handleInputFocus = function (event) {
+                  if (_this.props.disabled) {
+                    return;
+                  }
+                  _this.setState({ isFocused: true });
+                  if (_this.props.onFocus) {
+                    _this.props.onFocus(event);
+                  }
+                }, _this.handleHeightChange = function (event, height) {
+                  var newHeight = height + 24;
+                  if (_this.props.floatingLabelText) {
+                    newHeight += 24;
+                  }
+                  _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                autoFocus={true}
+                disabled={false}
+                floatingLabelFixed={false}
+                floatingLabelText="Role ID"
+                fullWidth={false}
+                multiLine={false}
+                onChange={[Function]}
+                rows={1}
+                type="text"
+                underlineShow={true}
+                value="" />
+            <function TextField() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, TextField);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  isFocused: false,
+                  errorText: undefined,
+                  hasValue: false,
+                  isClean: true
+                }, _this.handleInputBlur = function (event) {
+                  _this.setState({ isFocused: false });
+                  if (_this.props.onBlur) _this.props.onBlur(event);
+                }, _this.handleInputChange = function (event) {
+                  _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                  if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                }, _this.handleInputFocus = function (event) {
+                  if (_this.props.disabled) {
+                    return;
+                  }
+                  _this.setState({ isFocused: true });
+                  if (_this.props.onFocus) {
+                    _this.props.onFocus(event);
+                  }
+                }, _this.handleHeightChange = function (event, height) {
+                  var newHeight = height + 24;
+                  if (_this.props.floatingLabelText) {
+                    newHeight += 24;
+                  }
+                  _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                disabled={false}
+                floatingLabelFixed={false}
+                floatingLabelText="Role Label"
+                fullWidth={false}
+                multiLine={false}
+                onChange={[Function]}
+                rows={1}
+                type="text"
+                underlineShow={true}
+                value="" />
+            <function RaisedButton() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, RaisedButton);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  hovered: false,
+                  keyboardFocused: false,
+                  touched: false,
+                  initialZDepth: 0,
+                  zDepth: 0
+                }, _this.handleMouseDown = function (event) {
+                  // only listen to left clicks
+                  if (event.button === 0) {
+                    _this.setState({
+                      zDepth: _this.state.initialZDepth + 1
+                    });
+                  }
+                  if (_this.props.onMouseDown) {
+                    _this.props.onMouseDown(event);
+                  }
+                }, _this.handleMouseUp = function (event) {
+                  _this.setState({
+                    zDepth: _this.state.initialZDepth
+                  });
+                  if (_this.props.onMouseUp) {
+                    _this.props.onMouseUp(event);
+                  }
+                }, _this.handleMouseLeave = function (event) {
+                  if (!_this.state.keyboardFocused) {
+                    _this.setState({
+                      zDepth: _this.state.initialZDepth,
+                      hovered: false
+                    });
+                  }
+                  if (_this.props.onMouseLeave) {
+                    _this.props.onMouseLeave(event);
+                  }
+                }, _this.handleMouseEnter = function (event) {
+                  if (!_this.state.keyboardFocused && !_this.state.touched) {
+                    _this.setState({
+                      hovered: true
+                    });
+                  }
+                  if (_this.props.onMouseEnter) {
+                    _this.props.onMouseEnter(event);
+                  }
+                }, _this.handleTouchStart = function (event) {
+                  _this.setState({
+                    touched: true,
+                    zDepth: _this.state.initialZDepth + 1
+                  });
+            
+                  if (_this.props.onTouchStart) {
+                    _this.props.onTouchStart(event);
+                  }
+                }, _this.handleTouchEnd = function (event) {
+                  _this.setState({
+                    zDepth: _this.state.initialZDepth
+                  });
+            
+                  if (_this.props.onTouchEnd) {
+                    _this.props.onTouchEnd(event);
+                  }
+                }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                  var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+            
+                  _this.setState({
+                    zDepth: zDepth,
+                    keyboardFocused: keyboardFocused
+                  });
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                disabled={false}
+                fullWidth={false}
+                icon={
+                    <function _class() {
+                            _classCallCheck(this, _class);
+                    
+                            return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                          } />
+                }
+                labelPosition="after"
+                onClick={[Function]}
+                primary={false}
+                secondary={false}
+                style={
+                    Object {
+                        "alignSelf": "flex-end",
+                      }
+                } />
+        </div>
+        <div
+            className="form-row"
+            style={
+                Object {
+                    "display": "flex",
+                    "flexWrap": "wrap",
+                    "justifyContent": "flex-start",
+                  }
+            }>
+            
+        </div>
+        <div
+            className="form-row"
+            style={
+                Object {
+                    "justifyContent": "space-around",
+                  }
+            }>
+            <function RaisedButton() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, RaisedButton);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  hovered: false,
+                  keyboardFocused: false,
+                  touched: false,
+                  initialZDepth: 0,
+                  zDepth: 0
+                }, _this.handleMouseDown = function (event) {
+                  // only listen to left clicks
+                  if (event.button === 0) {
+                    _this.setState({
+                      zDepth: _this.state.initialZDepth + 1
+                    });
+                  }
+                  if (_this.props.onMouseDown) {
+                    _this.props.onMouseDown(event);
+                  }
+                }, _this.handleMouseUp = function (event) {
+                  _this.setState({
+                    zDepth: _this.state.initialZDepth
+                  });
+                  if (_this.props.onMouseUp) {
+                    _this.props.onMouseUp(event);
+                  }
+                }, _this.handleMouseLeave = function (event) {
+                  if (!_this.state.keyboardFocused) {
+                    _this.setState({
+                      zDepth: _this.state.initialZDepth,
+                      hovered: false
+                    });
+                  }
+                  if (_this.props.onMouseLeave) {
+                    _this.props.onMouseLeave(event);
+                  }
+                }, _this.handleMouseEnter = function (event) {
+                  if (!_this.state.keyboardFocused && !_this.state.touched) {
+                    _this.setState({
+                      hovered: true
+                    });
+                  }
+                  if (_this.props.onMouseEnter) {
+                    _this.props.onMouseEnter(event);
+                  }
+                }, _this.handleTouchStart = function (event) {
+                  _this.setState({
+                    touched: true,
+                    zDepth: _this.state.initialZDepth + 1
+                  });
+            
+                  if (_this.props.onTouchStart) {
+                    _this.props.onTouchStart(event);
+                  }
+                }, _this.handleTouchEnd = function (event) {
+                  _this.setState({
+                    zDepth: _this.state.initialZDepth
+                  });
+            
+                  if (_this.props.onTouchEnd) {
+                    _this.props.onTouchEnd(event);
+                  }
+                }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                  var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+            
+                  _this.setState({
+                    zDepth: zDepth,
+                    keyboardFocused: keyboardFocused
+                  });
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                disabled={false}
+                fullWidth={false}
+                icon={
+                    <function _class() {
+                            _classCallCheck(this, _class);
+                    
+                            return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                          } />
+                }
+                label="Cancel"
+                labelPosition="after"
+                onClick={[Function]}
+                primary={false}
+                secondary={false} />
+            <function RaisedButton() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, RaisedButton);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  hovered: false,
+                  keyboardFocused: false,
+                  touched: false,
+                  initialZDepth: 0,
+                  zDepth: 0
+                }, _this.handleMouseDown = function (event) {
+                  // only listen to left clicks
+                  if (event.button === 0) {
+                    _this.setState({
+                      zDepth: _this.state.initialZDepth + 1
+                    });
+                  }
+                  if (_this.props.onMouseDown) {
+                    _this.props.onMouseDown(event);
+                  }
+                }, _this.handleMouseUp = function (event) {
+                  _this.setState({
+                    zDepth: _this.state.initialZDepth
+                  });
+                  if (_this.props.onMouseUp) {
+                    _this.props.onMouseUp(event);
+                  }
+                }, _this.handleMouseLeave = function (event) {
+                  if (!_this.state.keyboardFocused) {
+                    _this.setState({
+                      zDepth: _this.state.initialZDepth,
+                      hovered: false
+                    });
+                  }
+                  if (_this.props.onMouseLeave) {
+                    _this.props.onMouseLeave(event);
+                  }
+                }, _this.handleMouseEnter = function (event) {
+                  if (!_this.state.keyboardFocused && !_this.state.touched) {
+                    _this.setState({
+                      hovered: true
+                    });
+                  }
+                  if (_this.props.onMouseEnter) {
+                    _this.props.onMouseEnter(event);
+                  }
+                }, _this.handleTouchStart = function (event) {
+                  _this.setState({
+                    touched: true,
+                    zDepth: _this.state.initialZDepth + 1
+                  });
+            
+                  if (_this.props.onTouchStart) {
+                    _this.props.onTouchStart(event);
+                  }
+                }, _this.handleTouchEnd = function (event) {
+                  _this.setState({
+                    zDepth: _this.state.initialZDepth
+                  });
+            
+                  if (_this.props.onTouchEnd) {
+                    _this.props.onTouchEnd(event);
+                  }
+                }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                  var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+            
+                  _this.setState({
+                    zDepth: zDepth,
+                    keyboardFocused: keyboardFocused
+                  });
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                disabled={false}
+                fullWidth={false}
+                icon={
+                    <function _class() {
+                            _classCallCheck(this, _class);
+                    
+                            return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                          } />
+                }
+                label="Submit Site Roles"
+                labelPosition="after"
+                onClick={[Function]}
+                primary={false}
+                secondary={true} />
+        </div>
+    </form>
+</div>,
+  "nodes": Array [
+    <div
+      style={
+            Object {
+                  "margin": "auto",
+                  "width": "auto",
+                }
+      }>
+      <form
+            onSubmit={[Function]}>
+            <div
+                  className="form-row">
+                  <function TextField() {
+                      var _ref;
+                  
+                      var _temp, _this, _ret;
+                  
+                      (0, _classCallCheck3.default)(this, TextField);
+                  
+                      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                      }
+                  
+                      return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                        isFocused: false,
+                        errorText: undefined,
+                        hasValue: false,
+                        isClean: true
+                      }, _this.handleInputBlur = function (event) {
+                        _this.setState({ isFocused: false });
+                        if (_this.props.onBlur) _this.props.onBlur(event);
+                      }, _this.handleInputChange = function (event) {
+                        _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                        if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                      }, _this.handleInputFocus = function (event) {
+                        if (_this.props.disabled) {
+                          return;
+                        }
+                        _this.setState({ isFocused: true });
+                        if (_this.props.onFocus) {
+                          _this.props.onFocus(event);
+                        }
+                      }, _this.handleHeightChange = function (event, height) {
+                        var newHeight = height + 24;
+                        if (_this.props.floatingLabelText) {
+                          newHeight += 24;
+                        }
+                        _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                      }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                    }
+                        autoFocus={true}
+                        disabled={false}
+                        floatingLabelFixed={false}
+                        floatingLabelText="Role ID"
+                        fullWidth={false}
+                        multiLine={false}
+                        onChange={[Function]}
+                        rows={1}
+                        type="text"
+                        underlineShow={true}
+                        value="" />
+                  <function TextField() {
+                      var _ref;
+                  
+                      var _temp, _this, _ret;
+                  
+                      (0, _classCallCheck3.default)(this, TextField);
+                  
+                      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                      }
+                  
+                      return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                        isFocused: false,
+                        errorText: undefined,
+                        hasValue: false,
+                        isClean: true
+                      }, _this.handleInputBlur = function (event) {
+                        _this.setState({ isFocused: false });
+                        if (_this.props.onBlur) _this.props.onBlur(event);
+                      }, _this.handleInputChange = function (event) {
+                        _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                        if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                      }, _this.handleInputFocus = function (event) {
+                        if (_this.props.disabled) {
+                          return;
+                        }
+                        _this.setState({ isFocused: true });
+                        if (_this.props.onFocus) {
+                          _this.props.onFocus(event);
+                        }
+                      }, _this.handleHeightChange = function (event, height) {
+                        var newHeight = height + 24;
+                        if (_this.props.floatingLabelText) {
+                          newHeight += 24;
+                        }
+                        _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                      }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                    }
+                        disabled={false}
+                        floatingLabelFixed={false}
+                        floatingLabelText="Role Label"
+                        fullWidth={false}
+                        multiLine={false}
+                        onChange={[Function]}
+                        rows={1}
+                        type="text"
+                        underlineShow={true}
+                        value="" />
+                  <function RaisedButton() {
+                      var _ref;
+                  
+                      var _temp, _this, _ret;
+                  
+                      (0, _classCallCheck3.default)(this, RaisedButton);
+                  
+                      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                      }
+                  
+                      return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                        hovered: false,
+                        keyboardFocused: false,
+                        touched: false,
+                        initialZDepth: 0,
+                        zDepth: 0
+                      }, _this.handleMouseDown = function (event) {
+                        // only listen to left clicks
+                        if (event.button === 0) {
+                          _this.setState({
+                            zDepth: _this.state.initialZDepth + 1
+                          });
+                        }
+                        if (_this.props.onMouseDown) {
+                          _this.props.onMouseDown(event);
+                        }
+                      }, _this.handleMouseUp = function (event) {
+                        _this.setState({
+                          zDepth: _this.state.initialZDepth
+                        });
+                        if (_this.props.onMouseUp) {
+                          _this.props.onMouseUp(event);
+                        }
+                      }, _this.handleMouseLeave = function (event) {
+                        if (!_this.state.keyboardFocused) {
+                          _this.setState({
+                            zDepth: _this.state.initialZDepth,
+                            hovered: false
+                          });
+                        }
+                        if (_this.props.onMouseLeave) {
+                          _this.props.onMouseLeave(event);
+                        }
+                      }, _this.handleMouseEnter = function (event) {
+                        if (!_this.state.keyboardFocused && !_this.state.touched) {
+                          _this.setState({
+                            hovered: true
+                          });
+                        }
+                        if (_this.props.onMouseEnter) {
+                          _this.props.onMouseEnter(event);
+                        }
+                      }, _this.handleTouchStart = function (event) {
+                        _this.setState({
+                          touched: true,
+                          zDepth: _this.state.initialZDepth + 1
+                        });
+                  
+                        if (_this.props.onTouchStart) {
+                          _this.props.onTouchStart(event);
+                        }
+                      }, _this.handleTouchEnd = function (event) {
+                        _this.setState({
+                          zDepth: _this.state.initialZDepth
+                        });
+                  
+                        if (_this.props.onTouchEnd) {
+                          _this.props.onTouchEnd(event);
+                        }
+                      }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                        var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                  
+                        _this.setState({
+                          zDepth: zDepth,
+                          keyboardFocused: keyboardFocused
+                        });
+                      }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                    }
+                        disabled={false}
+                        fullWidth={false}
+                        icon={
+                              <function _class() {
+                                      _classCallCheck(this, _class);
+                              
+                                      return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                    } />
+                        }
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={false}
+                        secondary={false}
+                        style={
+                              Object {
+                                    "alignSelf": "flex-end",
+                                  }
+                        } />
+            </div>
+            <div
+                  className="form-row"
+                  style={
+                        Object {
+                              "display": "flex",
+                              "flexWrap": "wrap",
+                              "justifyContent": "flex-start",
+                            }
+                  }>
+                  
+            </div>
+            <div
+                  className="form-row"
+                  style={
+                        Object {
+                              "justifyContent": "space-around",
+                            }
+                  }>
+                  <function RaisedButton() {
+                      var _ref;
+                  
+                      var _temp, _this, _ret;
+                  
+                      (0, _classCallCheck3.default)(this, RaisedButton);
+                  
+                      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                      }
+                  
+                      return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                        hovered: false,
+                        keyboardFocused: false,
+                        touched: false,
+                        initialZDepth: 0,
+                        zDepth: 0
+                      }, _this.handleMouseDown = function (event) {
+                        // only listen to left clicks
+                        if (event.button === 0) {
+                          _this.setState({
+                            zDepth: _this.state.initialZDepth + 1
+                          });
+                        }
+                        if (_this.props.onMouseDown) {
+                          _this.props.onMouseDown(event);
+                        }
+                      }, _this.handleMouseUp = function (event) {
+                        _this.setState({
+                          zDepth: _this.state.initialZDepth
+                        });
+                        if (_this.props.onMouseUp) {
+                          _this.props.onMouseUp(event);
+                        }
+                      }, _this.handleMouseLeave = function (event) {
+                        if (!_this.state.keyboardFocused) {
+                          _this.setState({
+                            zDepth: _this.state.initialZDepth,
+                            hovered: false
+                          });
+                        }
+                        if (_this.props.onMouseLeave) {
+                          _this.props.onMouseLeave(event);
+                        }
+                      }, _this.handleMouseEnter = function (event) {
+                        if (!_this.state.keyboardFocused && !_this.state.touched) {
+                          _this.setState({
+                            hovered: true
+                          });
+                        }
+                        if (_this.props.onMouseEnter) {
+                          _this.props.onMouseEnter(event);
+                        }
+                      }, _this.handleTouchStart = function (event) {
+                        _this.setState({
+                          touched: true,
+                          zDepth: _this.state.initialZDepth + 1
+                        });
+                  
+                        if (_this.props.onTouchStart) {
+                          _this.props.onTouchStart(event);
+                        }
+                      }, _this.handleTouchEnd = function (event) {
+                        _this.setState({
+                          zDepth: _this.state.initialZDepth
+                        });
+                  
+                        if (_this.props.onTouchEnd) {
+                          _this.props.onTouchEnd(event);
+                        }
+                      }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                        var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                  
+                        _this.setState({
+                          zDepth: zDepth,
+                          keyboardFocused: keyboardFocused
+                        });
+                      }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                    }
+                        disabled={false}
+                        fullWidth={false}
+                        icon={
+                              <function _class() {
+                                      _classCallCheck(this, _class);
+                              
+                                      return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                    } />
+                        }
+                        label="Cancel"
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={false}
+                        secondary={false} />
+                  <function RaisedButton() {
+                      var _ref;
+                  
+                      var _temp, _this, _ret;
+                  
+                      (0, _classCallCheck3.default)(this, RaisedButton);
+                  
+                      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                      }
+                  
+                      return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                        hovered: false,
+                        keyboardFocused: false,
+                        touched: false,
+                        initialZDepth: 0,
+                        zDepth: 0
+                      }, _this.handleMouseDown = function (event) {
+                        // only listen to left clicks
+                        if (event.button === 0) {
+                          _this.setState({
+                            zDepth: _this.state.initialZDepth + 1
+                          });
+                        }
+                        if (_this.props.onMouseDown) {
+                          _this.props.onMouseDown(event);
+                        }
+                      }, _this.handleMouseUp = function (event) {
+                        _this.setState({
+                          zDepth: _this.state.initialZDepth
+                        });
+                        if (_this.props.onMouseUp) {
+                          _this.props.onMouseUp(event);
+                        }
+                      }, _this.handleMouseLeave = function (event) {
+                        if (!_this.state.keyboardFocused) {
+                          _this.setState({
+                            zDepth: _this.state.initialZDepth,
+                            hovered: false
+                          });
+                        }
+                        if (_this.props.onMouseLeave) {
+                          _this.props.onMouseLeave(event);
+                        }
+                      }, _this.handleMouseEnter = function (event) {
+                        if (!_this.state.keyboardFocused && !_this.state.touched) {
+                          _this.setState({
+                            hovered: true
+                          });
+                        }
+                        if (_this.props.onMouseEnter) {
+                          _this.props.onMouseEnter(event);
+                        }
+                      }, _this.handleTouchStart = function (event) {
+                        _this.setState({
+                          touched: true,
+                          zDepth: _this.state.initialZDepth + 1
+                        });
+                  
+                        if (_this.props.onTouchStart) {
+                          _this.props.onTouchStart(event);
+                        }
+                      }, _this.handleTouchEnd = function (event) {
+                        _this.setState({
+                          zDepth: _this.state.initialZDepth
+                        });
+                  
+                        if (_this.props.onTouchEnd) {
+                          _this.props.onTouchEnd(event);
+                        }
+                      }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                        var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                  
+                        _this.setState({
+                          zDepth: zDepth,
+                          keyboardFocused: keyboardFocused
+                        });
+                      }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                    }
+                        disabled={false}
+                        fullWidth={false}
+                        icon={
+                              <function _class() {
+                                      _classCallCheck(this, _class);
+                              
+                                      return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                    } />
+                        }
+                        label="Submit Site Roles"
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={false}
+                        secondary={true} />
+            </div>
+      </form>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <class RoleForm extends /* istanbul ignore next */_react.Component {
+
+  constructor(props) {
+    super(props); /* istanbul ignore next */this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    componentDidMount = () => {
+      const roles = this.props.scratch.roles.asMutable();
+      this.setState({ roles });
+    }; /* istanbul ignore next */this.
+
+    _onCancelForm = () => {
+      this.props.closeFormFunc();
+    }; /* istanbul ignore next */this.
+
+    _onSetValue = field => {
+      const val = this.refs[field].input.value;
+      let role = this.state.role;
+      switch (field) {
+        case 'roleID':
+          role.id = val;
+          break;
+        case 'roleLabel':
+          role.label = val;
+          break;
+        default:
+          break;}
+
+      this.setState({ role: role });
+    }; /* istanbul ignore next */this.
+
+    _onAddRole = () => {
+      let roles = this.state.roles;
+      roles.push(this.state.role);
+      this.setState({ roles, role: { id: '', label: '' } });
+    }; /* istanbul ignore next */this.
+
+    _onDelete = id => {
+      this.chipData = this.state.roles;
+      const chipToDelete = this.chipData.map(chip => chip.id).indexOf(id);
+      this.chipData.splice(chipToDelete, 1);
+      this.setState({ roles: this.chipData });
+    }; /* istanbul ignore next */this.
+
+    _onSubmit = () => {/* istanbul ignore next */var _props =
+      this.props; /* istanbul ignore next */const scratch = _props.scratch; /* istanbul ignore next */const updateSite = _props.updateSite;
+      const newSite = scratch.set('roles', this.state.roles);
+      updateSite(newSite._id, newSite).then(res => {
+        this.props.closeFormFunc();
+        this.props.actions.alertSend({
+          dismissAfter: 2000,
+          message: 'Site roles successfully updated',
+          type: 'success' });
+
+      }).catch(err => {
+        this.props.closeFormFunc();
+        this.props.actions.alertSend({
+          message: \`ERROR: ${ err.message }\`,
+          type: 'danger' });
+
+      });
+    };this.state = { role: { id: '', label: '' }, roles: [] };this.styles = { chip: { margin: 4 }, wrapper: { display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start' } };}
+
+  _renderChip(data) {
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Chip2.default, /* istanbul ignore next */{
+          key: data.id,
+          onRequestDelete: () => this._onDelete(data.id),
+          style: this.styles.chip, __source: { fileName: _jsxFileName, lineNumber: 102 }, __self: this },
+
+        data.label, /* istanbul ignore next */' [', data.id, /* istanbul ignore next */']'));
+
+
+  }
+
+
+  render() {
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 'auto', margin: 'auto' }, __source: { fileName: _jsxFileName, lineNumber: 116 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
+              floatingLabelText: 'Role ID',
+              onChange: () => this._onSetValue('roleID'),
+              ref: 'roleID',
+              autoFocus: true,
+              value: this.state.role.id, __source: { fileName: _jsxFileName, lineNumber: 120 }, __self: this }),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
+              floatingLabelText: 'Role Label',
+              onChange: () => this._onSetValue('roleLabel'),
+              ref: 'roleLabel',
+              value: this.state.role.label, __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_add2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 136 }, __self: this }),
+              style: { alignSelf: 'flex-end' },
+              onClick: () => this._onAddRole(), __source: { fileName: _jsxFileName, lineNumber: 135 }, __self: this })),
+
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: this.styles.wrapper, __source: { fileName: _jsxFileName, lineNumber: 142 }, __self: this },
+            this.state.roles.map(this._renderChip, this)),
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: { justifyContent: 'space-around' }, __source: { fileName: _jsxFileName, lineNumber: 146 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_clear2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 148 }, __self: this }),
+              label: 'Cancel',
+              onClick: () => this._onCancelForm(), __source: { fileName: _jsxFileName, lineNumber: 147 }, __self: this }),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_done2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this }),
+              label: 'Submit Site Roles',
+              onClick: () => this._onSubmit(),
+              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this })))));
+
+
+
+
+
+  }}
+        actions={Object {}} />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": RoleForm {
+        "_onAddRole": [Function],
+        "_onCancelForm": [Function],
+        "_onDelete": [Function],
+        "_onSetValue": [Function],
+        "_onSubmit": [Function],
+        "_reactInternalInstance": [Circular],
+        "componentDidMount": [Function],
+        "context": Object {},
+        "props": Object {
+          "actions": Object {},
+        },
+        "refs": Object {},
+        "state": Object {
+          "role": Object {
+            "id": "",
+            "label": "",
+          },
+          "roles": Array [],
+        },
+        "styles": Object {
+          "chip": Object {
+            "margin": 4,
+          },
+          "wrapper": Object {
+            "display": "flex",
+            "flexWrap": "wrap",
+            "justifyContent": "flex-start",
+          },
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": Object {
+        "_currentElement": <div
+          style={
+                    Object {
+                              "margin": "auto",
+                              "width": "auto",
+                            }
+          }>
+          <form
+                    onSubmit={[Function]}>
+                    <div
+                              className="form-row">
+                              <function TextField() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, TextField);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    isFocused: false,
+                                    errorText: undefined,
+                                    hasValue: false,
+                                    isClean: true
+                                  }, _this.handleInputBlur = function (event) {
+                                    _this.setState({ isFocused: false });
+                                    if (_this.props.onBlur) _this.props.onBlur(event);
+                                  }, _this.handleInputChange = function (event) {
+                                    _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                                    if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                                  }, _this.handleInputFocus = function (event) {
+                                    if (_this.props.disabled) {
+                                      return;
+                                    }
+                                    _this.setState({ isFocused: true });
+                                    if (_this.props.onFocus) {
+                                      _this.props.onFocus(event);
+                                    }
+                                  }, _this.handleHeightChange = function (event, height) {
+                                    var newHeight = height + 24;
+                                    if (_this.props.floatingLabelText) {
+                                      newHeight += 24;
+                                    }
+                                    _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        autoFocus={true}
+                                        disabled={false}
+                                        floatingLabelFixed={false}
+                                        floatingLabelText="Role ID"
+                                        fullWidth={false}
+                                        multiLine={false}
+                                        onChange={[Function]}
+                                        rows={1}
+                                        type="text"
+                                        underlineShow={true}
+                                        value="" />
+                              <function TextField() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, TextField);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    isFocused: false,
+                                    errorText: undefined,
+                                    hasValue: false,
+                                    isClean: true
+                                  }, _this.handleInputBlur = function (event) {
+                                    _this.setState({ isFocused: false });
+                                    if (_this.props.onBlur) _this.props.onBlur(event);
+                                  }, _this.handleInputChange = function (event) {
+                                    _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                                    if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                                  }, _this.handleInputFocus = function (event) {
+                                    if (_this.props.disabled) {
+                                      return;
+                                    }
+                                    _this.setState({ isFocused: true });
+                                    if (_this.props.onFocus) {
+                                      _this.props.onFocus(event);
+                                    }
+                                  }, _this.handleHeightChange = function (event, height) {
+                                    var newHeight = height + 24;
+                                    if (_this.props.floatingLabelText) {
+                                      newHeight += 24;
+                                    }
+                                    _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        disabled={false}
+                                        floatingLabelFixed={false}
+                                        floatingLabelText="Role Label"
+                                        fullWidth={false}
+                                        multiLine={false}
+                                        onChange={[Function]}
+                                        rows={1}
+                                        type="text"
+                                        underlineShow={true}
+                                        value="" />
+                              <function RaisedButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, RaisedButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    keyboardFocused: false,
+                                    touched: false,
+                                    initialZDepth: 0,
+                                    zDepth: 0
+                                  }, _this.handleMouseDown = function (event) {
+                                    // only listen to left clicks
+                                    if (event.button === 0) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth + 1
+                                      });
+                                    }
+                                    if (_this.props.onMouseDown) {
+                                      _this.props.onMouseDown(event);
+                                    }
+                                  }, _this.handleMouseUp = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                                    if (_this.props.onMouseUp) {
+                                      _this.props.onMouseUp(event);
+                                    }
+                                  }, _this.handleMouseLeave = function (event) {
+                                    if (!_this.state.keyboardFocused) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth,
+                                        hovered: false
+                                      });
+                                    }
+                                    if (_this.props.onMouseLeave) {
+                                      _this.props.onMouseLeave(event);
+                                    }
+                                  }, _this.handleMouseEnter = function (event) {
+                                    if (!_this.state.keyboardFocused && !_this.state.touched) {
+                                      _this.setState({
+                                        hovered: true
+                                      });
+                                    }
+                                    if (_this.props.onMouseEnter) {
+                                      _this.props.onMouseEnter(event);
+                                    }
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({
+                                      touched: true,
+                                      zDepth: _this.state.initialZDepth + 1
+                                    });
+                              
+                                    if (_this.props.onTouchStart) {
+                                      _this.props.onTouchStart(event);
+                                    }
+                                  }, _this.handleTouchEnd = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                              
+                                    if (_this.props.onTouchEnd) {
+                                      _this.props.onTouchEnd(event);
+                                    }
+                                  }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                    var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                              
+                                    _this.setState({
+                                      zDepth: zDepth,
+                                      keyboardFocused: keyboardFocused
+                                    });
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        disabled={false}
+                                        fullWidth={false}
+                                        icon={
+                                                  <function _class() {
+                                                          _classCallCheck(this, _class);
+                                                  
+                                                          return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                                        } />
+                                        }
+                                        labelPosition="after"
+                                        onClick={[Function]}
+                                        primary={false}
+                                        secondary={false}
+                                        style={
+                                                  Object {
+                                                            "alignSelf": "flex-end",
+                                                          }
+                                        } />
+                    </div>
+                    <div
+                              className="form-row"
+                              style={
+                                        Object {
+                                                  "display": "flex",
+                                                  "flexWrap": "wrap",
+                                                  "justifyContent": "flex-start",
+                                                }
+                              }>
+                              
+                    </div>
+                    <div
+                              className="form-row"
+                              style={
+                                        Object {
+                                                  "justifyContent": "space-around",
+                                                }
+                              }>
+                              <function RaisedButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, RaisedButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    keyboardFocused: false,
+                                    touched: false,
+                                    initialZDepth: 0,
+                                    zDepth: 0
+                                  }, _this.handleMouseDown = function (event) {
+                                    // only listen to left clicks
+                                    if (event.button === 0) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth + 1
+                                      });
+                                    }
+                                    if (_this.props.onMouseDown) {
+                                      _this.props.onMouseDown(event);
+                                    }
+                                  }, _this.handleMouseUp = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                                    if (_this.props.onMouseUp) {
+                                      _this.props.onMouseUp(event);
+                                    }
+                                  }, _this.handleMouseLeave = function (event) {
+                                    if (!_this.state.keyboardFocused) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth,
+                                        hovered: false
+                                      });
+                                    }
+                                    if (_this.props.onMouseLeave) {
+                                      _this.props.onMouseLeave(event);
+                                    }
+                                  }, _this.handleMouseEnter = function (event) {
+                                    if (!_this.state.keyboardFocused && !_this.state.touched) {
+                                      _this.setState({
+                                        hovered: true
+                                      });
+                                    }
+                                    if (_this.props.onMouseEnter) {
+                                      _this.props.onMouseEnter(event);
+                                    }
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({
+                                      touched: true,
+                                      zDepth: _this.state.initialZDepth + 1
+                                    });
+                              
+                                    if (_this.props.onTouchStart) {
+                                      _this.props.onTouchStart(event);
+                                    }
+                                  }, _this.handleTouchEnd = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                              
+                                    if (_this.props.onTouchEnd) {
+                                      _this.props.onTouchEnd(event);
+                                    }
+                                  }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                    var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                              
+                                    _this.setState({
+                                      zDepth: zDepth,
+                                      keyboardFocused: keyboardFocused
+                                    });
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        disabled={false}
+                                        fullWidth={false}
+                                        icon={
+                                                  <function _class() {
+                                                          _classCallCheck(this, _class);
+                                                  
+                                                          return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                                        } />
+                                        }
+                                        label="Cancel"
+                                        labelPosition="after"
+                                        onClick={[Function]}
+                                        primary={false}
+                                        secondary={false} />
+                              <function RaisedButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, RaisedButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    keyboardFocused: false,
+                                    touched: false,
+                                    initialZDepth: 0,
+                                    zDepth: 0
+                                  }, _this.handleMouseDown = function (event) {
+                                    // only listen to left clicks
+                                    if (event.button === 0) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth + 1
+                                      });
+                                    }
+                                    if (_this.props.onMouseDown) {
+                                      _this.props.onMouseDown(event);
+                                    }
+                                  }, _this.handleMouseUp = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                                    if (_this.props.onMouseUp) {
+                                      _this.props.onMouseUp(event);
+                                    }
+                                  }, _this.handleMouseLeave = function (event) {
+                                    if (!_this.state.keyboardFocused) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth,
+                                        hovered: false
+                                      });
+                                    }
+                                    if (_this.props.onMouseLeave) {
+                                      _this.props.onMouseLeave(event);
+                                    }
+                                  }, _this.handleMouseEnter = function (event) {
+                                    if (!_this.state.keyboardFocused && !_this.state.touched) {
+                                      _this.setState({
+                                        hovered: true
+                                      });
+                                    }
+                                    if (_this.props.onMouseEnter) {
+                                      _this.props.onMouseEnter(event);
+                                    }
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({
+                                      touched: true,
+                                      zDepth: _this.state.initialZDepth + 1
+                                    });
+                              
+                                    if (_this.props.onTouchStart) {
+                                      _this.props.onTouchStart(event);
+                                    }
+                                  }, _this.handleTouchEnd = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                              
+                                    if (_this.props.onTouchEnd) {
+                                      _this.props.onTouchEnd(event);
+                                    }
+                                  }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                    var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                              
+                                    _this.setState({
+                                      zDepth: zDepth,
+                                      keyboardFocused: keyboardFocused
+                                    });
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        disabled={false}
+                                        fullWidth={false}
+                                        icon={
+                                                  <function _class() {
+                                                          _classCallCheck(this, _class);
+                                                  
+                                                          return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                                        } />
+                                        }
+                                        label="Submit Site Roles"
+                                        labelPosition="after"
+                                        onClick={[Function]}
+                                        primary={false}
+                                        secondary={true} />
+                    </div>
+          </form>
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div
+          style={
+                    Object {
+                              "margin": "auto",
+                              "width": "auto",
+                            }
+          }>
+          <form
+                    onSubmit={[Function]}>
+                    <div
+                              className="form-row">
+                              <function TextField() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, TextField);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    isFocused: false,
+                                    errorText: undefined,
+                                    hasValue: false,
+                                    isClean: true
+                                  }, _this.handleInputBlur = function (event) {
+                                    _this.setState({ isFocused: false });
+                                    if (_this.props.onBlur) _this.props.onBlur(event);
+                                  }, _this.handleInputChange = function (event) {
+                                    _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                                    if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                                  }, _this.handleInputFocus = function (event) {
+                                    if (_this.props.disabled) {
+                                      return;
+                                    }
+                                    _this.setState({ isFocused: true });
+                                    if (_this.props.onFocus) {
+                                      _this.props.onFocus(event);
+                                    }
+                                  }, _this.handleHeightChange = function (event, height) {
+                                    var newHeight = height + 24;
+                                    if (_this.props.floatingLabelText) {
+                                      newHeight += 24;
+                                    }
+                                    _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        autoFocus={true}
+                                        disabled={false}
+                                        floatingLabelFixed={false}
+                                        floatingLabelText="Role ID"
+                                        fullWidth={false}
+                                        multiLine={false}
+                                        onChange={[Function]}
+                                        rows={1}
+                                        type="text"
+                                        underlineShow={true}
+                                        value="" />
+                              <function TextField() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, TextField);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    isFocused: false,
+                                    errorText: undefined,
+                                    hasValue: false,
+                                    isClean: true
+                                  }, _this.handleInputBlur = function (event) {
+                                    _this.setState({ isFocused: false });
+                                    if (_this.props.onBlur) _this.props.onBlur(event);
+                                  }, _this.handleInputChange = function (event) {
+                                    _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                                    if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                                  }, _this.handleInputFocus = function (event) {
+                                    if (_this.props.disabled) {
+                                      return;
+                                    }
+                                    _this.setState({ isFocused: true });
+                                    if (_this.props.onFocus) {
+                                      _this.props.onFocus(event);
+                                    }
+                                  }, _this.handleHeightChange = function (event, height) {
+                                    var newHeight = height + 24;
+                                    if (_this.props.floatingLabelText) {
+                                      newHeight += 24;
+                                    }
+                                    _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        disabled={false}
+                                        floatingLabelFixed={false}
+                                        floatingLabelText="Role Label"
+                                        fullWidth={false}
+                                        multiLine={false}
+                                        onChange={[Function]}
+                                        rows={1}
+                                        type="text"
+                                        underlineShow={true}
+                                        value="" />
+                              <function RaisedButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, RaisedButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    keyboardFocused: false,
+                                    touched: false,
+                                    initialZDepth: 0,
+                                    zDepth: 0
+                                  }, _this.handleMouseDown = function (event) {
+                                    // only listen to left clicks
+                                    if (event.button === 0) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth + 1
+                                      });
+                                    }
+                                    if (_this.props.onMouseDown) {
+                                      _this.props.onMouseDown(event);
+                                    }
+                                  }, _this.handleMouseUp = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                                    if (_this.props.onMouseUp) {
+                                      _this.props.onMouseUp(event);
+                                    }
+                                  }, _this.handleMouseLeave = function (event) {
+                                    if (!_this.state.keyboardFocused) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth,
+                                        hovered: false
+                                      });
+                                    }
+                                    if (_this.props.onMouseLeave) {
+                                      _this.props.onMouseLeave(event);
+                                    }
+                                  }, _this.handleMouseEnter = function (event) {
+                                    if (!_this.state.keyboardFocused && !_this.state.touched) {
+                                      _this.setState({
+                                        hovered: true
+                                      });
+                                    }
+                                    if (_this.props.onMouseEnter) {
+                                      _this.props.onMouseEnter(event);
+                                    }
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({
+                                      touched: true,
+                                      zDepth: _this.state.initialZDepth + 1
+                                    });
+                              
+                                    if (_this.props.onTouchStart) {
+                                      _this.props.onTouchStart(event);
+                                    }
+                                  }, _this.handleTouchEnd = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                              
+                                    if (_this.props.onTouchEnd) {
+                                      _this.props.onTouchEnd(event);
+                                    }
+                                  }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                    var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                              
+                                    _this.setState({
+                                      zDepth: zDepth,
+                                      keyboardFocused: keyboardFocused
+                                    });
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        disabled={false}
+                                        fullWidth={false}
+                                        icon={
+                                                  <function _class() {
+                                                          _classCallCheck(this, _class);
+                                                  
+                                                          return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                                        } />
+                                        }
+                                        labelPosition="after"
+                                        onClick={[Function]}
+                                        primary={false}
+                                        secondary={false}
+                                        style={
+                                                  Object {
+                                                            "alignSelf": "flex-end",
+                                                          }
+                                        } />
+                    </div>
+                    <div
+                              className="form-row"
+                              style={
+                                        Object {
+                                                  "display": "flex",
+                                                  "flexWrap": "wrap",
+                                                  "justifyContent": "flex-start",
+                                                }
+                              }>
+                              
+                    </div>
+                    <div
+                              className="form-row"
+                              style={
+                                        Object {
+                                                  "justifyContent": "space-around",
+                                                }
+                              }>
+                              <function RaisedButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, RaisedButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    keyboardFocused: false,
+                                    touched: false,
+                                    initialZDepth: 0,
+                                    zDepth: 0
+                                  }, _this.handleMouseDown = function (event) {
+                                    // only listen to left clicks
+                                    if (event.button === 0) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth + 1
+                                      });
+                                    }
+                                    if (_this.props.onMouseDown) {
+                                      _this.props.onMouseDown(event);
+                                    }
+                                  }, _this.handleMouseUp = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                                    if (_this.props.onMouseUp) {
+                                      _this.props.onMouseUp(event);
+                                    }
+                                  }, _this.handleMouseLeave = function (event) {
+                                    if (!_this.state.keyboardFocused) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth,
+                                        hovered: false
+                                      });
+                                    }
+                                    if (_this.props.onMouseLeave) {
+                                      _this.props.onMouseLeave(event);
+                                    }
+                                  }, _this.handleMouseEnter = function (event) {
+                                    if (!_this.state.keyboardFocused && !_this.state.touched) {
+                                      _this.setState({
+                                        hovered: true
+                                      });
+                                    }
+                                    if (_this.props.onMouseEnter) {
+                                      _this.props.onMouseEnter(event);
+                                    }
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({
+                                      touched: true,
+                                      zDepth: _this.state.initialZDepth + 1
+                                    });
+                              
+                                    if (_this.props.onTouchStart) {
+                                      _this.props.onTouchStart(event);
+                                    }
+                                  }, _this.handleTouchEnd = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                              
+                                    if (_this.props.onTouchEnd) {
+                                      _this.props.onTouchEnd(event);
+                                    }
+                                  }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                    var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                              
+                                    _this.setState({
+                                      zDepth: zDepth,
+                                      keyboardFocused: keyboardFocused
+                                    });
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        disabled={false}
+                                        fullWidth={false}
+                                        icon={
+                                                  <function _class() {
+                                                          _classCallCheck(this, _class);
+                                                  
+                                                          return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                                        } />
+                                        }
+                                        label="Cancel"
+                                        labelPosition="after"
+                                        onClick={[Function]}
+                                        primary={false}
+                                        secondary={false} />
+                              <function RaisedButton() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, RaisedButton);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    hovered: false,
+                                    keyboardFocused: false,
+                                    touched: false,
+                                    initialZDepth: 0,
+                                    zDepth: 0
+                                  }, _this.handleMouseDown = function (event) {
+                                    // only listen to left clicks
+                                    if (event.button === 0) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth + 1
+                                      });
+                                    }
+                                    if (_this.props.onMouseDown) {
+                                      _this.props.onMouseDown(event);
+                                    }
+                                  }, _this.handleMouseUp = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                                    if (_this.props.onMouseUp) {
+                                      _this.props.onMouseUp(event);
+                                    }
+                                  }, _this.handleMouseLeave = function (event) {
+                                    if (!_this.state.keyboardFocused) {
+                                      _this.setState({
+                                        zDepth: _this.state.initialZDepth,
+                                        hovered: false
+                                      });
+                                    }
+                                    if (_this.props.onMouseLeave) {
+                                      _this.props.onMouseLeave(event);
+                                    }
+                                  }, _this.handleMouseEnter = function (event) {
+                                    if (!_this.state.keyboardFocused && !_this.state.touched) {
+                                      _this.setState({
+                                        hovered: true
+                                      });
+                                    }
+                                    if (_this.props.onMouseEnter) {
+                                      _this.props.onMouseEnter(event);
+                                    }
+                                  }, _this.handleTouchStart = function (event) {
+                                    _this.setState({
+                                      touched: true,
+                                      zDepth: _this.state.initialZDepth + 1
+                                    });
+                              
+                                    if (_this.props.onTouchStart) {
+                                      _this.props.onTouchStart(event);
+                                    }
+                                  }, _this.handleTouchEnd = function (event) {
+                                    _this.setState({
+                                      zDepth: _this.state.initialZDepth
+                                    });
+                              
+                                    if (_this.props.onTouchEnd) {
+                                      _this.props.onTouchEnd(event);
+                                    }
+                                  }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                    var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                              
+                                    _this.setState({
+                                      zDepth: zDepth,
+                                      keyboardFocused: keyboardFocused
+                                    });
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        disabled={false}
+                                        fullWidth={false}
+                                        icon={
+                                                  <function _class() {
+                                                          _classCallCheck(this, _class);
+                                                  
+                                                          return _possibleConstructorReturn(this, _Component.apply(this, arguments));
+                                                        } />
+                                        }
+                                        label="Submit Site Roles"
+                                        labelPosition="after"
+                                        onClick={[Function]}
+                                        primary={false}
+                                        secondary={true} />
+                    </div>
+          </form>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <class RoleForm extends /* istanbul ignore next */_react.Component {
+
+  constructor(props) {
+    super(props); /* istanbul ignore next */this.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    componentDidMount = () => {
+      const roles = this.props.scratch.roles.asMutable();
+      this.setState({ roles });
+    }; /* istanbul ignore next */this.
+
+    _onCancelForm = () => {
+      this.props.closeFormFunc();
+    }; /* istanbul ignore next */this.
+
+    _onSetValue = field => {
+      const val = this.refs[field].input.value;
+      let role = this.state.role;
+      switch (field) {
+        case 'roleID':
+          role.id = val;
+          break;
+        case 'roleLabel':
+          role.label = val;
+          break;
+        default:
+          break;}
+
+      this.setState({ role: role });
+    }; /* istanbul ignore next */this.
+
+    _onAddRole = () => {
+      let roles = this.state.roles;
+      roles.push(this.state.role);
+      this.setState({ roles, role: { id: '', label: '' } });
+    }; /* istanbul ignore next */this.
+
+    _onDelete = id => {
+      this.chipData = this.state.roles;
+      const chipToDelete = this.chipData.map(chip => chip.id).indexOf(id);
+      this.chipData.splice(chipToDelete, 1);
+      this.setState({ roles: this.chipData });
+    }; /* istanbul ignore next */this.
+
+    _onSubmit = () => {/* istanbul ignore next */var _props =
+      this.props; /* istanbul ignore next */const scratch = _props.scratch; /* istanbul ignore next */const updateSite = _props.updateSite;
+      const newSite = scratch.set('roles', this.state.roles);
+      updateSite(newSite._id, newSite).then(res => {
+        this.props.closeFormFunc();
+        this.props.actions.alertSend({
+          dismissAfter: 2000,
+          message: 'Site roles successfully updated',
+          type: 'success' });
+
+      }).catch(err => {
+        this.props.closeFormFunc();
+        this.props.actions.alertSend({
+          message: \`ERROR: ${ err.message }\`,
+          type: 'danger' });
+
+      });
+    };this.state = { role: { id: '', label: '' }, roles: [] };this.styles = { chip: { margin: 4 }, wrapper: { display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start' } };}
+
+  _renderChip(data) {
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Chip2.default, /* istanbul ignore next */{
+          key: data.id,
+          onRequestDelete: () => this._onDelete(data.id),
+          style: this.styles.chip, __source: { fileName: _jsxFileName, lineNumber: 102 }, __self: this },
+
+        data.label, /* istanbul ignore next */' [', data.id, /* istanbul ignore next */']'));
+
+
+  }
+
+
+  render() {
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 'auto', margin: 'auto' }, __source: { fileName: _jsxFileName, lineNumber: 116 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 117 }, __self: this },
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
+              floatingLabelText: 'Role ID',
+              onChange: () => this._onSetValue('roleID'),
+              ref: 'roleID',
+              autoFocus: true,
+              value: this.state.role.id, __source: { fileName: _jsxFileName, lineNumber: 120 }, __self: this }),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
+              floatingLabelText: 'Role Label',
+              onChange: () => this._onSetValue('roleLabel'),
+              ref: 'roleLabel',
+              value: this.state.role.label, __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }),
+
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_add2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 136 }, __self: this }),
+              style: { alignSelf: 'flex-end' },
+              onClick: () => this._onAddRole(), __source: { fileName: _jsxFileName, lineNumber: 135 }, __self: this })),
+
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: this.styles.wrapper, __source: { fileName: _jsxFileName, lineNumber: 142 }, __self: this },
+            this.state.roles.map(this._renderChip, this)),
+
+
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: { justifyContent: 'space-around' }, __source: { fileName: _jsxFileName, lineNumber: 146 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_clear2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 148 }, __self: this }),
+              label: 'Cancel',
+              onClick: () => this._onCancelForm(), __source: { fileName: _jsxFileName, lineNumber: 147 }, __self: this }),
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_done2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this }),
+              label: 'Submit Site Roles',
+              onClick: () => this._onSubmit(),
+              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this })))));
+
+
+
+
+
+  }}
+    actions={Object {}} />,
+}
+`;
