@@ -2,7 +2,7 @@ import ApolloClient, { addQueryMerging } from 'apollo-client'
 import ResponseMiddlewareNetworkInterface from './response-middleware-network-interface'
 // import log from '../log'
 
-const responseMiddlewareNetworkInterface = new ResponseMiddlewareNetworkInterface('http://localhost:3003/graphql')
+const responseMiddlewareNetworkInterface = new ResponseMiddlewareNetworkInterface('http://localhost:3010/graphql')
 
 // Sample error handling middleware
 responseMiddlewareNetworkInterface.use({

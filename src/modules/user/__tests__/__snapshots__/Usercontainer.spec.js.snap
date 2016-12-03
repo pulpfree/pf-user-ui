@@ -571,7 +571,7 @@ ShallowWrapper {
 
   render() {/* istanbul ignore next */var _props =
 
-    this.props; /* istanbul ignore next */const loading = _props.loading; /* istanbul ignore next */const fetchSites = _props.fetchSites; /* istanbul ignore next */const params = _props.params; /* istanbul ignore next */const removeUser = _props.removeUser;
+    this.props; /* istanbul ignore next */const loading = _props.loading; /* istanbul ignore next */const fetchSites = _props.fetchSites; /* istanbul ignore next */const removeUser = _props.removeUser;
     if (loading === true) {
       return (
         /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 90 }, __self: this }, /* istanbul ignore next */'Loading...'));
@@ -782,7 +782,7 @@ ShallowWrapper {
       "_pendingForceUpdate": false,
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
-      "_renderedComponent": Object {
+      "_renderedComponent": NoopInternalComponent {
         "_currentElement": <section
           className="App-container">
           <function Paper() {
@@ -1352,7 +1352,7 @@ ShallowWrapper {
 
   render() {/* istanbul ignore next */var _props =
 
-    this.props; /* istanbul ignore next */const loading = _props.loading; /* istanbul ignore next */const fetchSites = _props.fetchSites; /* istanbul ignore next */const params = _props.params; /* istanbul ignore next */const removeUser = _props.removeUser;
+    this.props; /* istanbul ignore next */const loading = _props.loading; /* istanbul ignore next */const fetchSites = _props.fetchSites; /* istanbul ignore next */const removeUser = _props.removeUser;
     if (loading === true) {
       return (
         /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 90 }, __self: this }, /* istanbul ignore next */'Loading...'));

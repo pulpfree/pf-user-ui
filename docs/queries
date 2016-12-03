@@ -127,3 +127,87 @@ mutation updateSite($_id:ID!, $fields:SiteInput!) {
     "resetURI": "http://foo.com/auth"
   }
 }
+
+mutation authUser($fields: AuthInput) {
+  authUser(input: $fields) {
+    id
+    email
+    contact {
+      first
+      last
+    }
+    token
+  }
+}
+{
+  "fields": {
+    "email": "rond@webbtech.net",
+    "password": "my-new-passwd",
+    "domainID": "local.pf-user"
+  }
+}
+
+mutation authValidate($fields: AuthValidateInput) {
+  authValidate(input:$fields) {
+    exp
+    iat
+    iss
+    jti
+  }
+}
+{
+  "fields": {
+    "domainID": "local.pf-user",
+    "token": "<token>"
+  }
+}
+
+mutation authResetPasswd($fields: AuthResetPasswdInput) {
+  authResetPasswd(input: $fields) {
+    result
+    ok
+  }
+}
+{
+  "fields": {
+    "email": "rond@webbtech.net",
+    "domainID": "local.pf-user"
+  }
+}
+
+mutation authResetPasswd($fields: AuthResetPasswdInput) {
+  authResetPasswd(input: $fields) {
+    result
+    ok
+  }
+}
+{
+  "fields": {
+    "email": "rond@webbtech.net",
+    "domainID": "local.pf-user"
+  }
+}
+
+mutation authResetToken($fields: AuthResetTokenInput) {
+  authResetToken(input: $fields) {
+    id
+    contact {
+      first
+      last
+    }
+    token
+    scope {
+      id
+      label
+    }
+    scopeBits
+  }
+}
+{
+  "fields": {
+    "email": "rond@webbtech.net",
+    "domainID": "local.pf-user",
+    "password": "my-new-passwd",
+    "resetToken": "<token>"
+  }
+}

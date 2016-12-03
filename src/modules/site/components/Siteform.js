@@ -12,21 +12,15 @@ import { connect } from 'react-redux'
 
 import { compose, graphql, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
-// import update from 'react-addons-update'
 
 import { setSiteProp } from '../siteActions'
 import * as alertActions from '../../alert/alertActions'
-import {
-  siteScratchSelector,
-  siteCurrentSelector,
-} from '../siteSelectors'
+import { siteScratchSelector } from '../siteSelectors'
 
 import { sortBy } from '../../../utils'
-
-const R = require('ramda')
-
 import '../../../styles/form.css'
 
+const R = require('ramda')
 
 export class Siteform extends Component {
 

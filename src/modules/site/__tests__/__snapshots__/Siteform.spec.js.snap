@@ -1811,43 +1811,43 @@ ShallowWrapper {
     scratch = this.props.scratch;
 
     return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 'auto', margin: 'auto' }, __source: { fileName: _jsxFileName, lineNumber: 82 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 83 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 'auto', margin: 'auto' }, __source: { fileName: _jsxFileName, lineNumber: 76 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 77 }, __self: this },
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 85 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 79 }, __self: this },
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 87 }, __self: this },
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 88 }, __self: this }, /* istanbul ignore next */'Domain'),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 81 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 82 }, __self: this }, /* istanbul ignore next */'Domain'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Identifier Name',
                 onChange: () => this._onPropChange('name'),
                 onBlur: () => this._validate('name'),
                 ref: 'name',
-                value: scratch.name || '', __source: { fileName: _jsxFileName, lineNumber: 89 }, __self: this }),
+                value: scratch.name || '', __source: { fileName: _jsxFileName, lineNumber: 83 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Domain ID',
                 onChange: () => this._onPropChange('domainID'),
                 onBlur: () => this._validate('domainID'),
                 ref: 'domainID',
-                value: scratch.domainID || '', __source: { fileName: _jsxFileName, lineNumber: 96 }, __self: this }),
+                value: scratch.domainID || '', __source: { fileName: _jsxFileName, lineNumber: 90 }, __self: this }),
 
 
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this }),
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 105 }, __self: this }, /* istanbul ignore next */'Security'),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 98 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 98 }, __self: this }),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 99 }, __self: this }, /* istanbul ignore next */'Security'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Public PEM File',
                 onChange: () => this._onPropChange('pemFiles.public'),
                 onBlur: () => this._validate('pemFiles.public'),
                 ref: 'pemFiles.public',
-                value: scratch.pemFiles.public || '', __source: { fileName: _jsxFileName, lineNumber: 106 }, __self: this }),
+                value: scratch.pemFiles.public || '', __source: { fileName: _jsxFileName, lineNumber: 100 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Private PEM File',
                 onChange: () => this._onPropChange('pemFiles.private'),
                 onBlur: () => this._validate('pemFiles.private'),
                 ref: 'pemFiles.private',
-                value: scratch.pemFiles.private || '', __source: { fileName: _jsxFileName, lineNumber: 113 }, __self: this }),
+                value: scratch.pemFiles.private || '', __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 disabled: true,
@@ -1855,88 +1855,88 @@ ShallowWrapper {
                 onChange: () => this._onPropChange('signingMethod'),
                 onBlur: () => this._validate('signingMethod'),
                 ref: 'signingMethod',
-                value: scratch.signingMethod || '', __source: { fileName: _jsxFileName, lineNumber: 120 }, __self: this })),
+                value: scratch.signingMethod || '', __source: { fileName: _jsxFileName, lineNumber: 114 }, __self: this })),
 
 
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 130 }, __self: this }),
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 131 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 124 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 125 }, __self: this }),
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this },
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 134 }, __self: this }, /* istanbul ignore next */'Database'),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }, /* istanbul ignore next */'Database'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'DB Name',
                 onChange: () => this._onPropChange('dbNm'),
                 onBlur: () => this._validate('dbNm'),
                 ref: 'dbNm',
-                value: scratch.dbNm || '', __source: { fileName: _jsxFileName, lineNumber: 135 }, __self: this }),
+                value: scratch.dbNm || '', __source: { fileName: _jsxFileName, lineNumber: 129 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'User Collection',
                 onChange: () => this._onPropChange('collections.user'),
                 onBlur: () => this._validate('collections.user'),
                 ref: 'collections.user',
-                value: scratch.collections.user || '', __source: { fileName: _jsxFileName, lineNumber: 142 }, __self: this }),
+                value: scratch.collections.user || '', __source: { fileName: _jsxFileName, lineNumber: 136 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Contact Collection',
                 onChange: () => this._onPropChange('collections.contact'),
                 onBlur: () => this._validate('collections.contact'),
                 ref: 'collections.contact',
-                value: scratch.collections.contact || '', __source: { fileName: _jsxFileName, lineNumber: 149 }, __self: this }),
+                value: scratch.collections.contact || '', __source: { fileName: _jsxFileName, lineNumber: 143 }, __self: this }),
 
 
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 157 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 157 }, __self: this }),
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 158 }, __self: this }, /* istanbul ignore next */'Site Info'),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 151 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 151 }, __self: this }),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this }, /* istanbul ignore next */'Site Info'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Credential Password Field',
                 onChange: () => this._onPropChange('credentials.password'),
                 onBlur: () => this._validate('credentials.password'),
                 ref: 'credentials.password',
-                value: scratch.credentials.password || '', __source: { fileName: _jsxFileName, lineNumber: 159 }, __self: this }),
+                value: scratch.credentials.password || '', __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Credential Sitename Field',
                 onChange: () => this._onPropChange('credentials.username'),
                 onBlur: () => this._validate('credentials.username'),
                 ref: 'credentials.username',
-                value: scratch.credentials.username || '', __source: { fileName: _jsxFileName, lineNumber: 166 }, __self: this }),
+                value: scratch.credentials.username || '', __source: { fileName: _jsxFileName, lineNumber: 160 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Reset URI',
                 onChange: () => this._onPropChange('resetURI'),
                 onBlur: () => this._validate('resetURI'),
                 ref: 'resetURI',
-                value: scratch.resetURI || '', __source: { fileName: _jsxFileName, lineNumber: 173 }, __self: this }))),
+                value: scratch.resetURI || '', __source: { fileName: _jsxFileName, lineNumber: 167 }, __self: this }))),
 
 
 
 
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 184 }, __self: this },
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1 }, __source: { fileName: _jsxFileName, lineNumber: 185 }, __self: this },
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 186 }, __self: this }, /* istanbul ignore next */'Status'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 178 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1 }, __source: { fileName: _jsxFileName, lineNumber: 179 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 180 }, __self: this }, /* istanbul ignore next */'Status'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Checkbox2.default, /* istanbul ignore next */{
                 label: 'Active',
                 labelPosition: 'right',
                 onCheck: (e, val) => this._onCheck(e, val, 'active'),
                 ref: 'active',
-                checked: scratch.active, __source: { fileName: _jsxFileName, lineNumber: 187 }, __self: this }))),
+                checked: scratch.active, __source: { fileName: _jsxFileName, lineNumber: 181 }, __self: this }))),
 
 
 
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: { justifyContent: 'space-around' }, __source: { fileName: _jsxFileName, lineNumber: 197 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: { justifyContent: 'space-around' }, __source: { fileName: _jsxFileName, lineNumber: 191 }, __self: this },
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
-              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_clear2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 199 }, __self: this }),
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_clear2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 193 }, __self: this }),
               label: 'Cancel',
-              onClick: () => this._onCancelForm(), __source: { fileName: _jsxFileName, lineNumber: 198 }, __self: this }),
+              onClick: () => this._onCancelForm(), __source: { fileName: _jsxFileName, lineNumber: 192 }, __self: this }),
 
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
-              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_done2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 204 }, __self: this }),
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_done2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 198 }, __self: this }),
               label: 'Submit Site Info',
               onClick: () => this._onSubmit(),
-              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 203 }, __self: this })))));
+              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 197 }, __self: this })))));
 
 
 
@@ -2027,7 +2027,7 @@ ShallowWrapper {
       "_pendingForceUpdate": false,
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
-      "_renderedComponent": Object {
+      "_renderedComponent": NoopInternalComponent {
         "_currentElement": <div
           style={
                     Object {
@@ -3837,43 +3837,43 @@ ShallowWrapper {
     scratch = this.props.scratch;
 
     return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 'auto', margin: 'auto' }, __source: { fileName: _jsxFileName, lineNumber: 82 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 83 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 'auto', margin: 'auto' }, __source: { fileName: _jsxFileName, lineNumber: 76 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 77 }, __self: this },
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 85 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 79 }, __self: this },
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 87 }, __self: this },
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 88 }, __self: this }, /* istanbul ignore next */'Domain'),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 81 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 82 }, __self: this }, /* istanbul ignore next */'Domain'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Identifier Name',
                 onChange: () => this._onPropChange('name'),
                 onBlur: () => this._validate('name'),
                 ref: 'name',
-                value: scratch.name || '', __source: { fileName: _jsxFileName, lineNumber: 89 }, __self: this }),
+                value: scratch.name || '', __source: { fileName: _jsxFileName, lineNumber: 83 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Domain ID',
                 onChange: () => this._onPropChange('domainID'),
                 onBlur: () => this._validate('domainID'),
                 ref: 'domainID',
-                value: scratch.domainID || '', __source: { fileName: _jsxFileName, lineNumber: 96 }, __self: this }),
+                value: scratch.domainID || '', __source: { fileName: _jsxFileName, lineNumber: 90 }, __self: this }),
 
 
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 104 }, __self: this }),
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 105 }, __self: this }, /* istanbul ignore next */'Security'),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 98 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 98 }, __self: this }),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 99 }, __self: this }, /* istanbul ignore next */'Security'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Public PEM File',
                 onChange: () => this._onPropChange('pemFiles.public'),
                 onBlur: () => this._validate('pemFiles.public'),
                 ref: 'pemFiles.public',
-                value: scratch.pemFiles.public || '', __source: { fileName: _jsxFileName, lineNumber: 106 }, __self: this }),
+                value: scratch.pemFiles.public || '', __source: { fileName: _jsxFileName, lineNumber: 100 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Private PEM File',
                 onChange: () => this._onPropChange('pemFiles.private'),
                 onBlur: () => this._validate('pemFiles.private'),
                 ref: 'pemFiles.private',
-                value: scratch.pemFiles.private || '', __source: { fileName: _jsxFileName, lineNumber: 113 }, __self: this }),
+                value: scratch.pemFiles.private || '', __source: { fileName: _jsxFileName, lineNumber: 107 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 disabled: true,
@@ -3881,88 +3881,88 @@ ShallowWrapper {
                 onChange: () => this._onPropChange('signingMethod'),
                 onBlur: () => this._validate('signingMethod'),
                 ref: 'signingMethod',
-                value: scratch.signingMethod || '', __source: { fileName: _jsxFileName, lineNumber: 120 }, __self: this })),
+                value: scratch.signingMethod || '', __source: { fileName: _jsxFileName, lineNumber: 114 }, __self: this })),
 
 
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 130 }, __self: this }),
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 131 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 124 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 125 }, __self: this }),
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 133 }, __self: this },
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 134 }, __self: this }, /* istanbul ignore next */'Database'),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }, /* istanbul ignore next */'Database'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'DB Name',
                 onChange: () => this._onPropChange('dbNm'),
                 onBlur: () => this._validate('dbNm'),
                 ref: 'dbNm',
-                value: scratch.dbNm || '', __source: { fileName: _jsxFileName, lineNumber: 135 }, __self: this }),
+                value: scratch.dbNm || '', __source: { fileName: _jsxFileName, lineNumber: 129 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'User Collection',
                 onChange: () => this._onPropChange('collections.user'),
                 onBlur: () => this._validate('collections.user'),
                 ref: 'collections.user',
-                value: scratch.collections.user || '', __source: { fileName: _jsxFileName, lineNumber: 142 }, __self: this }),
+                value: scratch.collections.user || '', __source: { fileName: _jsxFileName, lineNumber: 136 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Contact Collection',
                 onChange: () => this._onPropChange('collections.contact'),
                 onBlur: () => this._validate('collections.contact'),
                 ref: 'collections.contact',
-                value: scratch.collections.contact || '', __source: { fileName: _jsxFileName, lineNumber: 149 }, __self: this }),
+                value: scratch.collections.contact || '', __source: { fileName: _jsxFileName, lineNumber: 143 }, __self: this }),
 
 
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 157 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 157 }, __self: this }),
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 158 }, __self: this }, /* istanbul ignore next */'Site Info'),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 151 }, __self: this }), /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'br', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 151 }, __self: this }),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this }, /* istanbul ignore next */'Site Info'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Credential Password Field',
                 onChange: () => this._onPropChange('credentials.password'),
                 onBlur: () => this._validate('credentials.password'),
                 ref: 'credentials.password',
-                value: scratch.credentials.password || '', __source: { fileName: _jsxFileName, lineNumber: 159 }, __self: this }),
+                value: scratch.credentials.password || '', __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Credential Sitename Field',
                 onChange: () => this._onPropChange('credentials.username'),
                 onBlur: () => this._validate('credentials.username'),
                 ref: 'credentials.username',
-                value: scratch.credentials.username || '', __source: { fileName: _jsxFileName, lineNumber: 166 }, __self: this }),
+                value: scratch.credentials.username || '', __source: { fileName: _jsxFileName, lineNumber: 160 }, __self: this }),
 
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
                 floatingLabelText: 'Reset URI',
                 onChange: () => this._onPropChange('resetURI'),
                 onBlur: () => this._validate('resetURI'),
                 ref: 'resetURI',
-                value: scratch.resetURI || '', __source: { fileName: _jsxFileName, lineNumber: 173 }, __self: this }))),
+                value: scratch.resetURI || '', __source: { fileName: _jsxFileName, lineNumber: 167 }, __self: this }))),
 
 
 
 
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 184 }, __self: this },
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1 }, __source: { fileName: _jsxFileName, lineNumber: 185 }, __self: this },
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 186 }, __self: this }, /* istanbul ignore next */'Status'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 178 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1 }, __source: { fileName: _jsxFileName, lineNumber: 179 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 180 }, __self: this }, /* istanbul ignore next */'Status'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Checkbox2.default, /* istanbul ignore next */{
                 label: 'Active',
                 labelPosition: 'right',
                 onCheck: (e, val) => this._onCheck(e, val, 'active'),
                 ref: 'active',
-                checked: scratch.active, __source: { fileName: _jsxFileName, lineNumber: 187 }, __self: this }))),
+                checked: scratch.active, __source: { fileName: _jsxFileName, lineNumber: 181 }, __self: this }))),
 
 
 
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: { justifyContent: 'space-around' }, __source: { fileName: _jsxFileName, lineNumber: 197 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: { justifyContent: 'space-around' }, __source: { fileName: _jsxFileName, lineNumber: 191 }, __self: this },
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
-              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_clear2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 199 }, __self: this }),
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_clear2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 193 }, __self: this }),
               label: 'Cancel',
-              onClick: () => this._onCancelForm(), __source: { fileName: _jsxFileName, lineNumber: 198 }, __self: this }),
+              onClick: () => this._onCancelForm(), __source: { fileName: _jsxFileName, lineNumber: 192 }, __self: this }),
 
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
-              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_done2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 204 }, __self: this }),
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_done2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 198 }, __self: this }),
               label: 'Submit Site Info',
               onClick: () => this._onSubmit(),
-              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 203 }, __self: this })))));
+              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 197 }, __self: this })))));
 
 
 

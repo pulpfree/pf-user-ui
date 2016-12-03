@@ -81,7 +81,13 @@ ShallowWrapper {
                 
                       this.state = initialState;
                     }
-                    onlyActiveOnIndex={false}
+                    activeStyle={
+                        Object {
+                            "backgroundColor": "#fff",
+                            "color": "#000",
+                          }
+                    }
+                    onlyActiveOnIndex={true}
                     style={Object {}}
                     to="/" />
             }
@@ -166,6 +172,12 @@ ShallowWrapper {
                       !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
                 
                       this.state = initialState;
+                    }
+                    activeStyle={
+                        Object {
+                            "backgroundColor": "#fff",
+                            "color": "#000",
+                          }
                     }
                     onlyActiveOnIndex={false}
                     style={Object {}}
@@ -252,6 +264,12 @@ ShallowWrapper {
                       !(typeof initialState === 'object' && !Array.isArray(initialState)) ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s.getInitialState(): must return an object or null', Constructor.displayName || 'ReactCompositeComponent') : _prodInvariant('82', Constructor.displayName || 'ReactCompositeComponent') : void 0;
                 
                       this.state = initialState;
+                    }
+                    activeStyle={
+                        Object {
+                            "backgroundColor": "#fff",
+                            "color": "#000",
+                          }
                     }
                     onlyActiveOnIndex={false}
                     style={Object {}}
@@ -350,7 +368,13 @@ ShallowWrapper {
                         
                               this.state = initialState;
                             }
-                              onlyActiveOnIndex={false}
+                              activeStyle={
+                                    Object {
+                                          "backgroundColor": "#fff",
+                                          "color": "#000",
+                                        }
+                              }
+                              onlyActiveOnIndex={true}
                               style={Object {}}
                               to="/" />
                   }
@@ -436,6 +460,12 @@ ShallowWrapper {
                         
                               this.state = initialState;
                             }
+                              activeStyle={
+                                    Object {
+                                          "backgroundColor": "#fff",
+                                          "color": "#000",
+                                        }
+                              }
                               onlyActiveOnIndex={false}
                               style={Object {}}
                               to="/site" />
@@ -522,6 +552,12 @@ ShallowWrapper {
                         
                               this.state = initialState;
                             }
+                              activeStyle={
+                                    Object {
+                                          "backgroundColor": "#fff",
+                                          "color": "#000",
+                                        }
+                              }
                               onlyActiveOnIndex={false}
                               style={Object {}}
                               to="/user" />
@@ -550,7 +586,39 @@ ShallowWrapper {
       "_calledComponentWillUnmount": false,
       "_compositeType": 0,
       "_context": Object {},
-      "_currentElement": <function Header() {_classCallCheck(this, Header);return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));}
+      "_currentElement": <class Header extends /* istanbul ignore next */_react.Component {
+
+  render() {/* istanbul ignore next */const
+
+    links = this.props.links;
+    const eleStyle = { borderRadius: 0 };
+    const activeStyle = {
+      backgroundColor: '#fff',
+      color: '#000' };
+
+
+    let activeOnIndex;
+    let ls = links.map(l => {
+      activeOnIndex = l.path === '/' ? true : false;
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+          style: eleStyle,
+          containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this }),
+          key: l.path,
+          label: l.label,
+          secondary: true, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }));
+
+
+    });
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }, ls)));
+
+
+  }}
         links={
                 Array [
                         Object {
@@ -608,7 +676,7 @@ ShallowWrapper {
       "_pendingForceUpdate": false,
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
-      "_renderedComponent": Object {
+      "_renderedComponent": NoopInternalComponent {
         "_currentElement": <header
           className="App-header">
           <img
@@ -684,7 +752,13 @@ ShallowWrapper {
                                         
                                               this.state = initialState;
                                             }
-                                                  onlyActiveOnIndex={false}
+                                                  activeStyle={
+                                                            Object {
+                                                                      "backgroundColor": "#fff",
+                                                                      "color": "#000",
+                                                                    }
+                                                  }
+                                                  onlyActiveOnIndex={true}
                                                   style={Object {}}
                                                   to="/" />
                               }
@@ -770,6 +844,12 @@ ShallowWrapper {
                                         
                                               this.state = initialState;
                                             }
+                                                  activeStyle={
+                                                            Object {
+                                                                      "backgroundColor": "#fff",
+                                                                      "color": "#000",
+                                                                    }
+                                                  }
                                                   onlyActiveOnIndex={false}
                                                   style={Object {}}
                                                   to="/site" />
@@ -856,6 +936,12 @@ ShallowWrapper {
                                         
                                               this.state = initialState;
                                             }
+                                                  activeStyle={
+                                                            Object {
+                                                                      "backgroundColor": "#fff",
+                                                                      "color": "#000",
+                                                                    }
+                                                  }
                                                   onlyActiveOnIndex={false}
                                                   style={Object {}}
                                                   to="/user" />
@@ -953,7 +1039,13 @@ ShallowWrapper {
                                         
                                               this.state = initialState;
                                             }
-                                                  onlyActiveOnIndex={false}
+                                                  activeStyle={
+                                                            Object {
+                                                                      "backgroundColor": "#fff",
+                                                                      "color": "#000",
+                                                                    }
+                                                  }
+                                                  onlyActiveOnIndex={true}
                                                   style={Object {}}
                                                   to="/" />
                               }
@@ -1039,6 +1131,12 @@ ShallowWrapper {
                                         
                                               this.state = initialState;
                                             }
+                                                  activeStyle={
+                                                            Object {
+                                                                      "backgroundColor": "#fff",
+                                                                      "color": "#000",
+                                                                    }
+                                                  }
                                                   onlyActiveOnIndex={false}
                                                   style={Object {}}
                                                   to="/site" />
@@ -1125,6 +1223,12 @@ ShallowWrapper {
                                         
                                               this.state = initialState;
                                             }
+                                                  activeStyle={
+                                                            Object {
+                                                                      "backgroundColor": "#fff",
+                                                                      "color": "#000",
+                                                                    }
+                                                  }
                                                   onlyActiveOnIndex={false}
                                                   style={Object {}}
                                                   to="/user" />
@@ -1157,7 +1261,39 @@ ShallowWrapper {
     "render": [Function],
   },
   "root": [Circular],
-  "unrendered": <function Header() {_classCallCheck(this, Header);return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));}
+  "unrendered": <class Header extends /* istanbul ignore next */_react.Component {
+
+  render() {/* istanbul ignore next */const
+
+    links = this.props.links;
+    const eleStyle = { borderRadius: 0 };
+    const activeStyle = {
+      backgroundColor: '#fff',
+      color: '#000' };
+
+
+    let activeOnIndex;
+    let ls = links.map(l => {
+      activeOnIndex = l.path === '/' ? true : false;
+
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+          style: eleStyle,
+          containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this }),
+          key: l.path,
+          label: l.label,
+          secondary: true, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }));
+
+
+    });
+
+    return (
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }, ls)));
+
+
+  }}
     links={
         Array [
             Object {

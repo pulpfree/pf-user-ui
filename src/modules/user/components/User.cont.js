@@ -84,7 +84,7 @@ export class User extends Component {
 
   render() {
 
-    const { loading, fetchSites, params, removeUser } = this.props
+    const { loading, fetchSites, removeUser } = this.props
     if (loading === true) {
       return (
         <div>Loading...</div>
