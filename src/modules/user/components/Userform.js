@@ -17,9 +17,10 @@ import gql from 'graphql-tag'
 
 import { setUserProp } from '../userActions'
 import * as alertActions from '../../alert/alertActions'
-import { userScratchSelector } from '../userSelectors'
-import { siteScratchSelector } from '../../site/siteSelectors'
-
+import {
+  userListSelector,
+  userScratchSelector
+} from '../userSelectors'
 import { sortBy } from '../../../utils'
 
 const R = require('ramda')
@@ -234,7 +235,7 @@ const SITE_QUERY = gql`
   }`
 
 const withSite = graphql(SITE_QUERY, {
-  options: ({ site }) => ({ variables: { siteID: site._id } }),
+  options: ({ userList }) => ({ variables: { siteID: userList.domainID } }),
   props({data: {error, loading, fetchSiteById, refetch}}) {
     return {error, loading, fetchSiteById, refetch}
   }
@@ -336,7 +337,7 @@ const withEditForm = graphql(UPDATE_USER_MUTATION, {
 function mapStateToProps(state) {
   return {
     scratch:  userScratchSelector(state),
-    site:     siteScratchSelector(state)
+    userList: userListSelector(state)
   }
 }
 

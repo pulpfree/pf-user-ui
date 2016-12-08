@@ -12,20 +12,25 @@ import { compose, graphql, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
 
 import * as alertActions from '../../alert/alertActions'
+import { loginUser } from '../../auth/authActions'
+
+import { userAuthVals } from '../../../utils'
 
 import '../../../styles/form.css'
 
 export class Loginform extends Component {
   constructor(props) {
     super(props)
-    /*this.state = {
-      email: null,
-      password: null
-    }*/
+    // const user = userAuthVals.getUser()
+    // console.log('user:', user)
+    // let email = user && user.email ? user.email : ''
+    let email = 'rond@webbtech.net'
     this.state = {
-      email: 'rond@webbtech.net',
-      password: 'NewPassword1'
+      email,
+      // password: ''
+      password: 'my-new-passwd'
     }
+    // console.log('props:', this.props)
   }
 
   _onChange = (field) => {
@@ -34,21 +39,18 @@ export class Loginform extends Component {
   }
 
   _onSubmit = () => {
-    console.log('props:', this.props)
     const { authUser } = this.props
     const creds = {
       email: this.state.email,
       password: this.state.password,
-      domainID: ''
+      domainID: 'local.pf-user'
     }
-  //   email: String!
-  // password: String!
-  // domainID: String!
     authUser(creds).then(res => {
-      console.log('res:', res)
+      userAuthVals.setVals(res.data.authUser)
+      this.props.actions.loginUser(res.data.authUser)
+      this.props.client.resetStore()
+      // window.location.reload(true)
     }).catch(err => {
-      console.log('err:', err)
-      console.log('err2:', JSON.stringify(err))
       this.props.actions.alertSend({
         message:  `ERROR: ${err.message}`,
         type:     'danger',
@@ -127,7 +129,8 @@ const withLoginForm = graphql(LOGIN_MUTATION, {
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
-      ...alertActions
+      ...alertActions,
+      loginUser
     }, dispatch),
   }
 }

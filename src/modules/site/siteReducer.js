@@ -4,13 +4,9 @@ import * as siteActions from './siteActions'
 import Immutable from 'seamless-immutable'
 
 const currentState = Immutable({
-
-
 })
 
 const listState = Immutable({
-
-
 })
 
 export const scratchState = Immutable({
@@ -61,6 +57,7 @@ export function scratch (state = scratchState, action) {
     return scratchState
 
   case siteActions.SITE_SCRATCH_PROP: {
+    console.log('action in site prop:', action)
     let keyS = Object.keys(action.prop)
     let rets = keyS.map(key => {
       return state.setIn(key.split('.'), action.prop[key])

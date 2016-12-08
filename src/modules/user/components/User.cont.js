@@ -6,24 +6,28 @@ import { browserHistory } from 'react-router'
 import { graphql, compose, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
 
+import ActionDelete from 'material-ui/svg-icons/action/delete'
 import AppBar from 'material-ui/AppBar'
 import ContentAdd from 'material-ui/svg-icons/content/add'
-import ActionDelete from 'material-ui/svg-icons/action/delete'
 import Dialog from 'material-ui/Dialog'
+import FlatButton from 'material-ui/FlatButton'
 import IconButton from 'material-ui/IconButton'
 import MenuItem from 'material-ui/MenuItem'
 import Paper from 'material-ui/Paper'
-import FlatButton from 'material-ui/FlatButton'
 import SelectField from 'material-ui/SelectField'
+import Toggle from 'material-ui/Toggle'
 
 import UserForm from './Userform'
 
 import {
   setUserCreate,
   setUserProp,
+  setUserListProp,
   setUserScratch
 } from '../userActions'
-import { setSiteScratch } from '../../site/siteActions'
+import {
+  userListSelector
+} from '../../user/userSelectors'
 import * as alertActions from '../../alert/alertActions'
 
 import '../../../styles/form.css'
@@ -39,7 +43,7 @@ export class User extends Component {
       open: false,
       openDelete: false,
       siteID: null,
-      userID: null,
+      userID: null
     }
   }
 
@@ -75,19 +79,23 @@ export class User extends Component {
     this._handleOpen()
   }
 
+  _onActiveToggle = (e, val) => {
+    this.props.actions.setUserListProp({active: val})
+    this.props.refetch()
+  }
+
   _onSelectSite = (e, idx, val) => {
     this.setState({siteID: val})
-    this.props.actions.setSiteScratch({site: {_id: val}})
+    this.props.actions.setUserListProp({domainID: val})
     browserHistory.push(`/user/${val}`)
   }
 
-
   render() {
 
-    const { loading, fetchSites, removeUser } = this.props
+    const { loading, fetchSites, removeUser, userList } = this.props
     if (loading === true) {
       return (
-        <div>Loading...</div>
+        <div>Loading main...</div>
       )
     }
 
@@ -100,7 +108,7 @@ export class User extends Component {
       const { loading, fetchUsers, refetch } = data
       if (loading) {
         return (
-          <div>Loading...</div>
+          <div>Loading users...</div>
         )
       }
 
@@ -169,18 +177,18 @@ export class User extends Component {
         )
       })
       return (
-          <div><Header />{rows}
-            <Dialog
-              actions={deleteActions}
-              contentStyle={{width: 400}}
-              onRequestClose={this._handleClose}
-              open={this.state.openDelete}
-            >
-              You sure you want to delete this user?<br />
-              This action cannot be undone.
-            </Dialog>
-          </div>
-        )
+        <div><Header />{rows}
+          <Dialog
+            actions={deleteActions}
+            contentStyle={{width: 400}}
+            onRequestClose={this._handleClose}
+            open={this.state.openDelete}
+          >
+            You sure you want to delete this user?<br />
+            This action cannot be undone.
+          </Dialog>
+        </div>
+      )
     }
 
     const USER_QUERY = gql`
@@ -223,6 +231,7 @@ export class User extends Component {
     })(UserList)
 
     return (
+
       <section className='App-container'>
         <Paper>
           <AppBar
@@ -233,15 +242,26 @@ export class User extends Component {
               title='User Listing'
           />
           <article style={st.paper}>
-            <SelectField
-                floatingLabelFixed={true}
-                floatingLabelText='Select Site'
-                onChange={(e, key, payload) => this._onSelectSite(e, key, payload)}
-                value={this.state.siteID}
-            >
-              {fetchSites && fetchSites.length && fetchSites.map(s => <MenuItem key={s._id} value={s._id} primaryText={s.name} /> )}
-            </SelectField>
-            <br /><br />
+            <div style={{display: 'flex', justifyContent: 'flex-start', marginBottom: 30}}>
+              <div style={{alignSelf: 'center', marginRight: 30}}>
+                <SelectField
+                    floatingLabelFixed={true}
+                    floatingLabelText='Select Site'
+                    onChange={(e, key, payload) => this._onSelectSite(e, key, payload)}
+                    value={this.state.siteID}
+                >
+                  {fetchSites && fetchSites.length && fetchSites.map(s => <MenuItem key={s._id} value={s._id} primaryText={s.name} /> )}
+                </SelectField>
+              </div>
+              <div style={{alignSelf: 'center'}}>
+                <Toggle
+                    label='Active'
+                    toggled={userList.active}
+                    onToggle={(e, val) => this._onActiveToggle(e, val)}
+                />
+              </div>
+            </div>
+
             <UserListWithData domainID={this.state.siteID} />
           </article>
         </Paper>
@@ -281,8 +301,9 @@ const USER_REMOVE = gql`
 
 const UserWithGraph = withApollo(compose(
   graphql(SITE_LIST_QUERY, {
-    props({data: {loading, fetchSites}}) {
-      return {loading, fetchSites}
+    options: ({ userList }) => ({ variables: { active: userList.active } }),
+    props({data: {loading, fetchSites, refetch}}) {
+      return {loading, fetchSites, refetch}
     }
   }),
   graphql(USER_REMOVE, {
@@ -298,13 +319,18 @@ const UserWithGraph = withApollo(compose(
   })
 )(User))
 
+function mapStateToProps(state) {
+  return {
+    userList: userListSelector(state),
+  }
+}
 
 function mapDispatchToProps(dispatch) {
   return {
     actions: bindActionCreators({
       ...alertActions,
-      setSiteScratch,
       setUserCreate,
+      setUserListProp,
       setUserProp,
       setUserScratch
     }, dispatch)
@@ -312,6 +338,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(UserWithGraph)

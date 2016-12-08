@@ -9,8 +9,7 @@ import './App.css'
 import Header from './Header'
 import Alerts from '../../alert/components/Alerts'
 
-import Loginform from '../../auth/components/Loginform'
-import Forgotform from '../../auth/components/Forgotform'
+
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
@@ -42,8 +41,6 @@ export class App extends Component {
         <div className="App">
           <Alerts />
           <Header links={links} pathname={pathname} routeChildren={routeChildren} />
-          <Loginform />
-          <Forgotform />
           {children}
         </div>
       </MuiThemeProvider>

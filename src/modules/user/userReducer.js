@@ -7,6 +7,8 @@ const currentState = Immutable({
 })
 
 const listState = Immutable({
+  active: true,
+  domainID: null
 })
 
 export const scratchState = Immutable({
@@ -35,6 +37,14 @@ export function current (state = currentState, action) {
 
 export function list (state = listState, action) {
   switch (action.type) {
+
+  case userActions.USER_LIST_PROP: {
+    let keyS = Object.keys(action.prop)
+    let rets = keyS.map(key => {
+      return state.setIn(key.split('.'), action.prop[key])
+    })
+    return state.merge(rets)
+  }
 
   default:
     return state

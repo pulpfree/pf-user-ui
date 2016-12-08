@@ -86,7 +86,7 @@ export class Site extends Component {
     if (loading) {
       return (
         <div>Loading...</div>
-      );
+      )
     }
 
     const Header = () => (
@@ -100,6 +100,9 @@ export class Site extends Component {
     )
 
     const SiteList = () => {
+      if (!fetchSites) {
+        return <div>no load</div>
+      }
       let rows = fetchSites.map(s => {
         return (
           <div
