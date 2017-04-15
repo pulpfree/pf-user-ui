@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme'
 
-import { UserForm } from '../components/Userform'
+import { UserForm } from '../components/UserForm'
 import { setUserProp } from '../userActions'
 import { scratchState } from '../userReducer'
 

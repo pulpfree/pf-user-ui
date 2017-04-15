@@ -1286,21 +1286,21 @@ ShallowWrapper {
 
     if (loading) {
       return (
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 114 }, __self: this }, /* istanbul ignore next */'Loading...'));
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 115 }, __self: this }, /* istanbul ignore next */'Loading...'));
 
     }
     if (this.props.error) {
       return (
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }, /* istanbul ignore next */'Fatal error occurred: ', this.props.error.message));
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 120 }, __self: this }, /* istanbul ignore next */'Fatal error occurred: ', this.props.error.message));
 
     }
 
     return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { margin: 'auto' }, __source: { fileName: _jsxFileName, lineNumber: 124 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 125 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { margin: 'auto' }, __source: { fileName: _jsxFileName, lineNumber: 125 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 126 }, __self: this },
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this }, /* istanbul ignore next */'Login'),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }, /* istanbul ignore next */'Login'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 129 }, __self: this },
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
               className: 'form-text-input',
               errorText: email.error && 'This field is required',
@@ -1309,9 +1309,9 @@ ShallowWrapper {
               onBlur: () => this._validate('email'),
               ref: 'email',
               type: 'email',
-              value: scratch.email || '', __source: { fileName: _jsxFileName, lineNumber: 129 }, __self: this }),
+              value: scratch.email || '', __source: { fileName: _jsxFileName, lineNumber: 130 }, __self: this }),
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 139 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 140 }, __self: this }),
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
               className: 'form-text-input',
               floatingLabelText: 'Password',
@@ -1319,35 +1319,35 @@ ShallowWrapper {
               onBlur: () => this._validate('password'),
               ref: 'password',
               type: 'password',
-              value: scratch.password || '', __source: { fileName: _jsxFileName, lineNumber: 140 }, __self: this })),
+              value: scratch.password || '', __source: { fileName: _jsxFileName, lineNumber: 141 }, __self: this })),
 
 
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 151 }, __self: this }, /* istanbul ignore next */'Contact'),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this }, /* istanbul ignore next */'Contact'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this },
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
               className: 'form-text-input',
               floatingLabelText: 'First Name',
               onChange: () => this._onPropChange('contact.name.first'),
               onBlur: () => this._validate('contact.name.first'),
               ref: 'contact.name.first',
-              value: scratch.contact.name.first || '', __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this }),
+              value: scratch.contact.name.first || '', __source: { fileName: _jsxFileName, lineNumber: 154 }, __self: this }),
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 161 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 162 }, __self: this }),
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
               className: 'form-text-input',
               floatingLabelText: 'Last Name',
               onChange: () => this._onPropChange('contact.name.last'),
               onBlur: () => this._validate('contact.name.last'),
               ref: 'contact.name.last',
-              value: scratch.contact.name.last || '', __source: { fileName: _jsxFileName, lineNumber: 162 }, __self: this })),
+              value: scratch.contact.name.last || '', __source: { fileName: _jsxFileName, lineNumber: 163 }, __self: this })),
 
 
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 172 }, __self: this }, /* istanbul ignore next */'Roles & Status'),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 173 }, __self: this },
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1 }, __source: { fileName: _jsxFileName, lineNumber: 174 }, __self: this },
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 175 }, __self: this }, /* istanbul ignore next */'Status'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 173 }, __self: this }, /* istanbul ignore next */'Roles & Status'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 174 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1 }, __source: { fileName: _jsxFileName, lineNumber: 175 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 176 }, __self: this }, /* istanbul ignore next */'Status'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Checkbox2.default, /* istanbul ignore next */{
                 className: 'form-text-input',
                 label: 'Active',
@@ -1355,22 +1355,22 @@ ShallowWrapper {
                 onBlur: () => this._validate('active'),
                 onCheck: (e, val) => this._onCheck(e, val, 'active'),
                 ref: 'active',
-                checked: scratch.active, __source: { fileName: _jsxFileName, lineNumber: 176 }, __self: this })),
+                checked: scratch.active, __source: { fileName: _jsxFileName, lineNumber: 177 }, __self: this })),
 
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1.25 }, __source: { fileName: _jsxFileName, lineNumber: 186 }, __self: this },
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 187 }, __self: this }, /* istanbul ignore next */'Roles'),
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_List.List, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 188 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1.25 }, __source: { fileName: _jsxFileName, lineNumber: 187 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 188 }, __self: this }, /* istanbul ignore next */'Roles'),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_List.List, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 189 }, __self: this },
                 this.state.roles.length && this.state.roles.map(r => {
                   return (
                     /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Checkbox2.default, /* istanbul ignore next */{
                       key: r.id,
-                      label: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 130 }, __source: { fileName: _jsxFileName, lineNumber: 193 }, __self: this }, r.label),
+                      label: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 130 }, __source: { fileName: _jsxFileName, lineNumber: 194 }, __self: this }, r.label),
                       labelPosition: 'right',
                       onCheck: (e, val) => this._onCheckRole(e, val, r),
                       defaultChecked: r.checked,
                       value: r.id,
-                      style: { marginBottom: 10 }, __source: { fileName: _jsxFileName, lineNumber: 191 }, __self: this }));
+                      style: { marginBottom: 10 }, __source: { fileName: _jsxFileName, lineNumber: 192 }, __self: this }));
 
 
                 })))),
@@ -1378,17 +1378,17 @@ ShallowWrapper {
 
 
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: { justifyContent: 'space-around' }, __source: { fileName: _jsxFileName, lineNumber: 206 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: { justifyContent: 'space-around' }, __source: { fileName: _jsxFileName, lineNumber: 207 }, __self: this },
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
-              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_clear2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 208 }, __self: this }),
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_clear2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 209 }, __self: this }),
               label: 'Cancel',
-              onClick: () => this._onCancelForm(), __source: { fileName: _jsxFileName, lineNumber: 207 }, __self: this }),
+              onClick: () => this._onCancelForm(), __source: { fileName: _jsxFileName, lineNumber: 208 }, __self: this }),
 
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
-              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_done2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 213 }, __self: this }),
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_done2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 214 }, __self: this }),
               label: 'Submit User Info',
               onClick: () => this._onSubmit(),
-              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 212 }, __self: this })))));
+              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 213 }, __self: this })))));
 
 
 
@@ -1471,7 +1471,7 @@ ShallowWrapper {
       "_pendingForceUpdate": false,
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
-      "_renderedComponent": Object {
+      "_renderedComponent": NoopInternalComponent {
         "_currentElement": <div
           style={
                     Object {
@@ -2756,21 +2756,21 @@ ShallowWrapper {
 
     if (loading) {
       return (
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 114 }, __self: this }, /* istanbul ignore next */'Loading...'));
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 115 }, __self: this }, /* istanbul ignore next */'Loading...'));
 
     }
     if (this.props.error) {
       return (
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 119 }, __self: this }, /* istanbul ignore next */'Fatal error occurred: ', this.props.error.message));
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 120 }, __self: this }, /* istanbul ignore next */'Fatal error occurred: ', this.props.error.message));
 
     }
 
     return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { margin: 'auto' }, __source: { fileName: _jsxFileName, lineNumber: 124 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 125 }, __self: this },
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { margin: 'auto' }, __source: { fileName: _jsxFileName, lineNumber: 125 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 126 }, __self: this },
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 127 }, __self: this }, /* istanbul ignore next */'Login'),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 128 }, __self: this }, /* istanbul ignore next */'Login'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 129 }, __self: this },
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
               className: 'form-text-input',
               errorText: email.error && 'This field is required',
@@ -2779,9 +2779,9 @@ ShallowWrapper {
               onBlur: () => this._validate('email'),
               ref: 'email',
               type: 'email',
-              value: scratch.email || '', __source: { fileName: _jsxFileName, lineNumber: 129 }, __self: this }),
+              value: scratch.email || '', __source: { fileName: _jsxFileName, lineNumber: 130 }, __self: this }),
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 139 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 140 }, __self: this }),
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
               className: 'form-text-input',
               floatingLabelText: 'Password',
@@ -2789,35 +2789,35 @@ ShallowWrapper {
               onBlur: () => this._validate('password'),
               ref: 'password',
               type: 'password',
-              value: scratch.password || '', __source: { fileName: _jsxFileName, lineNumber: 140 }, __self: this })),
+              value: scratch.password || '', __source: { fileName: _jsxFileName, lineNumber: 141 }, __self: this })),
 
 
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 151 }, __self: this }, /* istanbul ignore next */'Contact'),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 152 }, __self: this }, /* istanbul ignore next */'Contact'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this },
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
               className: 'form-text-input',
               floatingLabelText: 'First Name',
               onChange: () => this._onPropChange('contact.name.first'),
               onBlur: () => this._validate('contact.name.first'),
               ref: 'contact.name.first',
-              value: scratch.contact.name.first || '', __source: { fileName: _jsxFileName, lineNumber: 153 }, __self: this }),
+              value: scratch.contact.name.first || '', __source: { fileName: _jsxFileName, lineNumber: 154 }, __self: this }),
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 161 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row-spacer', __source: { fileName: _jsxFileName, lineNumber: 162 }, __self: this }),
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
               className: 'form-text-input',
               floatingLabelText: 'Last Name',
               onChange: () => this._onPropChange('contact.name.last'),
               onBlur: () => this._validate('contact.name.last'),
               ref: 'contact.name.last',
-              value: scratch.contact.name.last || '', __source: { fileName: _jsxFileName, lineNumber: 162 }, __self: this })),
+              value: scratch.contact.name.last || '', __source: { fileName: _jsxFileName, lineNumber: 163 }, __self: this })),
 
 
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 172 }, __self: this }, /* istanbul ignore next */'Roles & Status'),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 173 }, __self: this },
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1 }, __source: { fileName: _jsxFileName, lineNumber: 174 }, __self: this },
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 175 }, __self: this }, /* istanbul ignore next */'Status'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 173 }, __self: this }, /* istanbul ignore next */'Roles & Status'),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', __source: { fileName: _jsxFileName, lineNumber: 174 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1 }, __source: { fileName: _jsxFileName, lineNumber: 175 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 176 }, __self: this }, /* istanbul ignore next */'Status'),
               /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Checkbox2.default, /* istanbul ignore next */{
                 className: 'form-text-input',
                 label: 'Active',
@@ -2825,22 +2825,22 @@ ShallowWrapper {
                 onBlur: () => this._validate('active'),
                 onCheck: (e, val) => this._onCheck(e, val, 'active'),
                 ref: 'active',
-                checked: scratch.active, __source: { fileName: _jsxFileName, lineNumber: 176 }, __self: this })),
+                checked: scratch.active, __source: { fileName: _jsxFileName, lineNumber: 177 }, __self: this })),
 
 
-            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1.25 }, __source: { fileName: _jsxFileName, lineNumber: 186 }, __self: this },
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 187 }, __self: this }, /* istanbul ignore next */'Roles'),
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_List.List, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 188 }, __self: this },
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { flex: 1.25 }, __source: { fileName: _jsxFileName, lineNumber: 187 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Subheader2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 188 }, __self: this }, /* istanbul ignore next */'Roles'),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_List.List, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 189 }, __self: this },
                 this.state.roles.length && this.state.roles.map(r => {
                   return (
                     /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Checkbox2.default, /* istanbul ignore next */{
                       key: r.id,
-                      label: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 130 }, __source: { fileName: _jsxFileName, lineNumber: 193 }, __self: this }, r.label),
+                      label: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 130 }, __source: { fileName: _jsxFileName, lineNumber: 194 }, __self: this }, r.label),
                       labelPosition: 'right',
                       onCheck: (e, val) => this._onCheckRole(e, val, r),
                       defaultChecked: r.checked,
                       value: r.id,
-                      style: { marginBottom: 10 }, __source: { fileName: _jsxFileName, lineNumber: 191 }, __self: this }));
+                      style: { marginBottom: 10 }, __source: { fileName: _jsxFileName, lineNumber: 192 }, __self: this }));
 
 
                 })))),
@@ -2848,17 +2848,17 @@ ShallowWrapper {
 
 
 
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: { justifyContent: 'space-around' }, __source: { fileName: _jsxFileName, lineNumber: 206 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-row', style: { justifyContent: 'space-around' }, __source: { fileName: _jsxFileName, lineNumber: 207 }, __self: this },
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
-              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_clear2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 208 }, __self: this }),
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_clear2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 209 }, __self: this }),
               label: 'Cancel',
-              onClick: () => this._onCancelForm(), __source: { fileName: _jsxFileName, lineNumber: 207 }, __self: this }),
+              onClick: () => this._onCancelForm(), __source: { fileName: _jsxFileName, lineNumber: 208 }, __self: this }),
 
             /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default, /* istanbul ignore next */{
-              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_done2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 213 }, __self: this }),
+              icon: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_done2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 214 }, __self: this }),
               label: 'Submit User Info',
               onClick: () => this._onSubmit(),
-              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 212 }, __self: this })))));
+              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 213 }, __self: this })))));
 
 
 

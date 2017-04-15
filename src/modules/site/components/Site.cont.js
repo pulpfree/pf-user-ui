@@ -222,6 +222,7 @@ const SITES_QUERY = gql`
       resetURI
       roles {id, label}
       signingMethod
+      TTL
     }
   }`
 

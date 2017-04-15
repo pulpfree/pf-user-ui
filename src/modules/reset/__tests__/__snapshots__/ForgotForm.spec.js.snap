@@ -1,0 +1,915 @@
+exports[`components <ForgotForm /> matches snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div>
+    <div
+        style={
+            Object {
+                "backgroundColor": "#efefef",
+                "margin": "auto",
+                "marginTop": 100,
+                "padding": 20,
+                "width": 400,
+              }
+        }>
+        <form
+            onSubmit={[Function]}>
+            <legend
+                className="row">
+                Forgot Password
+            </legend>
+            <div
+                className="form-col">
+                <div
+                    style={
+                        Object {
+                            "marginTop": 20,
+                          }
+                    }>
+                    Enter your email address to have a reset link sent to you.
+                </div>
+                <function TextField() {
+                    var _ref;
+                
+                    var _temp, _this, _ret;
+                
+                    (0, _classCallCheck3.default)(this, TextField);
+                
+                    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                      args[_key] = arguments[_key];
+                    }
+                
+                    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                      isFocused: false,
+                      errorText: undefined,
+                      hasValue: false,
+                      isClean: true
+                    }, _this.handleInputBlur = function (event) {
+                      _this.setState({ isFocused: false });
+                      if (_this.props.onBlur) _this.props.onBlur(event);
+                    }, _this.handleInputChange = function (event) {
+                      _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                      if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                    }, _this.handleInputFocus = function (event) {
+                      if (_this.props.disabled) {
+                        return;
+                      }
+                      _this.setState({ isFocused: true });
+                      if (_this.props.onFocus) {
+                        _this.props.onFocus(event);
+                      }
+                    }, _this.handleHeightChange = function (event, height) {
+                      var newHeight = height + 24;
+                      if (_this.props.floatingLabelText) {
+                        newHeight += 24;
+                      }
+                      _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                  }
+                    autoFocus={true}
+                    disabled={false}
+                    floatingLabelFixed={false}
+                    floatingLabelText="Email"
+                    fullWidth={false}
+                    multiLine={false}
+                    onChange={[Function]}
+                    rows={1}
+                    type="email"
+                    underlineShow={true}
+                    value="rond@webbtech.net" />
+                <div
+                    style={
+                        Object {
+                            "marginTop": 20,
+                          }
+                    } />
+                <function RaisedButton() {
+                    var _ref;
+                
+                    var _temp, _this, _ret;
+                
+                    (0, _classCallCheck3.default)(this, RaisedButton);
+                
+                    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                      args[_key] = arguments[_key];
+                    }
+                
+                    return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                      hovered: false,
+                      keyboardFocused: false,
+                      touched: false,
+                      initialZDepth: 0,
+                      zDepth: 0
+                    }, _this.handleMouseDown = function (event) {
+                      // only listen to left clicks
+                      if (event.button === 0) {
+                        _this.setState({
+                          zDepth: _this.state.initialZDepth + 1
+                        });
+                      }
+                      if (_this.props.onMouseDown) {
+                        _this.props.onMouseDown(event);
+                      }
+                    }, _this.handleMouseUp = function (event) {
+                      _this.setState({
+                        zDepth: _this.state.initialZDepth
+                      });
+                      if (_this.props.onMouseUp) {
+                        _this.props.onMouseUp(event);
+                      }
+                    }, _this.handleMouseLeave = function (event) {
+                      if (!_this.state.keyboardFocused) {
+                        _this.setState({
+                          zDepth: _this.state.initialZDepth,
+                          hovered: false
+                        });
+                      }
+                      if (_this.props.onMouseLeave) {
+                        _this.props.onMouseLeave(event);
+                      }
+                    }, _this.handleMouseEnter = function (event) {
+                      if (!_this.state.keyboardFocused && !_this.state.touched) {
+                        _this.setState({
+                          hovered: true
+                        });
+                      }
+                      if (_this.props.onMouseEnter) {
+                        _this.props.onMouseEnter(event);
+                      }
+                    }, _this.handleTouchStart = function (event) {
+                      _this.setState({
+                        touched: true,
+                        zDepth: _this.state.initialZDepth + 1
+                      });
+                
+                      if (_this.props.onTouchStart) {
+                        _this.props.onTouchStart(event);
+                      }
+                    }, _this.handleTouchEnd = function (event) {
+                      _this.setState({
+                        zDepth: _this.state.initialZDepth
+                      });
+                
+                      if (_this.props.onTouchEnd) {
+                        _this.props.onTouchEnd(event);
+                      }
+                    }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                      var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                
+                      _this.setState({
+                        zDepth: zDepth,
+                        keyboardFocused: keyboardFocused
+                      });
+                    }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                  }
+                    disabled={false}
+                    fullWidth={false}
+                    label="Submit"
+                    labelPosition="after"
+                    onClick={[Function]}
+                    primary={false}
+                    secondary={true} />
+            </div>
+        </form>
+    </div>
+</div>,
+  "nodes": Array [
+    <div>
+      <div
+            style={
+                  Object {
+                        "backgroundColor": "#efefef",
+                        "margin": "auto",
+                        "marginTop": 100,
+                        "padding": 20,
+                        "width": 400,
+                      }
+            }>
+            <form
+                  onSubmit={[Function]}>
+                  <legend
+                        className="row">
+                        Forgot Password
+                  </legend>
+                  <div
+                        className="form-col">
+                        <div
+                              style={
+                                    Object {
+                                          "marginTop": 20,
+                                        }
+                              }>
+                              Enter your email address to have a reset link sent to you.
+                        </div>
+                        <function TextField() {
+                            var _ref;
+                        
+                            var _temp, _this, _ret;
+                        
+                            (0, _classCallCheck3.default)(this, TextField);
+                        
+                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                              args[_key] = arguments[_key];
+                            }
+                        
+                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                              isFocused: false,
+                              errorText: undefined,
+                              hasValue: false,
+                              isClean: true
+                            }, _this.handleInputBlur = function (event) {
+                              _this.setState({ isFocused: false });
+                              if (_this.props.onBlur) _this.props.onBlur(event);
+                            }, _this.handleInputChange = function (event) {
+                              _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                              if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                            }, _this.handleInputFocus = function (event) {
+                              if (_this.props.disabled) {
+                                return;
+                              }
+                              _this.setState({ isFocused: true });
+                              if (_this.props.onFocus) {
+                                _this.props.onFocus(event);
+                              }
+                            }, _this.handleHeightChange = function (event, height) {
+                              var newHeight = height + 24;
+                              if (_this.props.floatingLabelText) {
+                                newHeight += 24;
+                              }
+                              _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                          }
+                              autoFocus={true}
+                              disabled={false}
+                              floatingLabelFixed={false}
+                              floatingLabelText="Email"
+                              fullWidth={false}
+                              multiLine={false}
+                              onChange={[Function]}
+                              rows={1}
+                              type="email"
+                              underlineShow={true}
+                              value="rond@webbtech.net" />
+                        <div
+                              style={
+                                    Object {
+                                          "marginTop": 20,
+                                        }
+                              } />
+                        <function RaisedButton() {
+                            var _ref;
+                        
+                            var _temp, _this, _ret;
+                        
+                            (0, _classCallCheck3.default)(this, RaisedButton);
+                        
+                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                              args[_key] = arguments[_key];
+                            }
+                        
+                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                              hovered: false,
+                              keyboardFocused: false,
+                              touched: false,
+                              initialZDepth: 0,
+                              zDepth: 0
+                            }, _this.handleMouseDown = function (event) {
+                              // only listen to left clicks
+                              if (event.button === 0) {
+                                _this.setState({
+                                  zDepth: _this.state.initialZDepth + 1
+                                });
+                              }
+                              if (_this.props.onMouseDown) {
+                                _this.props.onMouseDown(event);
+                              }
+                            }, _this.handleMouseUp = function (event) {
+                              _this.setState({
+                                zDepth: _this.state.initialZDepth
+                              });
+                              if (_this.props.onMouseUp) {
+                                _this.props.onMouseUp(event);
+                              }
+                            }, _this.handleMouseLeave = function (event) {
+                              if (!_this.state.keyboardFocused) {
+                                _this.setState({
+                                  zDepth: _this.state.initialZDepth,
+                                  hovered: false
+                                });
+                              }
+                              if (_this.props.onMouseLeave) {
+                                _this.props.onMouseLeave(event);
+                              }
+                            }, _this.handleMouseEnter = function (event) {
+                              if (!_this.state.keyboardFocused && !_this.state.touched) {
+                                _this.setState({
+                                  hovered: true
+                                });
+                              }
+                              if (_this.props.onMouseEnter) {
+                                _this.props.onMouseEnter(event);
+                              }
+                            }, _this.handleTouchStart = function (event) {
+                              _this.setState({
+                                touched: true,
+                                zDepth: _this.state.initialZDepth + 1
+                              });
+                        
+                              if (_this.props.onTouchStart) {
+                                _this.props.onTouchStart(event);
+                              }
+                            }, _this.handleTouchEnd = function (event) {
+                              _this.setState({
+                                zDepth: _this.state.initialZDepth
+                              });
+                        
+                              if (_this.props.onTouchEnd) {
+                                _this.props.onTouchEnd(event);
+                              }
+                            }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                              var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                        
+                              _this.setState({
+                                zDepth: zDepth,
+                                keyboardFocused: keyboardFocused
+                              });
+                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                          }
+                              disabled={false}
+                              fullWidth={false}
+                              label="Submit"
+                              labelPosition="after"
+                              onClick={[Function]}
+                              primary={false}
+                              secondary={true} />
+                  </div>
+            </form>
+      </div>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <class ForgotForm extends /* istanbul ignore next */_react.Component {
+
+  constructor(props) {
+    super(props); /* istanbul ignore next */this.
+
+
+
+
+
+
+    componentDidMount = () => {/* istanbul ignore next */const
+      query = this.props.query;
+      if (!query.domainID) {
+        this.props.actions.alertSend({
+          dismissAfter: 5000,
+          message: 'ERROR: Missing domain id in request. Check your link.',
+          type: 'danger' });
+
+      }
+    }; /* istanbul ignore next */this.
+
+    _onEmailChange = val => {
+      console.log('val:', val);
+      this.setState({ email: val });
+    }; /* istanbul ignore next */this.
+
+    _onSubmit = () => {/* istanbul ignore next */var _props =
+      this.props; /* istanbul ignore next */const authResetPasswd = _props.authResetPasswd; /* istanbul ignore next */const query = _props.query;
+      const args = {
+        email: this.state.email,
+        domainID: query.domainID };
+
+      authResetPasswd(args).then(res => {
+        this.setState({ showConfirm: true });
+      }).catch(err => {
+        console.log('err:', err);
+      });
+    }; /* istanbul ignore next */this.
+
+    _renderForm = () => {
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 400, margin: 'auto', marginTop: 100, backgroundColor: '#efefef', padding: 20 }, __source: { fileName: _jsxFileName, lineNumber: 57 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 58 }, __self: this },
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 60 }, __self: this }, /* istanbul ignore next */'Forgot Password'),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 62 }, __self: this }, /* istanbul ignore next */'Enter your email address to have a reset link sent to you.'),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
+                floatingLabelText: 'Email',
+                autoFocus: true,
+                onChange: (e, val) => this._onEmailChange(val),
+                type: 'email',
+                value: this.state.email, __source: { fileName: _jsxFileName, lineNumber: 63 }, __self: this }),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 70 }, __self: this }),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default
+              // icon={<ActionDone />}
+              , /* istanbul ignore next */{ label: 'Submit',
+                onClick: () => this._onSubmit(),
+                secondary: true, __source: { fileName: _jsxFileName, lineNumber: 71 }, __self: this })))));
+
+
+
+
+
+
+    }; /* istanbul ignore next */this.
+
+    _renderConfirm = () => {
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 400, margin: 'auto', marginTop: 100, backgroundColor: '#efefef', padding: 20, textAlign: 'justify', lineHeight: 1.5 }, __source: { fileName: _jsxFileName, lineNumber: 86 }, __self: this }, /* istanbul ignore next */'An email has been sent to: ',
+          this.state.email, /* istanbul ignore next */' with instructions on how to reset your password.'));
+
+
+    };this.state = { email: 'rond@webbtech.net', showConfirm: false };}
+
+  render() {
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 93 }, __self: this },
+        this.state.showConfirm ? this._renderConfirm() : this._renderForm()));
+
+  }} />,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": ForgotForm {
+        "_onEmailChange": [Function],
+        "_onSubmit": [Function],
+        "_reactInternalInstance": [Circular],
+        "_renderConfirm": [Function],
+        "_renderForm": [Function],
+        "componentDidMount": [Function],
+        "context": Object {},
+        "props": Object {},
+        "refs": Object {},
+        "state": Object {
+          "email": "rond@webbtech.net",
+          "showConfirm": false,
+        },
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div>
+          <div
+                    style={
+                              Object {
+                                        "backgroundColor": "#efefef",
+                                        "margin": "auto",
+                                        "marginTop": 100,
+                                        "padding": 20,
+                                        "width": 400,
+                                      }
+                    }>
+                    <form
+                              onSubmit={[Function]}>
+                              <legend
+                                        className="row">
+                                        Forgot Password
+                              </legend>
+                              <div
+                                        className="form-col">
+                                        <div
+                                                  style={
+                                                            Object {
+                                                                      "marginTop": 20,
+                                                                    }
+                                                  }>
+                                                  Enter your email address to have a reset link sent to you.
+                                        </div>
+                                        <function TextField() {
+                                            var _ref;
+                                        
+                                            var _temp, _this, _ret;
+                                        
+                                            (0, _classCallCheck3.default)(this, TextField);
+                                        
+                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                              args[_key] = arguments[_key];
+                                            }
+                                        
+                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                              isFocused: false,
+                                              errorText: undefined,
+                                              hasValue: false,
+                                              isClean: true
+                                            }, _this.handleInputBlur = function (event) {
+                                              _this.setState({ isFocused: false });
+                                              if (_this.props.onBlur) _this.props.onBlur(event);
+                                            }, _this.handleInputChange = function (event) {
+                                              _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                                              if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                                            }, _this.handleInputFocus = function (event) {
+                                              if (_this.props.disabled) {
+                                                return;
+                                              }
+                                              _this.setState({ isFocused: true });
+                                              if (_this.props.onFocus) {
+                                                _this.props.onFocus(event);
+                                              }
+                                            }, _this.handleHeightChange = function (event, height) {
+                                              var newHeight = height + 24;
+                                              if (_this.props.floatingLabelText) {
+                                                newHeight += 24;
+                                              }
+                                              _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                          }
+                                                  autoFocus={true}
+                                                  disabled={false}
+                                                  floatingLabelFixed={false}
+                                                  floatingLabelText="Email"
+                                                  fullWidth={false}
+                                                  multiLine={false}
+                                                  onChange={[Function]}
+                                                  rows={1}
+                                                  type="email"
+                                                  underlineShow={true}
+                                                  value="rond@webbtech.net" />
+                                        <div
+                                                  style={
+                                                            Object {
+                                                                      "marginTop": 20,
+                                                                    }
+                                                  } />
+                                        <function RaisedButton() {
+                                            var _ref;
+                                        
+                                            var _temp, _this, _ret;
+                                        
+                                            (0, _classCallCheck3.default)(this, RaisedButton);
+                                        
+                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                              args[_key] = arguments[_key];
+                                            }
+                                        
+                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                              hovered: false,
+                                              keyboardFocused: false,
+                                              touched: false,
+                                              initialZDepth: 0,
+                                              zDepth: 0
+                                            }, _this.handleMouseDown = function (event) {
+                                              // only listen to left clicks
+                                              if (event.button === 0) {
+                                                _this.setState({
+                                                  zDepth: _this.state.initialZDepth + 1
+                                                });
+                                              }
+                                              if (_this.props.onMouseDown) {
+                                                _this.props.onMouseDown(event);
+                                              }
+                                            }, _this.handleMouseUp = function (event) {
+                                              _this.setState({
+                                                zDepth: _this.state.initialZDepth
+                                              });
+                                              if (_this.props.onMouseUp) {
+                                                _this.props.onMouseUp(event);
+                                              }
+                                            }, _this.handleMouseLeave = function (event) {
+                                              if (!_this.state.keyboardFocused) {
+                                                _this.setState({
+                                                  zDepth: _this.state.initialZDepth,
+                                                  hovered: false
+                                                });
+                                              }
+                                              if (_this.props.onMouseLeave) {
+                                                _this.props.onMouseLeave(event);
+                                              }
+                                            }, _this.handleMouseEnter = function (event) {
+                                              if (!_this.state.keyboardFocused && !_this.state.touched) {
+                                                _this.setState({
+                                                  hovered: true
+                                                });
+                                              }
+                                              if (_this.props.onMouseEnter) {
+                                                _this.props.onMouseEnter(event);
+                                              }
+                                            }, _this.handleTouchStart = function (event) {
+                                              _this.setState({
+                                                touched: true,
+                                                zDepth: _this.state.initialZDepth + 1
+                                              });
+                                        
+                                              if (_this.props.onTouchStart) {
+                                                _this.props.onTouchStart(event);
+                                              }
+                                            }, _this.handleTouchEnd = function (event) {
+                                              _this.setState({
+                                                zDepth: _this.state.initialZDepth
+                                              });
+                                        
+                                              if (_this.props.onTouchEnd) {
+                                                _this.props.onTouchEnd(event);
+                                              }
+                                            }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                              var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                                        
+                                              _this.setState({
+                                                zDepth: zDepth,
+                                                keyboardFocused: keyboardFocused
+                                              });
+                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                          }
+                                                  disabled={false}
+                                                  fullWidth={false}
+                                                  label="Submit"
+                                                  labelPosition="after"
+                                                  onClick={[Function]}
+                                                  primary={false}
+                                                  secondary={true} />
+                              </div>
+                    </form>
+          </div>
+</div>,
+        "_debugID": 2,
+        "_renderedOutput": <div>
+          <div
+                    style={
+                              Object {
+                                        "backgroundColor": "#efefef",
+                                        "margin": "auto",
+                                        "marginTop": 100,
+                                        "padding": 20,
+                                        "width": 400,
+                                      }
+                    }>
+                    <form
+                              onSubmit={[Function]}>
+                              <legend
+                                        className="row">
+                                        Forgot Password
+                              </legend>
+                              <div
+                                        className="form-col">
+                                        <div
+                                                  style={
+                                                            Object {
+                                                                      "marginTop": 20,
+                                                                    }
+                                                  }>
+                                                  Enter your email address to have a reset link sent to you.
+                                        </div>
+                                        <function TextField() {
+                                            var _ref;
+                                        
+                                            var _temp, _this, _ret;
+                                        
+                                            (0, _classCallCheck3.default)(this, TextField);
+                                        
+                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                              args[_key] = arguments[_key];
+                                            }
+                                        
+                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = TextField.__proto__ || (0, _getPrototypeOf2.default)(TextField)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                              isFocused: false,
+                                              errorText: undefined,
+                                              hasValue: false,
+                                              isClean: true
+                                            }, _this.handleInputBlur = function (event) {
+                                              _this.setState({ isFocused: false });
+                                              if (_this.props.onBlur) _this.props.onBlur(event);
+                                            }, _this.handleInputChange = function (event) {
+                                              _this.setState({ hasValue: isValid(event.target.value), isClean: false });
+                                              if (_this.props.onChange) _this.props.onChange(event, event.target.value);
+                                            }, _this.handleInputFocus = function (event) {
+                                              if (_this.props.disabled) {
+                                                return;
+                                              }
+                                              _this.setState({ isFocused: true });
+                                              if (_this.props.onFocus) {
+                                                _this.props.onFocus(event);
+                                              }
+                                            }, _this.handleHeightChange = function (event, height) {
+                                              var newHeight = height + 24;
+                                              if (_this.props.floatingLabelText) {
+                                                newHeight += 24;
+                                              }
+                                              _reactDom2.default.findDOMNode(_this).style.height = newHeight + 'px';
+                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                          }
+                                                  autoFocus={true}
+                                                  disabled={false}
+                                                  floatingLabelFixed={false}
+                                                  floatingLabelText="Email"
+                                                  fullWidth={false}
+                                                  multiLine={false}
+                                                  onChange={[Function]}
+                                                  rows={1}
+                                                  type="email"
+                                                  underlineShow={true}
+                                                  value="rond@webbtech.net" />
+                                        <div
+                                                  style={
+                                                            Object {
+                                                                      "marginTop": 20,
+                                                                    }
+                                                  } />
+                                        <function RaisedButton() {
+                                            var _ref;
+                                        
+                                            var _temp, _this, _ret;
+                                        
+                                            (0, _classCallCheck3.default)(this, RaisedButton);
+                                        
+                                            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                              args[_key] = arguments[_key];
+                                            }
+                                        
+                                            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = RaisedButton.__proto__ || (0, _getPrototypeOf2.default)(RaisedButton)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                              hovered: false,
+                                              keyboardFocused: false,
+                                              touched: false,
+                                              initialZDepth: 0,
+                                              zDepth: 0
+                                            }, _this.handleMouseDown = function (event) {
+                                              // only listen to left clicks
+                                              if (event.button === 0) {
+                                                _this.setState({
+                                                  zDepth: _this.state.initialZDepth + 1
+                                                });
+                                              }
+                                              if (_this.props.onMouseDown) {
+                                                _this.props.onMouseDown(event);
+                                              }
+                                            }, _this.handleMouseUp = function (event) {
+                                              _this.setState({
+                                                zDepth: _this.state.initialZDepth
+                                              });
+                                              if (_this.props.onMouseUp) {
+                                                _this.props.onMouseUp(event);
+                                              }
+                                            }, _this.handleMouseLeave = function (event) {
+                                              if (!_this.state.keyboardFocused) {
+                                                _this.setState({
+                                                  zDepth: _this.state.initialZDepth,
+                                                  hovered: false
+                                                });
+                                              }
+                                              if (_this.props.onMouseLeave) {
+                                                _this.props.onMouseLeave(event);
+                                              }
+                                            }, _this.handleMouseEnter = function (event) {
+                                              if (!_this.state.keyboardFocused && !_this.state.touched) {
+                                                _this.setState({
+                                                  hovered: true
+                                                });
+                                              }
+                                              if (_this.props.onMouseEnter) {
+                                                _this.props.onMouseEnter(event);
+                                              }
+                                            }, _this.handleTouchStart = function (event) {
+                                              _this.setState({
+                                                touched: true,
+                                                zDepth: _this.state.initialZDepth + 1
+                                              });
+                                        
+                                              if (_this.props.onTouchStart) {
+                                                _this.props.onTouchStart(event);
+                                              }
+                                            }, _this.handleTouchEnd = function (event) {
+                                              _this.setState({
+                                                zDepth: _this.state.initialZDepth
+                                              });
+                                        
+                                              if (_this.props.onTouchEnd) {
+                                                _this.props.onTouchEnd(event);
+                                              }
+                                            }, _this.handleKeyboardFocus = function (event, keyboardFocused) {
+                                              var zDepth = keyboardFocused && !_this.props.disabled ? _this.state.initialZDepth + 1 : _this.state.initialZDepth;
+                                        
+                                              _this.setState({
+                                                zDepth: zDepth,
+                                                keyboardFocused: keyboardFocused
+                                              });
+                                            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                          }
+                                                  disabled={false}
+                                                  fullWidth={false}
+                                                  label="Submit"
+                                                  labelPosition="after"
+                                                  onClick={[Function]}
+                                                  primary={false}
+                                                  secondary={true} />
+                              </div>
+                    </form>
+          </div>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <class ForgotForm extends /* istanbul ignore next */_react.Component {
+
+  constructor(props) {
+    super(props); /* istanbul ignore next */this.
+
+
+
+
+
+
+    componentDidMount = () => {/* istanbul ignore next */const
+      query = this.props.query;
+      if (!query.domainID) {
+        this.props.actions.alertSend({
+          dismissAfter: 5000,
+          message: 'ERROR: Missing domain id in request. Check your link.',
+          type: 'danger' });
+
+      }
+    }; /* istanbul ignore next */this.
+
+    _onEmailChange = val => {
+      console.log('val:', val);
+      this.setState({ email: val });
+    }; /* istanbul ignore next */this.
+
+    _onSubmit = () => {/* istanbul ignore next */var _props =
+      this.props; /* istanbul ignore next */const authResetPasswd = _props.authResetPasswd; /* istanbul ignore next */const query = _props.query;
+      const args = {
+        email: this.state.email,
+        domainID: query.domainID };
+
+      authResetPasswd(args).then(res => {
+        this.setState({ showConfirm: true });
+      }).catch(err => {
+        console.log('err:', err);
+      });
+    }; /* istanbul ignore next */this.
+
+    _renderForm = () => {
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 400, margin: 'auto', marginTop: 100, backgroundColor: '#efefef', padding: 20 }, __source: { fileName: _jsxFileName, lineNumber: 57 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 58 }, __self: this },
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 60 }, __self: this }, /* istanbul ignore next */'Forgot Password'),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 62 }, __self: this }, /* istanbul ignore next */'Enter your email address to have a reset link sent to you.'),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
+                floatingLabelText: 'Email',
+                autoFocus: true,
+                onChange: (e, val) => this._onEmailChange(val),
+                type: 'email',
+                value: this.state.email, __source: { fileName: _jsxFileName, lineNumber: 63 }, __self: this }),
+
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 70 }, __self: this }),
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default
+              // icon={<ActionDone />}
+              , /* istanbul ignore next */{ label: 'Submit',
+                onClick: () => this._onSubmit(),
+                secondary: true, __source: { fileName: _jsxFileName, lineNumber: 71 }, __self: this })))));
+
+
+
+
+
+
+    }; /* istanbul ignore next */this.
+
+    _renderConfirm = () => {
+      return (
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 400, margin: 'auto', marginTop: 100, backgroundColor: '#efefef', padding: 20, textAlign: 'justify', lineHeight: 1.5 }, __source: { fileName: _jsxFileName, lineNumber: 86 }, __self: this }, /* istanbul ignore next */'An email has been sent to: ',
+          this.state.email, /* istanbul ignore next */' with instructions on how to reset your password.'));
+
+
+    };this.state = { email: 'rond@webbtech.net', showConfirm: false };}
+
+  render() {
+    return (/* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 93 }, __self: this },
+        this.state.showConfirm ? this._renderConfirm() : this._renderForm()));
+
+  }} />,
+}
+`;

@@ -18,10 +18,14 @@ const links = [
   },
 ]
 
+const auth = {
+  isAuthenticated: true
+}
+
 describe('components', () => {
   describe('<Header />', () => {
 
-    const hdrC = shallow(<Header links={links} />)
+    const hdrC = shallow(<Header auth={auth} links={links} />)
 
     it('renders', () => {
       expect(hdrC.find('header').hasClass('App-header')).toBe(true)

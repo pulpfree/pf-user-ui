@@ -29,6 +29,7 @@ export const scratchState = Immutable({
   resetURI:       null,
   roles:          [],
   signingMethod:  'RSA',
+  TTL: null
 })
 
 export function current (state = currentState, action) {

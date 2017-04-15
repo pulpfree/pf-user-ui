@@ -33,6 +33,12 @@
   background-color: '#fff';
 }
 
+.reset-header {
+  background-color: #333;
+  color: white;
+  min-height: 80px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

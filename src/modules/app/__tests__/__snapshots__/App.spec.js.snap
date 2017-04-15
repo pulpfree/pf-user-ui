@@ -444,152 +444,92 @@ ShallowWrapper {
               } />
         <class Header extends /* istanbul ignore next */_react.Component {
         
-          render() {/* istanbul ignore next */const
-        
-            links = this.props.links;
-            const eleStyle = { borderRadius: 0 };
-            const activeStyle = {
-              backgroundColor: '#fff',
-              color: '#000' };
-        
-        
-            let activeOnIndex;
-            let ls = links.map(l => {
-              activeOnIndex = l.path === '/' ? true : false;
-        
-              return (
-                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
-                  style: eleStyle,
-                  containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this }),
-                  key: l.path,
-                  label: l.label,
-                  secondary: true, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }));
-        
-        
-            });
-        
-            return (
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this },
-                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }),
-                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }, ls)));
-        
-        
-          }}
-            links={
-                Array [
-                    Object {
-                      "label": "dashboard",
-                      "path": "/",
-                    },
-                    Object {
-                      "label": "sites",
-                      "path": "/site",
-                    },
-                    Object {
-                      "label": "users",
-                      "path": "/user",
-                    },
-                  ]
-            }
-            pathname={undefined}
-            routeChildren={undefined} />
-        <class Loginform extends /* istanbul ignore next */_react.Component {
           constructor(props) {
             super(props); /* istanbul ignore next */this.
         
         
         
+            _onUserMenuChange = val => {
+              if (val === 2) {
+                this.props.logoutUser();
+              }
+            };this.state = { value: 1 };}
+        
+          render() {/* istanbul ignore next */var _props =
+        
+            this.props; /* istanbul ignore next */const auth = _props.auth; /* istanbul ignore next */const links = _props.links;
+            const eleStyle = { borderRadius: 0 };
+            const activeStyle = {
+              backgroundColor: '#fff',
+              color: '#000' };
+        
+            const isAuth = auth.isAuthenticated;
+        
+            let activeOnIndex;
+            let ls = links.map(l => {
+              activeOnIndex = l.path === '/admin' ? true : false;
+              return (
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                  containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }),
+                  key: l.path,
+                  label: l.label,
+                  secondary: true,
+                  style: eleStyle, __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this }));
         
         
-        
-            _onChange = field => {
-              const val = this.refs[field].input.value;
-              this.setState({ [field]: val });
-              console.log('val:', val);
-            }; /* istanbul ignore next */this.
-        
-            _onSubmit = () => {
-        
-            };this.state = { email: null, password: null };}
-        
-          render() {
-        
-            console.log('state:', this.state);
-        
-            return (
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 350, margin: 'auto', marginTop: 200, backgroundColor: '#efefef', padding: 20 }, __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this },
-                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this },
-        
-                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this }, /* istanbul ignore next */'Enter Login Credentials'),
-                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this },
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                      floatingLabelText: 'Email',
-                      type: 'email',
-                      onChange: () => this._onChange('email')
-                      // onBlur={() => this._validate('name')}
-                      , ref: 'email'
-                      // value={scratch.name || ''}
-                      , __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }),
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                      floatingLabelText: 'Password',
-                      type: 'password',
-                      onChange: () => this._onChange('password')
-                      // onBlur={() => this._validate('name')}
-                      , ref: 'password'
-                      // value={scratch.name || ''}
-                      , __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: this }),
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: this }),
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default
-                    // icon={<ActionDone />}
-                    , /* istanbul ignore next */{ label: 'Login',
-                      onClick: () => this._onSubmit(),
-                      secondary: true, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this }),
-        
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20, textAlign: 'right' }, __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this },
-                      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 62 }, __self: this }, /* istanbul ignore next */'Forgot Password'))))));
-        
-        
-        
-        
-        
-        
-          }} />
-        <class Forgotform extends /* istanbul ignore next */_react.Component {/* istanbul ignore next */constructor() {var _temp;return _temp = super(...arguments), this.
-        
-            _onSubmit = () => {
-        
-            }, _temp;}
-        
-          render() {
+            });
         
             return (
-              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 350, margin: 'auto', marginTop: 200, backgroundColor: '#efefef', padding: 20 }, __source: { fileName: _jsxFileName, lineNumber: 18 }, __self: this },
-                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this },
+              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this },
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this }),
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this }, ls),
+                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { right: 10, top: 5, position: 'absolute' }, __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this },
+                  isAuth &&
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DropDownMenu2.default, /* istanbul ignore next */{
+                      onChange: (e, i, val) => this._onUserMenuChange(val),
+                      labelStyle: { color: '#22A699' },
+                      value: this.state.value, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this },
         
-                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: this }, /* istanbul ignore next */'Forgot Password'),
-                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 22 }, __self: this },
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: this }, /* istanbul ignore next */'Enter your email address and we will send you a link to reset your password.'),
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                      floatingLabelText: 'Email',
-                      autoFocus: true
-                      // onChange={() => this._onPropChange('name')}
-                      // onBlur={() => this._validate('name')}
-                      // ref='name'
-                      // value={scratch.name || ''}
-                      , __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: this }),
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 32 }, __self: this }),
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default
-                    // icon={<ActionDone />}
-                    , /* istanbul ignore next */{ label: 'Submit',
-                      onClick: () => this._onSubmit(),
-                      secondary: true, __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this })))));
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 1, primaryText: auth.fullName, __source: { fileName: _jsxFileName, lineNumber: 60 }, __self: this }),
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 2, primaryText: 'Logout', __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this })),
         
         
+                  !isAuth &&
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                    containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ to: '/admin/login', __source: { fileName: _jsxFileName, lineNumber: 66 }, __self: this }),
+                    label: 'Login',
+                    secondary: true,
+                    value: 3, __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: this }))));
         
         
         
         
-          }} />
+        
+          }}
+            auth={
+                Object {
+                    "isAuthenticated": true,
+                  }
+            }
+            links={
+                Array [
+                    Object {
+                      "label": "dashboard",
+                      "path": "/admin",
+                    },
+                    Object {
+                      "label": "sites",
+                      "path": "/admin/site",
+                    },
+                    Object {
+                      "label": "users",
+                      "path": "/admin/user",
+                    },
+                  ]
+            }
+            logoutUser={[Function]}
+            pathname={undefined}
+            routeChildren={undefined} />
     </div>
 </function MuiThemeProvider() {
     (0, _classCallCheck3.default)(this, MuiThemeProvider);
@@ -1034,152 +974,92 @@ ShallowWrapper {
                   } />
             <class Header extends /* istanbul ignore next */_react.Component {
             
-              render() {/* istanbul ignore next */const
-            
-                links = this.props.links;
-                const eleStyle = { borderRadius: 0 };
-                const activeStyle = {
-                  backgroundColor: '#fff',
-                  color: '#000' };
-            
-            
-                let activeOnIndex;
-                let ls = links.map(l => {
-                  activeOnIndex = l.path === '/' ? true : false;
-            
-                  return (
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
-                      style: eleStyle,
-                      containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this }),
-                      key: l.path,
-                      label: l.label,
-                      secondary: true, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }));
-            
-            
-                });
-            
-                return (
-                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this },
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }),
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }, ls)));
-            
-            
-              }}
-                  links={
-                        Array [
-                              Object {
-                                "label": "dashboard",
-                                "path": "/",
-                              },
-                              Object {
-                                "label": "sites",
-                                "path": "/site",
-                              },
-                              Object {
-                                "label": "users",
-                                "path": "/user",
-                              },
-                            ]
-                  }
-                  pathname={undefined}
-                  routeChildren={undefined} />
-            <class Loginform extends /* istanbul ignore next */_react.Component {
               constructor(props) {
                 super(props); /* istanbul ignore next */this.
             
             
             
+                _onUserMenuChange = val => {
+                  if (val === 2) {
+                    this.props.logoutUser();
+                  }
+                };this.state = { value: 1 };}
+            
+              render() {/* istanbul ignore next */var _props =
+            
+                this.props; /* istanbul ignore next */const auth = _props.auth; /* istanbul ignore next */const links = _props.links;
+                const eleStyle = { borderRadius: 0 };
+                const activeStyle = {
+                  backgroundColor: '#fff',
+                  color: '#000' };
+            
+                const isAuth = auth.isAuthenticated;
+            
+                let activeOnIndex;
+                let ls = links.map(l => {
+                  activeOnIndex = l.path === '/admin' ? true : false;
+                  return (
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                      containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }),
+                      key: l.path,
+                      label: l.label,
+                      secondary: true,
+                      style: eleStyle, __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this }));
             
             
-            
-                _onChange = field => {
-                  const val = this.refs[field].input.value;
-                  this.setState({ [field]: val });
-                  console.log('val:', val);
-                }; /* istanbul ignore next */this.
-            
-                _onSubmit = () => {
-            
-                };this.state = { email: null, password: null };}
-            
-              render() {
-            
-                console.log('state:', this.state);
-            
-                return (
-                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 350, margin: 'auto', marginTop: 200, backgroundColor: '#efefef', padding: 20 }, __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this },
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this },
-            
-                      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this }, /* istanbul ignore next */'Enter Login Credentials'),
-                      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this },
-                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                          floatingLabelText: 'Email',
-                          type: 'email',
-                          onChange: () => this._onChange('email')
-                          // onBlur={() => this._validate('name')}
-                          , ref: 'email'
-                          // value={scratch.name || ''}
-                          , __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }),
-                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                          floatingLabelText: 'Password',
-                          type: 'password',
-                          onChange: () => this._onChange('password')
-                          // onBlur={() => this._validate('name')}
-                          , ref: 'password'
-                          // value={scratch.name || ''}
-                          , __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: this }),
-                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: this }),
-                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default
-                        // icon={<ActionDone />}
-                        , /* istanbul ignore next */{ label: 'Login',
-                          onClick: () => this._onSubmit(),
-                          secondary: true, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this }),
-            
-                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20, textAlign: 'right' }, __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this },
-                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 62 }, __self: this }, /* istanbul ignore next */'Forgot Password'))))));
-            
-            
-            
-            
-            
-            
-              }} />
-            <class Forgotform extends /* istanbul ignore next */_react.Component {/* istanbul ignore next */constructor() {var _temp;return _temp = super(...arguments), this.
-            
-                _onSubmit = () => {
-            
-                }, _temp;}
-            
-              render() {
+                });
             
                 return (
-                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 350, margin: 'auto', marginTop: 200, backgroundColor: '#efefef', padding: 20 }, __source: { fileName: _jsxFileName, lineNumber: 18 }, __self: this },
-                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this },
+                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this },
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this }),
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this }, ls),
+                    /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { right: 10, top: 5, position: 'absolute' }, __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this },
+                      isAuth &&
+                      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DropDownMenu2.default, /* istanbul ignore next */{
+                          onChange: (e, i, val) => this._onUserMenuChange(val),
+                          labelStyle: { color: '#22A699' },
+                          value: this.state.value, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this },
             
-                      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: this }, /* istanbul ignore next */'Forgot Password'),
-                      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 22 }, __self: this },
-                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: this }, /* istanbul ignore next */'Enter your email address and we will send you a link to reset your password.'),
-                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                          floatingLabelText: 'Email',
-                          autoFocus: true
-                          // onChange={() => this._onPropChange('name')}
-                          // onBlur={() => this._validate('name')}
-                          // ref='name'
-                          // value={scratch.name || ''}
-                          , __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: this }),
-                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 32 }, __self: this }),
-                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default
-                        // icon={<ActionDone />}
-                        , /* istanbul ignore next */{ label: 'Submit',
-                          onClick: () => this._onSubmit(),
-                          secondary: true, __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this })))));
+                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 1, primaryText: auth.fullName, __source: { fileName: _jsxFileName, lineNumber: 60 }, __self: this }),
+                        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 2, primaryText: 'Logout', __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this })),
             
             
+                      !isAuth &&
+                      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                        containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ to: '/admin/login', __source: { fileName: _jsxFileName, lineNumber: 66 }, __self: this }),
+                        label: 'Login',
+                        secondary: true,
+                        value: 3, __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: this }))));
             
             
             
             
-              }} />
+            
+              }}
+                  auth={
+                        Object {
+                              "isAuthenticated": true,
+                            }
+                  }
+                  links={
+                        Array [
+                              Object {
+                                "label": "dashboard",
+                                "path": "/admin",
+                              },
+                              Object {
+                                "label": "sites",
+                                "path": "/admin/site",
+                              },
+                              Object {
+                                "label": "users",
+                                "path": "/admin/user",
+                              },
+                            ]
+                  }
+                  logoutUser={[Function]}
+                  pathname={undefined}
+                  routeChildren={undefined} />
       </div>
 </function MuiThemeProvider() {
     (0, _classCallCheck3.default)(this, MuiThemeProvider);
@@ -1194,29 +1074,60 @@ ShallowWrapper {
       "_context": Object {},
       "_currentElement": <class App extends /* istanbul ignore next */_react.Component {
 
+  constructor(props) {
+    super(props); /* istanbul ignore next */this.
+
+
+
+
+
+
+
+    logoutUserFunc = () => {
+      this.props.actions.logoutUser();
+      /* istanbul ignore next */_reactRouter.browserHistory.push('/login');
+      // todo: can we get away without this, as when apollo
+      // is reseting we get errors due to not being authenticated
+      window.location.reload(true);
+      // this.props.client.resetStore()
+    }; /* istanbul ignore next */const auth = this.props.auth;const user = /* istanbul ignore next */_utils.userAuthVals.getUser();if (user && !auth.isAuthenticated) {this.props.actions.setUser(user);}}
+
   render() {/* istanbul ignore next */var _props =
 
-    this.props; /* istanbul ignore next */const children = _props.children; /* istanbul ignore next */const pathname = _props.pathname; /* istanbul ignore next */const routeChildren = _props.routeChildren;
-
+    this.props; /* istanbul ignore next */const auth = _props.auth; /* istanbul ignore next */const children = _props.children; /* istanbul ignore next */const pathname = _props.pathname; /* istanbul ignore next */const routeChildren = _props.routeChildren;
     return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MuiThemeProvider2.default, /* istanbul ignore next */{ muiTheme: /* istanbul ignore next */_theme.muiTheme, __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'App', __source: { fileName: _jsxFileName, lineNumber: 42 }, __self: this },
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Alerts2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this }),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Header2.default, /* istanbul ignore next */{ links: links, pathname: pathname, routeChildren: routeChildren, __source: { fileName: _jsxFileName, lineNumber: 44 }, __self: this }),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Loginform2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 45 }, __self: this }),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Forgotform2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: this }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MuiThemeProvider2.default, /* istanbul ignore next */{ muiTheme: /* istanbul ignore next */_theme.muiTheme, __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'App', __source: { fileName: _jsxFileName, lineNumber: 66 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Alerts2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 67 }, __self: this }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Header2.default, /* istanbul ignore next */{
+            auth: auth,
+            links: links,
+            logoutUser: this.logoutUserFunc,
+            pathname: pathname,
+            routeChildren: routeChildren, __source: { fileName: _jsxFileName, lineNumber: 68 }, __self: this }),
+
           children)));
 
 
 
-  }} />,
+  }}
+        auth={
+                Object {
+                        "isAuthenticated": true,
+                      }
+        } />,
       "_debugID": 1,
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": App {
         "_reactInternalInstance": [Circular],
         "context": Object {},
-        "props": Object {},
+        "logoutUserFunc": [Function],
+        "props": Object {
+          "auth": Object {
+            "isAuthenticated": true,
+          },
+        },
         "refs": Object {},
         "state": null,
         "updater": Object {
@@ -1675,152 +1586,92 @@ ShallowWrapper {
                           } />
                     <class Header extends /* istanbul ignore next */_react.Component {
                     
-                      render() {/* istanbul ignore next */const
-                    
-                        links = this.props.links;
-                        const eleStyle = { borderRadius: 0 };
-                        const activeStyle = {
-                          backgroundColor: '#fff',
-                          color: '#000' };
-                    
-                    
-                        let activeOnIndex;
-                        let ls = links.map(l => {
-                          activeOnIndex = l.path === '/' ? true : false;
-                    
-                          return (
-                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
-                              style: eleStyle,
-                              containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this }),
-                              key: l.path,
-                              label: l.label,
-                              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }));
-                    
-                    
-                        });
-                    
-                        return (
-                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this },
-                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }),
-                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }, ls)));
-                    
-                    
-                      }}
-                              links={
-                                        Array [
-                                                  Object {
-                                                    "label": "dashboard",
-                                                    "path": "/",
-                                                  },
-                                                  Object {
-                                                    "label": "sites",
-                                                    "path": "/site",
-                                                  },
-                                                  Object {
-                                                    "label": "users",
-                                                    "path": "/user",
-                                                  },
-                                                ]
-                              }
-                              pathname={undefined}
-                              routeChildren={undefined} />
-                    <class Loginform extends /* istanbul ignore next */_react.Component {
                       constructor(props) {
                         super(props); /* istanbul ignore next */this.
                     
                     
                     
+                        _onUserMenuChange = val => {
+                          if (val === 2) {
+                            this.props.logoutUser();
+                          }
+                        };this.state = { value: 1 };}
+                    
+                      render() {/* istanbul ignore next */var _props =
+                    
+                        this.props; /* istanbul ignore next */const auth = _props.auth; /* istanbul ignore next */const links = _props.links;
+                        const eleStyle = { borderRadius: 0 };
+                        const activeStyle = {
+                          backgroundColor: '#fff',
+                          color: '#000' };
+                    
+                        const isAuth = auth.isAuthenticated;
+                    
+                        let activeOnIndex;
+                        let ls = links.map(l => {
+                          activeOnIndex = l.path === '/admin' ? true : false;
+                          return (
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                              containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }),
+                              key: l.path,
+                              label: l.label,
+                              secondary: true,
+                              style: eleStyle, __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this }));
                     
                     
-                    
-                        _onChange = field => {
-                          const val = this.refs[field].input.value;
-                          this.setState({ [field]: val });
-                          console.log('val:', val);
-                        }; /* istanbul ignore next */this.
-                    
-                        _onSubmit = () => {
-                    
-                        };this.state = { email: null, password: null };}
-                    
-                      render() {
-                    
-                        console.log('state:', this.state);
-                    
-                        return (
-                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 350, margin: 'auto', marginTop: 200, backgroundColor: '#efefef', padding: 20 }, __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this },
-                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this },
-                    
-                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this }, /* istanbul ignore next */'Enter Login Credentials'),
-                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this },
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                                  floatingLabelText: 'Email',
-                                  type: 'email',
-                                  onChange: () => this._onChange('email')
-                                  // onBlur={() => this._validate('name')}
-                                  , ref: 'email'
-                                  // value={scratch.name || ''}
-                                  , __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                                  floatingLabelText: 'Password',
-                                  type: 'password',
-                                  onChange: () => this._onChange('password')
-                                  // onBlur={() => this._validate('name')}
-                                  , ref: 'password'
-                                  // value={scratch.name || ''}
-                                  , __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: this }),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: this }),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default
-                                // icon={<ActionDone />}
-                                , /* istanbul ignore next */{ label: 'Login',
-                                  onClick: () => this._onSubmit(),
-                                  secondary: true, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this }),
-                    
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20, textAlign: 'right' }, __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this },
-                                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 62 }, __self: this }, /* istanbul ignore next */'Forgot Password'))))));
-                    
-                    
-                    
-                    
-                    
-                    
-                      }} />
-                    <class Forgotform extends /* istanbul ignore next */_react.Component {/* istanbul ignore next */constructor() {var _temp;return _temp = super(...arguments), this.
-                    
-                        _onSubmit = () => {
-                    
-                        }, _temp;}
-                    
-                      render() {
+                        });
                     
                         return (
-                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 350, margin: 'auto', marginTop: 200, backgroundColor: '#efefef', padding: 20 }, __source: { fileName: _jsxFileName, lineNumber: 18 }, __self: this },
-                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this },
+                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this },
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this }),
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this }, ls),
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { right: 10, top: 5, position: 'absolute' }, __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this },
+                              isAuth &&
+                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DropDownMenu2.default, /* istanbul ignore next */{
+                                  onChange: (e, i, val) => this._onUserMenuChange(val),
+                                  labelStyle: { color: '#22A699' },
+                                  value: this.state.value, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this },
                     
-                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: this }, /* istanbul ignore next */'Forgot Password'),
-                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 22 }, __self: this },
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: this }, /* istanbul ignore next */'Enter your email address and we will send you a link to reset your password.'),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                                  floatingLabelText: 'Email',
-                                  autoFocus: true
-                                  // onChange={() => this._onPropChange('name')}
-                                  // onBlur={() => this._validate('name')}
-                                  // ref='name'
-                                  // value={scratch.name || ''}
-                                  , __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: this }),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 32 }, __self: this }),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default
-                                // icon={<ActionDone />}
-                                , /* istanbul ignore next */{ label: 'Submit',
-                                  onClick: () => this._onSubmit(),
-                                  secondary: true, __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this })))));
+                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 1, primaryText: auth.fullName, __source: { fileName: _jsxFileName, lineNumber: 60 }, __self: this }),
+                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 2, primaryText: 'Logout', __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this })),
                     
                     
+                              !isAuth &&
+                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                                containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ to: '/admin/login', __source: { fileName: _jsxFileName, lineNumber: 66 }, __self: this }),
+                                label: 'Login',
+                                secondary: true,
+                                value: 3, __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: this }))));
                     
                     
                     
                     
-                      }} />
+                    
+                      }}
+                              auth={
+                                        Object {
+                                                  "isAuthenticated": true,
+                                                }
+                              }
+                              links={
+                                        Array [
+                                                  Object {
+                                                    "label": "dashboard",
+                                                    "path": "/admin",
+                                                  },
+                                                  Object {
+                                                    "label": "sites",
+                                                    "path": "/admin/site",
+                                                  },
+                                                  Object {
+                                                    "label": "users",
+                                                    "path": "/admin/user",
+                                                  },
+                                                ]
+                              }
+                              logoutUser={[Function]}
+                              pathname={undefined}
+                              routeChildren={undefined} />
           </div>
 </function MuiThemeProvider() {
     (0, _classCallCheck3.default)(this, MuiThemeProvider);
@@ -2265,152 +2116,92 @@ ShallowWrapper {
                           } />
                     <class Header extends /* istanbul ignore next */_react.Component {
                     
-                      render() {/* istanbul ignore next */const
-                    
-                        links = this.props.links;
-                        const eleStyle = { borderRadius: 0 };
-                        const activeStyle = {
-                          backgroundColor: '#fff',
-                          color: '#000' };
-                    
-                    
-                        let activeOnIndex;
-                        let ls = links.map(l => {
-                          activeOnIndex = l.path === '/' ? true : false;
-                    
-                          return (
-                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
-                              style: eleStyle,
-                              containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this }),
-                              key: l.path,
-                              label: l.label,
-                              secondary: true, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }));
-                    
-                    
-                        });
-                    
-                        return (
-                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this },
-                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }),
-                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }, ls)));
-                    
-                    
-                      }}
-                              links={
-                                        Array [
-                                                  Object {
-                                                    "label": "dashboard",
-                                                    "path": "/",
-                                                  },
-                                                  Object {
-                                                    "label": "sites",
-                                                    "path": "/site",
-                                                  },
-                                                  Object {
-                                                    "label": "users",
-                                                    "path": "/user",
-                                                  },
-                                                ]
-                              }
-                              pathname={undefined}
-                              routeChildren={undefined} />
-                    <class Loginform extends /* istanbul ignore next */_react.Component {
                       constructor(props) {
                         super(props); /* istanbul ignore next */this.
                     
                     
                     
+                        _onUserMenuChange = val => {
+                          if (val === 2) {
+                            this.props.logoutUser();
+                          }
+                        };this.state = { value: 1 };}
+                    
+                      render() {/* istanbul ignore next */var _props =
+                    
+                        this.props; /* istanbul ignore next */const auth = _props.auth; /* istanbul ignore next */const links = _props.links;
+                        const eleStyle = { borderRadius: 0 };
+                        const activeStyle = {
+                          backgroundColor: '#fff',
+                          color: '#000' };
+                    
+                        const isAuth = auth.isAuthenticated;
+                    
+                        let activeOnIndex;
+                        let ls = links.map(l => {
+                          activeOnIndex = l.path === '/admin' ? true : false;
+                          return (
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                              containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }),
+                              key: l.path,
+                              label: l.label,
+                              secondary: true,
+                              style: eleStyle, __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this }));
                     
                     
-                    
-                        _onChange = field => {
-                          const val = this.refs[field].input.value;
-                          this.setState({ [field]: val });
-                          console.log('val:', val);
-                        }; /* istanbul ignore next */this.
-                    
-                        _onSubmit = () => {
-                    
-                        };this.state = { email: null, password: null };}
-                    
-                      render() {
-                    
-                        console.log('state:', this.state);
-                    
-                        return (
-                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 350, margin: 'auto', marginTop: 200, backgroundColor: '#efefef', padding: 20 }, __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this },
-                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 34 }, __self: this },
-                    
-                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this }, /* istanbul ignore next */'Enter Login Credentials'),
-                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this },
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                                  floatingLabelText: 'Email',
-                                  type: 'email',
-                                  onChange: () => this._onChange('email')
-                                  // onBlur={() => this._validate('name')}
-                                  , ref: 'email'
-                                  // value={scratch.name || ''}
-                                  , __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                                  floatingLabelText: 'Password',
-                                  type: 'password',
-                                  onChange: () => this._onChange('password')
-                                  // onBlur={() => this._validate('name')}
-                                  , ref: 'password'
-                                  // value={scratch.name || ''}
-                                  , __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: this }),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 54 }, __self: this }),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default
-                                // icon={<ActionDone />}
-                                , /* istanbul ignore next */{ label: 'Login',
-                                  onClick: () => this._onSubmit(),
-                                  secondary: true, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this }),
-                    
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20, textAlign: 'right' }, __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this },
-                                  /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 62 }, __self: this }, /* istanbul ignore next */'Forgot Password'))))));
-                    
-                    
-                    
-                    
-                    
-                    
-                      }} />
-                    <class Forgotform extends /* istanbul ignore next */_react.Component {/* istanbul ignore next */constructor() {var _temp;return _temp = super(...arguments), this.
-                    
-                        _onSubmit = () => {
-                    
-                        }, _temp;}
-                    
-                      render() {
+                        });
                     
                         return (
-                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { width: 350, margin: 'auto', marginTop: 200, backgroundColor: '#efefef', padding: 20 }, __source: { fileName: _jsxFileName, lineNumber: 18 }, __self: this },
-                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'form', /* istanbul ignore next */{ onSubmit: () => this._onSubmit(), __source: { fileName: _jsxFileName, lineNumber: 19 }, __self: this },
+                          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this },
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this }),
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this }, ls),
+                            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { right: 10, top: 5, position: 'absolute' }, __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this },
+                              isAuth &&
+                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DropDownMenu2.default, /* istanbul ignore next */{
+                                  onChange: (e, i, val) => this._onUserMenuChange(val),
+                                  labelStyle: { color: '#22A699' },
+                                  value: this.state.value, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this },
                     
-                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'legend', /* istanbul ignore next */{ className: 'row', __source: { fileName: _jsxFileName, lineNumber: 21 }, __self: this }, /* istanbul ignore next */'Forgot Password'),
-                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'form-col', __source: { fileName: _jsxFileName, lineNumber: 22 }, __self: this },
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 23 }, __self: this }, /* istanbul ignore next */'Enter your email address and we will send you a link to reset your password.'),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_TextField2.default, /* istanbul ignore next */{
-                                  floatingLabelText: 'Email',
-                                  autoFocus: true
-                                  // onChange={() => this._onPropChange('name')}
-                                  // onBlur={() => this._validate('name')}
-                                  // ref='name'
-                                  // value={scratch.name || ''}
-                                  , __source: { fileName: _jsxFileName, lineNumber: 24 }, __self: this }),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { marginTop: 20 }, __source: { fileName: _jsxFileName, lineNumber: 32 }, __self: this }),
-                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_RaisedButton2.default
-                                // icon={<ActionDone />}
-                                , /* istanbul ignore next */{ label: 'Submit',
-                                  onClick: () => this._onSubmit(),
-                                  secondary: true, __source: { fileName: _jsxFileName, lineNumber: 33 }, __self: this })))));
+                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 1, primaryText: auth.fullName, __source: { fileName: _jsxFileName, lineNumber: 60 }, __self: this }),
+                                /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 2, primaryText: 'Logout', __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this })),
                     
                     
+                              !isAuth &&
+                              /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+                                containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ to: '/admin/login', __source: { fileName: _jsxFileName, lineNumber: 66 }, __self: this }),
+                                label: 'Login',
+                                secondary: true,
+                                value: 3, __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: this }))));
                     
                     
                     
                     
-                      }} />
+                    
+                      }}
+                              auth={
+                                        Object {
+                                                  "isAuthenticated": true,
+                                                }
+                              }
+                              links={
+                                        Array [
+                                                  Object {
+                                                    "label": "dashboard",
+                                                    "path": "/admin",
+                                                  },
+                                                  Object {
+                                                    "label": "sites",
+                                                    "path": "/admin/site",
+                                                  },
+                                                  Object {
+                                                    "label": "users",
+                                                    "path": "/admin/user",
+                                                  },
+                                                ]
+                              }
+                              logoutUser={[Function]}
+                              pathname={undefined}
+                              routeChildren={undefined} />
           </div>
 </function MuiThemeProvider() {
     (0, _classCallCheck3.default)(this, MuiThemeProvider);
@@ -2429,21 +2220,47 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <class App extends /* istanbul ignore next */_react.Component {
 
+  constructor(props) {
+    super(props); /* istanbul ignore next */this.
+
+
+
+
+
+
+
+    logoutUserFunc = () => {
+      this.props.actions.logoutUser();
+      /* istanbul ignore next */_reactRouter.browserHistory.push('/login');
+      // todo: can we get away without this, as when apollo
+      // is reseting we get errors due to not being authenticated
+      window.location.reload(true);
+      // this.props.client.resetStore()
+    }; /* istanbul ignore next */const auth = this.props.auth;const user = /* istanbul ignore next */_utils.userAuthVals.getUser();if (user && !auth.isAuthenticated) {this.props.actions.setUser(user);}}
+
   render() {/* istanbul ignore next */var _props =
 
-    this.props; /* istanbul ignore next */const children = _props.children; /* istanbul ignore next */const pathname = _props.pathname; /* istanbul ignore next */const routeChildren = _props.routeChildren;
-
+    this.props; /* istanbul ignore next */const auth = _props.auth; /* istanbul ignore next */const children = _props.children; /* istanbul ignore next */const pathname = _props.pathname; /* istanbul ignore next */const routeChildren = _props.routeChildren;
     return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MuiThemeProvider2.default, /* istanbul ignore next */{ muiTheme: /* istanbul ignore next */_theme.muiTheme, __source: { fileName: _jsxFileName, lineNumber: 41 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'App', __source: { fileName: _jsxFileName, lineNumber: 42 }, __self: this },
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Alerts2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 43 }, __self: this }),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Header2.default, /* istanbul ignore next */{ links: links, pathname: pathname, routeChildren: routeChildren, __source: { fileName: _jsxFileName, lineNumber: 44 }, __self: this }),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Loginform2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 45 }, __self: this }),
-          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Forgotform2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 46 }, __self: this }),
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MuiThemeProvider2.default, /* istanbul ignore next */{ muiTheme: /* istanbul ignore next */_theme.muiTheme, __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ className: 'App', __source: { fileName: _jsxFileName, lineNumber: 66 }, __self: this },
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Alerts2.default, /* istanbul ignore next */{ __source: { fileName: _jsxFileName, lineNumber: 67 }, __self: this }),
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_Header2.default, /* istanbul ignore next */{
+            auth: auth,
+            links: links,
+            logoutUser: this.logoutUserFunc,
+            pathname: pathname,
+            routeChildren: routeChildren, __source: { fileName: _jsxFileName, lineNumber: 68 }, __self: this }),
+
           children)));
 
 
 
-  }} />,
+  }}
+    auth={
+        Object {
+            "isAuthenticated": true,
+          }
+    } />,
 }
 `;

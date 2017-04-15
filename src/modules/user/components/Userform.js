@@ -82,7 +82,6 @@ export class UserForm extends Component {
     const { createUser, scratch, updateUser } = this.props
     const edit = scratch._id ? true : false
     const successMsg = edit ? 'User info successfully updated' : 'User successfully created'
-
     let p
     if (edit) {
       p = updateUser(scratch)

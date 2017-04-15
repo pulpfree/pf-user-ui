@@ -171,6 +171,13 @@ export class Siteform extends Component {
                   ref='resetURI'
                   value={scratch.resetURI || ''}
               />
+              <TextField
+                  floatingLabelText='Token Expiry TTL'
+                  onChange={() => this._onPropChange('TTL')}
+                  onBlur={() => this._validate('TTL')}
+                  ref='TTL'
+                  value={scratch.TTL || ''}
+              />
 
             </div>
           </div>
@@ -233,6 +240,7 @@ const CREATE_SITE_MUTATION = gql`
         label
       }
       signingMethod
+      TTL
     }
   }`
 
@@ -262,6 +270,7 @@ const UPDATE_SITE_MUTATION = gql`
         label
       }
       signingMethod
+      TTL
     }
   }`
 

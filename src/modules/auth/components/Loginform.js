@@ -3,34 +3,29 @@ import React, { Component } from 'react'
 
 import RaisedButton from 'material-ui/RaisedButton'
 import TextField from 'material-ui/TextField'
+import Paper from 'material-ui/Paper'
 
-import { Link } from 'react-router'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-
-import { compose, graphql, withApollo } from 'react-apollo'
 import gql from 'graphql-tag'
-
-import * as alertActions from '../../alert/alertActions'
-import { loginUser } from '../../auth/authActions'
-
-import { userAuthVals } from '../../../utils'
+import { bindActionCreators } from 'redux'
+import { compose, graphql, withApollo } from 'react-apollo'
+import { connect } from 'react-redux'
+import { Link } from 'react-router'
 
 import '../../../styles/form.css'
+import * as alertActions from '../../alert/alertActions'
+import { config } from '../../../config/config'
+import { loginUser } from '../../auth/authActions'
+import { userAuthVals } from '../../../utils'
 
-export class Loginform extends Component {
+export class LoginForm extends Component {
   constructor(props) {
     super(props)
-    // const user = userAuthVals.getUser()
-    // console.log('user:', user)
-    // let email = user && user.email ? user.email : ''
-    let email = 'rond@webbtech.net'
+    const user = userAuthVals.getUser()
+    let email = user && user.email ? user.email : ''
     this.state = {
       email,
-      // password: ''
-      password: 'my-new-passwd'
+      password: ''
     }
-    // console.log('props:', this.props)
   }
 
   _onChange = (field) => {
@@ -39,22 +34,28 @@ export class Loginform extends Component {
   }
 
   _onSubmit = () => {
-    const { authUser } = this.props
+    const { authUser, location } = this.props
+    const domainID = config.DOMAIN_ID
     const creds = {
       email: this.state.email,
       password: this.state.password,
-      domainID: 'local.pf-user'
+      domainID
     }
+    // console.log('creds:', creds)
     authUser(creds).then(res => {
       userAuthVals.setVals(res.data.authUser)
       this.props.actions.loginUser(res.data.authUser)
       this.props.client.resetStore()
-      // window.location.reload(true)
+      if (location.state && location.state.nextPathname) {
+        this.props.router.replace(location.state.nextPathname)
+      } else {
+        this.props.router.replace('/admin')
+      }
     }).catch(err => {
       this.props.actions.alertSend({
         message:  `ERROR: ${err.message}`,
         type:     'danger',
-        domain: 'local.gales.sales'
+        domainID
       })
     })
   }
@@ -62,7 +63,8 @@ export class Loginform extends Component {
   render() {
 
     return (
-      <div style={{width: 350, margin: 'auto', marginTop: 200, backgroundColor: '#efefef', padding: 20}}>
+      <div style={{width: 400, margin: 'auto'}}>
+      <Paper style={{padding: 35}}>
         <form onSubmit={() => this._onSubmit()}>
 
           <legend className='row'>Enter Login Credentials</legend>
@@ -71,7 +73,7 @@ export class Loginform extends Component {
                 floatingLabelText='Email'
                 type='email'
                 onChange={() => this._onChange('email')}
-                // onBlur={() => this._validate('name')}
+                // onBlur={() => this._validate('email')}
                 ref='email'
                 value={this.state.email}
             />
@@ -79,7 +81,7 @@ export class Loginform extends Component {
                 floatingLabelText='Password'
                 type='password'
                 onChange={() => this._onChange('password')}
-                // onBlur={() => this._validate('name')}
+                // onBlur={() => this._validate('password')}
                 ref='password'
                 value={this.state.password}
             />
@@ -96,6 +98,7 @@ export class Loginform extends Component {
           </div>
 
         </form>
+        </Paper>
       </div>
     )
   }
@@ -137,7 +140,7 @@ function mapDispatchToProps(dispatch) {
 
 const MutateLoginForm = withApollo(compose(
   withLoginForm,
-)(Loginform))
+)(LoginForm))
 
 export default connect(
   null,

@@ -1,16 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme'
 
-import { LoginForm } from '../components/LoginForm'
+import { ForgotForm } from '../components/ForgotForm'
 
 describe('components', () => {
-  describe('<LoginForm />', () => {
 
-    const wrapper = shallow(<LoginForm />)
+  describe('<ForgotForm />', () => {
+
+    const wrapper = shallow(<ForgotForm />)
 
     it('matches snapshot', () => {
       expect(wrapper).toMatchSnapshot()
     })
   })
-
 })

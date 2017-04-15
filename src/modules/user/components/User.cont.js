@@ -17,7 +17,7 @@ import Paper from 'material-ui/Paper'
 import SelectField from 'material-ui/SelectField'
 import Toggle from 'material-ui/Toggle'
 
-import UserForm from './Userform'
+import UserForm from './UserForm'
 
 import {
   setUserCreate,
@@ -87,7 +87,7 @@ export class User extends Component {
   _onSelectSite = (e, idx, val) => {
     this.setState({siteID: val})
     this.props.actions.setUserListProp({domainID: val})
-    browserHistory.push(`/user/${val}`)
+    browserHistory.push(`/admin/user/${val}`)
   }
 
   render() {
@@ -130,17 +130,17 @@ export class User extends Component {
       }
 
       const deleteActions = [
-          <FlatButton
-              label='NO!'
-              primary={true}
-              onTouchTap={this._handleClose}
-          />,
-          <FlatButton
-              label='Go Ahead'
-              secondary={true}
-              onTouchTap={_onDeleteConfirm}
-          />
-        ]
+        <FlatButton
+            label='NO!'
+            primary={true}
+            onTouchTap={this._handleClose}
+        />,
+        <FlatButton
+            label='Go Ahead'
+            secondary={true}
+            onTouchTap={_onDeleteConfirm}
+        />
+      ]
 
       const Header = () => (
         <header className='list-table-header'>

@@ -7,6 +7,7 @@ import { userAuthVals } from '../../utils'
 export const userState = Immutable({
   domainID: null,
   email: null,
+  fullName: null,
   isAuthenticated: false,
   name: {
     first: null,
@@ -21,8 +22,6 @@ export function auth (state = userState, action) {
   switch (action.type) {
 
   case authActions.AUTH_LOGIN:
-    console.log('action:', action)
-    console.log('state:', state)
     const { params } = action
     const u = {
       domainID:         params.domainID,
@@ -36,6 +35,10 @@ export function auth (state = userState, action) {
       userID:           params.id,
     }
     return userState.merge(u)
+
+  case authActions.AUTH_SET_USER: // Reseting a user from userState
+    action.params.isAuthenticated = true
+    return userState.merge(action.params)
 
   case authActions.AUTH_LOGOUT:
     userAuthVals.clearUser()

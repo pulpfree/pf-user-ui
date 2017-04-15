@@ -87,7 +87,7 @@ ShallowWrapper {
                             "color": "#000",
                           }
                     }
-                    onlyActiveOnIndex={true}
+                    onlyActiveOnIndex={false}
                     style={Object {}}
                     to="/" />
             }
@@ -291,6 +291,201 @@ ShallowWrapper {
                   }
             } />
     </nav>
+    <div
+        style={
+            Object {
+                "position": "absolute",
+                "right": 10,
+                "top": 5,
+              }
+        }>
+        <function DropDownMenu() {
+            var _ref;
+        
+            var _temp, _this, _ret;
+        
+            (0, _classCallCheck3.default)(this, DropDownMenu);
+        
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = arguments[_key];
+            }
+        
+            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = DropDownMenu.__proto__ || (0, _getPrototypeOf2.default)(DropDownMenu)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+              open: false
+            }, _this.handleTouchTapControl = function (event) {
+              event.preventDefault();
+              if (!_this.props.disabled) {
+                _this.setState({
+                  open: !_this.state.open,
+                  anchorEl: _this.refs.root
+                });
+              }
+            }, _this.handleRequestCloseMenu = function () {
+              _this.setState({
+                open: false,
+                anchorEl: null
+              });
+            }, _this.handleItemTouchTap = function (event, child, index) {
+              event.persist();
+              _this.setState({
+                open: false
+              }, function () {
+                if (_this.props.onChange) {
+                  _this.props.onChange(event, index, child.props.value);
+                }
+              });
+            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+          }
+            animated={true}
+            autoWidth={true}
+            disabled={false}
+            labelStyle={
+                Object {
+                    "color": "#22A699",
+                  }
+            }
+            maxHeight={500}
+            onChange={[Function]}
+            openImmediately={false}
+            value={1}>
+            <function MenuItem() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, MenuItem);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  open: false
+                }, _this.cloneMenuItem = function (item) {
+                  return _react2.default.cloneElement(item, {
+                    onTouchTap: function onTouchTap(event) {
+                      if (!item.props.menuItems) {
+                        _this.handleRequestClose();
+                      }
+            
+                      if (item.props.onTouchTap) {
+                        item.props.onTouchTap(event);
+                      }
+                    }
+                  });
+                }, _this.handleTouchTap = function (event) {
+                  event.preventDefault();
+            
+                  _this.setState({
+                    open: true,
+                    anchorEl: _reactDom2.default.findDOMNode(_this)
+                  });
+            
+                  if (_this.props.onTouchTap) {
+                    _this.props.onTouchTap(event);
+                  }
+                }, _this.handleRequestClose = function () {
+                  _this.setState({
+                    open: false,
+                    anchorEl: null
+                  });
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                checked={false}
+                desktop={false}
+                disabled={false}
+                focusState="none"
+                insetChildren={false}
+                primaryText={undefined}
+                value={1} />
+            <function MenuItem() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, MenuItem);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  open: false
+                }, _this.cloneMenuItem = function (item) {
+                  return _react2.default.cloneElement(item, {
+                    onTouchTap: function onTouchTap(event) {
+                      if (!item.props.menuItems) {
+                        _this.handleRequestClose();
+                      }
+            
+                      if (item.props.onTouchTap) {
+                        item.props.onTouchTap(event);
+                      }
+                    }
+                  });
+                }, _this.handleTouchTap = function (event) {
+                  event.preventDefault();
+            
+                  _this.setState({
+                    open: true,
+                    anchorEl: _reactDom2.default.findDOMNode(_this)
+                  });
+            
+                  if (_this.props.onTouchTap) {
+                    _this.props.onTouchTap(event);
+                  }
+                }, _this.handleRequestClose = function () {
+                  _this.setState({
+                    open: false,
+                    anchorEl: null
+                  });
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                checked={false}
+                desktop={false}
+                disabled={false}
+                focusState="none"
+                insetChildren={false}
+                primaryText="Logout"
+                value={2} />
+        </function DropDownMenu() {
+            var _ref;
+        
+            var _temp, _this, _ret;
+        
+            (0, _classCallCheck3.default)(this, DropDownMenu);
+        
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+              args[_key] = arguments[_key];
+            }
+        
+            return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = DropDownMenu.__proto__ || (0, _getPrototypeOf2.default)(DropDownMenu)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+              open: false
+            }, _this.handleTouchTapControl = function (event) {
+              event.preventDefault();
+              if (!_this.props.disabled) {
+                _this.setState({
+                  open: !_this.state.open,
+                  anchorEl: _this.refs.root
+                });
+              }
+            }, _this.handleRequestCloseMenu = function () {
+              _this.setState({
+                open: false,
+                anchorEl: null
+              });
+            }, _this.handleItemTouchTap = function (event, child, index) {
+              event.persist();
+              _this.setState({
+                open: false
+              }, function () {
+                if (_this.props.onChange) {
+                  _this.props.onChange(event, index, child.props.value);
+                }
+              });
+            }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+          }>
+    </div>
 </header>,
   "nodes": Array [
     <header
@@ -374,7 +569,7 @@ ShallowWrapper {
                                           "color": "#000",
                                         }
                               }
-                              onlyActiveOnIndex={true}
+                              onlyActiveOnIndex={false}
                               style={Object {}}
                               to="/" />
                   }
@@ -578,6 +773,201 @@ ShallowWrapper {
                             }
                   } />
       </nav>
+      <div
+            style={
+                  Object {
+                        "position": "absolute",
+                        "right": 10,
+                        "top": 5,
+                      }
+            }>
+            <function DropDownMenu() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, DropDownMenu);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = DropDownMenu.__proto__ || (0, _getPrototypeOf2.default)(DropDownMenu)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  open: false
+                }, _this.handleTouchTapControl = function (event) {
+                  event.preventDefault();
+                  if (!_this.props.disabled) {
+                    _this.setState({
+                      open: !_this.state.open,
+                      anchorEl: _this.refs.root
+                    });
+                  }
+                }, _this.handleRequestCloseMenu = function () {
+                  _this.setState({
+                    open: false,
+                    anchorEl: null
+                  });
+                }, _this.handleItemTouchTap = function (event, child, index) {
+                  event.persist();
+                  _this.setState({
+                    open: false
+                  }, function () {
+                    if (_this.props.onChange) {
+                      _this.props.onChange(event, index, child.props.value);
+                    }
+                  });
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }
+                  animated={true}
+                  autoWidth={true}
+                  disabled={false}
+                  labelStyle={
+                        Object {
+                              "color": "#22A699",
+                            }
+                  }
+                  maxHeight={500}
+                  onChange={[Function]}
+                  openImmediately={false}
+                  value={1}>
+                  <function MenuItem() {
+                      var _ref;
+                  
+                      var _temp, _this, _ret;
+                  
+                      (0, _classCallCheck3.default)(this, MenuItem);
+                  
+                      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                      }
+                  
+                      return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                        open: false
+                      }, _this.cloneMenuItem = function (item) {
+                        return _react2.default.cloneElement(item, {
+                          onTouchTap: function onTouchTap(event) {
+                            if (!item.props.menuItems) {
+                              _this.handleRequestClose();
+                            }
+                  
+                            if (item.props.onTouchTap) {
+                              item.props.onTouchTap(event);
+                            }
+                          }
+                        });
+                      }, _this.handleTouchTap = function (event) {
+                        event.preventDefault();
+                  
+                        _this.setState({
+                          open: true,
+                          anchorEl: _reactDom2.default.findDOMNode(_this)
+                        });
+                  
+                        if (_this.props.onTouchTap) {
+                          _this.props.onTouchTap(event);
+                        }
+                      }, _this.handleRequestClose = function () {
+                        _this.setState({
+                          open: false,
+                          anchorEl: null
+                        });
+                      }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                    }
+                        checked={false}
+                        desktop={false}
+                        disabled={false}
+                        focusState="none"
+                        insetChildren={false}
+                        primaryText={undefined}
+                        value={1} />
+                  <function MenuItem() {
+                      var _ref;
+                  
+                      var _temp, _this, _ret;
+                  
+                      (0, _classCallCheck3.default)(this, MenuItem);
+                  
+                      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                        args[_key] = arguments[_key];
+                      }
+                  
+                      return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                        open: false
+                      }, _this.cloneMenuItem = function (item) {
+                        return _react2.default.cloneElement(item, {
+                          onTouchTap: function onTouchTap(event) {
+                            if (!item.props.menuItems) {
+                              _this.handleRequestClose();
+                            }
+                  
+                            if (item.props.onTouchTap) {
+                              item.props.onTouchTap(event);
+                            }
+                          }
+                        });
+                      }, _this.handleTouchTap = function (event) {
+                        event.preventDefault();
+                  
+                        _this.setState({
+                          open: true,
+                          anchorEl: _reactDom2.default.findDOMNode(_this)
+                        });
+                  
+                        if (_this.props.onTouchTap) {
+                          _this.props.onTouchTap(event);
+                        }
+                      }, _this.handleRequestClose = function () {
+                        _this.setState({
+                          open: false,
+                          anchorEl: null
+                        });
+                      }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                    }
+                        checked={false}
+                        desktop={false}
+                        disabled={false}
+                        focusState="none"
+                        insetChildren={false}
+                        primaryText="Logout"
+                        value={2} />
+            </function DropDownMenu() {
+                var _ref;
+            
+                var _temp, _this, _ret;
+            
+                (0, _classCallCheck3.default)(this, DropDownMenu);
+            
+                for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                  args[_key] = arguments[_key];
+                }
+            
+                return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = DropDownMenu.__proto__ || (0, _getPrototypeOf2.default)(DropDownMenu)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                  open: false
+                }, _this.handleTouchTapControl = function (event) {
+                  event.preventDefault();
+                  if (!_this.props.disabled) {
+                    _this.setState({
+                      open: !_this.state.open,
+                      anchorEl: _this.refs.root
+                    });
+                  }
+                }, _this.handleRequestCloseMenu = function () {
+                  _this.setState({
+                    open: false,
+                    anchorEl: null
+                  });
+                }, _this.handleItemTouchTap = function (event, child, index) {
+                  event.persist();
+                  _this.setState({
+                    open: false
+                  }, function () {
+                    if (_this.props.onChange) {
+                      _this.props.onChange(event, index, child.props.value);
+                    }
+                  });
+                }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+              }>
+      </div>
 </header>,
   ],
   "options": Object {},
@@ -588,37 +978,73 @@ ShallowWrapper {
       "_context": Object {},
       "_currentElement": <class Header extends /* istanbul ignore next */_react.Component {
 
-  render() {/* istanbul ignore next */const
+  constructor(props) {
+    super(props); /* istanbul ignore next */this.
 
-    links = this.props.links;
+
+
+    _onUserMenuChange = val => {
+      if (val === 2) {
+        this.props.logoutUser();
+      }
+    };this.state = { value: 1 };}
+
+  render() {/* istanbul ignore next */var _props =
+
+    this.props; /* istanbul ignore next */const auth = _props.auth; /* istanbul ignore next */const links = _props.links;
     const eleStyle = { borderRadius: 0 };
     const activeStyle = {
       backgroundColor: '#fff',
       color: '#000' };
 
+    const isAuth = auth.isAuthenticated;
 
     let activeOnIndex;
     let ls = links.map(l => {
-      activeOnIndex = l.path === '/' ? true : false;
-
+      activeOnIndex = l.path === '/admin' ? true : false;
       return (
         /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
-          style: eleStyle,
-          containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this }),
+          containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }),
           key: l.path,
           label: l.label,
-          secondary: true, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }));
+          secondary: true,
+          style: eleStyle, __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this }));
 
 
     });
 
     return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }),
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }, ls)));
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this }),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this }, ls),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { right: 10, top: 5, position: 'absolute' }, __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this },
+          isAuth &&
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DropDownMenu2.default, /* istanbul ignore next */{
+              onChange: (e, i, val) => this._onUserMenuChange(val),
+              labelStyle: { color: '#22A699' },
+              value: this.state.value, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this },
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 1, primaryText: auth.fullName, __source: { fileName: _jsxFileName, lineNumber: 60 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 2, primaryText: 'Logout', __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this })),
+
+
+          !isAuth &&
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+            containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ to: '/admin/login', __source: { fileName: _jsxFileName, lineNumber: 66 }, __self: this }),
+            label: 'Login',
+            secondary: true,
+            value: 3, __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: this }))));
+
+
+
 
 
   }}
+        auth={
+                Object {
+                        "isAuthenticated": true,
+                      }
+        }
         links={
                 Array [
                         Object {
@@ -639,9 +1065,13 @@ ShallowWrapper {
       "_hostContainerInfo": null,
       "_hostParent": null,
       "_instance": Header {
+        "_onUserMenuChange": [Function],
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {
+          "auth": Object {
+            "isAuthenticated": true,
+          },
           "links": Array [
             Object {
               "label": "dashboard",
@@ -658,7 +1088,9 @@ ShallowWrapper {
           ],
         },
         "refs": Object {},
-        "state": null,
+        "state": Object {
+          "value": 1,
+        },
         "updater": Object {
           "enqueueCallback": [Function],
           "enqueueCallbackInternal": [Function],
@@ -758,7 +1190,7 @@ ShallowWrapper {
                                                                       "color": "#000",
                                                                     }
                                                   }
-                                                  onlyActiveOnIndex={true}
+                                                  onlyActiveOnIndex={false}
                                                   style={Object {}}
                                                   to="/" />
                               }
@@ -962,6 +1394,201 @@ ShallowWrapper {
                                                 }
                               } />
           </nav>
+          <div
+                    style={
+                              Object {
+                                        "position": "absolute",
+                                        "right": 10,
+                                        "top": 5,
+                                      }
+                    }>
+                    <function DropDownMenu() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, DropDownMenu);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = DropDownMenu.__proto__ || (0, _getPrototypeOf2.default)(DropDownMenu)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                          open: false
+                        }, _this.handleTouchTapControl = function (event) {
+                          event.preventDefault();
+                          if (!_this.props.disabled) {
+                            _this.setState({
+                              open: !_this.state.open,
+                              anchorEl: _this.refs.root
+                            });
+                          }
+                        }, _this.handleRequestCloseMenu = function () {
+                          _this.setState({
+                            open: false,
+                            anchorEl: null
+                          });
+                        }, _this.handleItemTouchTap = function (event, child, index) {
+                          event.persist();
+                          _this.setState({
+                            open: false
+                          }, function () {
+                            if (_this.props.onChange) {
+                              _this.props.onChange(event, index, child.props.value);
+                            }
+                          });
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }
+                              animated={true}
+                              autoWidth={true}
+                              disabled={false}
+                              labelStyle={
+                                        Object {
+                                                  "color": "#22A699",
+                                                }
+                              }
+                              maxHeight={500}
+                              onChange={[Function]}
+                              openImmediately={false}
+                              value={1}>
+                              <function MenuItem() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, MenuItem);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    open: false
+                                  }, _this.cloneMenuItem = function (item) {
+                                    return _react2.default.cloneElement(item, {
+                                      onTouchTap: function onTouchTap(event) {
+                                        if (!item.props.menuItems) {
+                                          _this.handleRequestClose();
+                                        }
+                              
+                                        if (item.props.onTouchTap) {
+                                          item.props.onTouchTap(event);
+                                        }
+                                      }
+                                    });
+                                  }, _this.handleTouchTap = function (event) {
+                                    event.preventDefault();
+                              
+                                    _this.setState({
+                                      open: true,
+                                      anchorEl: _reactDom2.default.findDOMNode(_this)
+                                    });
+                              
+                                    if (_this.props.onTouchTap) {
+                                      _this.props.onTouchTap(event);
+                                    }
+                                  }, _this.handleRequestClose = function () {
+                                    _this.setState({
+                                      open: false,
+                                      anchorEl: null
+                                    });
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        checked={false}
+                                        desktop={false}
+                                        disabled={false}
+                                        focusState="none"
+                                        insetChildren={false}
+                                        primaryText={undefined}
+                                        value={1} />
+                              <function MenuItem() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, MenuItem);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    open: false
+                                  }, _this.cloneMenuItem = function (item) {
+                                    return _react2.default.cloneElement(item, {
+                                      onTouchTap: function onTouchTap(event) {
+                                        if (!item.props.menuItems) {
+                                          _this.handleRequestClose();
+                                        }
+                              
+                                        if (item.props.onTouchTap) {
+                                          item.props.onTouchTap(event);
+                                        }
+                                      }
+                                    });
+                                  }, _this.handleTouchTap = function (event) {
+                                    event.preventDefault();
+                              
+                                    _this.setState({
+                                      open: true,
+                                      anchorEl: _reactDom2.default.findDOMNode(_this)
+                                    });
+                              
+                                    if (_this.props.onTouchTap) {
+                                      _this.props.onTouchTap(event);
+                                    }
+                                  }, _this.handleRequestClose = function () {
+                                    _this.setState({
+                                      open: false,
+                                      anchorEl: null
+                                    });
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        checked={false}
+                                        desktop={false}
+                                        disabled={false}
+                                        focusState="none"
+                                        insetChildren={false}
+                                        primaryText="Logout"
+                                        value={2} />
+                    </function DropDownMenu() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, DropDownMenu);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = DropDownMenu.__proto__ || (0, _getPrototypeOf2.default)(DropDownMenu)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                          open: false
+                        }, _this.handleTouchTapControl = function (event) {
+                          event.preventDefault();
+                          if (!_this.props.disabled) {
+                            _this.setState({
+                              open: !_this.state.open,
+                              anchorEl: _this.refs.root
+                            });
+                          }
+                        }, _this.handleRequestCloseMenu = function () {
+                          _this.setState({
+                            open: false,
+                            anchorEl: null
+                          });
+                        }, _this.handleItemTouchTap = function (event, child, index) {
+                          event.persist();
+                          _this.setState({
+                            open: false
+                          }, function () {
+                            if (_this.props.onChange) {
+                              _this.props.onChange(event, index, child.props.value);
+                            }
+                          });
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }>
+          </div>
 </header>,
         "_debugID": 2,
         "_renderedOutput": <header
@@ -1045,7 +1672,7 @@ ShallowWrapper {
                                                                       "color": "#000",
                                                                     }
                                                   }
-                                                  onlyActiveOnIndex={true}
+                                                  onlyActiveOnIndex={false}
                                                   style={Object {}}
                                                   to="/" />
                               }
@@ -1249,6 +1876,201 @@ ShallowWrapper {
                                                 }
                               } />
           </nav>
+          <div
+                    style={
+                              Object {
+                                        "position": "absolute",
+                                        "right": 10,
+                                        "top": 5,
+                                      }
+                    }>
+                    <function DropDownMenu() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, DropDownMenu);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = DropDownMenu.__proto__ || (0, _getPrototypeOf2.default)(DropDownMenu)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                          open: false
+                        }, _this.handleTouchTapControl = function (event) {
+                          event.preventDefault();
+                          if (!_this.props.disabled) {
+                            _this.setState({
+                              open: !_this.state.open,
+                              anchorEl: _this.refs.root
+                            });
+                          }
+                        }, _this.handleRequestCloseMenu = function () {
+                          _this.setState({
+                            open: false,
+                            anchorEl: null
+                          });
+                        }, _this.handleItemTouchTap = function (event, child, index) {
+                          event.persist();
+                          _this.setState({
+                            open: false
+                          }, function () {
+                            if (_this.props.onChange) {
+                              _this.props.onChange(event, index, child.props.value);
+                            }
+                          });
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }
+                              animated={true}
+                              autoWidth={true}
+                              disabled={false}
+                              labelStyle={
+                                        Object {
+                                                  "color": "#22A699",
+                                                }
+                              }
+                              maxHeight={500}
+                              onChange={[Function]}
+                              openImmediately={false}
+                              value={1}>
+                              <function MenuItem() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, MenuItem);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    open: false
+                                  }, _this.cloneMenuItem = function (item) {
+                                    return _react2.default.cloneElement(item, {
+                                      onTouchTap: function onTouchTap(event) {
+                                        if (!item.props.menuItems) {
+                                          _this.handleRequestClose();
+                                        }
+                              
+                                        if (item.props.onTouchTap) {
+                                          item.props.onTouchTap(event);
+                                        }
+                                      }
+                                    });
+                                  }, _this.handleTouchTap = function (event) {
+                                    event.preventDefault();
+                              
+                                    _this.setState({
+                                      open: true,
+                                      anchorEl: _reactDom2.default.findDOMNode(_this)
+                                    });
+                              
+                                    if (_this.props.onTouchTap) {
+                                      _this.props.onTouchTap(event);
+                                    }
+                                  }, _this.handleRequestClose = function () {
+                                    _this.setState({
+                                      open: false,
+                                      anchorEl: null
+                                    });
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        checked={false}
+                                        desktop={false}
+                                        disabled={false}
+                                        focusState="none"
+                                        insetChildren={false}
+                                        primaryText={undefined}
+                                        value={1} />
+                              <function MenuItem() {
+                                  var _ref;
+                              
+                                  var _temp, _this, _ret;
+                              
+                                  (0, _classCallCheck3.default)(this, MenuItem);
+                              
+                                  for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                                    args[_key] = arguments[_key];
+                                  }
+                              
+                                  return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = MenuItem.__proto__ || (0, _getPrototypeOf2.default)(MenuItem)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                                    open: false
+                                  }, _this.cloneMenuItem = function (item) {
+                                    return _react2.default.cloneElement(item, {
+                                      onTouchTap: function onTouchTap(event) {
+                                        if (!item.props.menuItems) {
+                                          _this.handleRequestClose();
+                                        }
+                              
+                                        if (item.props.onTouchTap) {
+                                          item.props.onTouchTap(event);
+                                        }
+                                      }
+                                    });
+                                  }, _this.handleTouchTap = function (event) {
+                                    event.preventDefault();
+                              
+                                    _this.setState({
+                                      open: true,
+                                      anchorEl: _reactDom2.default.findDOMNode(_this)
+                                    });
+                              
+                                    if (_this.props.onTouchTap) {
+                                      _this.props.onTouchTap(event);
+                                    }
+                                  }, _this.handleRequestClose = function () {
+                                    _this.setState({
+                                      open: false,
+                                      anchorEl: null
+                                    });
+                                  }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                                }
+                                        checked={false}
+                                        desktop={false}
+                                        disabled={false}
+                                        focusState="none"
+                                        insetChildren={false}
+                                        primaryText="Logout"
+                                        value={2} />
+                    </function DropDownMenu() {
+                        var _ref;
+                    
+                        var _temp, _this, _ret;
+                    
+                        (0, _classCallCheck3.default)(this, DropDownMenu);
+                    
+                        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                          args[_key] = arguments[_key];
+                        }
+                    
+                        return _ret = (_temp = (_this = (0, _possibleConstructorReturn3.default)(this, (_ref = DropDownMenu.__proto__ || (0, _getPrototypeOf2.default)(DropDownMenu)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+                          open: false
+                        }, _this.handleTouchTapControl = function (event) {
+                          event.preventDefault();
+                          if (!_this.props.disabled) {
+                            _this.setState({
+                              open: !_this.state.open,
+                              anchorEl: _this.refs.root
+                            });
+                          }
+                        }, _this.handleRequestCloseMenu = function () {
+                          _this.setState({
+                            open: false,
+                            anchorEl: null
+                          });
+                        }, _this.handleItemTouchTap = function (event, child, index) {
+                          event.persist();
+                          _this.setState({
+                            open: false
+                          }, function () {
+                            if (_this.props.onChange) {
+                              _this.props.onChange(event, index, child.props.value);
+                            }
+                          });
+                        }, _temp), (0, _possibleConstructorReturn3.default)(_this, _ret);
+                      }>
+          </div>
 </header>,
       },
       "_renderedNodeType": 0,
@@ -1263,37 +2085,73 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <class Header extends /* istanbul ignore next */_react.Component {
 
-  render() {/* istanbul ignore next */const
+  constructor(props) {
+    super(props); /* istanbul ignore next */this.
 
-    links = this.props.links;
+
+
+    _onUserMenuChange = val => {
+      if (val === 2) {
+        this.props.logoutUser();
+      }
+    };this.state = { value: 1 };}
+
+  render() {/* istanbul ignore next */var _props =
+
+    this.props; /* istanbul ignore next */const auth = _props.auth; /* istanbul ignore next */const links = _props.links;
     const eleStyle = { borderRadius: 0 };
     const activeStyle = {
       backgroundColor: '#fff',
       color: '#000' };
 
+    const isAuth = auth.isAuthenticated;
 
     let activeOnIndex;
     let ls = links.map(l => {
-      activeOnIndex = l.path === '/' ? true : false;
-
+      activeOnIndex = l.path === '/admin' ? true : false;
       return (
         /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
-          style: eleStyle,
-          containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 27 }, __self: this }),
+          containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ onlyActiveOnIndex: activeOnIndex, activeStyle: activeStyle, to: l.path, __source: { fileName: _jsxFileName, lineNumber: 40 }, __self: this }),
           key: l.path,
           label: l.label,
-          secondary: true, __source: { fileName: _jsxFileName, lineNumber: 25 }, __self: this }));
+          secondary: true,
+          style: eleStyle, __source: { fileName: _jsxFileName, lineNumber: 39 }, __self: this }));
 
 
     });
 
     return (
-      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 36 }, __self: this },
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 37 }, __self: this }),
-        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 38 }, __self: this }, ls)));
+      /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'header', /* istanbul ignore next */{ className: 'App-header', __source: { fileName: _jsxFileName, lineNumber: 50 }, __self: this },
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'img', /* istanbul ignore next */{ src: /* istanbul ignore next */_logo2.default, className: 'App-logo', alt: 'logo', __source: { fileName: _jsxFileName, lineNumber: 51 }, __self: this }),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'nav', /* istanbul ignore next */{ className: 'App-nav', __source: { fileName: _jsxFileName, lineNumber: 52 }, __self: this }, ls),
+        /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */'div', /* istanbul ignore next */{ style: { right: 10, top: 5, position: 'absolute' }, __source: { fileName: _jsxFileName, lineNumber: 53 }, __self: this },
+          isAuth &&
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_DropDownMenu2.default, /* istanbul ignore next */{
+              onChange: (e, i, val) => this._onUserMenuChange(val),
+              labelStyle: { color: '#22A699' },
+              value: this.state.value, __source: { fileName: _jsxFileName, lineNumber: 55 }, __self: this },
+
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 1, primaryText: auth.fullName, __source: { fileName: _jsxFileName, lineNumber: 60 }, __self: this }),
+            /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_MenuItem2.default, /* istanbul ignore next */{ value: 2, primaryText: 'Logout', __source: { fileName: _jsxFileName, lineNumber: 61 }, __self: this })),
+
+
+          !isAuth &&
+          /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_FlatButton2.default, /* istanbul ignore next */{
+            containerElement: /* istanbul ignore next */_react2.default.createElement( /* istanbul ignore next */_reactRouter.Link, /* istanbul ignore next */{ to: '/admin/login', __source: { fileName: _jsxFileName, lineNumber: 66 }, __self: this }),
+            label: 'Login',
+            secondary: true,
+            value: 3, __source: { fileName: _jsxFileName, lineNumber: 65 }, __self: this }))));
+
+
+
 
 
   }}
+    auth={
+        Object {
+            "isAuthenticated": true,
+          }
+    }
     links={
         Array [
             Object {
